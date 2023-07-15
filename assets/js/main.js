@@ -257,7 +257,7 @@
 
 $(document).ready(function () {
   //Preloader
-  preloaderFadeOutTime = 3000;
+  preloaderFadeOutTime = 0;
   function hidePreloader() {
     var preloader = $('.spinner-wrapper');
     preloader.delay(preloaderFadeOutTime).fadeOut("slow");
