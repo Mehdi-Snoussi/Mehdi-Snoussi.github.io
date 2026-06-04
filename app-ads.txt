@@ -1,0 +1,4 @@
+# app-ads.txt for apps published by Mehdi Snoussi
+# Authorizes Google AdMob to sell this developer's mobile ad inventory.
+# Add one line per mediation partner (Meta, AppLovin, Unity, etc.) when you enable them.
+google.com, pub-4403160882008302, DIRECT, f08c47fec0942fa0
