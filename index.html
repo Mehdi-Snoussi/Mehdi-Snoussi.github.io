@@ -1,529 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mehdi Snoussi &mdash; Software Engineer &amp; App Maker</title>
+<meta name="description" content="Mehdi Snoussi - full-stack software engineer from Mahdia, Tunisia. I build web apps, mobile apps with Flutter, and ship a growing portfolio of products." />
+<meta name="author" content="Mehdi Snoussi" />
+<meta property="og:title" content="Mehdi Snoussi - Software Engineer &amp; App Maker" />
+<meta property="og:description" content="Full-stack engineer. I design and ship web &amp; mobile products from idea to store." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23ff4d2e'/%3E%3Ctext x='50' y='72' font-family='Georgia,serif' font-size='62' font-weight='700' fill='%23f3ebdd' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --cream:#f3ebdd; --cream-2:#ece0cd; --sand:#e4d8c1;
+  --ink:#211913; --ink-soft:#6a5d4f; --line:rgba(33,25,19,.14);
+  --accent:#ff4d2e; --accent-deep:#d63310; --gold:#c2893a;
+  --serif:"Fraunces",Georgia,serif; --sans:"Hanken Grotesk",system-ui,sans-serif; --mono:"JetBrains Mono",monospace;
+  --maxw:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden;position:relative}
+::selection{background:var(--accent);color:var(--cream)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.02;letter-spacing:-.02em}
 
-  <title>Mehdi Portfolio</title>
-  <meta content="developer" name="description">
-  <meta content="developer" name="keywords">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5334744740093404"
-     crossorigin="anonymous"></script>
-  <!-- Favicons -->
-  <link href="assets/img/portfolio.png" rel="icon">
-  <link href="assets/img/portfolio.png" rel="apple-touch-icon">
+.orbs{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5}
+.orb.a{width:46vw;height:46vw;background:radial-gradient(circle,#ff7a4d,transparent 68%);top:-12vw;right:-8vw;animation:float1 22s ease-in-out infinite}
+.orb.b{width:40vw;height:40vw;background:radial-gradient(circle,#e9c073,transparent 70%);bottom:-10vw;left:-10vw;animation:float2 26s ease-in-out infinite}
+.orb.c{width:30vw;height:30vw;background:radial-gradient(circle,#ff4d2e,transparent 72%);top:42%;left:38%;opacity:.22;animation:float1 30s ease-in-out infinite reverse}
+@keyframes float1{50%{transform:translate(-4vw,5vw) scale(1.12)}}
+@keyframes float2{50%{transform:translate(5vw,-4vw) scale(1.08)}}
+.grain{position:fixed;inset:0;z-index:9990;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+.cursor{position:fixed;top:0;left:0;width:30px;height:30px;border:1.5px solid #fff;border-radius:50%;
+  transform:translate(-50%,-50%);pointer-events:none;z-index:9999;mix-blend-mode:difference;
+  transition:width .25s,height .25s,background .25s;will-change:transform}
+.cursor.big{width:64px;height:64px;background:#fff}
+@media (pointer:coarse){.cursor{display:none}}
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+section{position:relative}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep);font-weight:500}
+.seclabel{display:flex;align-items:center;gap:14px;margin-bottom:46px;font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.seclabel b{color:var(--ink)}
+.seclabel::after{content:"";flex:1;height:1px;background:var(--line)}
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:.4s}
+nav .bar{max-width:var(--maxw);margin:0 auto;padding:20px 28px;display:flex;align-items:center;justify-content:space-between}
+nav.scrolled{background:rgba(243,235,221,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav.scrolled .bar{padding:13px 28px}
+.brand{font-family:var(--serif);font-weight:700;font-size:1.32rem;letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
+.brand .dot{color:var(--accent)}
+.navlinks{display:flex;align-items:center;gap:30px;font-family:var(--mono);font-size:.8rem;letter-spacing:.04em}
+.navlinks a{position:relative;padding:4px 0;color:var(--ink-soft);transition:color .25s}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1.5px;background:var(--accent);transition:width .3s}
+.navlinks a:hover,.navlinks a.active{color:var(--ink)}
+.navlinks a:hover::after,.navlinks a.active::after{width:100%}
+.avail{display:inline-flex;align-items:center;gap:7px;color:var(--ink)}
+.avail .pulse{width:8px;height:8px;border-radius:50%;background:#2fbf71;box-shadow:0 0 0 0 rgba(47,191,113,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(47,191,113,0)}}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:30px;padding:9px 16px;font-family:var(--mono);font-size:.78rem;cursor:pointer;color:var(--ink)}
+.mobile-menu{position:fixed;inset:0;z-index:999;background:var(--ink);color:var(--cream);display:flex;flex-direction:column;justify-content:center;padding:0 32px;gap:6px;transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.2,1)}
+.mobile-menu.open{transform:translateY(0)}
+.mobile-menu a{font-family:var(--serif);font-size:clamp(2.4rem,12vw,4rem);font-weight:600;padding:6px 0;opacity:.5;transition:opacity .3s,transform .3s}
+.mobile-menu a:hover{opacity:1;transform:translateX(14px);color:var(--accent)}
+.mobile-menu .mm-foot{margin-top:36px;font-family:var(--mono);font-size:.8rem;opacity:.6;letter-spacing:.05em}
+
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:120px;padding-bottom:60px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;width:100%}
+.hero h1{font-size:clamp(3.6rem,11vw,9rem);font-weight:600;margin:18px 0 0}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln span{display:block;transform:translateY(110%);animation:rise .9s cubic-bezier(.16,1,.3,1) forwards}
+.hero h1 .ln:nth-child(2) span{animation-delay:.12s}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--accent)}
+@keyframes rise{to{transform:translateY(0)}}
+.hero-eyebrow{display:flex;align-items:center;gap:12px;opacity:0;animation:fade .8s .1s forwards}
+.hero-eyebrow .star{color:var(--accent);animation:spin 7s linear infinite;display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-sub{font-size:clamp(1.05rem,1.7vw,1.32rem);color:var(--ink-soft);max-width:34ch;margin-top:26px;opacity:0;animation:fade .8s .55s forwards}
+.hero-sub .roller{font-weight:700;color:var(--ink)}
+.hero-sub .roller b{color:var(--accent);font-weight:700}
+.cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;opacity:0;animation:fade .8s .72s forwards}
+.btn{font-family:var(--mono);font-size:.86rem;letter-spacing:.03em;padding:15px 26px;border-radius:40px;border:1.5px solid var(--ink);display:inline-flex;align-items:center;gap:9px;cursor:pointer;transition:transform .3s,background .3s,color .3s;will-change:transform}
+.btn.fill{background:var(--ink);color:var(--cream)}
+.btn.fill:hover{background:var(--accent);border-color:var(--accent)}
+.btn.ghost:hover{background:var(--ink);color:var(--cream)}
+.btn .arr{transition:transform .3s}
+.btn:hover .arr{transform:translate(3px,-3px)}
+@keyframes fade{to{opacity:1}}
+.hero-meta{display:flex;gap:30px;margin-top:46px;font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);letter-spacing:.04em;opacity:0;animation:fade .8s .9s forwards}
+.hero-meta b{color:var(--ink);display:block;font-size:.95rem;margin-top:3px}
+
+.hero-photo{position:relative;justify-self:center;opacity:0;animation:fade 1s .35s forwards}
+.pf{position:relative;width:min(380px,80vw);aspect-ratio:4/4.6;background:var(--sand);
+  border-radius:200px 200px 30px 30px;overflow:hidden;rotate:-2.5deg;
+  box-shadow:0 40px 80px -30px rgba(33,25,19,.5),inset 0 0 0 1px rgba(255,255,255,.4);transition:rotate .5s}
+.pf:hover{rotate:0deg}
+.pf img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.deco-ring{position:absolute;inset:-26px;border:1.5px dashed var(--accent);border-radius:50%;
+  width:min(440px,92vw);height:min(440px,92vw);top:50%;left:50%;transform:translate(-50%,-50%);
+  animation:spin 40s linear infinite;opacity:.5;z-index:-1}
+.deco-blob{position:absolute;width:160px;height:160px;background:var(--accent);border-radius:50%;bottom:-30px;left:-44px;z-index:-1;filter:blur(2px);opacity:.92}
+.sticker{position:absolute;top:6px;right:-18px;background:var(--ink);color:var(--cream);
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:10px 14px;border-radius:50%;width:104px;height:104px;display:flex;align-items:center;
+  text-align:center;rotate:12deg;line-height:1.3;box-shadow:0 14px 30px -12px rgba(0,0,0,.5)}
+.sticker b{color:var(--accent)}
+.scrollcue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-family:var(--mono);
+  font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);display:flex;
+  flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fade 1s 1.2s forwards}
+.scrollcue .l{width:1px;height:34px;background:var(--ink-soft);position:relative;overflow:hidden}
+.scrollcue .l::after{content:"";position:absolute;top:-34px;left:0;width:100%;height:34px;background:var(--accent);animation:drop 1.8s infinite}
+@keyframes drop{to{top:34px}}
+
+.marquee{background:var(--ink);color:var(--cream);padding:22px 0;overflow:hidden;white-space:nowrap;transform:rotate(-1deg) scale(1.04);margin:30px 0}
+.mq-track{display:inline-flex;animation:scrollx 28s linear infinite}
+.mq-track span{font-family:var(--serif);font-size:1.9rem;font-style:italic;font-weight:500;padding:0 26px;display:inline-flex;align-items:center;gap:26px}
+.mq-track span::after{content:"\2726";color:var(--accent);font-style:normal;font-size:1rem}
+@keyframes scrollx{to{transform:translateX(-50%)}}
+
+.block{padding:100px 0}
+.about-lead{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.9rem);font-weight:500;line-height:1.22;max-width:20ch;letter-spacing:-.02em}
+.about-lead em{font-style:italic;color:var(--accent)}
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:start}
+.about-body p{color:var(--ink-soft);font-size:1.06rem;margin-top:22px;max-width:46ch}
+.about-body p b{color:var(--ink);font-weight:600}
+.facts{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px}
+.chip{font-family:var(--mono);font-size:.76rem;border:1px solid var(--line);border-radius:30px;padding:8px 15px;color:var(--ink-soft)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.stat{background:var(--cream);padding:26px 22px}
+.stat .n{font-family:var(--serif);font-size:clamp(2.6rem,5vw,3.6rem);font-weight:700;line-height:1;color:var(--ink)}
+.stat .n .u{color:var(--accent)}
+.stat .t{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);margin-top:10px}
+
+.stack-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.scard{border:1px solid var(--line);border-radius:18px;padding:26px;background:linear-gradient(180deg,rgba(255,255,255,.4),transparent);transition:transform .35s,box-shadow .35s,border-color .35s}
+.scard:hover{transform:translateY(-8px);box-shadow:0 24px 44px -28px rgba(33,25,19,.45);border-color:var(--accent)}
+.scard h3{font-size:1.18rem;display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.scard h3 .ix{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:700}
+.scard ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.scard li{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);background:var(--cream-2);padding:6px 11px;border-radius:8px}
+
+.xp-item{border-top:1px solid var(--line);padding:26px 0;display:grid;grid-template-columns:170px 1fr;gap:30px;align-items:start;transition:background .3s}
+.xp-item:hover{background:rgba(255,255,255,.35)}
+.xp-item:last-child{border-bottom:1px solid var(--line)}
+.xp-when{font-family:var(--mono);font-size:.78rem;color:var(--accent-deep);letter-spacing:.03em;padding-top:5px}
+.xp-role{font-family:var(--serif);font-size:1.45rem;font-weight:600}
+.xp-co{font-family:var(--mono);font-size:.82rem;color:var(--ink-soft);margin-top:4px;letter-spacing:.03em}
+.xp-desc{color:var(--ink-soft);margin-top:12px;max-width:62ch;font-size:1rem}
+.xp-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:7px}
+.xp-tags span{font-family:var(--mono);font-size:.7rem;border:1px solid var(--line);padding:4px 9px;border-radius:20px;color:var(--ink-soft)}
+.edu{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.edu-card{border:1px solid var(--line);border-radius:16px;padding:24px;background:rgba(255,255,255,.3)}
+.edu-card .w{font-family:var(--mono);font-size:.74rem;color:var(--accent-deep)}
+.edu-card h4{font-family:var(--serif);font-size:1.25rem;font-weight:600;margin:8px 0 6px}
+.edu-card p{font-size:.92rem;color:var(--ink-soft)}
+
+.apps{background:var(--ink);color:var(--cream);padding:110px 0;position:relative;overflow:hidden}
+.apps .seclabel{color:rgba(243,235,221,.55)}
+.apps .seclabel b{color:var(--cream)}
+.apps .seclabel::after{background:rgba(243,235,221,.18)}
+.apps-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:50px}
+.apps-head h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600;max-width:14ch}
+.apps-head h2 em{font-style:italic;color:var(--accent)}
+.apps-head p{font-family:var(--mono);font-size:.82rem;color:rgba(243,235,221,.6);max-width:34ch;letter-spacing:.03em}
+.apps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.acard{background:rgba(255,255,255,.04);border:1px solid rgba(243,235,221,.1);border-radius:20px;padding:22px;transition:transform .35s cubic-bezier(.2,.8,.2,1),background .35s,border-color .35s}
+.acard:hover{transform:translateY(-10px);background:rgba(255,255,255,.08);border-color:var(--accent)}
+.acard img{width:60px;height:60px;border-radius:15px;box-shadow:0 12px 24px -10px rgba(0,0,0,.6)}
+.acard h4{font-family:var(--sans);font-weight:700;font-size:1.05rem;margin:18px 0 5px;letter-spacing:-.01em}
+.acard p{font-size:.86rem;color:rgba(243,235,221,.62);line-height:1.45}
+.acard .tag{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);border:1px solid rgba(255,77,46,.4);padding:4px 9px;border-radius:20px}
+.apps-note{margin-top:30px;font-family:var(--mono);font-size:.78rem;color:rgba(243,235,221,.5);text-align:center;letter-spacing:.05em}
+.apps-note a{color:var(--accent)}
+
+.builds-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.bcard{border:1px solid var(--line);border-radius:18px;padding:28px;background:rgba(255,255,255,.3);transition:transform .35s,box-shadow .35s}
+.bcard:hover{transform:translateY(-6px);box-shadow:0 22px 40px -26px rgba(33,25,19,.4)}
+.bcard .num{font-family:var(--mono);font-size:.78rem;color:var(--accent)}
+.bcard h4{font-family:var(--serif);font-size:1.4rem;font-weight:600;margin:10px 0 8px}
+.bcard p{font-size:.92rem;color:var(--ink-soft)}
+.bcard .st{margin-top:14px;font-family:var(--mono);font-size:.72rem;color:var(--ink-soft)}
+
+.contact{padding:120px 0 70px;text-align:center}
+.contact h2{font-size:clamp(2.8rem,9vw,7rem);font-weight:600;line-height:.98}
+.contact h2 em{font-style:italic;color:var(--accent)}
+.contact .lead{color:var(--ink-soft);max-width:46ch;margin:24px auto 0;font-size:1.1rem}
+.cmail{display:inline-flex;align-items:center;gap:12px;margin-top:40px;font-family:var(--serif);font-size:clamp(1.3rem,4vw,2.2rem);font-weight:500;border-bottom:2px solid var(--accent);padding-bottom:6px;transition:gap .3s}
+.cmail:hover{gap:20px}
+.cmail .arr{color:var(--accent);transition:transform .3s}
+.cmail:hover .arr{transform:translate(5px,-5px)}
+.cinfo{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:46px;font-family:var(--mono);font-size:.82rem;color:var(--ink-soft);letter-spacing:.03em}
+.cinfo b{color:var(--ink);display:block;margin-top:4px;font-size:.92rem}
+.socials{display:flex;justify-content:center;gap:14px;margin-top:40px}
+.socials a{width:48px;height:48px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .3s,background .3s,color .3s,border-color .3s}
+.socials a:hover{background:var(--ink);color:var(--cream);transform:translateY(-5px) rotate(-6deg);border-color:var(--ink)}
+.socials svg{width:19px;height:19px;fill:currentColor}
+
+footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);letter-spacing:.03em}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+footer .top{cursor:pointer;display:inline-flex;align-items:center;gap:7px;color:var(--ink);transition:gap .3s}
+footer .top:hover{gap:12px}
+
+[data-reveal]{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+[data-reveal].in{opacity:1;transform:none}
+[data-reveal].d1{transition-delay:.08s}[data-reveal].d2{transition-delay:.16s}[data-reveal].d3{transition-delay:.24s}[data-reveal].d4{transition-delay:.32s}
+
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-photo{order:-1;margin-top:30px}
+  .about-grid,.apps-grid,.builds-grid,.edu{grid-template-columns:1fr 1fr}
+  .stack-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  .navlinks,.avail{display:none}
+  .menu-btn{display:block}
+  .stack-grid,.apps-grid,.builds-grid,.edu,.about-grid{grid-template-columns:1fr}
+  .xp-item{grid-template-columns:1fr;gap:8px}
+  .hero-meta{flex-wrap:wrap;gap:22px}
+  .marquee .mq-track span{font-size:1.4rem}
+  .block{padding:70px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001s!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
+  [data-reveal]{opacity:1;transform:none}
+  .hero h1 .ln span{transform:none}
+  .orb,.deco-ring{animation:none}
+}
+</style>
+<noscript><style>[data-reveal]{opacity:1;transform:none}.hero h1 .ln span{transform:none}.cursor{display:none}</style></noscript>
 </head>
-
 <body>
-  <div class="spinner-wrapper">
-    <div class="spinner"></div>
+<div class="orbs"><span class="orb a"></span><span class="orb b"></span><span class="orb c"></span></div>
+<div class="grain"></div>
+<div class="cursor" id="cursor"></div>
+
+<nav id="nav">
+  <div class="bar">
+    <a href="#top" class="brand">Mehdi<span class="dot">.</span></a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#stack">Stack</a>
+      <a href="#work">Work</a>
+      <a href="#apps">Apps</a>
+      <a href="#contact">Contact</a>
+      <span class="avail"><span class="pulse"></span><span id="clock">--:--</span> &middot; Tunis</span>
+    </div>
+    <button class="menu-btn" id="menuBtn">Menu +</button>
   </div>
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#stack">Stack</a>
+  <a href="#work">Work</a>
+  <a href="#apps">Apps</a>
+  <a href="#contact">Contact</a>
+  <div class="mm-foot">apps.contact.supports@gmail.com<br>Mahdia, Tunisia</div>
+</div>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.png" alt="profile-img" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Mehdi Snoussi</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://github.com/Mehdi-Snoussi" class="github" target="_blank"><i class="bx bxl-github"></i></a>
-          <a href="https://www.facebook.com/mehdi11823/" class="facebook" target="_blank"><i
-              class="bx bxl-facebook"></i></a>
-          <a href="https://www.instagram.com/mehdi_snoussi/" class="instagram" target="_blank"><i
-              class="bx bxl-instagram"></i></a>
-          <a href="https://join.skype.com/invite/MRiFoqMbSXJX" class="google-plus" target="_blank"><i
-              class="bx bxl-skype"></i></a>
-          <a href="https://www.linkedin.com/in/snoussi-mehdi-b86abb17b/" class="linkedin" target="_blank"><i
-              class="bx bxl-linkedin"></i></a>
-        </div>
+<header class="hero wrap" id="top">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-eyebrow eyebrow"><span class="star">&#10022;</span> Software Engineer &middot; Mahdia, Tunisia</div>
+      <h1>
+        <span class="ln"><span>Mehdi</span></span>
+        <span class="ln"><span>Snoussi<em>.</em></span></span>
+      </h1>
+      <p class="hero-sub">I'm a full-stack engineer who designs and ships <span class="roller"><b id="roller">web apps</b></span> &mdash; from the first line of code to the store listing.</p>
+      <div class="cta">
+        <a href="#contact" class="btn fill" data-cursor>Let's talk <span class="arr">&#8599;</span></a>
+        <a href="#apps" class="btn ghost" data-cursor>See my work <span class="arr">&#8599;</span></a>
       </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-              <span>Portfolio</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+      <div class="hero-meta">
+        <div>Currently<b>Shipping 16 apps</b></div>
+        <div>Focus<b>Web &middot; Mobile &middot; UI</b></div>
+        <div>Status<b style="color:#2fbf71">Open to work</b></div>
+      </div>
     </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Mehdi Snoussi</h1>
-      <p>I'm <span class="typed" data-typed-items="Developer, Freelancer, Engineer"></span></p>
+    <div class="hero-photo">
+      <div class="deco-ring"></div>
+      <div class="deco-blob"></div>
+      <div class="pf"><img src="assets/me.png" alt="Portrait of Mehdi Snoussi" /></div>
+      <div class="sticker">Available<br>for<br><b>work &#10022;</b></div>
     </div>
-  </section><!-- End Hero -->
+  </div>
+  <div class="scrollcue">Scroll<span class="l"></span></div>
+</header>
 
-  <main id="main">
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    <span>Angular</span><span>Spring Boot</span><span>NestJS</span><span>TypeScript</span><span>Java</span><span>Flutter</span><span>Dart</span><span>RxJS &middot; NgRx</span><span>Figma</span><span>Git</span><span>REST APIs</span>
+    <span>Angular</span><span>Spring Boot</span><span>NestJS</span><span>TypeScript</span><span>Java</span><span>Flutter</span><span>Dart</span><span>RxJS &middot; NgRx</span><span>Figma</span><span>Git</span><span>REST APIs</span>
+  </div>
+</div>
 
-        <div class="section-title">
-          <h2>About</h2>
-        </div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5334744740093404"
-     crossorigin="anonymous"></script>
-<!-- header_ads -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5334744740093404"
-     data-ad-slot="3199142274"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+<section class="block wrap" id="about">
+  <div class="seclabel" data-reveal><b>(01)</b> &mdash; About</div>
+  <div class="about-grid">
+    <div class="about-body">
+      <p class="about-lead" data-reveal>I build <em>reliable, good-looking software</em> &mdash; and I take it all the way to shipped.</p>
+      <p class="d1" data-reveal>From <b>Mahdia on the Tunisian coast</b>, I've spent the last few years as a full-stack engineer &mdash; Angular and TypeScript on the front, Spring Boot and NestJS on the back &mdash; building HR platforms, estimation tools and showcase sites for companies in Sousse.</p>
+      <p class="d2" data-reveal>Lately I've gone solo on mobile: designing, coding and shipping a <b>portfolio of 16 cross-platform apps</b> with Flutter &mdash; utilities, games, AI tools &mdash; handling everything from architecture to the store listing and the privacy policy.</p>
+      <div class="facts d3" data-reveal>
+        <span class="chip">Mahdia, Tunisia</span>
+        <span class="chip">Arabic &middot; English &middot; French</span>
+        <span class="chip">Runs on coffee</span>
+        <span class="chip">Freelance available</span>
+      </div>
+    </div>
+    <div class="stats d1" data-reveal>
+      <div class="stat"><div class="n"><span class="num" data-to="16">0</span></div><div class="t">Apps built solo</div></div>
+      <div class="stat"><div class="n"><span class="num" data-to="4">0</span><span class="u">+</span></div><div class="t">Years engineering</div></div>
+      <div class="stat"><div class="n"><span class="num" data-to="3">0</span></div><div class="t">Languages shipped</div></div>
+      <div class="stat"><div class="n"><span class="u">&#8734;</span></div><div class="t">Cups of coffee</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block wrap" id="stack">
+  <div class="seclabel" data-reveal><b>(02)</b> &mdash; Stack</div>
+  <div class="stack-grid">
+    <div class="scard" data-reveal><h3><span class="ix">01</span> Frontend</h3><ul><li>Angular</li><li>TypeScript</li><li>RxJS</li><li>NgRx</li><li>HTML / CSS</li><li>Responsive UI</li></ul></div>
+    <div class="scard d1" data-reveal><h3><span class="ix">02</span> Backend</h3><ul><li>Spring Boot</li><li>NestJS</li><li>Java</li><li>REST APIs</li><li>Swagger</li><li>OAuth2</li></ul></div>
+    <div class="scard d2" data-reveal><h3><span class="ix">03</span> Mobile</h3><ul><li>Flutter</li><li>Dart</li><li>BLoC</li><li>Clean Arch</li><li>In-app purchase</li><li>AdMob</li></ul></div>
+    <div class="scard d3" data-reveal><h3><span class="ix">04</span> Toolbox</h3><ul><li>Git</li><li>Figma</li><li>Firebase</li><li>CI / CD</li><li>Heroku</li><li>Machine Learning</li></ul></div>
+  </div>
+</section>
+
+<section class="block wrap" id="work">
+  <div class="seclabel" data-reveal><b>(03)</b> &mdash; Experience</div>
+  <div class="xp">
+    <div class="xp-item" data-reveal>
+      <div class="xp-when">Present</div>
+      <div><div class="xp-role">Independent App Developer</div><div class="xp-co">Self-initiated &middot; Remote</div>
+      <p class="xp-desc">Designing, building and shipping a portfolio of 16 cross-platform apps with Flutter &mdash; handling product, UI, architecture, monetization, and store readiness end to end.</p>
+      <div class="xp-tags"><span>Flutter</span><span>Dart</span><span>BLoC</span><span>Firebase</span><span>AdMob</span></div></div>
+    </div>
+    <div class="xp-item" data-reveal>
+      <div class="xp-when">Feb 2023 &mdash; Jun 2023</div>
+      <div><div class="xp-role">End-of-Studies Project</div><div class="xp-co">TeamDev &middot; Sousse, Tunisia</div>
+      <p class="xp-desc">Built a platform for estimating product value, letting users request estimates across categories like real estate, vehicles and multimedia.</p>
+      <div class="xp-tags"><span>Angular</span><span>NestJS</span><span>NgRx</span><span>Figma</span><span>TypeScript</span></div></div>
+    </div>
+    <div class="xp-item" data-reveal>
+      <div class="xp-when">Jul 2022 &mdash; Aug 2022</div>
+      <div><div class="xp-role">Software Engineering Intern</div><div class="xp-co">TeamDev &middot; Sousse, Tunisia</div>
+      <p class="xp-desc">Designed and built the leave-management module of an HR platform with admin and collaborator roles &mdash; requests, approvals and tracking.</p>
+      <div class="xp-tags"><span>Angular</span><span>NestJS</span><span>GitLab</span><span>Figma</span><span>Heroku</span></div></div>
+    </div>
+    <div class="xp-item" data-reveal>
+      <div class="xp-when">Feb 2022 &mdash; May 2022</div>
+      <div><div class="xp-role">Web Developer Intern</div><div class="xp-co">CamelSoft &middot; Sousse, Tunisia</div>
+      <p class="xp-desc">Developed a responsive showcase website for an IT services company as part of a client project.</p>
+      <div class="xp-tags"><span>Angular</span><span>Spring Boot</span><span>Swagger</span><span>GitHub</span></div></div>
+    </div>
+    <div class="xp-item" data-reveal>
+      <div class="xp-when">Feb 2020 &mdash; Jun 2020</div>
+      <div><div class="xp-role">Engineering Intern</div><div class="xp-co">Sartex &middot; Monastir, Tunisia</div>
+      <p class="xp-desc">Studied and designed a safety system for monitoring ambient ozone levels.</p>
+      <div class="xp-tags"><span>Electronics</span><span>Embedded</span></div></div>
+    </div>
+  </div>
+  <div class="edu">
+    <div class="edu-card" data-reveal><div class="w">2020 &mdash; 2023</div><h4>Software Engineering Degree</h4><p>International Multidisciplinary School (EPI)</p></div>
+    <div class="edu-card d1" data-reveal><div class="w">2017 &mdash; 2020</div><h4>Electronics &amp; Industrial Computing</h4><p>Higher Institute of Applied Science &amp; Technology (ISSAT)</p></div>
+  </div>
+</section>
+
+<section class="apps" id="apps">
+  <div class="wrap">
+    <div class="seclabel" data-reveal><b>(04)</b> &mdash; The app shelf</div>
+    <div class="apps-head">
+      <h2 data-reveal>Sixteen apps,<br>built <em>solo.</em></h2>
+      <p class="d1" data-reveal>A self-initiated portfolio designed, coded and shipped end-to-end with Flutter. Utilities, games and AI tools &mdash; all heading to Google Play.</p>
+    </div>
+    <div class="apps-grid">
+      <div class="acard" data-reveal><img src="assets/apps/dhikr.png" alt="Dhikr icon"><h4>Dhikr</h4><p>Islamic companion &mdash; prayer times, Quran, azkar &amp; Qibla.</p><span class="tag">Utility</span></div>
+      <div class="acard d1" data-reveal><img src="assets/apps/scrollia.png" alt="Scrollia icon"><h4>Scrollia</h4><p>Webnovel reader for original Romance &amp; LitRPG fiction.</p><span class="tag">Reader</span></div>
+      <div class="acard d2" data-reveal><img src="assets/apps/mycar.png" alt="MyCar icon"><h4>MyCar</h4><p>Car expense &amp; maintenance tracker with drive score.</p><span class="tag">Utility</span></div>
+      <div class="acard d3" data-reveal><img src="assets/apps/sortflow.png" alt="SortFlow icon"><h4>SortFlow</h4><p>Addictive color-sort puzzle game with daily levels.</p><span class="tag">Game</span></div>
+      <div class="acard" data-reveal><img src="assets/apps/aimystic.png" alt="AI Mystic icon"><h4>AI Mystic</h4><p>AI tarot &amp; astrology with shareable cosmic cards.</p><span class="tag">AI</span></div>
+      <div class="acard d1" data-reveal><img src="assets/apps/thock.png" alt="Thock icon"><h4>Thock</h4><p>Measure your mechanical keyboard's sound, on-device.</p><span class="tag">Tool</span></div>
+      <div class="acard d2" data-reveal><img src="assets/apps/wallio.png" alt="Wallio icon"><h4>Wallio</h4><p>Wallpaper discovery with auto-change &amp; favorites.</p><span class="tag">Utility</span></div>
+      <div class="acard d3" data-reveal><img src="assets/apps/mathcam.png" alt="MathCam icon"><h4>MathCam</h4><p>Snap a math problem, get step-by-step AI solutions.</p><span class="tag">AI</span></div>
+      <div class="acard" data-reveal><img src="assets/apps/snapcal.png" alt="SnapCal icon"><h4>SnapCal</h4><p>AI food scanner that estimates calories from a photo.</p><span class="tag">AI</span></div>
+      <div class="acard d1" data-reveal><img src="assets/apps/leafsnap.png" alt="LeafSnap icon"><h4>LeafSnap</h4><p>Identify plants instantly with AI vision.</p><span class="tag">AI</span></div>
+      <div class="acard d2" data-reveal><img src="assets/apps/breedlens.png" alt="BreedLens icon"><h4>BreedLens</h4><p>AI dog-breed identifier from a single snapshot.</p><span class="tag">AI</span></div>
+      <div class="acard d3" data-reveal><img src="assets/apps/mangaverse.png" alt="MangaVerse icon"><h4>MangaVerse</h4><p>Discover &amp; track manga across your reading list.</p><span class="tag">Reader</span></div>
+      <div class="acard" data-reveal><img src="assets/apps/cutout.png" alt="CutOut icon"><h4>CutOut</h4><p>One-tap background remover powered by on-device ML.</p><span class="tag">Tool</span></div>
+      <div class="acard d1" data-reveal><img src="assets/apps/pixelup.png" alt="PixelUp icon"><h4>PixelUp</h4><p>Photo enhancer for sharper, brighter pictures.</p><span class="tag">Tool</span></div>
+      <div class="acard d2" data-reveal><img src="assets/apps/pawpulse.png" alt="PawPulse icon"><h4>PawPulse</h4><p>Pet health tracker with reminders &amp; logs.</p><span class="tag">Utility</span></div>
+      <div class="acard d3" data-reveal><img src="assets/apps/creepid.png" alt="CreepID icon"><h4>CreepID</h4><p>Educational wildlife identifier for the curious.</p><span class="tag">AI</span></div>
+    </div>
+    <p class="apps-note" data-reveal>&#10022; In active development &mdash; privacy policies live at <a href="/legal/">/legal</a> &#10022;</p>
+  </div>
+</section>
+
+<section class="block wrap" id="builds">
+  <div class="seclabel" data-reveal><b>(05)</b> &mdash; Also built</div>
+  <div class="builds-grid">
+    <div class="bcard" data-reveal><div class="num">/01</div><h4>Employee Manager</h4><p>A full employee-management web app with dashboards and role-based access.</p><div class="st">Angular &middot; Spring Boot &middot; Heroku</div></div>
+    <div class="bcard d1" data-reveal><div class="num">/02</div><h4>Spotify Clone</h4><p>A music-streaming UI built on the Spotify API with OAuth2 login.</p><div class="st">Angular &middot; Spotify API &middot; OAuth2</div></div>
+    <div class="bcard d2" data-reveal><div class="num">/03</div><h4>Quiz Game</h4><p>A native Android quiz game with scoring and categories.</p><div class="st">Android &middot; Java</div></div>
+  </div>
+</section>
+
+<section class="contact wrap" id="contact">
+  <div class="eyebrow" data-reveal>&#10022; Let's work together</div>
+  <h2 class="d1" data-reveal>Got an idea?<br>Let's <em>ship</em> it.</h2>
+  <p class="lead d2" data-reveal>Open to freelance projects, collaborations, and full-time roles. The fastest way to reach me is email.</p>
+  <a href="mailto:snoussimehdi0@gmail.com" class="cmail d2" data-cursor data-reveal>snoussimehdi0@gmail.com <span class="arr">&#8599;</span></a>
+  <div class="cinfo d3" data-reveal>
+    <div>Location<b>Mahdia, Tunisia</b></div>
+    <div>Phone<b>(+216) 93 722 113</b></div>
+    <div>Availability<b style="color:#2fbf71">Open to work</b></div>
+  </div>
+  <div class="socials d3" data-reveal>
+    <a href="https://github.com/Mehdi-Snoussi" target="_blank" rel="noopener" aria-label="GitHub" data-cursor><svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></a>
+    <a href="https://www.linkedin.com/in/snoussi-mehdi-b86abb17b/" target="_blank" rel="noopener" aria-label="LinkedIn" data-cursor><svg viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5V8h3v11zM6.5 6.7a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zM19 19h-3v-5.6c0-1.3-.5-2.2-1.7-2.2-.9 0-1.5.6-1.7 1.2-.1.2-.1.5-.1.8V19h-3V8h3v1.3c.4-.6 1.1-1.5 2.8-1.5 2 0 3.5 1.3 3.5 4.2V19z"/></svg></a>
+    <a href="https://www.instagram.com/mehdi_snoussi/" target="_blank" rel="noopener" aria-label="Instagram" data-cursor><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4a3.8 3.8 0 0 1-1.4-.9 3.8 3.8 0 0 1-.9-1.4c-.2-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-.9 0-1.4.2-1.7.3-.4.2-.7.4-1 .7-.3.3-.5.6-.7 1-.1.3-.3.8-.3 1.7-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c0 .9.2 1.4.3 1.7.2.4.4.7.7 1 .3.3.6.5 1 .7.3.1.8.3 1.7.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c.9 0 1.4-.2 1.7-.3.4-.2.7-.4 1-.7.3-.3.5-.6.7-1 .1-.3.3-.8.3-1.7.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c0-.9-.2-1.4-.3-1.7a2.7 2.7 0 0 0-.7-1 2.7 2.7 0 0 0-1-.7c-.3-.1-.8-.3-1.7-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.2-8.2a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg></a>
+    <a href="https://www.facebook.com/mehdi11823/" target="_blank" rel="noopener" aria-label="Facebook" data-cursor><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Mehdi Snoussi &mdash; Built from scratch in Mahdia</span>
+    <span class="top" id="toTop">Back to top &#8593;</span>
+  </div>
+</footer>
+
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+(function(){
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasIO = 'IntersectionObserver' in window;
+
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 40); };
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  var mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
+  mb.addEventListener('click', function(){
+    var open = mm.classList.toggle('open');
+    mb.textContent = open ? 'Close ×' : 'Menu +';
+  });
+  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mm.classList.remove('open'); mb.textContent='Menu +'; }); });
+
+  var clock = document.getElementById('clock');
+  function tick(){
+    try{ clock.textContent = new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Africa/Tunis'}).format(new Date()); }
+    catch(e){ clock.textContent=''; }
+  }
+  tick(); setInterval(tick, 10000);
+
+  var words = ['web apps','mobile apps','clean interfaces','things that ship'];
+  var i = 0, roller = document.getElementById('roller');
+  if(!rm && roller) setInterval(function(){
+    i = (i+1)%words.length;
+    roller.style.transition='opacity .3s'; roller.style.opacity = 0;
+    setTimeout(function(){ roller.textContent = words[i]; roller.style.opacity = 1; }, 300);
+  }, 2300);
+
+  var reveals = document.querySelectorAll('[data-reveal]');
+  if(hasIO && !rm){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  function countUp(el){
+    var to = +el.dataset.to, d = 1400, s = null;
+    function step(t){ if(!s) s=t; var p=Math.min((t-s)/d,1);
+      el.textContent = Math.floor((1-Math.pow(1-p,3))*to); if(p<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  var nums = document.querySelectorAll('.num');
+  if(hasIO && !rm){
+    var cio = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ countUp(e.target); cio.unobserve(e.target); } });
+    }, {threshold:.6});
+    nums.forEach(function(el){ cio.observe(el); });
+  } else {
+    nums.forEach(function(el){ el.textContent = el.dataset.to; });
+  }
+
+  if(hasIO){
+    var links = [].slice.call(document.querySelectorAll('.navlinks a'));
+    var nio = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){ links.forEach(function(l){ l.classList.toggle('active', l.getAttribute('href')==='#'+e.target.id); }); }
+      });
+    }, {threshold:.5});
+    links.forEach(function(l){ var s=document.querySelector(l.getAttribute('href')); if(s) nio.observe(s); });
+  }
+
+  if(!rm && window.matchMedia('(pointer:fine)').matches){
+    var cur = document.getElementById('cursor'), cx=0,cy=0,tx=0,ty=0;
+    window.addEventListener('mousemove', function(e){ tx=e.clientX; ty=e.clientY; });
+    (function loop(){ cx+=(tx-cx)*.18; cy+=(ty-cy)*.18; cur.style.transform='translate('+cx+'px,'+cy+'px) translate(-50%,-50%)'; requestAnimationFrame(loop); })();
+    document.querySelectorAll('a,button,[data-cursor]').forEach(function(el){
+      el.addEventListener('mouseenter', function(){ cur.classList.add('big'); });
+      el.addEventListener('mouseleave', function(){ cur.classList.remove('big'); });
+    });
+    document.querySelectorAll('.btn').forEach(function(b){
+      b.addEventListener('mousemove', function(e){ var r=b.getBoundingClientRect();
+        b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.25)+'px,'+((e.clientY-r.top-r.height/2)*.35)+'px)'; });
+      b.addEventListener('mouseleave', function(){ b.style.transform=''; });
+    });
+  } else { var c=document.getElementById('cursor'); if(c) c.style.display='none'; }
+
+  document.getElementById('toTop').addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+})();
 </script>
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Software Developer.</h3>
-            <p class="fst-italic">
-              Experienced software engineer with a passion for developing innovative programs that expedite the
-              efficiency and effectiveness of organizational success. Well-versed in technology and writing code to
-              create systems that are reliable and user-friendly.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>21 November 1997</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>CV:</strong>
-                    <span>   <a href="assets/mehdi-resume.pdf" download="mehdi_snoussi_cv" target="_blank">Download</a></span>
-                  </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>93 722 113</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Mahdia, Tunisia</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Speciality:</strong> <span>Software Developer</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Engineer</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>snoussimehdi0@gmail.com</span>
-                  </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-        </div>
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">Angular <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Spring Boot <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">NestJs <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Machine Learning <i class="val">50%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Java <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-<!--             <div class="progress">
-              <span class="skill">Java <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div> -->
-
-            <div class="progress">
-              <span class="skill">Git <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Figma <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Flutter <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">TypeScript <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section><!-- End Skills Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Mehdi Snoussi</h4>
-              <p><em>I am a driven individual with the ability to adapt to any situation and proven potential
-                  to grow others and myself.</em></p>
-              <ul>
-                <li>Mahdia, Tunisia</li>
-                <li>(+216) 93 722 113</li>
-                <li>snoussimehdi0@gmail.com</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Software engineer</h4>
-              <h5>2020 - 2023</h5>
-              <p><em>International Multidisciplinary School (EPI)</em></p>
-            </div>
-            <div class="resume-item">
-              <h4>Degree in electronics &amp; industrial computing</h4>
-              <h5>2017 - 2020</h5>
-              <p><em>Higher Institute of Applied Science and Technology (ISSAT)</em></p>
-            </div>
-
-            <h3 class="resume-title">Personal Projects</h3>
-            <div class="resume-item">
-              <h4>Employee management website</h4>
-              <ul>
-                <li>Link to the website:
-                  <a href="https://employees-manager-v1.herokuapp.com" target="_blank">
-                    https://employees-manager-v1.herokuapp.com
-                  </a>
-                </li>
-                <li>Angular / SpringBoot / Heroku / GitHub</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Spotify Clone</h4>
-              <ul>
-                <li>Link to the website:
-                  <a href="https://spotify-clone-challange.herokuapp.com/" target="_blank">
-                    https://spotify-clone-challange.herokuapp.com
-                  </a>
-                </li>
-                <li>Angular / SpotifyApi / Heroku / Oauth2 / GitHub</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Quiz App</h4>
-              <ul>
-                <li>Develop a quiz game mobile application.</li>
-                <li>Android Studio / Java</li>
-              </ul>
-            </div>
-
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>End of studies project at TeamDev company</h4>
-              <h5>Feb 2023 - Jun 2023 </h5>
-              <p><em>Sousse, Tunisia </em></p>
-              <ul>
-                <li>Construct and devise a platform for estimating the value of products. </li>
-                <li>The platform will empower users to request
-                  estimates for their desired products by selecting a 
-                  category, such as real estate, vehicles, multimedia, 
-                  and more.</li>
-                <li>- Angular / NestJs / Git / NgRx / Figma / Ts </li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Intern at TeamDev company</h4>
-              <h5>Jul 2022 - Aug 2022 </h5>
-              <p><em>Sousse, Tunisia </em></p>
-              <ul>
-                <li>Develop and design a human resources platform. </li>
-                <li>I was tasked with the time leave management part.
-                  The application contains two roles both the admin and the
-                  collaborator with the collaborator can send a leave request, and the admin can manage them.</li>
-                <li>Angular / Nest Js / GitLab / Figma / Heroku</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Intern at CamelSoft company</h4>
-              <h5>Feb 2022 - May 2022</h5>
-              <p><em>Sousse, Tunisia</em></p>
-              <ul>
-                <li>Develop and design a showcase website for an IT company.</li>
-                <li>As part of a client project, my mission in Camel Soft was to develop a responsive website for
-                  an IT company named Creative which offers a number of online IT services like creating mobile apps,
-                  websites, digital marketing...
-                </li>
-                <li>Angular / SpringBoot / Github / Swagger</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Intern at Sartex entreprise</h4>
-              <h5>Feb 2020 - Jun 2020</h5>
-              <p><em>Monastir, Tunisia</em></p>
-              <ul>
-                <li>Study and design of a safety system for the level of ozone in the ambient environment.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>This Portfolio section showcases projects I've worked on throughout my coding years.</p>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <!-- <li data-filter=".filter-card">Card</li> -->
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio1.png" class="img-fluid" alt="img">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio1-video.webm" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox">Watch Video</i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio5.png" class="img-fluid" alt="img">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio5-video.webm" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox">Watch Video</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio3.png" class="img-fluid" alt="img">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio3-video.webm" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox">Watch Video</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio6.png" class="img-fluid" alt="img">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio6-video.webm" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox">Watch Video</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio2.png" class="img-fluid" alt="img">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio2.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox"><i class="bx bx-zoom-in"></i></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio4.png" class="img-fluid" alt="img" style="width: 60%;">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio4-video.webm" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox">Watch Video</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-6 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>mahdia, Mahdia, 5100</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>snoussimehdi0@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>(+216) 93 722 113</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 d-flex align-items-stretch">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.9601906135404!2d11.062446015078564!3d35.505262580235744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130223f0c4e5b2dd%3A0x81ff916c2e3256c4!2sMahdia%20Center%2C%20Mahdia!5e0!3m2!1sen!2stn!4v1662997796051!5m2!1sen!2stn"
-              width="100%" height="290" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5334744740093404"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="autorelaxed"
-     data-ad-client="ca-pub-5334744740093404"
-     data-ad-slot="9965475575"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>2023</span></strong>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
 </body>
-
 </html>
