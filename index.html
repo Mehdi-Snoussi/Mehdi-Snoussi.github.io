@@ -3,409 +3,980 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mehdi Snoussi &mdash; Software Engineer &amp; App Maker</title>
-<meta name="description" content="Mehdi Snoussi - full-stack software engineer from Mahdia, Tunisia. I build web apps, mobile apps with Flutter, and ship a growing portfolio of products." />
+<title>Mehdi Snoussi &mdash; I build and ship mobile apps, solo</title>
+<meta name="description" content="I take mobile apps from empty repo to signed release — Flutter and React Native, plus the backend behind them. One engineer, architecture through store submission. Based in Mahdia, Tunisia." />
 <meta name="author" content="Mehdi Snoussi" />
-<meta property="og:title" content="Mehdi Snoussi - Software Engineer &amp; App Maker" />
-<meta property="og:description" content="Full-stack engineer. I design and ship web &amp; mobile products from idea to store." />
+<meta property="og:title" content="Mehdi Snoussi — I build and ship mobile apps, solo" />
+<meta property="og:description" content="From empty repo to signed release: Flutter &amp; React Native apps and the backends behind them. Six apps built end to end by one person." />
 <meta property="og:type" content="website" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23ff4d2e'/%3E%3Ctext x='50' y='72' font-family='Georgia,serif' font-size='62' font-weight='700' fill='%23f3ebdd' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+<meta property="og:url" content="https://mehdi-snoussi.github.io/" />
+<meta name="theme-color" content="#E7E8E2" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2314161A'/%3E%3Crect x='8' y='8' width='84' height='84' fill='none' stroke='%231A33DC' stroke-width='5'/%3E%3Ctext x='50' y='68' font-family='monospace' font-size='52' font-weight='700' fill='%23E7E8E2' text-anchor='middle'%3EMS%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --cream:#f3ebdd; --cream-2:#ece0cd; --sand:#e4d8c1;
-  --ink:#211913; --ink-soft:#6a5d4f; --line:rgba(33,25,19,.14);
-  --accent:#ff4d2e; --accent-deep:#d63310; --gold:#c2893a;
-  --serif:"Fraunces",Georgia,serif; --sans:"Hanken Grotesk",system-ui,sans-serif; --mono:"JetBrains Mono",monospace;
-  --maxw:1200px;
+  --paper:#E7E8E2; --paper-2:#DEDFD8; --card:#F3F4EF; --cream:#F3F4EF;
+  --ink:#14161A; --ink-2:#4E545C; --ink-3:#63686F;
+  --rule:#C4C7BF; --hair:#D4D6CF;
+  --signal:#1A33DC; --signal-2:#0E1F97; --ok:#0B7A45;
+  --sans:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --maxw:1180px; --gut:26px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden;position:relative}
-::selection{background:var(--accent);color:var(--cream)}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);
+  font-size:16px;line-height:1.55;overflow-x:hidden;
+  background-image:linear-gradient(var(--hair) 1px,transparent 1px),linear-gradient(90deg,var(--hair) 1px,transparent 1px);
+  background-size:64px 64px;background-position:-1px -1px}
+::selection{background:var(--signal);color:#fff}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.02;letter-spacing:-.02em}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+.close :focus-visible,.apps :focus-visible{outline-color:var(--cream)}
 
-.orbs{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
-.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5}
-.orb.a{width:46vw;height:46vw;background:radial-gradient(circle,#ff7a4d,transparent 68%);top:-12vw;right:-8vw;animation:float1 22s ease-in-out infinite}
-.orb.b{width:40vw;height:40vw;background:radial-gradient(circle,#e9c073,transparent 70%);bottom:-10vw;left:-10vw;animation:float2 26s ease-in-out infinite}
-.orb.c{width:30vw;height:30vw;background:radial-gradient(circle,#ff4d2e,transparent 72%);top:42%;left:38%;opacity:.22;animation:float1 30s ease-in-out infinite reverse}
-@keyframes float1{50%{transform:translate(-4vw,5vw) scale(1.12)}}
-@keyframes float2{50%{transform:translate(5vw,-4vw) scale(1.08)}}
-.grain{position:fixed;inset:0;z-index:9990;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+section[id],main[id]{scroll-margin-top:72px}
+.mono{font-family:var(--mono)}
+.sheet{position:relative;padding:74px 0 78px}
+.sheet + .sheet{border-top:1px solid var(--rule)}
 
-.cursor{position:fixed;top:0;left:0;width:30px;height:30px;border:1.5px solid #fff;border-radius:50%;
-  transform:translate(-50%,-50%);pointer-events:none;z-index:9999;mix-blend-mode:difference;
-  transition:width .25s,height .25s,background .25s;will-change:transform}
-.cursor.big{width:64px;height:64px;background:#fff}
-@media (pointer:coarse){.cursor{display:none}}
+/* ── title block: the document device the whole page is built on ───── */
+.tb{display:flex;align-items:stretch;gap:0;margin-bottom:44px;border:1px solid var(--ink);background:var(--card)}
+.tb-no{flex:0 0 auto;background:var(--ink);color:var(--paper);padding:9px 13px;
+  font-family:var(--mono);font-size:.7rem;font-weight:600;letter-spacing:.12em;display:flex;align-items:center}
+.tb-ttl{flex:1 1 auto;padding:9px 15px;font-family:var(--mono);font-size:.72rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;min-width:0}
 
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-section{position:relative}
-.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep);font-weight:500}
-.seclabel{display:flex;align-items:center;gap:14px;margin-bottom:46px;font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
-.seclabel b{color:var(--ink)}
-.seclabel::after{content:"";flex:1;height:1px;background:var(--line)}
+/* ── masthead ───────────────────────────────────────────────────────── */
+.mast{position:sticky;top:0;z-index:100;background:rgba(231,232,226,.93);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--ink)}
+.mast-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);display:flex;align-items:center;gap:20px;height:54px}
+.mast .id{font-family:var(--mono);font-weight:600;font-size:.82rem;letter-spacing:.14em;white-space:nowrap}
+.mast .id b{color:var(--signal)}
+.mast .meta{display:flex;gap:22px;margin-left:auto;font-family:var(--mono);font-size:.68rem;
+  letter-spacing:.1em;color:var(--ink-2);white-space:nowrap}
+.mast .meta i{font-style:normal;color:var(--ink)}
+.mast .cta{flex:0 0 auto}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ok);margin-right:7px;
+  vertical-align:middle;animation:blip 2.4s ease-in-out infinite}
+@keyframes blip{50%{opacity:.35}}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:.4s}
-nav .bar{max-width:var(--maxw);margin:0 auto;padding:20px 28px;display:flex;align-items:center;justify-content:space-between}
-nav.scrolled{background:rgba(243,235,221,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-nav.scrolled .bar{padding:13px 28px}
-.brand{font-family:var(--serif);font-weight:700;font-size:1.32rem;letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
-.brand .dot{color:var(--accent)}
-.navlinks{display:flex;align-items:center;gap:30px;font-family:var(--mono);font-size:.8rem;letter-spacing:.04em}
-.navlinks a{position:relative;padding:4px 0;color:var(--ink-soft);transition:color .25s}
-.navlinks a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1.5px;background:var(--accent);transition:width .3s}
-.navlinks a:hover,.navlinks a.active{color:var(--ink)}
-.navlinks a:hover::after,.navlinks a.active::after{width:100%}
-.avail{display:inline-flex;align-items:center;gap:7px;color:var(--ink)}
-.avail .pulse{width:8px;height:8px;border-radius:50%;background:#2fbf71;box-shadow:0 0 0 0 rgba(47,191,113,.6);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(47,191,113,0)}}
-.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:30px;padding:9px 16px;font-family:var(--mono);font-size:.78rem;cursor:pointer;color:var(--ink)}
-.mobile-menu{position:fixed;inset:0;z-index:999;background:var(--ink);color:var(--cream);display:flex;flex-direction:column;justify-content:center;padding:0 32px;gap:6px;transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.2,1)}
-.mobile-menu.open{transform:translateY(0)}
-.mobile-menu a{font-family:var(--serif);font-size:clamp(2.4rem,12vw,4rem);font-weight:600;padding:6px 0;opacity:.5;transition:opacity .3s,transform .3s}
-.mobile-menu a:hover{opacity:1;transform:translateX(14px);color:var(--accent)}
-.mobile-menu .mm-foot{margin-top:36px;font-family:var(--mono);font-size:.8rem;opacity:.6;letter-spacing:.05em}
+/* ── buttons ────────────────────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-weight:600;
+  font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:12px 18px;border:1px solid var(--ink);
+  background:var(--ink);color:var(--paper);cursor:pointer;transition:background .18s,color .18s,transform .18s}
+.btn:hover{background:var(--signal);border-color:var(--signal);transform:translate(-2px,-2px);
+  box-shadow:4px 4px 0 var(--ink)}
+.btn.sm{padding:9px 13px;font-size:.7rem;letter-spacing:.09em}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);box-shadow:4px 4px 0 var(--signal)}
+.btn .ar{transition:transform .18s}
+.btn:hover .ar{transform:translateX(3px)}
 
-.hero{min-height:100vh;display:flex;align-items:center;padding-top:120px;padding-bottom:60px}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;width:100%}
-.hero h1{font-size:clamp(3.6rem,11vw,9rem);font-weight:600;margin:18px 0 0}
-.hero h1 .ln{display:block;overflow:hidden}
-.hero h1 .ln span{display:block;transform:translateY(110%);animation:rise .9s cubic-bezier(.16,1,.3,1) forwards}
-.hero h1 .ln:nth-child(2) span{animation-delay:.12s}
-.hero h1 em{font-style:italic;font-weight:500;color:var(--accent)}
-@keyframes rise{to{transform:translateY(0)}}
-.hero-eyebrow{display:flex;align-items:center;gap:12px;opacity:0;animation:fade .8s .1s forwards}
-.hero-eyebrow .star{color:var(--accent);animation:spin 7s linear infinite;display:inline-block}
-@keyframes spin{to{transform:rotate(360deg)}}
-.hero-sub{font-size:clamp(1.05rem,1.7vw,1.32rem);color:var(--ink-soft);max-width:34ch;margin-top:26px;opacity:0;animation:fade .8s .55s forwards}
-.hero-sub .roller{font-weight:700;color:var(--ink)}
-.hero-sub .roller b{color:var(--accent);font-weight:700}
-.cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;opacity:0;animation:fade .8s .72s forwards}
-.btn{font-family:var(--mono);font-size:.86rem;letter-spacing:.03em;padding:15px 26px;border-radius:40px;border:1.5px solid var(--ink);display:inline-flex;align-items:center;gap:9px;cursor:pointer;transition:transform .3s,background .3s,color .3s;will-change:transform}
-.btn.fill{background:var(--ink);color:var(--cream)}
-.btn.fill:hover{background:var(--accent);border-color:var(--accent)}
-.btn.ghost:hover{background:var(--ink);color:var(--cream)}
-.btn .arr{transition:transform .3s}
-.btn:hover .arr{transform:translate(3px,-3px)}
-@keyframes fade{to{opacity:1}}
-.hero-meta{display:flex;gap:30px;margin-top:46px;font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);letter-spacing:.04em;opacity:0;animation:fade .8s .9s forwards}
-.hero-meta b{color:var(--ink);display:block;font-size:.95rem;margin-top:3px}
+/* ── hero ───────────────────────────────────────────────────────────── */
+.hero{padding:66px 0 78px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:52px;align-items:start}
+.kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--signal-2);font-weight:600;margin-bottom:22px}
+.hero h1{font-size:clamp(2.35rem,5.6vw,4.25rem);line-height:1.02;font-weight:700;letter-spacing:-.033em;max-width:15ch}
+.hero h1 u{text-decoration:none;background:linear-gradient(transparent 62%,rgba(26,51,220,.22) 62%)}
+.hero .lede{margin-top:26px;font-size:1.12rem;line-height:1.6;color:var(--ink-2);max-width:56ch}
+.hero .lede b{color:var(--ink);font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:32px}
+.hero-cta .note{font-family:var(--mono);font-size:.72rem;color:var(--ink-2);letter-spacing:.04em}
+.portrait{border:1px solid var(--ink);background:var(--card);padding:9px}
+.portrait img{width:100%;height:auto;display:block}
+.portrait .cap{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;color:var(--ink-2);
+  padding:9px 2px 2px;display:flex;justify-content:space-between;gap:8px}
 
-.hero-photo{position:relative;justify-self:center;opacity:0;animation:fade 1s .35s forwards}
-.pf{position:relative;width:min(380px,80vw);aspect-ratio:4/4.6;background:var(--sand);
-  border-radius:200px 200px 30px 30px;overflow:hidden;rotate:-2.5deg;
-  box-shadow:0 40px 80px -30px rgba(33,25,19,.5),inset 0 0 0 1px rgba(255,255,255,.4);transition:rotate .5s}
-.pf:hover{rotate:0deg}
-.pf img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
-.deco-ring{position:absolute;inset:-26px;border:1.5px dashed var(--accent);border-radius:50%;
-  width:min(440px,92vw);height:min(440px,92vw);top:50%;left:50%;transform:translate(-50%,-50%);
-  animation:spin 40s linear infinite;opacity:.5;z-index:-1}
-.deco-blob{position:absolute;width:160px;height:160px;background:var(--accent);border-radius:50%;bottom:-30px;left:-44px;z-index:-1;filter:blur(2px);opacity:.92}
-.sticker{position:absolute;top:6px;right:-18px;background:var(--ink);color:var(--cream);
-  font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;
-  padding:10px 14px;border-radius:50%;width:104px;height:104px;display:flex;align-items:center;
-  text-align:center;rotate:12deg;line-height:1.3;box-shadow:0 14px 30px -12px rgba(0,0,0,.5)}
-.sticker b{color:var(--accent)}
-.scrollcue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-family:var(--mono);
-  font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);display:flex;
-  flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fade 1s 1.2s forwards}
-.scrollcue .l{width:1px;height:34px;background:var(--ink-soft);position:relative;overflow:hidden}
-.scrollcue .l::after{content:"";position:absolute;top:-34px;left:0;width:100%;height:34px;background:var(--accent);animation:drop 1.8s infinite}
-@keyframes drop{to{top:34px}}
+/* ── spec table ─────────────────────────────────────────────────────── */
+.spec{margin-top:52px;border:1px solid var(--ink);background:var(--card)}
+.spec-h{display:flex;font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--ink);color:var(--paper)}
+.spec-h span,.spec-r span{flex:1 1 0;padding:8px 14px;min-width:0}
+.spec-r{display:flex;font-weight:600}
+.spec-r span{font-size:clamp(1.05rem,2.1vw,1.5rem);letter-spacing:-.02em;padding:14px;
+  border-left:1px solid var(--rule)}
+.spec-r span:first-child,.spec-h span:first-child{border-left:0}
+.spec-r span i{display:block;font-style:normal;font-family:var(--mono);font-size:.68rem;font-weight:500;
+  letter-spacing:.06em;color:var(--ink-2);margin-top:5px}
 
-.marquee{background:var(--ink);color:var(--cream);padding:22px 0;overflow:hidden;white-space:nowrap;transform:rotate(-1deg) scale(1.04);margin:30px 0}
-.mq-track{display:inline-flex;animation:scrollx 28s linear infinite}
-.mq-track span{font-family:var(--serif);font-size:1.9rem;font-style:italic;font-weight:500;padding:0 26px;display:inline-flex;align-items:center;gap:26px}
-.mq-track span::after{content:"\2726";color:var(--accent);font-style:normal;font-size:1rem}
-@keyframes scrollx{to{transform:translateX(-50%)}}
+/* ── section heads ──────────────────────────────────────────────────── */
+.h2{font-size:clamp(1.75rem,3.4vw,2.6rem);font-weight:700;letter-spacing:-.028em;line-height:1.08;max-width:20ch}
+.sub{margin-top:14px;color:var(--ink-2);max-width:62ch;font-size:1.02rem}
 
-.block{padding:100px 0}
-.about-lead{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.9rem);font-weight:500;line-height:1.22;max-width:20ch;letter-spacing:-.02em}
-.about-lead em{font-style:italic;color:var(--accent)}
-.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:start}
-.about-body p{color:var(--ink-soft);font-size:1.06rem;margin-top:22px;max-width:46ch}
-.about-body p b{color:var(--ink);font-weight:600}
-.facts{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px}
-.chip{font-family:var(--mono);font-size:.76rem;border:1px solid var(--line);border-radius:30px;padding:8px 15px;color:var(--ink-soft)}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
-.stat{background:var(--cream);padding:26px 22px}
-.stat .n{font-family:var(--serif);font-size:clamp(2.6rem,5vw,3.6rem);font-weight:700;line-height:1;color:var(--ink)}
-.stat .n .u{color:var(--accent)}
-.stat .t{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);margin-top:10px}
+/* ── services ───────────────────────────────────────────────────────── */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;border:1px solid var(--ink)}
+.svc-c{padding:26px 24px 24px;border-left:1px solid var(--rule);background:var(--card);
+  display:flex;flex-direction:column;transition:background .2s}
+.svc-c:first-child{border-left:0}
+.svc-c:hover{background:#fff}
+.svc-c .no{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;color:var(--signal-2);font-weight:600}
+.svc-c h3{font-size:1.3rem;font-weight:700;letter-spacing:-.02em;margin:12px 0 10px}
+.svc-c p{color:var(--ink-2);font-size:.95rem;flex:1 1 auto}
+.svc-c ul{list-style:none;margin:16px 0 0;display:grid;gap:7px}
+.svc-c li{font-size:.87rem;color:var(--ink-2);padding-left:17px;position:relative}
+.svc-c li::before{content:"";position:absolute;left:0;top:.52em;width:7px;height:1px;background:var(--signal)}
+.svc-c .ln{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair);
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink)}
+.svc-c .ln b{color:var(--signal-2)}
 
-.stack-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.scard{border:1px solid var(--line);border-radius:18px;padding:26px;background:linear-gradient(180deg,rgba(255,255,255,.4),transparent);transition:transform .35s,box-shadow .35s,border-color .35s}
-.scard:hover{transform:translateY(-8px);box-shadow:0 24px 44px -28px rgba(33,25,19,.45);border-color:var(--accent)}
-.scard h3{font-size:1.18rem;display:flex;align-items:center;gap:10px;margin-bottom:16px}
-.scard h3 .ix{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:700}
-.scard ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
-.scard li{font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);background:var(--cream-2);padding:6px 11px;border-radius:8px}
+/* ── client work ────────────────────────────────────────────────────── */
+.jobs{margin-top:40px;border:1px solid var(--ink);background:var(--card)}
+.job{display:grid;grid-template-columns:132px minmax(0,1fr) 220px;gap:26px;padding:22px 24px;
+  border-top:1px solid var(--rule);align-items:baseline;transition:background .2s}
+.job:first-child{border-top:0}
+.job:hover{background:#fff}
+.job .ix{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--ink-3)}
+.job h3{font-size:1.12rem;font-weight:700;letter-spacing:-.015em}
+.job p{color:var(--ink-2);font-size:.94rem;margin-top:7px}
+.job .tech{font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;color:var(--ink-2);line-height:1.8}
+.jobs-note{margin-top:14px;font-family:var(--mono);font-size:.72rem;color:var(--ink-2);letter-spacing:.03em}
 
-.xp-item{border-top:1px solid var(--line);padding:26px 0;display:grid;grid-template-columns:170px 1fr;gap:30px;align-items:start;transition:background .3s}
-.xp-item:hover{background:rgba(255,255,255,.35)}
-.xp-item:last-child{border-bottom:1px solid var(--line)}
-.xp-when{font-family:var(--mono);font-size:.78rem;color:var(--accent-deep);letter-spacing:.03em;padding-top:5px}
-.xp-role{font-family:var(--serif);font-size:1.45rem;font-weight:600}
-.xp-co{font-family:var(--mono);font-size:.82rem;color:var(--ink-soft);margin-top:4px;letter-spacing:.03em}
-.xp-desc{color:var(--ink-soft);margin-top:12px;max-width:62ch;font-size:1rem}
-.xp-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:7px}
-.xp-tags span{font-family:var(--mono);font-size:.7rem;border:1px solid var(--line);padding:4px 9px;border-radius:20px;color:var(--ink-soft)}
-.edu{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.edu-card{border:1px solid var(--line);border-radius:16px;padding:24px;background:rgba(255,255,255,.3)}
-.edu-card .w{font-family:var(--mono);font-size:.74rem;color:var(--accent-deep)}
-.edu-card h4{font-family:var(--serif);font-size:1.25rem;font-weight:600;margin:8px 0 6px}
-.edu-card p{font-size:.92rem;color:var(--ink-soft)}
+/* ── process ────────────────────────────────────────────────────────── */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border:1px solid var(--ink)}
+.step{padding:24px 22px;border-left:1px solid var(--rule);background:var(--card);position:relative}
+.step:first-child{border-left:0}
+.step .n{font-family:var(--mono);font-size:2rem;font-weight:600;line-height:1;color:var(--signal);letter-spacing:-.04em}
+.step h3{font-size:1.05rem;font-weight:700;margin:14px 0 8px;letter-spacing:-.015em}
+.step p{font-size:.9rem;color:var(--ink-2)}
+.step .t{margin-top:14px;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3)}
 
-.apps{background:var(--ink);color:var(--cream);padding:110px 0;position:relative;overflow:hidden}
-.apps .seclabel{color:rgba(243,235,221,.55)}
-.apps .seclabel b{color:var(--cream)}
-.apps .seclabel::after{background:rgba(243,235,221,.18)}
-.apps-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:50px}
-.apps-head h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600;max-width:14ch}
-.apps-head h2 em{font-style:italic;color:var(--accent)}
-.apps-head p{font-family:var(--mono);font-size:.82rem;color:rgba(243,235,221,.6);max-width:34ch;letter-spacing:.03em}
-.apps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.acard{background:rgba(255,255,255,.04);border:1px solid rgba(243,235,221,.1);border-radius:20px;padding:22px;transition:transform .35s cubic-bezier(.2,.8,.2,1),background .35s,border-color .35s}
-.acard:hover{transform:translateY(-10px);background:rgba(255,255,255,.08);border-color:var(--accent)}
-.acard img{width:60px;height:60px;border-radius:15px;box-shadow:0 12px 24px -10px rgba(0,0,0,.6)}
-.acard h4{font-family:var(--sans);font-weight:700;font-size:1.05rem;margin:18px 0 5px;letter-spacing:-.01em}
-.acard p{font-size:.86rem;color:rgba(243,235,221,.62);line-height:1.45}
-.acard .tag{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);border:1px solid rgba(255,77,46,.4);padding:4px 9px;border-radius:20px}
-.apps-note{margin-top:30px;font-family:var(--mono);font-size:.78rem;color:rgba(243,235,221,.5);text-align:center;letter-spacing:.05em}
-.apps-note a{color:var(--accent)}
+/* ── faq ────────────────────────────────────────────────────────────── */
+.faq{margin-top:40px;border:1px solid var(--ink);background:var(--card)}
+.qa{border-top:1px solid var(--rule)}
+.qa:first-child{border-top:0}
+.qa summary{list-style:none;cursor:pointer;padding:17px 22px;display:flex;gap:16px;align-items:baseline;
+  font-weight:600;font-size:1.02rem;letter-spacing:-.01em;transition:background .18s}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary:hover{background:#fff}
+.qa summary::after{content:"+";margin-left:auto;font-family:var(--mono);font-weight:400;color:var(--signal);
+  font-size:1.2rem;line-height:1;transition:transform .22s}
+.qa[open] summary::after{transform:rotate(45deg)}
+.qa summary .qn{font-family:var(--mono);font-size:.68rem;font-weight:600;letter-spacing:.1em;
+  color:var(--ink-3);flex:0 0 auto}
+.qa .a{padding:0 22px 20px 60px;color:var(--ink-2);max-width:78ch}
 
-.builds-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.bcard{border:1px solid var(--line);border-radius:18px;padding:28px;background:rgba(255,255,255,.3);transition:transform .35s,box-shadow .35s}
-.bcard:hover{transform:translateY(-6px);box-shadow:0 22px 40px -26px rgba(33,25,19,.4)}
-.bcard .num{font-family:var(--mono);font-size:.78rem;color:var(--accent)}
-.bcard h4{font-family:var(--serif);font-size:1.4rem;font-weight:600;margin:10px 0 8px}
-.bcard p{font-size:.92rem;color:var(--ink-soft)}
-.bcard .st{margin-top:14px;font-family:var(--mono);font-size:.72rem;color:var(--ink-soft)}
+/* ── about ──────────────────────────────────────────────────────────── */
+.about{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:52px;margin-top:40px;align-items:start}
+.about p{color:var(--ink-2);margin-bottom:15px;max-width:62ch}
+.about p b{color:var(--ink);font-weight:600}
+.facts{border:1px solid var(--ink);background:var(--card)}
+.facts div{display:flex;gap:14px;padding:11px 16px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.04em}
+.facts div:first-child{border-top:0}
+.facts dt{flex:0 0 88px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.1em;font-size:.66rem;padding-top:2px}
+.facts dd{color:var(--ink);font-weight:500}
 
-.contact{padding:120px 0 70px;text-align:center}
-.contact h2{font-size:clamp(2.8rem,9vw,7rem);font-weight:600;line-height:.98}
-.contact h2 em{font-style:italic;color:var(--accent)}
-.contact .lead{color:var(--ink-soft);max-width:46ch;margin:24px auto 0;font-size:1.1rem}
-.cmail{display:inline-flex;align-items:center;gap:12px;margin-top:40px;font-family:var(--serif);font-size:clamp(1.3rem,4vw,2.2rem);font-weight:500;border-bottom:2px solid var(--accent);padding-bottom:6px;transition:gap .3s}
-.cmail:hover{gap:20px}
-.cmail .arr{color:var(--accent);transition:transform .3s}
-.cmail:hover .arr{transform:translate(5px,-5px)}
-.cinfo{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:46px;font-family:var(--mono);font-size:.82rem;color:var(--ink-soft);letter-spacing:.03em}
-.cinfo b{color:var(--ink);display:block;margin-top:4px;font-size:.92rem}
-.socials{display:flex;justify-content:center;gap:14px;margin-top:40px}
-.socials a{width:48px;height:48px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .3s,background .3s,color .3s,border-color .3s}
-.socials a:hover{background:var(--ink);color:var(--cream);transform:translateY(-5px) rotate(-6deg);border-color:var(--ink)}
-.socials svg{width:19px;height:19px;fill:currentColor}
+/* ── booking close ──────────────────────────────────────────────────── */
+.close{background:var(--ink);color:var(--paper);border-top:1px solid var(--ink)}
+.close .wrap{padding-top:78px;padding-bottom:78px}
+.close .tb{border-color:var(--paper);background:transparent}
+.close .tb-no{background:var(--paper);color:var(--ink)}
+.close .tb-ttl{color:var(--paper)}
+.close .close h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:700;letter-spacing:-.033em;line-height:1.04;max-width:17ch}
+.close .lede{margin-top:20px;color:rgba(243,244,239,.76);max-width:54ch;font-size:1.06rem}
+.close .btn{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.close .btn:hover{background:var(--signal);border-color:var(--signal);color:#fff;box-shadow:4px 4px 0 rgba(243,244,239,.35)}
+.close .btn.ghost{background:transparent;color:var(--paper)}
+.close .btn.ghost:hover{background:var(--paper);color:var(--ink);box-shadow:4px 4px 0 var(--signal)}
+.close-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 
-footer{border-top:1px solid var(--line);padding:34px 0;font-family:var(--mono);font-size:.76rem;color:var(--ink-soft);letter-spacing:.03em}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-footer .top{cursor:pointer;display:inline-flex;align-items:center;gap:7px;color:var(--ink);transition:gap .3s}
-footer .top:hover{gap:12px}
+/* ── project brief (composes a pre-filled email; no backend) ────────── */
+.form{margin-top:34px;border:1px solid rgba(243,244,239,.34);background:rgba(255,255,255,.035)}
+.form .row{display:grid;grid-template-columns:190px minmax(0,1fr);border-top:1px solid rgba(243,244,239,.24)}
+.form .row:first-child{border-top:0}
+.form .lbl{font-family:var(--mono);font-size:.66rem;line-height:1.7;letter-spacing:.11em;text-transform:uppercase;
+  color:rgba(243,244,239,.62);padding:17px 18px;border-right:1px solid rgba(243,244,239,.24)}
+.form .fld{padding:14px 16px;min-width:0}
+.form textarea{width:100%;background:transparent;border:0;color:var(--paper);font:inherit;
+  font-size:1rem;line-height:1.5;resize:vertical}
+.form textarea::placeholder{color:rgba(243,244,239,.52)}
+.form .row:focus-within{background:rgba(255,255,255,.05)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;cursor:pointer;position:relative}
+.chip input{position:absolute;inset:0;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}
+.chip span{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;padding:8px 13px;
+  border:1px solid rgba(243,244,239,.34);color:rgba(243,244,239,.82);
+  transition:background .15s,color .15s,border-color .15s}
+.chip:hover span{border-color:var(--paper);color:var(--paper)}
+.chip input:checked + span{background:var(--paper);border-color:var(--paper);color:var(--ink);font-weight:600}
+.chip input:focus-visible + span{outline:2px solid var(--cream);outline-offset:3px}
+.form .send .fld{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.form .hint{font-family:var(--mono);font-size:.68rem;letter-spacing:.03em;color:rgba(243,244,239,.6)}
+.fallback{margin-top:22px;border:1px solid rgba(243,244,239,.34);padding:18px}
+.fb-h{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:rgba(243,244,239,.75);margin-bottom:12px}
+.fb-h b{color:var(--paper)}
+.fb-row{display:flex;flex-wrap:wrap;gap:10px}
+.fallback:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
+.fallback pre{font-family:var(--mono);font-size:.76rem;line-height:1.7;white-space:pre-wrap;
+  color:rgba(243,244,239,.86);background:rgba(0,0,0,.28);padding:14px;margin-bottom:14px;overflow-x:auto}
+.close-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;
+  border:1px solid rgba(243,244,239,.3)}
+.close-grid div{padding:18px 20px;border-left:1px solid rgba(243,244,239,.3)}
+.close-grid div:first-child{border-left:0}
+.close-grid dt{font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;
+  color:rgba(243,244,239,.6)}
+.close-grid dd{margin-top:7px;font-weight:600;font-size:1.02rem}
+.close-grid a{border-bottom:1px solid rgba(243,244,239,.4)}
+.close-grid a:hover{border-color:var(--paper)}
 
-[data-reveal]{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
-[data-reveal].in{opacity:1;transform:none}
-[data-reveal].d1{transition-delay:.08s}[data-reveal].d2{transition-delay:.16s}[data-reveal].d3{transition-delay:.24s}[data-reveal].d4{transition-delay:.32s}
+footer{border-top:1px solid var(--rule);padding:26px 0;font-family:var(--mono);font-size:.7rem;
+  letter-spacing:.05em;color:var(--ink-2)}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+footer a:hover{color:var(--signal)}
 
-@media(max-width:980px){
-  .hero-grid{grid-template-columns:1fr;gap:40px}
-  .hero-photo{order:-1;margin-top:30px}
-  .about-grid,.apps-grid,.builds-grid,.edu{grid-template-columns:1fr 1fr}
-  .stack-grid{grid-template-columns:1fr 1fr}
+/* ── sheet 03 · the shelf: one device, six apps ──────────────────── */
+@property --wall{syntax:"<color>";inherits:true;initial-value:#0B2E14}
+@property --acc{syntax:"<color>";inherits:true;initial-value:#E8B23A}
+@property --acc2{syntax:"<color>";inherits:true;initial-value:#6FE08F}
+
+.apps{--wall:#0B2E14;--acc:#E8B23A;--acc2:#6FE08F;
+  background-color:var(--wall);color:var(--cream);padding:112px 0 84px;position:relative;overflow:hidden;overflow:clip;
+  background-image:linear-gradient(rgba(243,244,239,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(243,244,239,.06) 1px,transparent 1px);
+  background-size:64px 64px;background-position:-1px -1px;
+  transition:--wall .8s cubic-bezier(.4,0,.2,1),--acc .8s cubic-bezier(.4,0,.2,1),--acc2 .8s cubic-bezier(.4,0,.2,1)}
+.apps .wrap{position:relative;z-index:1}
+.apps-head{display:flex;justify-content:space-between;align-items:flex-end;gap:34px;flex-wrap:wrap;margin-bottom:28px}
+.apps-head .h2{font-size:clamp(1.9rem,3.8vw,2.8rem)}
+
+.apps-head .sub{font-size:.98rem;max-width:44ch;margin-top:0}
+
+/* overflow-x:auto promotes overflow-y to auto, so the selected icon's lift
+   (translateY + scale + ring) needs headroom or it gets clipped */
+.shelf{display:flex;gap:clamp(12px,2.4vw,30px);align-items:flex-end;padding:20px 2px 22px;margin-bottom:46px;
+  border-bottom:1px solid rgba(243,244,239,.17);overflow-x:auto;scrollbar-width:none}
+.shelf::-webkit-scrollbar{display:none}
+.shelf-item{flex:0 0 auto;background:none;border:0;padding:0;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;gap:11px;
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;
+  color:rgba(243,244,239,.6);transition:color .35s}
+.shelf-item img{width:clamp(50px,6.2vw,70px);height:auto;aspect-ratio:1;border-radius:23%;
+  box-shadow:0 12px 22px -12px rgba(0,0,0,.9);
+  filter:saturate(.3) brightness(.68);transition:transform .45s cubic-bezier(.2,.8,.2,1),filter .45s,box-shadow .45s}
+.shelf-item:hover,.shelf-item:focus-visible{color:rgba(243,244,239,.85)}
+.shelf-item:hover img,.shelf-item:focus-visible img{transform:translateY(-7px);filter:none}
+.shelf-item[aria-selected="true"]{color:var(--cream)}
+.shelf-item[aria-selected="true"] img{filter:none;transform:translateY(-11px) scale(1.05);
+  box-shadow:0 22px 32px -14px rgba(0,0,0,.9),0 0 0 2px var(--acc)}
+.shelf-item:focus-visible{outline:2px solid var(--cream);outline-offset:4px;border-radius:9px}
+
+.app-panel{display:none;grid-template-columns:minmax(0,540px) 1fr;gap:clamp(32px,4.5vw,64px);align-items:start}
+.app-panel.on{display:grid}
+.ap-cat{font-family:var(--mono);font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;color:var(--acc)}
+.ap-name{font-family:var(--sans);font-size:clamp(2.3rem,5.2vw,3.7rem);font-weight:600;line-height:1;
+  letter-spacing:-.03em;margin:15px 0 8px}
+.ap-tag{font-family:var(--mono);font-size:.8rem;letter-spacing:.05em;color:rgba(243,244,239,.66)}
+.ap-desc{margin:26px 0 30px;font-size:1.02rem;line-height:1.62;color:rgba(243,244,239,.86)}
+.ap-feats{list-style:none;display:grid;gap:12px}
+.ap-feats li{display:flex;gap:14px;font-size:.93rem;line-height:1.48;color:rgba(243,244,239,.78)}
+.ap-feats li::before{content:"";flex:0 0 auto;width:7px;height:7px;margin-top:.5em;border-radius:1.5px;
+  background:var(--acc);transform:rotate(45deg)}
+.ap-tech{margin-top:32px;padding-top:22px;border-top:1px solid rgba(243,244,239,.15);
+  font-family:var(--mono);font-size:.74rem;line-height:1.7;letter-spacing:.05em;color:rgba(243,244,239,.66)}
+.ap-meta{display:flex;flex-wrap:wrap;gap:7px 17px;margin-top:13px;
+  font-family:var(--mono);font-size:.69rem;letter-spacing:.06em;color:rgba(243,244,239,.64)}
+.ap-meta a{color:rgba(243,244,239,.86);border-bottom:1px solid rgba(243,244,239,.32);transition:color .25s,border-color .25s}
+.ap-meta a:hover{color:var(--acc);border-color:var(--acc)}
+
+.ap-device{justify-self:center;position:sticky;top:96px}
+.phone{width:clamp(206px,24vw,250px);padding:9px;border-radius:34px;position:relative;
+  background:linear-gradient(155deg,rgba(243,244,239,.28),rgba(243,244,239,.06) 42%,rgba(0,0,0,.42));
+  box-shadow:0 44px 70px -34px rgba(0,0,0,.9),0 0 0 1px rgba(243,244,239,.11)}
+.phone::after{content:"";position:absolute;top:16px;left:50%;translate:-50% 0;width:52px;height:4px;
+  border-radius:3px;background:rgba(0,0,0,.5);z-index:2}
+.phone-screen{aspect-ratio:1080/2400;border-radius:26px;overflow:hidden;position:relative;
+  background:#05100a;background:color-mix(in oklab,var(--wall) 62%,#000);
+  box-shadow:inset 0 0 0 1px rgba(243,244,239,.09)}
+.phone-screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:0;visibility:hidden;transform:scale(1.015);
+  transition:opacity .4s ease,transform .5s cubic-bezier(.2,.8,.2,1),visibility 0s .4s}
+.phone-screen img.on{opacity:1;visibility:visible;transform:none;
+  transition:opacity .4s ease,transform .5s cubic-bezier(.2,.8,.2,1),visibility 0s}
+.ap-thumbs{display:flex;gap:9px;justify-content:center;margin-top:22px}
+.ap-thumbs button{width:33px;padding:0;border:0;background:none;cursor:pointer;border-radius:6px;line-height:0;
+  opacity:.62;box-shadow:0 0 0 1px rgba(243,244,239,.22);
+  transition:opacity .3s,transform .3s,box-shadow .3s}
+.ap-thumbs button img{width:100%;height:auto;aspect-ratio:1080/2400;object-fit:cover;border-radius:6px}
+.ap-thumbs button:hover,.ap-thumbs button:focus-visible{opacity:.85;transform:translateY(-3px)}
+.ap-thumbs button[aria-current="true"]{opacity:1;box-shadow:0 0 0 2px var(--acc)}
+.ap-thumbs button:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
+.ap-caption{text-align:center;margin-top:15px;min-height:1.2em;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(243,244,239,.64)}
+
+.apps-note{margin-top:70px;padding-top:26px;border-top:1px solid rgba(243,244,239,.15);
+  font-family:var(--mono);font-size:.76rem;line-height:1.8;color:rgba(243,244,239,.64);text-align:center;letter-spacing:.04em}
+.apps-note a{color:var(--acc);border-bottom:1px solid transparent;transition:border-color .3s}
+.apps-note a:hover{border-color:var(--acc)}
+.apps .tb{border-color:var(--cream);background:transparent}
+.apps .tb-no{background:var(--cream);color:var(--ink)}
+.apps .tb-ttl{color:var(--cream)}
+.apps .apps .h2{color:var(--cream);max-width:22ch}
+.apps .sub{color:rgba(243,244,239,.72)}
+
+/* ── reveal ─────────────────────────────────────────────────────────── */
+[data-rv]{opacity:0;transform:translateY(16px);transition:opacity .55s cubic-bezier(.16,1,.3,1),transform .55s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+
+@media(max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .portrait{max-width:290px}
+  .svc,.steps{grid-template-columns:1fr 1fr}
+  .svc-c:nth-child(3),.step:nth-child(3){border-left:0}
+  .svc-c:nth-child(n+3),.step:nth-child(n+3){border-top:1px solid var(--rule)}
+  .about{grid-template-columns:1fr;gap:34px}
+  .job{grid-template-columns:96px minmax(0,1fr);gap:18px}
+  .job .tech{grid-column:2}
+  .app-panel{grid-template-columns:1fr;gap:44px}
+  .ap-device{order:-1;position:static;justify-self:center}
 }
-@media(max-width:760px){
-  .navlinks,.avail{display:none}
-  .menu-btn{display:block}
-  .stack-grid,.apps-grid,.builds-grid,.edu,.about-grid{grid-template-columns:1fr}
-  .xp-item{grid-template-columns:1fr;gap:8px}
-  .hero-meta{flex-wrap:wrap;gap:22px}
-  .marquee .mq-track span{font-size:1.4rem}
-  .block{padding:70px 0}
+@media(max-width:720px){
+  :root{--gut:18px}
+  .mast .meta{display:none}
+  .sheet{padding:52px 0 54px}
+  .hero{padding:44px 0 0}
+  .svc,.steps,.close-grid{grid-template-columns:1fr}
+  .svc-c,.step{border-left:0;border-top:1px solid var(--rule)}
+  .svc-c:first-child,.step:first-child{border-top:0}
+  .close-grid div{border-left:0;border-top:1px solid rgba(243,244,239,.3)}
+  .close-grid div:first-child{border-top:0}
+  .spec-h{display:none}
+  .spec-r{flex-wrap:wrap}
+  .spec-r span{flex:1 0 50%;border-left:1px solid var(--rule);border-top:1px solid var(--rule)}
+  .qa .a{padding-left:22px}
+  /* the 190px label column crushes the fields on a phone */
+  .form .row{grid-template-columns:1fr}
+  .form .lbl{border-right:0;border-bottom:1px solid rgba(243,244,239,.24);padding:13px 16px;line-height:1.5}
+  .form .send .fld{align-items:stretch;flex-direction:column;gap:12px}
+  .form .send .btn{justify-content:center}
+    .apps{padding:60px 0 54px}
+  .shelf{flex-wrap:wrap;align-items:flex-start;gap:20px 14px;overflow-x:visible;
+    margin-bottom:34px;padding:16px 2px 20px}
+  .apps-note{margin-top:44px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001s!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
-  [data-reveal]{opacity:1;transform:none}
-  .hero h1 .ln span{transform:none}
-  .orb,.deco-ring{animation:none}
+  [data-rv]{opacity:1;transform:none}
+  .apps,.shelf-item img,.phone-screen img,.ap-thumbs button,.btn{transition-duration:.01ms}
+  .btn:hover{transform:none}
+  .shelf-item:hover img,.shelf-item[aria-selected="true"] img,.ap-thumbs button:hover{transform:none}
 }
 </style>
-<noscript><style>[data-reveal]{opacity:1;transform:none}.hero h1 .ln span{transform:none}.cursor{display:none}</style></noscript>
+<noscript><style>.app-panel{display:grid!important}.shelf,.ap-thumbs{display:none!important}[data-rv]{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
-<div class="orbs"><span class="orb a"></span><span class="orb b"></span><span class="orb c"></span></div>
-<div class="grain"></div>
-<div class="cursor" id="cursor"></div>
 
-<nav id="nav">
-  <div class="bar">
-    <a href="#top" class="brand">Mehdi<span class="dot">.</span></a>
-    <div class="navlinks">
-      <a href="#about">About</a>
-      <a href="#stack">Stack</a>
-      <a href="#work">Work</a>
-      <a href="#apps">Apps</a>
-      <a href="#contact">Contact</a>
-      <span class="avail"><span class="pulse"></span><span id="clock">--:--</span> &middot; Tunis</span>
+<header class="mast">
+  <div class="mast-in">
+    <a href="#top" class="id">MEHDI<b>/</b>SNOUSSI</a>
+    <div class="meta">
+      <span>REV <i>2026.08</i></span>
+      <span>MAHDIA <i id="clock">--:--</i> GMT+1</span>
+      <span><span class="dot"></span><i>Open for projects</i></span>
     </div>
-    <button class="menu-btn" id="menuBtn">Menu +</button>
+    <a class="btn sm cta" href="#book">Book a call <span class="ar">&rarr;</span></a>
   </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about">About</a>
-  <a href="#stack">Stack</a>
-  <a href="#work">Work</a>
-  <a href="#apps">Apps</a>
-  <a href="#contact">Contact</a>
-  <div class="mm-foot">snoussimehdi0@gmail.com<br>Mahdia, Tunisia</div>
-</div>
-
-<header class="hero wrap" id="top">
-  <div class="hero-grid">
-    <div class="hero-text">
-      <div class="hero-eyebrow eyebrow"><span class="star">&#10022;</span> Mobile &amp; Full-Stack Engineer &middot; Mahdia, Tunisia</div>
-      <h1>
-        <span class="ln"><span>Mehdi</span></span>
-        <span class="ln"><span>Snoussi<em>.</em></span></span>
-      </h1>
-      <p class="hero-sub">A two-in-one engineer: I ship cross-platform mobile apps in <b>React Native</b> &amp; <b>Flutter</b>, then build the <span class="roller"><b id="roller">web apps</b></span> and backends behind them.</p>
-      <div class="cta">
-        <a href="#contact" class="btn fill" data-cursor>Let's talk <span class="arr">&#8599;</span></a>
-        <a href="https://www.upwork.com/freelancers/~015b3b341714236b29" target="_blank" rel="noopener" class="btn ghost" data-cursor>Hire me on Upwork <span class="arr">&#8599;</span></a>
-        <a href="#apps" class="btn ghost" data-cursor>See my work <span class="arr">&#8599;</span></a>
-      </div>
-      <div class="hero-meta">
-        <div>Currently<b>Shipping 16 apps</b></div>
-        <div>Focus<b>React Native &middot; Flutter &middot; Full-Stack</b></div>
-        <div>Status<b style="color:#2fbf71">Open to work</b></div>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <div class="deco-ring"></div>
-      <div class="deco-blob"></div>
-      <div class="pf"><img src="assets/me.png" alt="Portrait of Mehdi Snoussi" /></div>
-      <div class="sticker">Available<br>for<br><b>work &#10022;</b></div>
-    </div>
-  </div>
-  <div class="scrollcue">Scroll<span class="l"></span></div>
 </header>
 
-<div class="marquee" aria-hidden="true">
-  <div class="mq-track">
-    <span>React Native</span><span>Flutter</span><span>Angular</span><span>TypeScript</span><span>NestJS</span><span>Node.js</span><span>Symfony</span><span>Spring Boot</span><span>PostgreSQL</span><span>NgRx</span><span>GitLab CI</span>
-    <span>React Native</span><span>Flutter</span><span>Angular</span><span>TypeScript</span><span>NestJS</span><span>Node.js</span><span>Symfony</span><span>Spring Boot</span><span>PostgreSQL</span><span>NgRx</span><span>GitLab CI</span>
-  </div>
-</div>
+<main id="top">
 
-<section class="block wrap" id="about">
-  <div class="seclabel" data-reveal><b>(01)</b> &mdash; About</div>
-  <div class="about-grid">
-    <div class="about-body">
-      <p class="about-lead" data-reveal>I build <em>reliable, good-looking software</em> &mdash; and I take it all the way to shipped.</p>
-      <p class="d1" data-reveal>From <b>Mahdia on the Tunisian coast</b>, I've spent the last few years as a full-stack engineer &mdash; Angular and TypeScript on the front, Symfony, Spring Boot and Java on the back &mdash; building enterprise web platforms and the systems that run behind them.</p>
-      <p class="d2" data-reveal>Lately I've gone solo on mobile: designing, coding and shipping a <b>portfolio of 16 cross-platform apps</b> with Flutter &mdash; utilities, games, AI tools &mdash; handling everything from architecture to the store listing and the privacy policy.</p>
-      <div class="facts d3" data-reveal>
-        <span class="chip">Mahdia, Tunisia</span>
-        <span class="chip">Arabic &middot; English &middot; French</span>
-        <span class="chip">Runs on coffee</span>
-        <span class="chip">Freelance available</span>
+<!-- ══ 01 · THE OFFER ══════════════════════════════════════════════ -->
+<section class="sheet hero wrap">
+  <div class="hero-grid">
+    <div>
+      <div class="kicker" data-rv>Mobile engineering &middot; Mahdia, Tunisia</div>
+      <h1 data-rv>I take mobile apps from an empty repo to a <u>signed release</u>.</h1>
+      <p class="lede" data-rv>Flutter and React Native, plus the backend behind them. You get <b>one engineer</b> who does the architecture, the code, the icon, the store listing and the release build &mdash; not a handoff chain between four freelancers.</p>
+      <div class="hero-cta" data-rv>
+        <a class="btn" href="#book">Book a call <span class="ar">&rarr;</span></a>
+        <a class="btn ghost" href="#apps">See six apps I built alone <span class="ar">&darr;</span></a>
       </div>
+      <p class="hero-cta note" data-rv>Free 30 minutes. You leave knowing what I&rsquo;d cut from v1 and roughly what it costs &mdash; the written scope and fixed price follow within 2&ndash;3 days, whether or not you hire me.</p>
     </div>
-    <div class="stats d1" data-reveal>
-      <div class="stat"><div class="n"><span class="num" data-to="16">0</span></div><div class="t">Apps built solo</div></div>
-      <div class="stat"><div class="n"><span class="num" data-to="4">0</span><span class="u">+</span></div><div class="t">Years engineering</div></div>
-      <div class="stat"><div class="n"><span class="num" data-to="3">0</span></div><div class="t">Languages shipped</div></div>
-      <div class="stat"><div class="n"><span class="u">&#8734;</span></div><div class="t">Cups of coffee</div></div>
+    <figure class="portrait" data-rv>
+      <img src="assets/me.webp" alt="Mehdi Snoussi" width="640" height="640" decoding="async" />
+      <figcaption class="cap"><span>MEHDI SNOUSSI</span><span>MAHDIA, TN</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="spec" data-rv>
+    <div class="spec-h">
+      <span>Built solo, signed</span><span>Apps built</span><span>Experience</span><span>Localised</span>
+    </div>
+    <div class="spec-r">
+      <span>6<i>apps, release-signed</i></span>
+      <span>16<i>apps in the portfolio</i></span>
+      <span>4 yrs<i>mobile + full-stack</i></span>
+      <span>8<i>languages, incl. RTL</i></span>
     </div>
   </div>
 </section>
 
-<section class="block wrap" id="stack">
-  <div class="seclabel" data-reveal><b>(02)</b> &mdash; Stack</div>
-  <div class="stack-grid">
-    <div class="scard" data-reveal><h3><span class="ix">01</span> Mobile</h3><ul><li>React Native</li><li>Flutter</li><li>Dart</li><li>iOS</li><li>Android</li><li>Native build &amp; release</li></ul></div>
-    <div class="scard d1" data-reveal><h3><span class="ix">02</span> Frontend</h3><ul><li>Angular 13-17</li><li>TypeScript</li><li>RxJS / NgRx</li><li>Angular Material</li><li>PrimeNG</li><li>PWA</li></ul></div>
-    <div class="scard d2" data-reveal><h3><span class="ix">03</span> Backend</h3><ul><li>NestJS</li><li>Node.js</li><li>Symfony</li><li>Spring Boot / Java</li><li>Flask / Python</li><li>REST APIs</li></ul></div>
-    <div class="scard d3" data-reveal><h3><span class="ix">04</span> Data &amp; Quality</h3><ul><li>PostgreSQL</li><li>Mercure / WebSocket</li><li>Swagger</li><li>SonarQube</li><li>GitLab CI</li><li>Karma</li></ul></div>
+<!-- ══ 02 · SERVICES ══════════════════════════════════════════════ -->
+<section class="sheet wrap" id="services">
+  <div class="tb" data-rv>
+    <span class="tb-no">SHEET 01</span>
+    <span class="tb-ttl">What you can hire me for</span>
   </div>
-</section>
+  <h2 class="h2" data-rv>Three ways this usually starts.</h2>
+  <p class="sub" data-rv>Fixed scope, fixed quote, one person accountable. If your project isn't one of these, say so on the call and I'll tell you honestly whether I'm the right fit.</p>
 
-<section class="block wrap" id="work">
-  <div class="seclabel" data-reveal><b>(03)</b> &mdash; Selected work</div>
-  <p class="about-lead" data-reveal style="max-width:22ch;margin-bottom:14px">Production platforms &amp; apps I've <em>shipped</em>.</p>
-  <p class="d1" data-reveal style="color:var(--ink-soft);max-width:60ch;margin-bottom:42px">Client names, links and code are kept private under NDA &mdash; I'm glad to walk through the architecture and the decisions behind it on a call.</p>
-  <div class="builds-grid">
-    <div class="bcard" data-reveal><div class="num">/01</div><h4>Enterprise SaaS ERP Platform</h4><p>Multi-tenant financial platform &mdash; accounting, e-invoicing, payments and reporting &mdash; with granular per-user permissions, record-level locking and real-time updates. Sole front-end engineer in a 12-person Scrum team.</p><div class="st">Angular &middot; Symfony &middot; PostgreSQL &middot; Mercure</div></div>
-    <div class="bcard d1" data-reveal><div class="num">/02</div><h4>Cross-Platform Tourism App</h4><p>Published to the App Store &amp; Google Play: live geolocation guidance, full offline mode, multi-language support and push notifications.</p><div class="st">Flutter &middot; iOS &middot; Android &middot; i18n</div></div>
-    <div class="bcard d2" data-reveal><div class="num">/03</div><h4>Financial Management Mobile App</h4><p>A cross-platform finance app released to production on both stores &mdash; architecture, offline-first sync, native permissions and store submission.</p><div class="st">React Native &middot; iOS &middot; Android</div></div>
-    <div class="bcard" data-reveal><div class="num">/04</div><h4>Healthtech Training Platform</h4><p>Learner progress tracking and automatic certificate generation, with external telephony API and learning-management-system integrations.</p><div class="st">Angular &middot; Symfony &middot; PostgreSQL</div></div>
-    <div class="bcard d1" data-reveal><div class="num">/05</div><h4>Real-Estate &amp; Vehicle Valuation</h4><p>An instant-estimate quiz, photo/video submission, an admin back-office, and a web-scraping pipeline for live market comparables.</p><div class="st">Angular &middot; NestJS &middot; NgRx</div></div>
-    <div class="bcard d2" data-reveal><div class="num">/06</div><h4>Angular Rich-Text Editor</h4><p>A reusable in-house editor component that replaced a paid third-party library and removed a recurring license cost.</p><div class="st">Angular &middot; TypeScript</div></div>
-  </div>
-  <p class="eyebrow" data-reveal style="margin:64px 0 24px">Education</p>
-  <div class="edu">
-    <div class="edu-card" data-reveal><div class="w">Sept 2020 &mdash; Jun 2023</div><h4>Software Engineering Degree</h4><p>International Polytechnic School (EPI)</p></div>
-    <div class="edu-card d1" data-reveal><div class="w">Sept 2017 &mdash; Jun 2020</div><h4>Bachelor's Degree in Electronics</h4><p>Higher Institute of Applied Sciences &amp; Technology of Sousse</p></div>
+  <div class="svc">
+    <article class="svc-c" data-rv>
+      <div class="no">SVC-01</div>
+      <h3>Ship a new app</h3>
+      <p>You have an idea and no app. I take it to a real release on Google Play and the App Store.</p>
+      <ul>
+        <li>Architecture, UI and the whole codebase</li>
+        <li>Backend and API where you need one</li>
+        <li>Icon, screenshots and store listing</li>
+        <li>Signed release build and submission</li>
+        <li>Analytics, ads or in-app purchases wired in</li>
+      </ul>
+      <div class="ln">First release scoped to <b>6&ndash;10 weeks</b></div>
+    </article>
+    <article class="svc-c" data-rv>
+      <div class="no">SVC-02</div>
+      <h3>Rescue an app you already have</h3>
+      <p>Someone built it and left. It crashes, it's slow, or nobody can release it any more.</p>
+      <ul>
+        <li>Audit of the codebase and build pipeline</li>
+        <li>Crash and performance triage, root cause first</li>
+        <li>Dependency and platform-policy catch-up</li>
+        <li>Get it building, signed and shippable again</li>
+        <li>Handover docs so you're not stuck twice</li>
+      </ul>
+      <div class="ln">Audit first &middot; <b>1 week, fixed price</b></div>
+    </article>
+    <article class="svc-c" data-rv>
+      <div class="no">SVC-03</div>
+      <h3>App plus the platform behind it</h3>
+      <p>The app is half the product. The other half is the dashboard, the back-office and the API.</p>
+      <ul>
+        <li>Mobile app in Flutter or React Native</li>
+        <li>Web dashboard in Angular</li>
+        <li>API in NestJS, Symfony or Spring Boot</li>
+        <li>PostgreSQL, auth, roles and permissions</li>
+        <li>Real-time updates and offline-first sync</li>
+      </ul>
+      <div class="ln">Scoped per project &middot; <b>from 10 weeks</b></div>
+    </article>
   </div>
 </section>
 
 <section class="apps" id="apps">
   <div class="wrap">
-    <div class="seclabel" data-reveal><b>(04)</b> &mdash; The app shelf</div>
+    <div class="tb" data-rv>
+      <span class="tb-no">SHEET 02</span>
+      <span class="tb-ttl">Proof &mdash; apps I shipped alone</span>
+    </div>
     <div class="apps-head">
-      <h2 data-reveal>Sixteen apps,<br>built <em>solo.</em></h2>
-      <p class="d1" data-reveal>A self-initiated portfolio designed, coded and shipped end-to-end with Flutter. Utilities, games and AI tools &mdash; all heading to Google Play.</p>
+      <h2 class="h2" data-rv>This is what one person shipping alone looks like.</h2>
+      <p class="sub" data-rv>Every screen, icon, store listing and signed release below is mine &mdash; no designer, no team. Pick one and read exactly what is in it.</p>
     </div>
-    <div class="apps-grid">
-      <div class="acard" data-reveal><img src="assets/apps/dhikr.png" alt="Dhikr icon"><h4>Dhikr</h4><p>Islamic companion &mdash; prayer times, Quran, azkar &amp; Qibla.</p><span class="tag">Utility</span></div>
-      <div class="acard d1" data-reveal><img src="assets/apps/scrollia.png" alt="Scrollia icon"><h4>Scrollia</h4><p>Webnovel reader for original Romance &amp; LitRPG fiction.</p><span class="tag">Reader</span></div>
-      <div class="acard d2" data-reveal><img src="assets/apps/mycar.png" alt="MyCar icon"><h4>MyCar</h4><p>Car expense &amp; maintenance tracker with drive score.</p><span class="tag">Utility</span></div>
-      <div class="acard d3" data-reveal><img src="assets/apps/sortflow.png" alt="SortFlow icon"><h4>SortFlow</h4><p>Addictive color-sort puzzle game with daily levels.</p><span class="tag">Game</span></div>
-      <div class="acard" data-reveal><img src="assets/apps/aimystic.png" alt="AI Mystic icon"><h4>AI Mystic</h4><p>AI tarot &amp; astrology with shareable cosmic cards.</p><span class="tag">AI</span></div>
-      <div class="acard d1" data-reveal><img src="assets/apps/thock.png" alt="Thock icon"><h4>Thock</h4><p>Measure your mechanical keyboard's sound, on-device.</p><span class="tag">Tool</span></div>
-      <div class="acard d2" data-reveal><img src="assets/apps/wallio.png" alt="Wallio icon"><h4>Wallio</h4><p>Wallpaper discovery with auto-change &amp; favorites.</p><span class="tag">Utility</span></div>
-      <div class="acard d3" data-reveal><img src="assets/apps/mathcam.png" alt="MathCam icon"><h4>MathCam</h4><p>Snap a math problem, get step-by-step AI solutions.</p><span class="tag">AI</span></div>
-      <div class="acard" data-reveal><img src="assets/apps/snapcal.png" alt="SnapCal icon"><h4>SnapCal</h4><p>AI food scanner that estimates calories from a photo.</p><span class="tag">AI</span></div>
-      <div class="acard d1" data-reveal><img src="assets/apps/leafsnap.png" alt="LeafSnap icon"><h4>LeafSnap</h4><p>Identify plants instantly with AI vision.</p><span class="tag">AI</span></div>
-      <div class="acard d2" data-reveal><img src="assets/apps/breedlens.png" alt="BreedLens icon"><h4>BreedLens</h4><p>AI dog-breed identifier from a single snapshot.</p><span class="tag">AI</span></div>
-      <div class="acard d3" data-reveal><img src="assets/apps/mangaverse.png" alt="MangaVerse icon"><h4>MangaVerse</h4><p>Discover &amp; track manga across your reading list.</p><span class="tag">Reader</span></div>
-      <div class="acard" data-reveal><img src="assets/apps/cutout.png" alt="CutOut icon"><h4>CutOut</h4><p>One-tap background remover powered by on-device ML.</p><span class="tag">Tool</span></div>
-      <div class="acard d1" data-reveal><img src="assets/apps/pixelup.png" alt="PixelUp icon"><h4>PixelUp</h4><p>Photo enhancer for sharper, brighter pictures.</p><span class="tag">Tool</span></div>
-      <div class="acard d2" data-reveal><img src="assets/apps/pawpulse.png" alt="PawPulse icon"><h4>PawPulse</h4><p>Pet health tracker with reminders &amp; logs.</p><span class="tag">Utility</span></div>
-      <div class="acard d3" data-reveal><img src="assets/apps/creepid.png" alt="CreepID icon"><h4>CreepID</h4><p>Educational wildlife identifier for the curious.</p><span class="tag">AI</span></div>
+
+    <div class="shelf" data-rv>
+      <button class="shelf-item" type="button" id="tab-dhikr">
+        <img src="assets/apps/dhikr.webp" alt="" width="192" height="192" loading="lazy" decoding="async">
+        <span>Dhikr</span>
+      </button>
+      <button class="shelf-item" type="button" id="tab-sortflow">
+        <img src="assets/apps/sortflow.webp" alt="" width="192" height="192" loading="lazy" decoding="async">
+        <span>SortFlow</span>
+      </button>
+      <button class="shelf-item" type="button" id="tab-aimystic">
+        <img src="assets/apps/aimystic.webp" alt="" width="192" height="192" loading="lazy" decoding="async">
+        <span>AI Mystic</span>
+      </button>
+      <button class="shelf-item" type="button" id="tab-cascade">
+        <img src="assets/apps/cascade.webp" alt="" width="192" height="192" loading="lazy" decoding="async">
+        <span>Cascade</span>
+      </button>
+      <button class="shelf-item" type="button" id="tab-zellia">
+        <img src="assets/apps/zellia.webp" alt="" width="192" height="192" loading="lazy" decoding="async">
+        <span>Zellia</span>
+      </button>
+      <button class="shelf-item" type="button" id="tab-relicrevival">
+        <img src="assets/apps/relicrevival.webp" alt="" width="192" height="192" loading="lazy" decoding="async">
+        <span>Relic Revival</span>
+      </button>
     </div>
-    <p class="apps-note" data-reveal>&#10022; In active development &mdash; privacy policies live at <a href="/legal/">/legal</a> &#10022;</p>
+
+    <div class="app-stage" data-rv>
+      <div class="app-panel on" id="panel-dhikr"
+           data-wall="#0B2E14" data-acc="#E8B23A" data-acc2="#6FE08F">
+        <div class="ap-body">
+          <div class="ap-cat">Lifestyle / Religion</div>
+          <h3 class="ap-name">Dhikr</h3>
+          <div class="ap-tag">Tasbih, Azkar, Salah &amp; Quran</div>
+          <p class="ap-desc">A companion for daily Muslim practice — tasbih, azkar, prayer times, Qibla and the full Quran. Prayer times are computed on the device and Quran search accepts spoken Arabic through a bundled Whisper ONNX model, so everything but recitation audio and mosque search works with no connection.</p>
+          <ul class="ap-feats">
+          <li>Full Quran reader: 114 surahs, 6,236 ayahs in Uthmani script with EN/FR translation</li>
+          <li>On-device Arabic voice search — bundled Whisper tiny + Silero VAD ONNX models</li>
+          <li>Offline prayer times, 7 calculation methods, per-prayer offsets, Athan alarm channel</li>
+          <li>Real-time Qibla compass and nearby-mosque search over the OpenStreetMap Overpass API</li>
+          <li>Tasbih counter with 7 presets, streaks and weekly / monthly charts, plus 9 app-wide badges</li>
+          <li>Four curated azkar sets — morning, evening, after-prayer, sleep — plus 25 prophet stories in 83 trilingual chapters</li>
+          </ul>
+          <p class="ap-tech">Flutter · BLoC · get_it · GoRouter · Hive · adhan_dart · sherpa_onnx (Whisper + Silero VAD) · flutter_map · AdMob + UMP · in_app_purchase</p>
+          <div class="ap-meta">
+            <span>com.carthage.dhikr</span><span>v1.1.0</span><span>Android</span><span>Arabic · English · French</span>
+            <a href="/legal/dhikr/privacy.html">Privacy &#8599;</a>
+            <a href="/legal/dhikr/terms.html">Terms &#8599;</a>
+          </div>
+        </div>
+        <div class="ap-device">
+          <div class="phone"><div class="phone-screen">
+            <img class="on" src="assets/apps/dhikr/1.webp" alt="Dhikr — Arabic home dashboard" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/dhikr/2.webp" alt="Dhikr — Uthmani Quran reader" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/dhikr/3.webp" alt="Dhikr — Qibla compass" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/dhikr/4.webp" alt="Dhikr — Azkar collections" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/dhikr/5.webp" alt="Dhikr — Surah browser" width="540" height="1200" loading="lazy" decoding="async">
+          </div></div>
+          <div class="ap-thumbs">
+          <button type="button" data-caption="Arabic home dashboard" aria-label="Show screen: Arabic home dashboard"><img src="assets/apps/dhikr/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Uthmani Quran reader" aria-label="Show screen: Uthmani Quran reader"><img src="assets/apps/dhikr/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Qibla compass" aria-label="Show screen: Qibla compass"><img src="assets/apps/dhikr/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Azkar collections" aria-label="Show screen: Azkar collections"><img src="assets/apps/dhikr/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Surah browser" aria-label="Show screen: Surah browser"><img src="assets/apps/dhikr/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          </div>
+          <div class="ap-caption" role="status">Arabic home dashboard</div>
+        </div>
+      </div>
+      <div class="app-panel" id="panel-sortflow"
+           data-wall="#1E1456" data-acc="#2BDDFB" data-acc2="#FFC845">
+        <div class="ap-body">
+          <div class="ap-cat">Game / Puzzle</div>
+          <h3 class="ap-name">SortFlow</h3>
+          <div class="ap-tag">Color sort puzzle, solver-verified</div>
+          <p class="ap-desc">A color-sort puzzle with no authored level list. Every board is scrambled out of a solved state and then re-proved by a breadth-first solver, and that same search supplies the hints and sets the three-star threshold — so every shipped board is solvable by construction, with a par that is proven reachable.</p>
+          <ul class="ap-feats">
+          <li>No authored level list — every board is generated on the fly and re-proved by a BFS solver</li>
+          <li>Generation and hints run on a background isolate, so a level load never blocks the UI</li>
+          <li>Star thresholds derive from the board's own BFS optimum plus a small fairness pad</li>
+          <li>6 star-gated worlds, 12 claimable achievements and a date-seeded daily challenge</li>
+          <li>8 tube skins and 6 backgrounds drawn in code with CustomPainter — no image assets</li>
+          <li>8 languages including Arabic RTL, JSON progress export / import, and no backend at all</li>
+          </ul>
+          <p class="ap-tech">Flutter (no game engine) · CustomPainter + AnimationController · BLoC · get_it · GoRouter · Hive · easy_localization · AdMob · in_app_purchase</p>
+          <div class="ap-meta">
+            <span>com.sortflow.sortflow</span><span>v1.1.0</span><span>Android</span><span>8 languages, Arabic RTL</span>
+            <a href="/legal/sortflow/privacy.html">Privacy &#8599;</a>
+            <a href="/legal/sortflow/terms.html">Terms &#8599;</a>
+          </div>
+        </div>
+        <div class="ap-device">
+          <div class="phone"><div class="phone-screen">
+            <img class="on" src="assets/apps/sortflow/1.webp" alt="SortFlow — Pour and sort" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/sortflow/2.webp" alt="SortFlow — Home and progress" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/sortflow/3.webp" alt="SortFlow — Star-gated worlds" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/sortflow/4.webp" alt="SortFlow — Daily challenge streak" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/sortflow/5.webp" alt="SortFlow — Power-up shop" width="540" height="1200" loading="lazy" decoding="async">
+          </div></div>
+          <div class="ap-thumbs">
+          <button type="button" data-caption="Pour and sort" aria-label="Show screen: Pour and sort"><img src="assets/apps/sortflow/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Home and progress" aria-label="Show screen: Home and progress"><img src="assets/apps/sortflow/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Star-gated worlds" aria-label="Show screen: Star-gated worlds"><img src="assets/apps/sortflow/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Daily challenge streak" aria-label="Show screen: Daily challenge streak"><img src="assets/apps/sortflow/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Power-up shop" aria-label="Show screen: Power-up shop"><img src="assets/apps/sortflow/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          </div>
+          <div class="ap-caption" role="status">Pour and sort</div>
+        </div>
+      </div>
+      <div class="app-panel" id="panel-aimystic"
+           data-wall="#0B0B1E" data-acc="#D4A856" data-acc2="#9B6DFF">
+        <div class="ap-body">
+          <div class="ap-cat">Lifestyle / Astrology</div>
+          <h3 class="ap-name">AI Mystic</h3>
+          <div class="ap-tag">AI tarot &amp; astrology readings</div>
+          <p class="ap-desc">A tarot and astrology app that writes its readings with Google Gemini in a fixed Oracle voice. The interesting part is the failure path: a content-keyed cache and hand-written fallback text mean the app always returns a reading, even with the model unreachable.</p>
+          <ul class="ap-feats">
+          <li>Full 78-card deck with hand-written upright and reversed meanings, drawn in CustomPainter</li>
+          <li>Gemini 2.0 Flash readings with a hand-written offline fallback and a content-keyed cache</li>
+          <li>Four question spreads plus the daily card, a 3-reading free cap, 2 more by rewarded video</li>
+          <li>Daily card seeded by the calendar date, so a given day always yields the same draw</li>
+          <li>1080×1920 share card whose Play link encodes the card id for deferred deep linking</li>
+          <li>Streak milestones at 7 / 30 / 100 / 365 days, a 78-card collection and a journal</li>
+          </ul>
+          <p class="ap-tech">Flutter · BLoC · get_it · go_router · Hive · google_generative_ai (Gemini) · AdMob · Play Billing 8</p>
+          <div class="ap-meta">
+            <span>com.carthage.aimystic</span><span>v1.1.0</span><span>Android</span><span>English</span>
+            <a href="/legal/aimystic/privacy.html">Privacy &#8599;</a>
+            <a href="/legal/aimystic/terms.html">Terms &#8599;</a>
+          </div>
+        </div>
+        <div class="ap-device">
+          <div class="phone"><div class="phone-screen">
+            <img class="on" src="assets/apps/aimystic/1.webp" alt="AI Mystic — Daily card orb" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/aimystic/2.webp" alt="AI Mystic — Card revelation" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/aimystic/3.webp" alt="AI Mystic — Zodiac wheel" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/aimystic/4.webp" alt="AI Mystic — Ask your question" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/aimystic/5.webp" alt="AI Mystic — Streaks and collection" width="540" height="1200" loading="lazy" decoding="async">
+          </div></div>
+          <div class="ap-thumbs">
+          <button type="button" data-caption="Daily card orb" aria-label="Show screen: Daily card orb"><img src="assets/apps/aimystic/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Card revelation" aria-label="Show screen: Card revelation"><img src="assets/apps/aimystic/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Zodiac wheel" aria-label="Show screen: Zodiac wheel"><img src="assets/apps/aimystic/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Ask your question" aria-label="Show screen: Ask your question"><img src="assets/apps/aimystic/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Streaks and collection" aria-label="Show screen: Streaks and collection"><img src="assets/apps/aimystic/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          </div>
+          <div class="ap-caption" role="status">Daily card orb</div>
+        </div>
+      </div>
+      <div class="app-panel" id="panel-cascade"
+           data-wall="#170C38" data-acc="#5BE3A0" data-acc2="#A9C8FF">
+        <div class="ap-body">
+          <div class="ap-cat">Game / Puzzle</div>
+          <h3 class="ap-name">Cascade</h3>
+          <div class="ap-tag">Drop &amp; merge physics puzzle</div>
+          <p class="ap-desc">A drop-and-merge puzzle built on Flame and Forge2D, where merges resolve through real rigid-body contacts rather than a grid. The rewarded continue clears a band roughly two rows deep off the bottom and wakes the sleeping bodies above it, so the stack actually collapses into the gap.</p>
+          <ul class="ap-feats">
+          <li>Forge2D rigid-body board where same-tier orbs merge on contact — 11 tiers, Spark to Nova</li>
+          <li>Chain-merge combo window with up to 4× multiplier and triangular per-tier scoring</li>
+          <li>Date-seeded daily challenge giving every player the same board, plus a day streak</li>
+          <li>Three coin-priced power-ups (swap, undo, targeted bomb) and one ad-earned bomb per run</li>
+          <li>19 claim-to-collect achievements, 5 orb skins and a 7-day escalating login reward</li>
+          <li>8 languages with Arabic RTL, an in-app language switcher and a reduced-motion mode</li>
+          </ul>
+          <p class="ap-tech">Flutter · Flame 1.37 · flame_forge2d physics · easy_localization · shared_preferences · audioplayers · AdMob + UMP · in_app_purchase</p>
+          <div class="ap-meta">
+            <span>com.carthage.cascade</span><span>v1.1.0</span><span>Android</span><span>8 languages, Arabic RTL</span>
+            <a href="/legal/cascade/privacy.html">Privacy &#8599;</a>
+            <a href="/legal/cascade/terms.html">Terms &#8599;</a>
+          </div>
+        </div>
+        <div class="ap-device">
+          <div class="phone"><div class="phone-screen">
+            <img class="on" src="assets/apps/cascade/1.webp" alt="Cascade — Home menu" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/cascade/2.webp" alt="Cascade — Physics board" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/cascade/3.webp" alt="Cascade — Achievements and claims" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/cascade/4.webp" alt="Cascade — Orb skin shop" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/cascade/5.webp" alt="Cascade — 7-day reward ladder" width="540" height="1200" loading="lazy" decoding="async">
+          </div></div>
+          <div class="ap-thumbs">
+          <button type="button" data-caption="Home menu" aria-label="Show screen: Home menu"><img src="assets/apps/cascade/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Physics board" aria-label="Show screen: Physics board"><img src="assets/apps/cascade/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Achievements and claims" aria-label="Show screen: Achievements and claims"><img src="assets/apps/cascade/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Orb skin shop" aria-label="Show screen: Orb skin shop"><img src="assets/apps/cascade/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="7-day reward ladder" aria-label="Show screen: 7-day reward ladder"><img src="assets/apps/cascade/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          </div>
+          <div class="ap-caption" role="status">Home menu</div>
+        </div>
+      </div>
+      <div class="app-panel" id="panel-zellia"
+           data-wall="#0A3B44" data-acc="#F4C430" data-acc2="#E2734F">
+        <div class="ap-body">
+          <div class="ap-cat">Game / Puzzle</div>
+          <h3 class="ap-name">Zellia</h3>
+          <div class="ap-tag">Cozy triple tile match</div>
+          <p class="ap-desc">A triple-tile-match puzzle set in the zellige mosaics of Fez and Granada. Every board comes out of a constructive reverse-deal generator that lays the winning line down first, so no level can ever be dealt unsolvable.</p>
+          <ul class="ap-feats">
+          <li>Constructive reverse-deal generator proves every board solvable, unit-tested to level 150</li>
+          <li>Shuffle re-runs the deal on the live position, tray included, and is tested to stay winnable</li>
+          <li>Six girih motifs on a pre-rasterised 256 px sprite set — tiles separate by silhouette, not just colour</li>
+          <li>Palace restoration meta: 8 areas × 4 stages bought with tesserae earned per board</li>
+          <li>Daily board on a launch-stable seed, endless Zen mode and a freeze-forgiving streak</li>
+          <li>No banner ads: interstitials every 2nd board on an 80 s cooldown, plus opt-in rewarded</li>
+          </ul>
+          <p class="ap-tech">Flutter · Flame · pure-Dart solvable-board generator · shared_preferences · easy_localization · AdMob + UMP · in_app_purchase · flutter_local_notifications</p>
+          <div class="ap-meta">
+            <span>com.carthage.zellia</span><span>v1.1.0</span><span>Android</span><span>8 languages, Arabic RTL</span>
+            <a href="/legal/zellia/privacy.html">Privacy &#8599;</a>
+            <a href="/legal/zellia/terms.html">Terms &#8599;</a>
+          </div>
+        </div>
+        <div class="ap-device">
+          <div class="phone"><div class="phone-screen">
+            <img class="on" src="assets/apps/zellia/1.webp" alt="Zellia — Core match loop" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/zellia/2.webp" alt="Zellia — Palace restoration" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/zellia/3.webp" alt="Zellia — Daily board" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/zellia/4.webp" alt="Zellia — Mode select" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/zellia/5.webp" alt="Zellia — Zen mode" width="540" height="1200" loading="lazy" decoding="async">
+          </div></div>
+          <div class="ap-thumbs">
+          <button type="button" data-caption="Core match loop" aria-label="Show screen: Core match loop"><img src="assets/apps/zellia/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Palace restoration" aria-label="Show screen: Palace restoration"><img src="assets/apps/zellia/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Daily board" aria-label="Show screen: Daily board"><img src="assets/apps/zellia/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Mode select" aria-label="Show screen: Mode select"><img src="assets/apps/zellia/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Zen mode" aria-label="Show screen: Zen mode"><img src="assets/apps/zellia/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          </div>
+          <div class="ap-caption" role="status">Core match loop</div>
+        </div>
+      </div>
+      <div class="app-panel" id="panel-relicrevival"
+           data-wall="#1C1309" data-acc="#D4AF37" data-acc2="#7FB0A2">
+        <div class="ap-body">
+          <div class="ap-cat">Game / Casual</div>
+          <h3 class="ap-name">Relic Revival</h3>
+          <div class="ap-tag">Antique restore &amp; museum builder</div>
+          <p class="ap-desc">A swipe-to-clean restoration game: wipe away the grime and a relic's hidden identity emerges. Every relic is composed from an integer id plus a per-install salt by a seeded FNV-1a / SplitMix64 pipeline, and drawn entirely in CustomPainter — the game itself ships with no bitmap art.</p>
+          <ul class="ap-feats">
+          <li>Swipe-to-wipe reveal driven by a GPU erase mask plus a 64×64 CPU coverage grid</li>
+          <li>Deterministic composer: FNV-1a-64 + SplitMix64 turns a relic id into vector art</li>
+          <li>Five rarity tiers at 60 / 25 / 10 / 4.5 / 0.5 drop weights — higher tiers resist the wipe</li>
+          <li>A museum of 8 themed sets across 61 pedestals, each completion adding permanent income</li>
+          <li>Offline idle income from a 4-restorer roster, capped at 6 h and proof against clock edits</li>
+          <li>1080×1080 before / after share card rendered by the same painter, plus 8 UI languages</li>
+          </ul>
+          <p class="ap-tech">Flutter · CustomPainter-only art (no game engine) · shared_preferences · easy_localization · AdMob · in_app_purchase · audioplayers</p>
+          <div class="ap-meta">
+            <span>com.carthage.relicrevival</span><span>v1.1.0</span><span>Android</span><span>8 languages, incl. Arabic</span>
+            <a href="/legal/relicrevival/privacy.html">Privacy &#8599;</a>
+            <a href="/legal/relicrevival/terms.html">Terms &#8599;</a>
+          </div>
+        </div>
+        <div class="ap-device">
+          <div class="phone"><div class="phone-screen">
+            <img class="on" src="assets/apps/relicrevival/1.webp" alt="Relic Revival — Epic reveal and appraisal" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/relicrevival/2.webp" alt="Relic Revival — Mid-wipe reveal" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/relicrevival/3.webp" alt="Relic Revival — Museum collection sets" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/relicrevival/4.webp" alt="Relic Revival — Restorer roster" width="540" height="1200" loading="lazy" decoding="async">
+          </div></div>
+          <div class="ap-thumbs">
+          <button type="button" data-caption="Epic reveal and appraisal" aria-label="Show screen: Epic reveal and appraisal"><img src="assets/apps/relicrevival/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Mid-wipe reveal" aria-label="Show screen: Mid-wipe reveal"><img src="assets/apps/relicrevival/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Museum collection sets" aria-label="Show screen: Museum collection sets"><img src="assets/apps/relicrevival/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Restorer roster" aria-label="Show screen: Restorer roster"><img src="assets/apps/relicrevival/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          </div>
+          <div class="ap-caption" role="status">Epic reveal and appraisal</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="apps-note" data-rv>Six release-signed 1.1.0 builds, currently moving through Google Play review. <a href="#book">Ask me for an install link</a> and I&rsquo;ll put any of them on your phone today, or screen-share the codebase on the call. Privacy policy and terms for every app are already live at <a href="/legal/">/legal</a>.</p>
   </div>
 </section>
 
-<section class="contact wrap" id="contact">
-  <div class="eyebrow" data-reveal>&#10022; Let's work together</div>
-  <h2 class="d1" data-reveal>Got an idea?<br>Let's <em>ship</em> it.</h2>
-  <p class="lead d2" data-reveal>Open to freelance projects, collaborations, and full-time roles. The fastest way to reach me is email.</p>
-  <a href="mailto:snoussimehdi0@gmail.com" class="cmail d2" data-cursor data-reveal>snoussimehdi0@gmail.com <span class="arr">&#8599;</span></a>
-  <div class="cinfo d3" data-reveal>
-    <div>Location<b>Mahdia, Tunisia</b></div>
-    <div>Phone<b>(+216) 93 722 113</b></div>
-    <div>Availability<b style="color:#2fbf71">Open to work</b></div>
+<!-- ══ 04 · CLIENT WORK ═══════════════════════════════════════════ -->
+<section class="sheet wrap" id="work">
+  <div class="tb" data-rv>
+    <span class="tb-no">SHEET 03</span>
+    <span class="tb-ttl">Production work for clients</span>
   </div>
-  <div class="socials d3" data-reveal>
-    <a href="https://www.upwork.com/freelancers/~015b3b341714236b29" target="_blank" rel="noopener" aria-label="Upwork" data-cursor><svg viewBox="0 0 24 24"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06a2.299 2.299 0 0 1 2.3 2.302 2.299 2.299 0 0 1-2.301 2.303zm0-6.561c-2.542 0-4.51 1.658-5.32 4.326-1.244-1.879-2.19-4.139-2.741-6.066H7.74v7.512c-.001 1.269-1.032 2.3-2.301 2.301-1.27-.001-2.302-1.032-2.302-2.301V4.857H.835v7.512a5.214 5.214 0 0 0 5.205 5.215 5.214 5.214 0 0 0 5.214-5.215v-1.259c.542 1.123 1.205 2.262 2.008 3.262l-1.7 7.992h2.31l1.242-5.852c1.069.5 2.292.823 3.726.823 2.812 0 5.12-2.318 5.12-5.16 0-2.812-2.308-5.119-5.12-5.119z"/></svg></a>
-    <a href="https://github.com/Mehdi-Snoussi" target="_blank" rel="noopener" aria-label="GitHub" data-cursor><svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></a>
-    <a href="https://www.linkedin.com/in/snoussi-mehdi-b86abb17b/" target="_blank" rel="noopener" aria-label="LinkedIn" data-cursor><svg viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5V8h3v11zM6.5 6.7a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zM19 19h-3v-5.6c0-1.3-.5-2.2-1.7-2.2-.9 0-1.5.6-1.7 1.2-.1.2-.1.5-.1.8V19h-3V8h3v1.3c.4-.6 1.1-1.5 2.8-1.5 2 0 3.5 1.3 3.5 4.2V19z"/></svg></a>
-    <a href="https://www.instagram.com/mehdi_snoussi/" target="_blank" rel="noopener" aria-label="Instagram" data-cursor><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4a3.8 3.8 0 0 1-1.4-.9 3.8 3.8 0 0 1-.9-1.4c-.2-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-.9 0-1.4.2-1.7.3-.4.2-.7.4-1 .7-.3.3-.5.6-.7 1-.1.3-.3.8-.3 1.7-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c0 .9.2 1.4.3 1.7.2.4.4.7.7 1 .3.3.6.5 1 .7.3.1.8.3 1.7.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c.9 0 1.4-.2 1.7-.3.4-.2.7-.4 1-.7.3-.3.5-.6.7-1 .1-.3.3-.8.3-1.7.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c0-.9-.2-1.4-.3-1.7a2.7 2.7 0 0 0-.7-1 2.7 2.7 0 0 0-1-.7c-.3-.1-.8-.3-1.7-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.2-8.2a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg></a>
-    <a href="https://www.facebook.com/mehdi11823/" target="_blank" rel="noopener" aria-label="Facebook" data-cursor><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a>
+  <h2 class="h2" data-rv>Four years of production work, under NDA.</h2>
+  <p class="sub" data-rv>Client names and code stay private. The architecture doesn&rsquo;t, and I&rsquo;m glad to walk you through any of these decisions on a call.</p>
+
+  <div class="jobs">
+    <article class="job" data-rv>
+      <div class="ix">JOB-01 &middot; ERP</div>
+      <div>
+        <h3>Multi-tenant financial platform</h3>
+        <p>Sole front-end engineer in a 12-person Scrum team. Accounting, e-invoicing, payments and reporting, with per-user permissions, record-level locking and real-time updates.</p>
+      </div>
+      <div class="tech">Angular<br>Symfony &middot; PostgreSQL<br>Mercure</div>
+    </article>
+    <article class="job" data-rv>
+      <div class="ix">JOB-02 &middot; MOBILE</div>
+      <div>
+        <h3>Cross-platform tourism app</h3>
+        <p>Published to both the App Store and Google Play. Live geolocation guidance, a full offline mode, multi-language support and push notifications.</p>
+      </div>
+      <div class="tech">Flutter<br>iOS &middot; Android<br>i18n</div>
+    </article>
+    <article class="job" data-rv>
+      <div class="ix">JOB-03 &middot; FINTECH</div>
+      <div>
+        <h3>Personal finance app, both stores</h3>
+        <p>Taken to production on iOS and Android: offline-first sync, native permission handling, and the store submission process end to end.</p>
+      </div>
+      <div class="tech">React Native<br>iOS &middot; Android</div>
+    </article>
+    <article class="job" data-rv>
+      <div class="ix">JOB-04 &middot; HEALTHTECH</div>
+      <div>
+        <h3>Clinical training platform</h3>
+        <p>Learner progress tracking with automatic certificate generation, integrated with an external telephony API and the client's learning-management system.</p>
+      </div>
+      <div class="tech">Angular<br>Symfony &middot; PostgreSQL</div>
+    </article>
+    <article class="job" data-rv>
+      <div class="ix">JOB-05 &middot; PROPTECH</div>
+      <div>
+        <h3>Real-estate &amp; vehicle valuation</h3>
+        <p>An instant-estimate quiz with photo and video submission, an admin back-office, and an automated ingestion pipeline that keeps live market comparables flowing in.</p>
+      </div>
+      <div class="tech">Angular &middot; NgRx<br>NestJS</div>
+    </article>
+    <article class="job" data-rv>
+      <div class="ix">JOB-06 &middot; INTERNAL</div>
+      <div>
+        <h3>Rich-text editor component</h3>
+        <p>Replaced a paid third-party library with a reusable in-house component, removing a recurring licence cost from the product.</p>
+      </div>
+      <div class="tech">Angular<br>TypeScript</div>
+    </article>
+  </div>
+  <p class="jobs-note" data-rv>Earlier: Software Engineering degree, EPI (2020&ndash;2023) &middot; BSc Electronics, ISSAT Sousse (2017&ndash;2020)</p>
+</section>
+
+<!-- ══ 05 · PROCESS ═══════════════════════════════════════════════ -->
+<section class="sheet wrap" id="process">
+  <div class="tb" data-rv>
+    <span class="tb-no">SHEET 04</span>
+    <span class="tb-ttl">How a project runs</span>
+  </div>
+  <h2 class="h2" data-rv>You always know what week you're in.</h2>
+  <p class="sub" data-rv>No black box, no invoice surprises. From the first week of building, an installable build lands in your hands every week.</p>
+
+  <div class="steps">
+    <div class="step" data-rv>
+      <div class="n">01</div>
+      <h3>Call</h3>
+      <p>Thirty minutes. You describe the product, I ask the awkward questions and tell you what I'd cut from v1.</p>
+      <div class="t">Free &middot; same week</div>
+    </div>
+    <div class="step" data-rv>
+      <div class="n">02</div>
+      <h3>Scope &amp; quote</h3>
+      <p>A written scope, a fixed price and a delivery date. If it's out of your budget, you find out here, not later.</p>
+      <div class="t">2&ndash;3 days</div>
+    </div>
+    <div class="step" data-rv>
+      <div class="n">03</div>
+      <h3>Weekly builds</h3>
+      <p>An installable build every week, in your own repo from day one. You steer while steering is still cheap.</p>
+      <div class="t">The bulk of the project</div>
+    </div>
+    <div class="step" data-rv>
+      <div class="n">04</div>
+      <h3>Release &amp; handover</h3>
+      <p>Signed builds, store listing, privacy policy and submission. Then docs, or a maintenance arrangement if you want one.</p>
+      <div class="t">Final 1&ndash;2 weeks</div>
+    </div>
   </div>
 </section>
+
+<!-- ══ 06 · FAQ ═══════════════════════════════════════════════════ -->
+<section class="sheet wrap" id="faq">
+  <div class="tb" data-rv>
+    <span class="tb-no">SHEET 05</span>
+    <span class="tb-ttl">Questions people actually ask</span>
+  </div>
+  <h2 class="h2" data-rv>The awkward ones, answered up front.</h2>
+
+  <div class="faq">
+    <details class="qa" data-rv><summary><span class="qn">Q-01</span> What does an app cost?</summary>
+      <!-- CONVERSION: put your real floor price in the sentence below ("I don't take app
+           builds under $X"). A founder who can't self-qualify on price usually just leaves. -->
+      <div class="a">I quote a fixed price after the scope call, never an open-ended hourly rate. The number depends almost entirely on how much you're willing to leave out of version one &mdash; which is the main thing we'll talk about on the call. You will not get an invoice you didn't agree to in writing first.</div></details>
+    <details class="qa" data-rv><summary><span class="qn">Q-02</span> How long until it's in the stores?</summary>
+      <div class="a">I scope first releases to a six-to-ten week window, and the exact date goes into the written scope before you pay anything. A rescue starts with a one-week fixed-price audit so neither of us is guessing. Store review adds a few days on Google Play, and can add longer on the App Store.</div></details>
+    <details class="qa" data-rv><summary><span class="qn">Q-03</span> Do you do the design as well?</summary>
+      <div class="a">There was no designer on any of the six apps above; I drew every screen, icon and store screenshot myself. If you already have a designer or a Figma file I&rsquo;ll build to that instead, and if you don&rsquo;t, you&rsquo;re not blocked waiting for one.</div></details>
+    <details class="qa" data-rv><summary><span class="qn">Q-04</span> iOS as well as Android?</summary>
+      <div class="a">Flutter and React Native both build one codebase for both platforms, and I have taken client apps through submission on both stores. My own six apps are Android-first because that is where their audience is, not because of a platform limit.</div></details>
+    <details class="qa" data-rv><summary><span class="qn">Q-05</span> Who owns the code?</summary>
+      <div class="a">You do. The work happens in your repository, under your account, with your name on the store listing and your signing keys in your hands from day one. Full IP assignment is written into the contract and completes on final payment. No lock-in, nothing to buy back at the end.</div></details>
+    <details class="qa" data-rv><summary><span class="qn">Q-06</span> What happens after launch?</summary>
+      <div class="a">Your choice. Either a clean handover with documentation so any developer can pick it up, or a monthly arrangement for updates, platform-policy changes and new features. Both stores force breaking changes on you every year, so someone has to own that.</div></details>
+    <details class="qa" data-rv><summary><span class="qn">Q-07</span> You're in Tunisia &mdash; how does that work?</summary>
+      <div class="a">Mahdia, on the coast, GMT+1 &mdash; the same working day as all of Europe, and mornings with the US East Coast. I work in English, French and Arabic. On money: a written agreement, and payment in milestones tied to deliverables rather than one lump sum up front. You can pay by bank transfer, or through Upwork escrow if you would rather have a platform holding the funds. And because the code sits in your repository under your account from the first commit, you keep everything you have paid for even if we stop working together.</div></details>
+    <details class="qa" data-rv><summary><span class="qn">Q-08</span> Can I see the code before I commit?</summary>
+      <div class="a">On the call, yes. I&rsquo;ll share a screen and walk you through the architecture of any app on this page, including the parts I would do differently now. It is the fastest way for a technical founder to work out whether I am any good.</div></details>
+  </div>
+</section>
+
+<!-- ══ 07 · ABOUT ═════════════════════════════════════════════════ -->
+<section class="sheet wrap" id="about">
+  <div class="tb" data-rv>
+    <span class="tb-no">SHEET 06</span>
+    <span class="tb-ttl">Who you'd be working with</span>
+  </div>
+  <div class="about">
+    <div data-rv>
+      <h2 class="h2" style="max-width:24ch">Four years inside other people&rsquo;s platforms taught me what to build on my own.</h2>
+      <p style="margin-top:20px">Angular and TypeScript on the front, Symfony, NestJS, Spring Boot and PostgreSQL behind them &mdash; <b>enterprise systems where a bad release costs somebody real money</b>. That's where I learned to care about release pipelines, permissions and the boring parts.</p>
+      <p>Alongside that I built sixteen apps of my own, six of them all the way to signed, release-ready builds: Flutter, clean architecture, BLoC, localisation into eight languages, AdMob and in-app purchases, store listings, privacy policies. <b>Every part of that was me</b> &mdash; which is why I know exactly how long each part takes.</p>
+      <p>So the person on the call is the person who writes the code. I&rsquo;ve done every part of this job &mdash; architecture, UI, store submission &mdash; on my own, more than once.</p>
+    </div>
+    <dl class="facts" data-rv>
+      <div><dt>Based</dt><dd>Mahdia, Tunisia &middot; GMT+1</dd></div>
+      <div><dt>Languages</dt><dd>English &middot; French &middot; Arabic</dd></div>
+      <div><dt>Mobile</dt><dd>Flutter &middot; React Native &middot; Dart</dd></div>
+      <div><dt>Web</dt><dd>Angular &middot; TypeScript &middot; RxJS</dd></div>
+      <div><dt>Backend</dt><dd>NestJS &middot; Symfony &middot; Spring Boot</dd></div>
+      <div><dt>Data</dt><dd>PostgreSQL &middot; Hive &middot; SQLite</dd></div>
+      <div><dt>Ships with</dt><dd>GitLab CI &middot; SonarQube</dd></div>
+      <div><dt>Contract</dt><dd>Direct or via Upwork escrow</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ══ 08 · BOOK ══════════════════════════════════════════════════ -->
+<section class="close" id="book">
+  <div class="wrap">
+    <div class="tb" data-rv>
+      <span class="tb-no">SHEET 07</span>
+      <span class="tb-ttl">Start here</span>
+    </div>
+    <h2 data-rv>Tell me what you're building.</h2>
+    <p class="lede" data-rv>Answer these three and I&rsquo;ll send you a couple of times that work. You&rsquo;ll leave the call knowing what v1 should actually contain; the written scope, delivery date and fixed price follow within 2&ndash;3 days.</p>
+
+    <form class="form" id="brief" data-rv>
+      <div class="row">
+        <label class="lbl" for="f-what">01 &middot; What are you building?</label>
+        <div class="fld"><textarea id="f-what" rows="3" required placeholder="A delivery app for my restaurant chain. Customers order, drivers get routed, I see it all in a dashboard."></textarea></div>
+      </div>
+      <div class="row">
+        <span class="lbl" id="lbl-stage">02 &middot; Where is it now?</span>
+        <div class="fld"><div class="chips" role="radiogroup" aria-labelledby="lbl-stage">
+          <label class="chip"><input type="radio" name="stage" value="Just an idea"><span>Just an idea</span></label>
+          <label class="chip"><input type="radio" name="stage" value="Designs ready"><span>Designs ready</span></label>
+          <label class="chip"><input type="radio" name="stage" value="App exists, needs work"><span>App exists, needs work</span></label>
+        </div></div>
+      </div>
+      <div class="row">
+        <span class="lbl" id="lbl-budget">03 &middot; Budget band</span>
+        <div class="fld"><div class="chips" role="radiogroup" aria-labelledby="lbl-budget">
+          <label class="chip"><input type="radio" name="budget" value="Under $5k"><span>Under $5k</span></label>
+          <label class="chip"><input type="radio" name="budget" value="$5k - $15k"><span>$5k &ndash; $15k</span></label>
+          <label class="chip"><input type="radio" name="budget" value="$15k - $40k"><span>$15k &ndash; $40k</span></label>
+          <label class="chip"><input type="radio" name="budget" value="$40k+"><span>$40k+</span></label>
+          <label class="chip"><input type="radio" name="budget" value="Not sure yet"><span>Not sure yet</span></label>
+        </div></div>
+      </div>
+      <div class="row send">
+        <span class="lbl">Send</span>
+        <div class="fld">
+          <button type="submit" class="btn">Book a call <span class="ar">&rarr;</span></button>
+          <span class="hint">I usually answer the same day, and never later than two business days.</span>
+        </div>
+      </div>
+    </form>
+
+    <!-- Upgrade path: paste a Formspree/Web3Forms id into action= and add method="POST"
+         on the form above to receive briefs directly instead of via the visitor's mail app. -->
+    <div class="fallback" id="fallback" tabindex="-1" hidden aria-live="polite">
+      <p class="fb-h">Your message is ready. Your email app should have opened &mdash; if nothing happened, copy it below and send it to <b>snoussimehdi0@gmail.com</b>.</p>
+      <pre id="fb-text"></pre>
+      <div class="fb-row">
+        <button type="button" class="btn ghost sm" id="fb-copy">Copy message</button>
+        <a class="btn ghost sm" href="https://www.upwork.com/freelancers/~015b3b341714236b29" target="_blank" rel="noopener">Send it on Upwork instead <span class="ar">&nearr;</span></a>
+      </div>
+    </div>
+
+    <div class="close-row" data-rv>
+      <a class="btn ghost" href="https://www.upwork.com/freelancers/~015b3b341714236b29" target="_blank" rel="noopener">Or message me on Upwork <span class="ar">&nearr;</span></a>
+    </div>
+    <dl class="close-grid" data-rv>
+      <div><dt>Email</dt><dd><a href="mailto:snoussimehdi0@gmail.com">snoussimehdi0@gmail.com</a></dd></div>
+      <div><dt>Working hours</dt><dd>GMT+1 &middot; overlaps EU all day, US mornings</dd></div>
+      <div><dt>Availability</dt><dd>Open for new projects</dd></div>
+      <div><dt>Elsewhere</dt><dd><a href="https://github.com/Mehdi-Snoussi" target="_blank" rel="noopener">GitHub</a> &middot; <a href="https://www.upwork.com/freelancers/~015b3b341714236b29" target="_blank" rel="noopener">Upwork</a></dd></div>
+    </dl>
+  </div>
+</section>
+</main>
 
 <footer>
   <div class="wrap">
-    <span>&copy; 2026 Mehdi Snoussi &mdash; Built from scratch in Mahdia</span>
-    <span class="top" id="toTop">Back to top &#8593;</span>
+    <span>&copy; <span id="yr">2026</span> Mehdi Snoussi &middot; Mahdia, Tunisia</span>
+    <span><a href="/legal/">App privacy policies &amp; terms</a> &middot; <a href="#book">Book a call</a> &middot; <a href="#top">Back to top &uarr;</a></span>
   </div>
 </footer>
 
@@ -414,84 +985,154 @@ footer .top:hover{gap:12px}
   var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hasIO = 'IntersectionObserver' in window;
 
-  var nav = document.getElementById('nav');
-  var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 40); };
-  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
-
-  var mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
-  mb.addEventListener('click', function(){
-    var open = mm.classList.toggle('open');
-    mb.textContent = open ? 'Close ×' : 'Menu +';
-  });
-  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mm.classList.remove('open'); mb.textContent='Menu +'; }); });
-
   var clock = document.getElementById('clock');
   function tick(){
     try{ clock.textContent = new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Africa/Tunis'}).format(new Date()); }
-    catch(e){ clock.textContent=''; }
+    catch(e){ clock.textContent = '--:--'; }
   }
-  tick(); setInterval(tick, 10000);
+  tick(); setInterval(tick, 20000);
+  document.getElementById('yr').textContent = new Date().getFullYear();
 
-  var words = ['web apps','admin panels','dashboards','web platforms'];
-  var i = 0, roller = document.getElementById('roller');
-  if(!rm && roller) setInterval(function(){
-    i = (i+1)%words.length;
-    roller.style.transition='opacity .3s'; roller.style.opacity = 0;
-    setTimeout(function(){ roller.textContent = words[i]; roller.style.opacity = 1; }, 300);
-  }, 2300);
-
-  var reveals = document.querySelectorAll('[data-reveal]');
+  var rv = document.querySelectorAll('[data-rv]');
   if(hasIO && !rm){
     var io = new IntersectionObserver(function(es){
       es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
-    reveals.forEach(function(el){ io.observe(el); });
+    }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+    rv.forEach(function(el, i){ el.style.transitionDelay = (Math.min(i%4,3)*60)+'ms'; io.observe(el); });
   } else {
-    reveals.forEach(function(el){ el.classList.add('in'); });
+    rv.forEach(function(el){ el.classList.add('in'); });
   }
 
-  function countUp(el){
-    var to = +el.dataset.to, d = 1400, s = null;
-    function step(t){ if(!s) s=t; var p=Math.min((t-s)/d,1);
-      el.textContent = Math.floor((1-Math.pow(1-p,3))*to); if(p<1) requestAnimationFrame(step); }
-    requestAnimationFrame(step);
-  }
-  var nums = document.querySelectorAll('.num');
-  if(hasIO && !rm){
-    var cio = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if(e.isIntersecting){ countUp(e.target); cio.unobserve(e.target); } });
-    }, {threshold:.6});
-    nums.forEach(function(el){ cio.observe(el); });
-  } else {
-    nums.forEach(function(el){ el.textContent = el.dataset.to; });
+  // ── project brief → pre-filled email, with a copy fallback ────────
+  var brief = document.getElementById('brief');
+  if(brief){
+    var pick = function(g){
+      var s = brief.querySelector('input[name="' + g + '"]:checked');
+      return s ? s.value : 'not said';
+    };
+    brief.addEventListener('submit', function(e){
+      e.preventDefault();
+      var what = (document.getElementById('f-what').value || '').trim();
+      var body = 'What I’m building:\n' + (what || '(tell Mehdi here)') +
+                 '\n\nWhere it is now: ' + pick('stage') +
+                 '\nBudget band: ' + pick('budget') +
+                 '\n\nBest times for a 30-minute call:\n\n';
+      var addr = 'snoussimehdi0@gmail.com';
+      var fb = document.getElementById('fallback');
+      document.getElementById('fb-text').textContent = 'To: ' + addr + '\nSubject: Project enquiry\n\n' + body;
+      fb.hidden = false;
+      fb.focus();
+      try{ fb.scrollIntoView({behavior:'smooth', block:'center'}); }catch(e){ fb.scrollIntoView(); }
+      window.location.href = 'mailto:' + addr + '?subject=' + encodeURIComponent('Project enquiry') +
+                             '&body=' + encodeURIComponent(body);
+    });
+    var cp = document.getElementById('fb-copy');
+    if(cp) cp.addEventListener('click', function(){
+      var el = document.getElementById('fb-text');
+      var done = function(){ cp.textContent = 'Copied'; };
+      var selectIt = function(){
+        var r = document.createRange(); r.selectNodeContents(el);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+        cp.textContent = 'Selected — press Ctrl+C';
+      };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(el.textContent).then(done, selectIt);
+      } else { selectIt(); }
+    });
   }
 
-  if(hasIO){
-    var links = [].slice.call(document.querySelectorAll('.navlinks a'));
-    var nio = new IntersectionObserver(function(es){
-      es.forEach(function(e){
-        if(e.isIntersecting){ links.forEach(function(l){ l.classList.toggle('active', l.getAttribute('href')==='#'+e.target.id); }); }
+// ── The shelf: one device, six apps ──────────────────────────────
+  var shelf = document.getElementById('apps');
+  if(shelf && shelf.querySelector('.shelf-item')){
+    var tabs   = [].slice.call(shelf.querySelectorAll('.shelf-item'));
+    var panels = [].slice.call(shelf.querySelectorAll('.app-panel'));
+
+    // Tab semantics are applied here, not in the static HTML: without JS the
+    // panels all render and these controls do nothing, so advertising a tablist
+    // would describe state the document does not have.
+    var rail = shelf.querySelector('.shelf');
+    rail.setAttribute('role', 'tablist');
+    rail.setAttribute('aria-label', 'Apps');
+    rail.setAttribute('aria-orientation', 'horizontal');
+    tabs.forEach(function(t, i){
+      t.setAttribute('role', 'tab');
+      t.setAttribute('aria-controls', panels[i].id);
+      panels[i].setAttribute('role', 'tabpanel');
+      panels[i].setAttribute('aria-labelledby', t.id);
+    });
+
+    // Screens live in display:none panels, so they never fetch until their tab
+    // opens. Warm them off the critical path instead, so a switch is instant.
+    var idle = window.requestIdleCallback || function(f){ return setTimeout(f, 250); };
+    var warm = function(imgs){
+      imgs.forEach(function(im){
+        if(im.dataset.warm) return;
+        im.dataset.warm = '1';
+        var pre = new Image(); pre.decoding = 'async'; pre.src = im.src;
       });
-    }, {threshold:.5});
-    links.forEach(function(l){ var s=document.querySelector(l.getAttribute('href')); if(s) nio.observe(s); });
+    };
+    var warmPanel = function(p, all){
+      var imgs = [].slice.call(p.querySelectorAll('.phone-screen img'));
+      warm(all ? imgs : imgs.slice(0, 1));
+    };
+
+    var pickApp = function(i, moveFocus){
+      tabs.forEach(function(t, j){
+        t.setAttribute('aria-selected', j===i ? 'true' : 'false');
+        t.tabIndex = j===i ? 0 : -1;
+      });
+      panels.forEach(function(p, j){ p.classList.toggle('on', j===i); });
+      var d = panels[i].dataset;
+      shelf.style.setProperty('--wall', d.wall);
+      shelf.style.setProperty('--acc',  d.acc);
+      shelf.style.setProperty('--acc2', d.acc2);
+      idle(function(){ warmPanel(panels[i], true); });
+      if(moveFocus) tabs[i].focus();
+    };
+
+    tabs.forEach(function(t, i){
+      t.addEventListener('click', function(){ pickApp(i); });
+      t.addEventListener('keydown', function(e){
+        // horizontal tablist: leave Up/Down to the browser so the page still scrolls
+        var n = null, k = e.key;
+        if(k==='ArrowRight') n = (i+1) % tabs.length;
+        else if(k==='ArrowLeft') n = (i-1+tabs.length) % tabs.length;
+        else if(k==='Home') n = 0;
+        else if(k==='End') n = tabs.length-1;
+        if(n !== null){ e.preventDefault(); pickApp(n, true); }
+      });
+    });
+
+    panels.forEach(function(p){
+      var shots  = [].slice.call(p.querySelectorAll('.phone-screen img'));
+      var thumbs = [].slice.call(p.querySelectorAll('.ap-thumbs button'));
+      var cap    = p.querySelector('.ap-caption');
+      var pickShot = function(i){
+        shots.forEach(function(s, j){ s.classList.toggle('on', j===i); });
+        thumbs.forEach(function(b, j){ b.setAttribute('aria-current', j===i ? 'true' : 'false'); });
+        if(cap) cap.textContent = thumbs[i].dataset.caption || '';
+      };
+      thumbs.forEach(function(t, i){
+        t.addEventListener('click', function(){ pickShot(i); });
+      });
+      if(thumbs.length) pickShot(0);
+    });
+
+    pickApp(0);
+
+    // once the shelf is actually in view, pre-fetch each app's first screen so
+    // the phone is never blank on a tab click
+    if(hasIO){
+      var wio = new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(!e.isIntersecting) return;
+          wio.disconnect();
+          idle(function(){ panels.forEach(function(p){ warmPanel(p, false); }); });
+        });
+      }, {rootMargin:'300px 0px'});
+      wio.observe(shelf);
+    }
   }
-
-  if(!rm && window.matchMedia('(pointer:fine)').matches){
-    var cur = document.getElementById('cursor'), cx=0,cy=0,tx=0,ty=0;
-    window.addEventListener('mousemove', function(e){ tx=e.clientX; ty=e.clientY; });
-    (function loop(){ cx+=(tx-cx)*.18; cy+=(ty-cy)*.18; cur.style.transform='translate('+cx+'px,'+cy+'px) translate(-50%,-50%)'; requestAnimationFrame(loop); })();
-    document.querySelectorAll('a,button,[data-cursor]').forEach(function(el){
-      el.addEventListener('mouseenter', function(){ cur.classList.add('big'); });
-      el.addEventListener('mouseleave', function(){ cur.classList.remove('big'); });
-    });
-    document.querySelectorAll('.btn').forEach(function(b){
-      b.addEventListener('mousemove', function(e){ var r=b.getBoundingClientRect();
-        b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.25)+'px,'+((e.clientY-r.top-r.height/2)*.35)+'px)'; });
-      b.addEventListener('mouseleave', function(){ b.style.transform=''; });
-    });
-  } else { var c=document.getElementById('cursor'); if(c) c.style.display='none'; }
-
-  document.getElementById('toTop').addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
 })();
 </script>
 </body>
