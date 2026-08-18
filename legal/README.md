@@ -1,38 +1,39 @@
 # App Legal Center
 
-Privacy policies + terms of service for all 16 apps, hosted under `/legal/` on the
-existing `Mehdi-Snoussi.github.io` GitHub Pages site (the portfolio site stays at the root).
-Plain static HTML — no build step. Each app has its own page with its own data-collection section.
+Privacy policies + terms of service for the six apps published on Google Play, hosted under
+`/legal/` on the `Mehdi-Snoussi.github.io` GitHub Pages site (the portfolio stays at the root).
+Plain static HTML — no build step.
 
 - Landing page: <https://mehdi-snoussi.github.io/legal/>
 - `app-ads.txt` lives at the **site root** (`/app-ads.txt`, not under `/legal/`) so AdMob can find it.
 - Branch: `master` (this repo's default).
 
 ## Editing
-Each page is hand-written static HTML linking the shared `style.css`. Edit the file directly.
+Each page is self-contained: its CSS lives in an inline `<style>` block in the file itself, and
+each app's pages are designed in that app's own palette, typography and motifs. There is no
+shared stylesheet any more — the old `style.css` was removed on 18 August 2026. Edit a file
+directly; the two pages for one app share the same tokens, so change both together.
+
+The legal text is frozen. Redesigns must preserve every sentence, table row, list item, date
+and external link verbatim — the URLs below are referenced by live Play Console listings.
 
 ## Play Console URLs
 Paste each app's privacy URL into **App content → Privacy policy** and reference it in **Data safety**.
 Set each app's **developer website** in the store listing to `https://mehdi-snoussi.github.io` so
 `app-ads.txt` resolves at the domain root.
 
-| App | Privacy | Terms |
-|---|---|---|
-| Dhikr | `https://mehdi-snoussi.github.io/legal/dhikr/privacy.html` | `https://mehdi-snoussi.github.io/legal/dhikr/terms.html` |
-| MyCar | `https://mehdi-snoussi.github.io/legal/mycar/privacy.html` | `https://mehdi-snoussi.github.io/legal/mycar/terms.html` |
-| Wallio | `https://mehdi-snoussi.github.io/legal/wallio/privacy.html` | `https://mehdi-snoussi.github.io/legal/wallio/terms.html` |
-| MangaVerse | `https://mehdi-snoussi.github.io/legal/mangaverse/privacy.html` | `https://mehdi-snoussi.github.io/legal/mangaverse/terms.html` |
-| PixelUp | `https://mehdi-snoussi.github.io/legal/pixelup/privacy.html` | `https://mehdi-snoussi.github.io/legal/pixelup/terms.html` |
-| BreedLens | `https://mehdi-snoussi.github.io/legal/breedlens/privacy.html` | `https://mehdi-snoussi.github.io/legal/breedlens/terms.html` |
-| CreepID | `https://mehdi-snoussi.github.io/legal/creepid/privacy.html` | `https://mehdi-snoussi.github.io/legal/creepid/terms.html` |
-| CutOut | `https://mehdi-snoussi.github.io/legal/cutout/privacy.html` | `https://mehdi-snoussi.github.io/legal/cutout/terms.html` |
-| SnapCal | `https://mehdi-snoussi.github.io/legal/snapcal/privacy.html` | `https://mehdi-snoussi.github.io/legal/snapcal/terms.html` |
-| AI Mystic | `https://mehdi-snoussi.github.io/legal/aimystic/privacy.html` | `https://mehdi-snoussi.github.io/legal/aimystic/terms.html` |
-| LeafSnap | `https://mehdi-snoussi.github.io/legal/leafsnap/privacy.html` | `https://mehdi-snoussi.github.io/legal/leafsnap/terms.html` |
-| PawPulse | `https://mehdi-snoussi.github.io/legal/pawpulse/privacy.html` | `https://mehdi-snoussi.github.io/legal/pawpulse/terms.html` |
-| SortFlow | `https://mehdi-snoussi.github.io/legal/sortflow/privacy.html` | `https://mehdi-snoussi.github.io/legal/sortflow/terms.html` |
-| MathCam | `https://mehdi-snoussi.github.io/legal/mathcam/privacy.html` | `https://mehdi-snoussi.github.io/legal/mathcam/terms.html` |
-| Scrollia | `https://mehdi-snoussi.github.io/legal/scrollia/privacy.html` | `https://mehdi-snoussi.github.io/legal/scrollia/terms.html` |
-| Thock | `https://mehdi-snoussi.github.io/legal/thock/privacy.html` | `https://mehdi-snoussi.github.io/legal/thock/terms.html` |
+| App | Package | Privacy | Terms |
+|---|---|---|---|
+| Dhikr | `com.carthage.dhikr` | `https://mehdi-snoussi.github.io/legal/dhikr/privacy.html` | `https://mehdi-snoussi.github.io/legal/dhikr/terms.html` |
+| SortFlow | `com.sortflow.sortflow` | `https://mehdi-snoussi.github.io/legal/sortflow/privacy.html` | `https://mehdi-snoussi.github.io/legal/sortflow/terms.html` |
+| AI Mystic | `com.carthage.aimystic` | `https://mehdi-snoussi.github.io/legal/aimystic/privacy.html` | `https://mehdi-snoussi.github.io/legal/aimystic/terms.html` |
+| Cascade | `com.carthage.cascade` | `https://mehdi-snoussi.github.io/legal/cascade/privacy.html` | `https://mehdi-snoussi.github.io/legal/cascade/terms.html` |
+| Zellia | `com.carthage.zellia` | `https://mehdi-snoussi.github.io/legal/zellia/privacy.html` | `https://mehdi-snoussi.github.io/legal/zellia/terms.html` |
+| Relic Revival | `com.carthage.relicrevival` | `https://mehdi-snoussi.github.io/legal/relicrevival/privacy.html` | `https://mehdi-snoussi.github.io/legal/relicrevival/terms.html` |
+
+Thirteen unpublished side apps (breedlens, creepid, cutout, leafsnap, mangaverse, mathcam,
+mycar, pawpulse, pixelup, scrollia, snapcal, thock, wallio) had pages here until 18 August 2026.
+They were removed because none of them is on Play and nothing linked to them. If any of those
+ships later, restore its folder from git history and give it its own design.
 
 Contact for all apps: apps.contact.supports@gmail.com

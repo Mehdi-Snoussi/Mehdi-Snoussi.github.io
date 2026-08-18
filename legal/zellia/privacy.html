@@ -4,54 +4,374 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zellia — Privacy Policy</title>
-<link rel="stylesheet" href="../style.css">
+<meta name="description" content="How Zellia: Tile Match Palace handles your data. No sign-up, no login: game progress, palace restoration and settings stay on your device. Ads by Google AdMob, one optional Remove Ads purchase.">
+<meta name="theme-color" content="#115674">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&amp;family=Marcellus&amp;family=Poppins:wght@400;500;600&amp;display=swap">
+<style>
+:root{
+  --ground:#F2EAD3;      /* Atlas White  - page ground (the plaster wall)   */
+  --panel:#FBF6E9;       /* panel cream  - the bed the policy text sits on  */
+  --panel-2:#F7F0DE;     /* recessed cream - table stripe, callout          */
+  --ink:#2A2118;         /* warm near-black - body text        14.6:1       */
+  --ink-mute:#5C4B36;    /* secondary text                      7.7:1       */
+  --cobalt:#115674;      /* STRUCTURE: bars, frames, headings   7.5:1       */
+  --cobalt-d:#0E4A64;    /* deeper cobalt - footer bed          8.9:1       */
+  --saffron:#F4C430;     /* hairline inset + on-cobalt text     4.9:1       */
+  --tray:#E8DCBE;        /* tray plank   - table head, rules                */
+  --slot:#E0D0AB;        /* tray slot    - hairlines                        */
+  --accent:#115674;      /* per-page accent (overridden on terms)           */
+  --accent-ink:#7A5A07;  /* per-page accent TEXT  saffron-ink   5.9:1       */
+  --accent-orn:#F4C430;  /* per-page accent ORNAMENT                        */
+  --on-accent:#F4C430;   /* text on the accent chip             4.9:1       */
+  --frame:4px;
+  --wrap:66rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--ground);color:var(--ink);
+  font:400 1.0625rem/1.72 Poppins,system-ui,"Segoe UI",sans-serif;
+  overflow-x:hidden;display:flex;flex-direction:column;min-height:100vh;
+}
+main{flex:1 0 auto}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--cobalt);text-underline-offset:3px;text-decoration-thickness:1px;
+  overflow-wrap:break-word}
+a:hover{color:var(--cobalt-d)}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:2px;border-radius:3px}
+.wrap{width:min(100% - 2.2rem,var(--wrap));margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.defs{position:absolute;width:0;height:0;overflow:hidden}
+
+/* ---------- top bar : the cobalt lintel ---------- */
+.topbar{background:var(--cobalt-d);border-bottom:3px solid var(--saffron)}
+.topbar .wrap{display:flex;flex-wrap:wrap;gap:.35rem 1.4rem;align-items:center;
+  padding:.78rem 0;font-size:.875rem;font-weight:500;letter-spacing:.03em}
+.topbar a{color:var(--ground);text-decoration:none;display:inline-flex;align-items:center;gap:.42rem}
+.topbar a:hover{color:var(--saffron);text-decoration:underline}
+.topbar a:focus-visible{outline-color:var(--saffron)}
+.topbar .sep{margin-left:auto}
+
+/* ---------- SIGNATURE : the zellige wall ---------- */
+.wall{position:relative;background:var(--cobalt-d);--overlap:clamp(46px,6vw,74px)}
+.wall__field{display:block;width:100%;height:clamp(168px,23vw,286px)}
+.wall__field svg{display:block;width:100%;height:100%}
+.wall::after{content:"";position:absolute;left:0;right:0;
+  top:clamp(168px,23vw,286px);height:5px;background:var(--cobalt);
+  box-shadow:0 1px 0 var(--saffron)}
+
+/* the plaster cartouche set into the wall */
+.cartouche{position:relative;margin-top:calc(-1 * var(--overlap));z-index:1;
+  padding:clamp(1.35rem,3.6vw,2.3rem) clamp(1.25rem,3.6vw,2.4rem);
+  display:grid;grid-template-columns:auto 1fr;gap:.4rem clamp(1rem,2.6vw,1.6rem);
+  align-items:start}
+.icon{grid-row:span 3;width:clamp(58px,9vw,86px);border-radius:22%;
+  border:2px solid var(--cobalt);
+  box-shadow:0 0 0 3px var(--panel),0 0 0 4px var(--saffron),0 6px 18px rgba(42,33,24,.2)}
+.eyebrow{margin:0;font-family:Cinzel,Georgia,serif;font-weight:700;
+  font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--accent-ink)}
+h1{margin:.1rem 0 .28rem;font-family:Cinzel,Georgia,serif;font-weight:700;
+  font-size:clamp(1.95rem,1.15rem + 2.7vw,2.95rem);line-height:1.08;
+  letter-spacing:.012em;color:var(--cobalt)}
+.meta{margin:0;grid-column:2;font-family:Marcellus,Georgia,serif;
+  font-size:clamp(.95rem,.9rem + .2vw,1.05rem);line-height:1.55;color:var(--ink-mute)}
+
+/* privacy <-> terms switch, built like two game tiles */
+.switch{grid-column:1/-1;margin:1.15rem 0 0;padding:.34rem;display:inline-flex;
+  gap:.34rem;list-style:none;background:var(--tray);border-radius:12px;
+  box-shadow:inset 0 2px 5px rgba(42,33,24,.14);width:fit-content;max-width:100%;
+  min-width:0;flex-wrap:wrap}
+.switch li{max-width:none}
+.switch a{display:block;padding:.5rem 1rem;border-radius:9px;text-decoration:none;
+  font-size:.845rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--ink-mute)}
+.switch a:hover{color:var(--cobalt);background:rgba(255,255,255,.55)}
+.switch [aria-current]{background:var(--accent);color:var(--on-accent);
+  box-shadow:inset 0 -3px 0 rgba(0,0,0,.24),inset 0 0 0 1.5px rgba(244,196,48,.45)}
+.switch [aria-current]:hover{background:var(--accent);color:var(--on-accent)}
+
+/* ---------- tile-panel frame ---------- */
+.frame{background:var(--panel);border:2px solid var(--cobalt);border-radius:6px;
+  box-shadow:inset 0 0 0 var(--frame) var(--panel),
+             inset 0 0 0 calc(var(--frame) + 1px) var(--saffron),
+             0 10px 26px -18px rgba(42,33,24,.55)}
+
+main{padding:clamp(1.8rem,4.5vw,3rem) 0 clamp(2rem,5vw,3.4rem)}
+.lede{display:grid;gap:clamp(1rem,2.4vw,1.5rem);margin-bottom:clamp(1.6rem,4vw,2.4rem)}
+@media (min-width:64rem){.lede{grid-template-columns:1.5fr 1fr;align-items:start}}
+.card{padding:clamp(1.25rem,3vw,1.9rem)}
+.card-label{margin:0 0 .2rem;font-family:Cinzel,Georgia,serif;font-weight:700;
+  font-size:1.02rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cobalt)}
+.card-sub{margin:0 0 1rem;font-family:Marcellus,Georgia,serif;font-size:.94rem;
+  color:var(--ink-mute)}
+.glance{margin:0;padding:0;list-style:none;display:grid;gap:.72rem}
+.glance li{position:relative;padding-left:1.85rem;font-size:1rem;line-height:1.62;
+  max-width:62ch}
+.glance li::before{content:"";position:absolute;left:0;top:.42em;width:11px;height:11px;
+  background:var(--accent-orn);
+  clip-path:polygon(50% 0,61.7% 26.5%,88.3% 14.6%,73.5% 38.3%,100% 50%,73.5% 61.7%,
+    88.3% 85.4%,61.7% 73.5%,50% 100%,38.3% 73.5%,11.7% 85.4%,26.5% 61.7%,0 50%,
+    26.5% 38.3%,11.7% 14.6%,38.3% 26.5%)}
+.toc{margin:0;padding:0;list-style:none;display:grid;gap:.1rem}
+.toc li{border-top:1px solid var(--slot);max-width:none}
+.toc li:first-child{border-top:0}
+.toc a{display:grid;grid-template-columns:2.1rem 1fr;gap:.5rem;padding:.44rem 0;
+  text-decoration:none;font-size:.94rem;color:var(--ink)}
+.toc a span{font-family:Cinzel,Georgia,serif;font-weight:700;color:var(--accent-ink)}
+.toc a:hover{color:var(--cobalt)}
+.toc a:hover span{color:var(--cobalt)}
+
+/* ---------- registers of the wall ---------- */
+.register{padding:clamp(1.4rem,4vw,2.7rem) clamp(1.25rem,4vw,2.7rem)}
+.register + .band,.band + .register{margin-top:clamp(1.5rem,3.6vw,2.3rem)}
+section + section{margin-top:2.3rem;padding-top:2.3rem;border-top:1px solid var(--slot)}
+section{scroll-margin-top:1.2rem}
+h2{margin:0 0 .85rem;display:flex;gap:.78rem;align-items:baseline;
+  font-family:Cinzel,Georgia,serif;font-weight:700;
+  font-size:clamp(1.18rem,1.06rem + .4vw,1.4rem);line-height:1.3;
+  letter-spacing:.01em;color:var(--cobalt)}
+.num{flex:0 0 auto;align-self:flex-start;position:relative;top:.06em;
+  width:2.05rem;height:2.05rem;border-radius:.55rem;display:grid;place-items:center;
+  background:var(--accent);color:var(--on-accent);
+  font-family:Cinzel,Georgia,serif;font-weight:700;font-size:.9rem;line-height:1;
+  box-shadow:inset 0 -3px 0 rgba(0,0,0,.24),inset 0 0 0 1.5px rgba(244,196,48,.42)}
+p,li{max-width:68ch}
+p{margin:0 0 1rem}
+p:last-child{margin-bottom:0}
+strong{font-weight:600}
+main ul{margin:0 0 1rem;padding-left:0;list-style:none;display:grid;gap:.6rem}
+main ul.glance li::before{transform:none}
+.register ul li{position:relative;padding-left:1.5rem}
+.register ul li::before{content:"";position:absolute;left:.12rem;top:.62em;width:8px;height:8px;
+  background:var(--accent-orn);transform:rotate(45deg)}
+
+/* table */
+.tablewrap{overflow-x:auto;margin:0 0 1rem;border:1px solid var(--slot);border-radius:5px;
+  -webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:41rem;font-size:.94rem;line-height:1.6}
+th,td{padding:.72rem .9rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--slot)}
+th{background:var(--tray);font-family:Marcellus,Georgia,serif;font-weight:400;
+  font-size:.82rem;letter-spacing:.13em;text-transform:uppercase;color:var(--cobalt);
+  border-bottom:2px solid var(--cobalt);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even) td{background:var(--panel-2)}
+td:first-child{font-weight:600;color:var(--cobalt);min-width:9.5rem}
+
+/* callout */
+.notice{margin:0 0 1rem;padding:1rem 1.15rem;background:var(--panel-2);
+  border:1px solid var(--slot);border-left:5px solid var(--accent);border-radius:5px;
+  max-width:68ch}
+.notice strong{font-family:Cinzel,Georgia,serif;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;font-size:.86rem;color:var(--accent-ink)}
+
+/* ---------- inter-register band ---------- */
+.band{display:block;width:100%;height:clamp(36px,4.6vw,48px);
+  border-block:2px solid var(--cobalt);border-radius:2px;overflow:hidden}
+.band svg{display:block;width:100%;height:100%}
+
+/* ---------- footer ---------- */
+footer{background:var(--cobalt-d);color:var(--ground);border-top:3px solid var(--saffron)}
+.footgrid{display:flex;flex-wrap:wrap;gap:1rem 2.4rem;align-items:baseline;
+  padding:clamp(1.5rem,3.6vw,2.2rem) 0}
+.mark{font-family:Cinzel,Georgia,serif;font-weight:700;font-size:1.12rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--saffron);margin:0;max-width:none}
+.mark small{display:block;font-family:Marcellus,Georgia,serif;font-size:.78rem;
+  letter-spacing:.14em;color:var(--ground);text-transform:none;margin-top:.25rem}
+.footlinks{margin:0 0 0 auto;padding:0;list-style:none;display:flex;flex-wrap:wrap;
+  gap:.5rem 1.5rem;font-size:.9rem}
+.footlinks li{max-width:none}
+footer a{color:var(--ground);text-decoration:none;border-bottom:1px solid rgba(242,234,211,.45);
+  padding-bottom:1px}
+footer a:hover{color:var(--saffron);border-color:var(--saffron)}
+footer a:focus-visible{outline-color:var(--saffron)}
+
+@media (max-width:36rem){
+  .cartouche{grid-template-columns:1fr}
+  .icon{grid-row:auto;margin-bottom:.45rem}
+  .meta{grid-column:1}
+  .topbar .sep{margin-left:0;width:100%}
+  .footlinks{margin-left:0}
+  table{min-width:34rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;
+    scroll-behavior:auto!important}
+}
+@media print{
+  :root{--panel:#fff;--panel-2:#fff;--ground:#fff;--ink:#000;--ink-mute:#222;
+        --cobalt:#000;--cobalt-d:#000;--slot:#999;--tray:#fff;--accent-ink:#000;
+        --accent:#fff;--on-accent:#000}
+  body{background:#fff;color:#000;font-size:11pt;line-height:1.5}
+  .wall__field,.band,.wall::after,.switch,.card--toc,.icon{display:none!important}
+  .wall{background:none}
+  .lede{display:block}
+  .topbar,footer{background:#fff!important;color:#000!important;border:0}
+  .topbar a,footer a{color:#000!important;border:0}
+  .mark{color:#000}
+  .mark small{color:#000}
+  .frame{border:1pt solid #000;box-shadow:none;border-radius:0}
+  .cartouche{margin-top:0;border:0;padding:0 0 .6rem}
+  .num{background:none;color:#000;box-shadow:none;border:0;width:auto;height:auto;
+    display:inline;font-size:inherit;top:0;margin-right:.15em}
+  .sr{position:static;width:auto;height:auto;clip:auto;overflow:visible}
+  h2{display:block}
+  .glance li::before,.register ul li::before{background:#000}
+  .notice{border:1pt solid #000;border-left:3pt solid #000}
+  section,tr,.register,.card{break-inside:avoid;page-break-inside:avoid}
+  h1,h2{break-after:avoid;page-break-after:avoid}
+  a[href^="http"]::after,a[href^="mailto"]::after{content:" <" attr(href) ">";
+    font-size:9pt;word-break:break-all}
+  .tablewrap{overflow:visible}
+  table{min-width:0;font-size:9.5pt}
+}
+
+</style>
 </head>
 <body>
-<p class="back"><a href="../index.html">&larr; All policies</a></p>
-<h1>Privacy Policy</h1>
-<p class="meta">Zellia: Tile Match Palace — Effective 11 July 2026. Last updated 11 July 2026.</p>
+<svg class="defs" aria-hidden="true" focusable="false"><defs><pattern id="zellijCool" width="360" height="360" patternUnits="userSpaceOnUse"><rect width="360" height="360" fill="#F2EAD3"/><g stroke="#F2EAD3" stroke-width="3.2" stroke-linejoin="round"><path d="M120 60L102.4 77.6L102.4 102.4L77.6 102.4L60 120L42.4 102.4L17.6 102.4L17.6 77.6L0 60L17.6 42.4L17.6 17.6L42.4 17.6L60 0L77.6 17.6L102.4 17.6L102.4 42.4Z" fill="#115674"/><path d="M240 60L222.4 77.6L222.4 102.4L197.6 102.4L180 120L162.4 102.4L137.6 102.4L137.6 77.6L120 60L137.6 42.4L137.6 17.6L162.4 17.6L180 0L197.6 17.6L222.4 17.6L222.4 42.4Z" fill="#6050DC"/><path d="M360 60L342.4 77.6L342.4 102.4L317.6 102.4L300 120L282.4 102.4L257.6 102.4L257.6 77.6L240 60L257.6 42.4L257.6 17.6L282.4 17.6L300 0L317.6 17.6L342.4 17.6L342.4 42.4Z" fill="#7BAFD4"/><path d="M120 180L102.4 197.6L102.4 222.4L77.6 222.4L60 240L42.4 222.4L17.6 222.4L17.6 197.6L0 180L17.6 162.4L17.6 137.6L42.4 137.6L60 120L77.6 137.6L102.4 137.6L102.4 162.4Z" fill="#115674"/><path d="M240 180L222.4 197.6L222.4 222.4L197.6 222.4L180 240L162.4 222.4L137.6 222.4L137.6 197.6L120 180L137.6 162.4L137.6 137.6L162.4 137.6L180 120L197.6 137.6L222.4 137.6L222.4 162.4Z" fill="#F4C430"/><path d="M360 180L342.4 197.6L342.4 222.4L317.6 222.4L300 240L282.4 222.4L257.6 222.4L257.6 197.6L240 180L257.6 162.4L257.6 137.6L282.4 137.6L300 120L317.6 137.6L342.4 137.6L342.4 162.4Z" fill="#8E4585"/><path d="M120 300L102.4 317.6L102.4 342.4L77.6 342.4L60 360L42.4 342.4L17.6 342.4L17.6 317.6L0 300L17.6 282.4L17.6 257.6L42.4 257.6L60 240L77.6 257.6L102.4 257.6L102.4 282.4Z" fill="#6050DC"/><path d="M240 300L222.4 317.6L222.4 342.4L197.6 342.4L180 360L162.4 342.4L137.6 342.4L137.6 317.6L120 300L137.6 282.4L137.6 257.6L162.4 257.6L180 240L197.6 257.6L222.4 257.6L222.4 282.4Z" fill="#62A87C"/><path d="M360 300L342.4 317.6L342.4 342.4L317.6 342.4L300 360L282.4 342.4L257.6 342.4L257.6 317.6L240 300L257.6 282.4L257.6 257.6L282.4 257.6L300 240L317.6 257.6L342.4 257.6L342.4 282.4Z" fill="#115674"/><path d="M120 60L137.6 77.6L137.6 102.4L162.4 102.4L180 120L162.4 137.6L137.6 137.6L137.6 162.4L120 180L102.4 162.4L102.4 137.6L77.6 137.6L60 120L77.6 102.4L102.4 102.4L102.4 77.6Z" fill="#115674"/><path d="M120 -300L137.6 -282.4L137.6 -257.6L162.4 -257.6L180 -240L162.4 -222.4L137.6 -222.4L137.6 -197.6L120 -180L102.4 -197.6L102.4 -222.4L77.6 -222.4L60 -240L77.6 -257.6L102.4 -257.6L102.4 -282.4Z" fill="#115674"/><path d="M-240 60L-222.4 77.6L-222.4 102.4L-197.6 102.4L-180 120L-197.6 137.6L-222.4 137.6L-222.4 162.4L-240 180L-257.6 162.4L-257.6 137.6L-282.4 137.6L-300 120L-282.4 102.4L-257.6 102.4L-257.6 77.6Z" fill="#115674"/><path d="M-240 -300L-222.4 -282.4L-222.4 -257.6L-197.6 -257.6L-180 -240L-197.6 -222.4L-222.4 -222.4L-222.4 -197.6L-240 -180L-257.6 -197.6L-257.6 -222.4L-282.4 -222.4L-300 -240L-282.4 -257.6L-257.6 -257.6L-257.6 -282.4Z" fill="#115674"/><path d="M240 60L257.6 77.6L257.6 102.4L282.4 102.4L300 120L282.4 137.6L257.6 137.6L257.6 162.4L240 180L222.4 162.4L222.4 137.6L197.6 137.6L180 120L197.6 102.4L222.4 102.4L222.4 77.6Z" fill="#115674"/><path d="M240 -300L257.6 -282.4L257.6 -257.6L282.4 -257.6L300 -240L282.4 -222.4L257.6 -222.4L257.6 -197.6L240 -180L222.4 -197.6L222.4 -222.4L197.6 -222.4L180 -240L197.6 -257.6L222.4 -257.6L222.4 -282.4Z" fill="#115674"/><path d="M-120 60L-102.4 77.6L-102.4 102.4L-77.6 102.4L-60 120L-77.6 137.6L-102.4 137.6L-102.4 162.4L-120 180L-137.6 162.4L-137.6 137.6L-162.4 137.6L-180 120L-162.4 102.4L-137.6 102.4L-137.6 77.6Z" fill="#115674"/><path d="M-120 -300L-102.4 -282.4L-102.4 -257.6L-77.6 -257.6L-60 -240L-77.6 -222.4L-102.4 -222.4L-102.4 -197.6L-120 -180L-137.6 -197.6L-137.6 -222.4L-162.4 -222.4L-180 -240L-162.4 -257.6L-137.6 -257.6L-137.6 -282.4Z" fill="#115674"/><path d="M360 60L377.6 77.6L377.6 102.4L402.4 102.4L420 120L402.4 137.6L377.6 137.6L377.6 162.4L360 180L342.4 162.4L342.4 137.6L317.6 137.6L300 120L317.6 102.4L342.4 102.4L342.4 77.6Z" fill="#B8860B"/><path d="M360 -300L377.6 -282.4L377.6 -257.6L402.4 -257.6L420 -240L402.4 -222.4L377.6 -222.4L377.6 -197.6L360 -180L342.4 -197.6L342.4 -222.4L317.6 -222.4L300 -240L317.6 -257.6L342.4 -257.6L342.4 -282.4Z" fill="#B8860B"/><path d="M0 60L17.6 77.6L17.6 102.4L42.4 102.4L60 120L42.4 137.6L17.6 137.6L17.6 162.4L0 180L-17.6 162.4L-17.6 137.6L-42.4 137.6L-60 120L-42.4 102.4L-17.6 102.4L-17.6 77.6Z" fill="#B8860B"/><path d="M0 -300L17.6 -282.4L17.6 -257.6L42.4 -257.6L60 -240L42.4 -222.4L17.6 -222.4L17.6 -197.6L0 -180L-17.6 -197.6L-17.6 -222.4L-42.4 -222.4L-60 -240L-42.4 -257.6L-17.6 -257.6L-17.6 -282.4Z" fill="#B8860B"/><path d="M120 180L137.6 197.6L137.6 222.4L162.4 222.4L180 240L162.4 257.6L137.6 257.6L137.6 282.4L120 300L102.4 282.4L102.4 257.6L77.6 257.6L60 240L77.6 222.4L102.4 222.4L102.4 197.6Z" fill="#115674"/><path d="M120 -180L137.6 -162.4L137.6 -137.6L162.4 -137.6L180 -120L162.4 -102.4L137.6 -102.4L137.6 -77.6L120 -60L102.4 -77.6L102.4 -102.4L77.6 -102.4L60 -120L77.6 -137.6L102.4 -137.6L102.4 -162.4Z" fill="#115674"/><path d="M-240 180L-222.4 197.6L-222.4 222.4L-197.6 222.4L-180 240L-197.6 257.6L-222.4 257.6L-222.4 282.4L-240 300L-257.6 282.4L-257.6 257.6L-282.4 257.6L-300 240L-282.4 222.4L-257.6 222.4L-257.6 197.6Z" fill="#115674"/><path d="M-240 -180L-222.4 -162.4L-222.4 -137.6L-197.6 -137.6L-180 -120L-197.6 -102.4L-222.4 -102.4L-222.4 -77.6L-240 -60L-257.6 -77.6L-257.6 -102.4L-282.4 -102.4L-300 -120L-282.4 -137.6L-257.6 -137.6L-257.6 -162.4Z" fill="#115674"/><path d="M240 180L257.6 197.6L257.6 222.4L282.4 222.4L300 240L282.4 257.6L257.6 257.6L257.6 282.4L240 300L222.4 282.4L222.4 257.6L197.6 257.6L180 240L197.6 222.4L222.4 222.4L222.4 197.6Z" fill="#115674"/><path d="M240 -180L257.6 -162.4L257.6 -137.6L282.4 -137.6L300 -120L282.4 -102.4L257.6 -102.4L257.6 -77.6L240 -60L222.4 -77.6L222.4 -102.4L197.6 -102.4L180 -120L197.6 -137.6L222.4 -137.6L222.4 -162.4Z" fill="#115674"/><path d="M-120 180L-102.4 197.6L-102.4 222.4L-77.6 222.4L-60 240L-77.6 257.6L-102.4 257.6L-102.4 282.4L-120 300L-137.6 282.4L-137.6 257.6L-162.4 257.6L-180 240L-162.4 222.4L-137.6 222.4L-137.6 197.6Z" fill="#115674"/><path d="M-120 -180L-102.4 -162.4L-102.4 -137.6L-77.6 -137.6L-60 -120L-77.6 -102.4L-102.4 -102.4L-102.4 -77.6L-120 -60L-137.6 -77.6L-137.6 -102.4L-162.4 -102.4L-180 -120L-162.4 -137.6L-137.6 -137.6L-137.6 -162.4Z" fill="#115674"/><path d="M360 180L377.6 197.6L377.6 222.4L402.4 222.4L420 240L402.4 257.6L377.6 257.6L377.6 282.4L360 300L342.4 282.4L342.4 257.6L317.6 257.6L300 240L317.6 222.4L342.4 222.4L342.4 197.6Z" fill="#115674"/><path d="M360 -180L377.6 -162.4L377.6 -137.6L402.4 -137.6L420 -120L402.4 -102.4L377.6 -102.4L377.6 -77.6L360 -60L342.4 -77.6L342.4 -102.4L317.6 -102.4L300 -120L317.6 -137.6L342.4 -137.6L342.4 -162.4Z" fill="#115674"/><path d="M0 180L17.6 197.6L17.6 222.4L42.4 222.4L60 240L42.4 257.6L17.6 257.6L17.6 282.4L0 300L-17.6 282.4L-17.6 257.6L-42.4 257.6L-60 240L-42.4 222.4L-17.6 222.4L-17.6 197.6Z" fill="#115674"/><path d="M0 -180L17.6 -162.4L17.6 -137.6L42.4 -137.6L60 -120L42.4 -102.4L17.6 -102.4L17.6 -77.6L0 -60L-17.6 -77.6L-17.6 -102.4L-42.4 -102.4L-60 -120L-42.4 -137.6L-17.6 -137.6L-17.6 -162.4Z" fill="#115674"/><path d="M120 300L137.6 317.6L137.6 342.4L162.4 342.4L180 360L162.4 377.6L137.6 377.6L137.6 402.4L120 420L102.4 402.4L102.4 377.6L77.6 377.6L60 360L77.6 342.4L102.4 342.4L102.4 317.6Z" fill="#115674"/><path d="M120 -60L137.6 -42.4L137.6 -17.6L162.4 -17.6L180 0L162.4 17.6L137.6 17.6L137.6 42.4L120 60L102.4 42.4L102.4 17.6L77.6 17.6L60 0L77.6 -17.6L102.4 -17.6L102.4 -42.4Z" fill="#115674"/><path d="M-240 300L-222.4 317.6L-222.4 342.4L-197.6 342.4L-180 360L-197.6 377.6L-222.4 377.6L-222.4 402.4L-240 420L-257.6 402.4L-257.6 377.6L-282.4 377.6L-300 360L-282.4 342.4L-257.6 342.4L-257.6 317.6Z" fill="#115674"/><path d="M-240 -60L-222.4 -42.4L-222.4 -17.6L-197.6 -17.6L-180 0L-197.6 17.6L-222.4 17.6L-222.4 42.4L-240 60L-257.6 42.4L-257.6 17.6L-282.4 17.6L-300 0L-282.4 -17.6L-257.6 -17.6L-257.6 -42.4Z" fill="#115674"/><path d="M240 300L257.6 317.6L257.6 342.4L282.4 342.4L300 360L282.4 377.6L257.6 377.6L257.6 402.4L240 420L222.4 402.4L222.4 377.6L197.6 377.6L180 360L197.6 342.4L222.4 342.4L222.4 317.6Z" fill="#B8860B"/><path d="M240 -60L257.6 -42.4L257.6 -17.6L282.4 -17.6L300 0L282.4 17.6L257.6 17.6L257.6 42.4L240 60L222.4 42.4L222.4 17.6L197.6 17.6L180 0L197.6 -17.6L222.4 -17.6L222.4 -42.4Z" fill="#B8860B"/><path d="M-120 300L-102.4 317.6L-102.4 342.4L-77.6 342.4L-60 360L-77.6 377.6L-102.4 377.6L-102.4 402.4L-120 420L-137.6 402.4L-137.6 377.6L-162.4 377.6L-180 360L-162.4 342.4L-137.6 342.4L-137.6 317.6Z" fill="#B8860B"/><path d="M-120 -60L-102.4 -42.4L-102.4 -17.6L-77.6 -17.6L-60 0L-77.6 17.6L-102.4 17.6L-102.4 42.4L-120 60L-137.6 42.4L-137.6 17.6L-162.4 17.6L-180 0L-162.4 -17.6L-137.6 -17.6L-137.6 -42.4Z" fill="#B8860B"/><path d="M360 300L377.6 317.6L377.6 342.4L402.4 342.4L420 360L402.4 377.6L377.6 377.6L377.6 402.4L360 420L342.4 402.4L342.4 377.6L317.6 377.6L300 360L317.6 342.4L342.4 342.4L342.4 317.6Z" fill="#115674"/><path d="M360 -60L377.6 -42.4L377.6 -17.6L402.4 -17.6L420 0L402.4 17.6L377.6 17.6L377.6 42.4L360 60L342.4 42.4L342.4 17.6L317.6 17.6L300 0L317.6 -17.6L342.4 -17.6L342.4 -42.4Z" fill="#115674"/><path d="M0 300L17.6 317.6L17.6 342.4L42.4 342.4L60 360L42.4 377.6L17.6 377.6L17.6 402.4L0 420L-17.6 402.4L-17.6 377.6L-42.4 377.6L-60 360L-42.4 342.4L-17.6 342.4L-17.6 317.6Z" fill="#115674"/><path d="M0 -60L17.6 -42.4L17.6 -17.6L42.4 -17.6L60 0L42.4 17.6L17.6 17.6L17.6 42.4L0 60L-17.6 42.4L-17.6 17.6L-42.4 17.6L-60 0L-42.4 -17.6L-17.6 -17.6L-17.6 -42.4Z" fill="#115674"/></g><g fill="#F2EAD3" fill-opacity=".34"><path d="M84 60L77 67L77 77L67 77L60 84L53 77L43 77L43 67L36 60L43 53L43 43L53 43L60 36L67 43L77 43L77 53Z"/><path d="M204 60L197 67L197 77L187 77L180 84L173 77L163 77L163 67L156 60L163 53L163 43L173 43L180 36L187 43L197 43L197 53Z"/><path d="M324 60L317 67L317 77L307 77L300 84L293 77L283 77L283 67L276 60L283 53L283 43L293 43L300 36L307 43L317 43L317 53Z"/><path d="M84 180L77 187L77 197L67 197L60 204L53 197L43 197L43 187L36 180L43 173L43 163L53 163L60 156L67 163L77 163L77 173Z"/><path d="M204 180L197 187L197 197L187 197L180 204L173 197L163 197L163 187L156 180L163 173L163 163L173 163L180 156L187 163L197 163L197 173Z"/><path d="M324 180L317 187L317 197L307 197L300 204L293 197L283 197L283 187L276 180L283 173L283 163L293 163L300 156L307 163L317 163L317 173Z"/><path d="M84 300L77 307L77 317L67 317L60 324L53 317L43 317L43 307L36 300L43 293L43 283L53 283L60 276L67 283L77 283L77 293Z"/><path d="M204 300L197 307L197 317L187 317L180 324L173 317L163 317L163 307L156 300L163 293L163 283L173 283L180 276L187 283L197 283L197 293Z"/><path d="M324 300L317 307L317 317L307 317L300 324L293 317L283 317L283 307L276 300L283 293L283 283L293 283L300 276L307 283L317 283L317 293Z"/></g></pattern></defs></svg>
 
-<h2>1. Who we are</h2>
+<nav class="topbar" aria-label="Policy navigation">
+  <div class="wrap">
+    <a href="../index.html">&larr;&nbsp;All policies</a>
+    <span class="sep"></span>
+    <a href="terms.html">Terms of Service</a>
+    <a href="https://play.google.com/store/apps/details?id=com.carthage.zellia" rel="noopener">Google&nbsp;Play listing &#8599;</a>
+  </div>
+</nav>
+
+<header class="wall">
+<div class="wall__field" aria-hidden="true"><svg viewBox="0 0 1800 480" preserveAspectRatio="xMidYMid slice" role="presentation" focusable="false"><rect width="1800" height="480" fill="url(#zellijCool)"/></svg></div>
+  <div class="wrap">
+    <div class="cartouche frame">
+      <img class="icon" src="../../assets/apps/zellia.webp" width="192" height="192"
+           alt="Zellia app icon: an eight-pointed khatam star in cobalt, saffron and terracotta">
+      <p class="eyebrow">Carthage Studio</p>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Zellia: Tile Match Palace — Effective 11 July 2026. Last updated 11 July 2026.</p>
+      <ul class="switch">
+<li><a href="privacy.html" aria-current="page">Privacy Policy</a></li>
+<li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="lede">
+    <div class="card frame">
+      <p class="card-label">At a glance</p>
+      <p class="card-sub">A summary of the sections below.</p>
+      <ul class="glance">
+<li>The App has <strong>no sign-up or login</strong>, and works offline apart from serving ads and processing the optional purchase.</li>
+<li>Your game progress and settings live <strong>on your device only</strong> &mdash; we do not hold a server-side copy.</li>
+<li>We do <strong>not</strong> collect your name, email address, phone number, contacts, SMS messages, calendar, location, microphone audio, or photos.</li>
+<li>Ads come from Google AdMob. There are <strong>no banner ads</strong>; rewarded ads are always optional, and interstitials appear only between boards.</li>
+<li>One optional in-app purchase (&ldquo;Remove Ads&rdquo;), validated by Google Play. We store only a yes/no flag on your device.</li>
+<li>The daily reminder is a <strong>local</strong> notification &mdash; no data leaves your device.</li>
+      </ul>
+    </div>
+    <div class="card card--toc frame">
+      <p class="card-label">Contents</p>
+      <p class="card-sub">11 sections.</p>
+      <ul class="toc">
+<li><a href="#s1"><span>1<i class="sr">.</i></span> Who we are</a></li>
+<li><a href="#s2"><span>2<i class="sr">.</i></span> Data we collect</a></li>
+<li><a href="#s3"><span>3<i class="sr">.</i></span> Third-party services</a></li>
+<li><a href="#s4"><span>4<i class="sr">.</i></span> Ads</a></li>
+<li><a href="#s5"><span>5<i class="sr">.</i></span> Notifications</a></li>
+<li><a href="#s6"><span>6<i class="sr">.</i></span> Children</a></li>
+<li><a href="#s7"><span>7<i class="sr">.</i></span> Data retention &amp; deletion</a></li>
+<li><a href="#s8"><span>8<i class="sr">.</i></span> Your rights (GDPR / CCPA)</a></li>
+<li><a href="#s9"><span>9<i class="sr">.</i></span> Security</a></li>
+<li><a href="#s10"><span>10<i class="sr">.</i></span> Changes</a></li>
+<li><a href="#s11"><span>11<i class="sr">.</i></span> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+<div class="register frame">
+<section id="s1">
+<h2><span class="num">1<i class="sr">.</i></span> <span>Who we are</span></h2>
 <p>Zellia: Tile Match Palace (the &ldquo;App&rdquo;) is a cozy zellige-mosaic tile-match puzzle game, published by <strong>Carthage Studio</strong> (the &ldquo;Developer&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). Contact: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
 <p>This policy explains, in plain language, what data the App handles and why.</p>
-
-<h2>2. Data we collect</h2>
+</section>
+<section id="s2">
+<h2><span class="num">2<i class="sr">.</i></span> <span>Data we collect</span></h2>
+<div class="tablewrap">
 <table>
-<tr><th>Category</th><th>What it is</th><th>Why</th><th>Where it lives</th></tr>
+<thead>
+<tr><th scope="col">Category</th><th scope="col">What it is</th><th scope="col">Why</th><th scope="col">Where it lives</th></tr>
+</thead>
+<tbody>
 <tr><td>Game progress</td><td>Your campaign level, coins and mosaic tesserae, palace-restoration progress, Daily Board streak and streak freezes, Zen Mode progress, and settings (sound, haptics, language, daily reminder).</td><td>To save your progress between sessions.</td><td>On your device only.</td></tr>
 <tr><td>Purchase records</td><td>A receipt confirming the &ldquo;Remove Ads&rdquo; purchase.</td><td>To unlock what you paid for.</td><td>Validated by Google Play. We store only a yes/no flag on your device.</td></tr>
 <tr><td>Advertising identifier</td><td>Your device's advertising ID, unless you removed ads or opted out at the OS level.</td><td>So our ad partner (Google AdMob) can show ads.</td><td>Sent to Google AdMob. We do not store it.</td></tr>
+</tbody>
 </table>
+</div>
 <p>We do <strong>not</strong> collect: your name, email address, phone number, contacts, SMS messages, calendar, location, microphone audio, or photos. The App has no sign-up or login and works offline apart from serving ads and processing the optional purchase.</p>
-
-<h2>3. Third-party services</h2>
+</section>
+<section id="s3">
+<h2><span class="num">3<i class="sr">.</i></span> <span>Third-party services</span></h2>
 <ul>
 <li><strong>Google Play Billing</strong> &mdash; processes the &ldquo;Remove Ads&rdquo; purchase. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
 <li><strong>Google AdMob</strong> &mdash; shows ads (only if you have not removed them). <a href="https://policies.google.com/technologies/ads">AdMob &amp; ads privacy</a></li>
 </ul>
-
-<h2>4. Ads</h2>
+</section>
+</div>
+<div class="band" aria-hidden="true"><svg viewBox="0 0 3240 120" preserveAspectRatio="xMidYMid slice" role="presentation" focusable="false"><rect width="3240" height="120" fill="url(#zellijCool)"/></svg></div>
+<div class="register frame">
+<section id="s4">
+<h2><span class="num">4<i class="sr">.</i></span> <span>Ads</span></h2>
 <p>The App may show interstitial and rewarded ads via Google AdMob. It shows <strong>no banner ads</strong>. Rewarded ads are always optional and shown only when you choose to watch one (for example, to revive a full tray, double a level's coins, or earn an extra shuffle). Interstitial ads appear only between boards, never during play. Ads are personalised only where you allow it. In the European Economic Area, the UK, and Switzerland (and US states where required) we show a consent prompt (via Google's User Messaging Platform) before serving personalised ads. You can disable ad personalisation in your device settings (Android: Settings &rarr; Google &rarr; Ads) or remove all ads via in-app purchase.</p>
-
-<h2>5. Notifications</h2>
+</section>
+<section id="s5">
+<h2><span class="num">5<i class="sr">.</i></span> <span>Notifications</span></h2>
 <p>The App can show an optional <strong>local</strong> daily reminder (at 19:00 device time) for the Daily Board. Notifications are scheduled entirely on your device &mdash; no data leaves it &mdash; and permission is asked only once. You can disable them at any time in your device settings.</p>
-
-<h2>6. Children</h2>
+</section>
+<section id="s6">
+<h2><span class="num">6<i class="sr">.</i></span> <span>Children</span></h2>
 <p>The App is intended for a general audience. It is not specifically directed at children under 13, and we do not knowingly collect personal data from them. Ads are requested with settings appropriate for a general audience.</p>
-
-<h2>7. Data retention &amp; deletion</h2>
+</section>
+<section id="s7">
+<h2><span class="num">7<i class="sr">.</i></span> <span>Data retention &amp; deletion</span></h2>
 <p>Your game progress and settings live on your device and are removed when you uninstall the App or clear its data. We do not hold a server-side copy. For any request, email <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>; we action verified requests within 30 days.</p>
-
-<h2>8. Your rights (GDPR / CCPA)</h2>
+</section>
+</div>
+<div class="band" aria-hidden="true"><svg viewBox="0 0 3240 120" preserveAspectRatio="xMidYMid slice" role="presentation" focusable="false"><rect width="3240" height="120" fill="url(#zellijCool)"/></svg></div>
+<div class="register frame">
+<section id="s8">
+<h2><span class="num">8<i class="sr">.</i></span> <span>Your rights (GDPR / CCPA)</span></h2>
 <p>If you are in the EU/UK (GDPR) or California (CCPA/CPRA), you have the right to access, delete, and object to processing of your data, and to withdraw consent. We do not sell personal information.</p>
-
-<h2>9. Security</h2>
-<p>Network requests use HTTPS. Purchases are validated by Google Play directly — we never see your payment method.</p>
-
-<h2>10. Changes</h2>
+</section>
+<section id="s9">
+<h2><span class="num">9<i class="sr">.</i></span> <span>Security</span></h2>
+<p>Network requests use HTTPS. Purchases are validated by Google Play directly &#8212; we never see your payment method.</p>
+</section>
+<section id="s10">
+<h2><span class="num">10<i class="sr">.</i></span> <span>Changes</span></h2>
 <p>If we materially change this policy we will update the date above and, where appropriate, notify you in the App.</p>
-
-<h2>11. Contact</h2>
+</section>
+<section id="s11">
+<h2><span class="num">11<i class="sr">.</i></span> <span>Contact</span></h2>
 <p>Questions or requests: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+</section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap footgrid">
+    <p class="mark">Zellia<small>Carthage Studio</small></p>
+    <ul class="footlinks">
+      <li><a href="../index.html">All policies</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=com.carthage.zellia" rel="noopener">Google Play listing &#8599;</a></li>
+    </ul>
+  </div>
+</footer>
 </body>
 </html>

@@ -3,37 +3,319 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>App Legal Center</title>
-<link rel="stylesheet" href="style.css">
+<title>App legal centre &mdash; Mehdi Snoussi</title>
+<meta name="description" content="Privacy policies and terms of service for the six apps Mehdi Snoussi publishes on Google Play: Dhikr, SortFlow, AI Mystic, Cascade, Zellia and Relic Revival.">
+<meta name="author" content="Mehdi Snoussi">
+<meta name="theme-color" content="#E7E8E2">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2314161A'/%3E%3Crect x='8' y='8' width='84' height='84' fill='none' stroke='%231A33DC' stroke-width='5'/%3E%3Ctext x='50' y='68' font-family='monospace' font-size='52' font-weight='700' fill='%23E7E8E2' text-anchor='middle'%3EMS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   /legal/ — the hub. Same datasheet chrome as the portfolio
+   root (Archivo + IBM Plex Mono, paper grid, title blocks,
+   1px ink rules). Each app card carries ONE hairline of its
+   own brand colour so the six identities are previewed —
+   the sheet itself stays neutral.
+   ============================================================ */
+:root{
+  --paper:#E7E8E2; --card:#F3F4EF; --cream:#F3F4EF;
+  --ink:#14161A; --ink-2:#4E545C; --ink-3:#63686F;
+  --rule:#C4C7BF; --hair:#D4D6CF;
+  --signal:#1A33DC; --signal-2:#0E1F97; --ok:#0B7A45;
+  --sans:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --maxw:1180px; --gut:26px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);
+  font-size:16px;line-height:1.55;overflow-x:hidden;
+  background-image:linear-gradient(var(--hair) 1px,transparent 1px),linear-gradient(90deg,var(--hair) 1px,transparent 1px);
+  background-size:64px 64px;background-position:-1px -1px}
+::selection{background:var(--signal);color:#fff}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+.mono{font-family:var(--mono)}
+
+/* ── masthead ───────────────────────────────────────────────── */
+.mast{position:sticky;top:0;z-index:100;background:rgba(231,232,226,.93);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--ink)}
+.mast-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);display:flex;align-items:center;gap:20px;
+  min-height:54px;flex-wrap:wrap}
+.mast .id{font-family:var(--mono);font-weight:600;font-size:.82rem;letter-spacing:.14em;white-space:nowrap}
+.mast .id b{color:var(--signal)}
+.mast .meta{display:flex;gap:22px;margin-left:auto;font-family:var(--mono);font-size:.68rem;
+  letter-spacing:.1em;color:var(--ink-2);white-space:nowrap}
+.mast .meta i{font-style:normal;color:var(--ink)}
+.mast a.id:hover b{color:var(--ink)}
+
+/* ── title block ────────────────────────────────────────────── */
+.tb{display:flex;align-items:stretch;margin-bottom:44px;border:1px solid var(--ink);background:var(--card)}
+.tb-no{flex:0 0 auto;background:var(--ink);color:var(--paper);padding:9px 13px;
+  font-family:var(--mono);font-size:.7rem;font-weight:600;letter-spacing:.12em;display:flex;align-items:center}
+.tb-ttl{flex:1 1 auto;padding:9px 15px;font-family:var(--mono);font-size:.72rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;min-width:0}
+
+/* ── head ───────────────────────────────────────────────────── */
+.sheet{padding:60px 0 74px}
+.kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--signal-2);font-weight:600;margin-bottom:20px}
+h1{font-size:clamp(2.05rem,4.6vw,3.3rem);line-height:1.05;font-weight:700;letter-spacing:-.03em;max-width:17ch}
+.lede{margin-top:22px;font-size:1.06rem;line-height:1.6;color:var(--ink-2);max-width:60ch}
+.lede b{color:var(--ink);font-weight:600}
+.lede a{border-bottom:1px solid var(--rule);color:var(--ink)}
+.lede a:hover{color:var(--signal);border-color:var(--signal)}
+
+/* ── the six cards ──────────────────────────────────────────── */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px;border:1px solid var(--ink)}
+.app{position:relative;background:var(--card);padding:26px 24px 24px;
+  border-left:1px solid var(--rule);display:flex;flex-direction:column;transition:background .2s}
+.app:nth-child(3n+1){border-left:0}
+.app:nth-child(n+4){border-top:1px solid var(--rule)}
+.app:hover{background:#fff}
+/* the single hairline of brand colour */
+.app::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--brand)}
+
+.app-h{display:flex;gap:15px;align-items:center}
+.app-h img{flex:0 0 auto;width:56px;height:56px;border-radius:23%;
+  box-shadow:0 4px 12px -6px rgba(20,22,26,.55),0 0 0 1px var(--hair)}
+.app-h h2{font-size:1.24rem;font-weight:700;letter-spacing:-.02em;line-height:1.15;
+  display:flex;align-items:center;gap:9px}
+/* the dot: second and last use of the brand colour */
+.app-h h2::before{content:"";flex:0 0 auto;width:7px;height:7px;background:var(--brand);
+  transform:rotate(45deg);border-radius:1px}
+.pkg{font-family:var(--mono);font-size:.66rem;letter-spacing:.09em;color:var(--ink-3);margin-top:6px;
+  overflow-wrap:anywhere}
+.desc{margin-top:16px;font-size:.93rem;color:var(--ink-2);flex:1 1 auto}
+
+.docs{display:grid;gap:0;margin-top:20px;border:1px solid var(--rule)}
+.doc{display:flex;align-items:center;gap:10px;padding:11px 13px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:.73rem;font-weight:600;letter-spacing:.07em;
+  background:transparent;transition:background .16s,color .16s}
+.doc:first-child{border-top:0}
+.doc .n{color:var(--ink-3);font-weight:500;font-size:.66rem;letter-spacing:.1em}
+.doc .ar{margin-left:auto;color:var(--ink-3);transition:transform .16s,color .16s}
+.doc:hover{background:var(--ink);color:var(--paper)}
+.doc:hover .n,.doc:hover .ar{color:var(--paper)}
+.doc:hover .ar{transform:translate(2px,-2px)}
+
+.play{margin-top:14px;padding-top:13px;border-top:1px solid var(--hair);
+  font-family:var(--mono);font-size:.69rem;letter-spacing:.07em;color:var(--ink-2);
+  display:flex;align-items:center;gap:8px}
+.play span{border-bottom:1px solid var(--rule)}
+.play:hover{color:var(--signal)}
+.play:hover span{border-color:var(--signal)}
+
+/* ── footer notes ───────────────────────────────────────────── */
+.notes{margin-top:40px;border:1px solid var(--ink);background:var(--card)}
+.notes div{display:flex;gap:16px;padding:13px 18px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:.74rem;letter-spacing:.03em;color:var(--ink-2);flex-wrap:wrap}
+.notes div:first-child{border-top:0}
+.notes dt{flex:0 0 132px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.11em;font-size:.66rem;padding-top:2px}
+.notes dd{color:var(--ink);min-width:0;overflow-wrap:anywhere}
+.notes a{border-bottom:1px solid var(--rule)}
+.notes a:hover{color:var(--signal);border-color:var(--signal)}
+
+footer{border-top:1px solid var(--rule);padding:24px 0;font-family:var(--mono);font-size:.7rem;
+  letter-spacing:.05em;color:var(--ink-2)}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+footer a:hover{color:var(--signal)}
+
+@media(max-width:1000px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .app:nth-child(3n+1){border-left:1px solid var(--rule)}
+  .app:nth-child(odd){border-left:0}
+  .app:nth-child(n+3){border-top:1px solid var(--rule)}
+}
+@media(max-width:720px){
+  :root{--gut:18px}
+  .mast .meta{display:none}
+  .sheet{padding:44px 0 52px}
+  .tb{margin-bottom:32px}
+  .grid{grid-template-columns:1fr}
+  .app{border-left:0;border-top:1px solid var(--rule)}
+  .app:first-child{border-top:0}
+  .notes div{gap:4px}
+  .notes dt{flex:0 0 100%}
+}
+@media(max-width:380px){
+  .app{padding:22px 16px 20px}
+  .app-h img{width:48px;height:48px}
+  .app-h h2{font-size:1.12rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition-duration:.01ms!important;animation:none!important}
+}
+@media print{
+  body{background:#fff;color:#000;background-image:none;font-size:11pt}
+  .mast,footer{display:none}
+  .sheet{padding:0}
+  .grid{grid-template-columns:repeat(2,1fr);border-color:#000}
+  .app{background:#fff;break-inside:avoid;page-break-inside:avoid}
+  .app::before{background:#000}
+  .app-h h2::before{background:#000}
+  .doc,.play{color:#000}
+  .doc .ar{display:none}
+  .doc::after,.play::after{content:" (" attr(href) ")";font-weight:400;color:#333;
+    font-size:.62rem;letter-spacing:0;overflow-wrap:anywhere}
+  .doc::after{margin-left:8px}
+  a{color:#000}
+}
+</style>
 </head>
 <body>
-<h1>App Legal Center</h1>
-<p>Privacy policies and terms of service for the mobile apps published by an independent developer.
-Contact: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
 
-<table>
-<tr><th>App</th><th>Privacy</th><th>Terms</th></tr>
-<tr><td><strong>Dhikr</strong></td><td><a href="dhikr/privacy.html">Privacy Policy</a></td><td><a href="dhikr/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>MyCar</strong></td><td><a href="mycar/privacy.html">Privacy Policy</a></td><td><a href="mycar/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>Wallio</strong></td><td><a href="wallio/privacy.html">Privacy Policy</a></td><td><a href="wallio/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>MangaVerse</strong></td><td><a href="mangaverse/privacy.html">Privacy Policy</a></td><td><a href="mangaverse/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>PixelUp</strong></td><td><a href="pixelup/privacy.html">Privacy Policy</a></td><td><a href="pixelup/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>BreedLens</strong></td><td><a href="breedlens/privacy.html">Privacy Policy</a></td><td><a href="breedlens/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>CreepID</strong></td><td><a href="creepid/privacy.html">Privacy Policy</a></td><td><a href="creepid/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>CutOut</strong></td><td><a href="cutout/privacy.html">Privacy Policy</a></td><td><a href="cutout/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>SnapCal</strong></td><td><a href="snapcal/privacy.html">Privacy Policy</a></td><td><a href="snapcal/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>AI Mystic</strong></td><td><a href="aimystic/privacy.html">Privacy Policy</a></td><td><a href="aimystic/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>LeafSnap</strong></td><td><a href="leafsnap/privacy.html">Privacy Policy</a></td><td><a href="leafsnap/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>PawPulse</strong></td><td><a href="pawpulse/privacy.html">Privacy Policy</a></td><td><a href="pawpulse/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>SortFlow</strong></td><td><a href="sortflow/privacy.html">Privacy Policy</a></td><td><a href="sortflow/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>MathCam</strong></td><td><a href="mathcam/privacy.html">Privacy Policy</a></td><td><a href="mathcam/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>Scrollia</strong></td><td><a href="scrollia/privacy.html">Privacy Policy</a></td><td><a href="scrollia/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>Thock</strong></td><td><a href="thock/privacy.html">Privacy Policy</a></td><td><a href="thock/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>Cascade</strong></td><td><a href="cascade/privacy.html">Privacy Policy</a></td><td><a href="cascade/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>Zellia</strong></td><td><a href="zellia/privacy.html">Privacy Policy</a></td><td><a href="zellia/terms.html">Terms of Service</a></td></tr>
-<tr><td><strong>Relic Revival</strong></td><td><a href="relicrevival/privacy.html">Privacy Policy</a></td><td><a href="relicrevival/terms.html">Terms of Service</a></td></tr>
-</table>
+<header class="mast">
+  <div class="mast-in">
+    <a href="/" class="id">MEHDI<b>/</b>SNOUSSI</a>
+    <div class="meta">
+      <span>DOC <i>LEGAL-01</i></span>
+      <span>REV <i>2026.08.18</i></span>
+      <span>APPS <i>6</i></span>
+    </div>
+  </div>
+</header>
 
-<p class="meta">Last updated 14 July 2026.</p>
+<main class="sheet wrap">
+
+  <div class="tb">
+    <span class="tb-no">SHEET 00</span>
+    <span class="tb-ttl">Privacy policies &amp; terms of service</span>
+  </div>
+
+  <div class="kicker">Legal centre &middot; six published apps</div>
+  <h1>The policies behind every app I publish.</h1>
+  <p class="lede">Each app below is live on Google Play and has its own privacy policy and terms of service &mdash; written per app, because each one handles different data. Pick the app you installed. Everything else about them is on the <a href="/#apps">portfolio</a>.</p>
+
+  <div class="grid">
+
+    <article class="app" style="--brand:#1B5E20">
+      <div class="app-h">
+        <img src="../assets/apps/dhikr.webp" alt="Dhikr app icon" width="192" height="192" loading="lazy" decoding="async">
+        <div>
+          <h2>Dhikr</h2>
+          <p class="pkg">com.carthage.dhikr</p>
+        </div>
+      </div>
+      <p class="desc">Islamic companion app: tasbih, azkar, offline prayer times, Qibla compass and the full Quran.</p>
+      <div class="docs">
+        <a class="doc" href="dhikr/privacy.html"><span class="n">01</span>Privacy Policy<span class="ar">&#8599;</span></a>
+        <a class="doc" href="dhikr/terms.html"><span class="n">02</span>Terms of Service<span class="ar">&#8599;</span></a>
+      </div>
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.carthage.dhikr" target="_blank" rel="noopener"><span>Google Play listing &#8599;</span></a>
+    </article>
+
+    <article class="app" style="--brand:#6C5CE7">
+      <div class="app-h">
+        <img src="../assets/apps/sortflow.webp" alt="SortFlow app icon" width="192" height="192" loading="lazy" decoding="async">
+        <div>
+          <h2>SortFlow</h2>
+          <p class="pkg">com.sortflow.sortflow</p>
+        </div>
+      </div>
+      <p class="desc">Colour-sort puzzle game. Every board is generated on the device and re-proved solvable by a solver.</p>
+      <div class="docs">
+        <a class="doc" href="sortflow/privacy.html"><span class="n">01</span>Privacy Policy<span class="ar">&#8599;</span></a>
+        <a class="doc" href="sortflow/terms.html"><span class="n">02</span>Terms of Service<span class="ar">&#8599;</span></a>
+      </div>
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.sortflow.sortflow" target="_blank" rel="noopener"><span>Google Play listing &#8599;</span></a>
+    </article>
+
+    <article class="app" style="--brand:#D4A856">
+      <div class="app-h">
+        <img src="../assets/apps/aimystic.webp" alt="AI Mystic app icon" width="192" height="192" loading="lazy" decoding="async">
+        <div>
+          <h2>AI Mystic</h2>
+          <p class="pkg">com.carthage.aimystic</p>
+        </div>
+      </div>
+      <p class="desc">Tarot and astrology app whose readings are written by Google Gemini, with an offline fallback.</p>
+      <div class="docs">
+        <a class="doc" href="aimystic/privacy.html"><span class="n">01</span>Privacy Policy<span class="ar">&#8599;</span></a>
+        <a class="doc" href="aimystic/terms.html"><span class="n">02</span>Terms of Service<span class="ar">&#8599;</span></a>
+      </div>
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.carthage.aimystic" target="_blank" rel="noopener"><span>Google Play listing &#8599;</span></a>
+    </article>
+
+    <article class="app" style="--brand:#7C5CFF">
+      <div class="app-h">
+        <img src="../assets/apps/cascade.webp" alt="Cascade app icon" width="192" height="192" loading="lazy" decoding="async">
+        <div>
+          <h2>Cascade</h2>
+          <p class="pkg">com.carthage.cascade</p>
+        </div>
+      </div>
+      <p class="desc">Drop-and-merge physics puzzle game built on Flame and Forge2D, with a date-seeded daily board.</p>
+      <div class="docs">
+        <a class="doc" href="cascade/privacy.html"><span class="n">01</span>Privacy Policy<span class="ar">&#8599;</span></a>
+        <a class="doc" href="cascade/terms.html"><span class="n">02</span>Terms of Service<span class="ar">&#8599;</span></a>
+      </div>
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.carthage.cascade" target="_blank" rel="noopener"><span>Google Play listing &#8599;</span></a>
+    </article>
+
+    <article class="app" style="--brand:#115674">
+      <div class="app-h">
+        <img src="../assets/apps/zellia.webp" alt="Zellia app icon" width="192" height="192" loading="lazy" decoding="async">
+        <div>
+          <h2>Zellia</h2>
+          <p class="pkg">com.carthage.zellia</p>
+        </div>
+      </div>
+      <p class="desc">Triple-tile-match puzzle game set in zellige mosaics, with a palace-restoration meta layer.</p>
+      <div class="docs">
+        <a class="doc" href="zellia/privacy.html"><span class="n">01</span>Privacy Policy<span class="ar">&#8599;</span></a>
+        <a class="doc" href="zellia/terms.html"><span class="n">02</span>Terms of Service<span class="ar">&#8599;</span></a>
+      </div>
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.carthage.zellia" target="_blank" rel="noopener"><span>Google Play listing &#8599;</span></a>
+    </article>
+
+    <article class="app" style="--brand:#1F3A3A">
+      <div class="app-h">
+        <img src="../assets/apps/relicrevival.webp" alt="Relic Revival app icon" width="192" height="192" loading="lazy" decoding="async">
+        <div>
+          <h2>Relic Revival</h2>
+          <p class="pkg">com.carthage.relicrevival</p>
+        </div>
+      </div>
+      <p class="desc">Swipe-to-clean restoration game: reveal procedurally composed relics and build a museum of them.</p>
+      <div class="docs">
+        <a class="doc" href="relicrevival/privacy.html"><span class="n">01</span>Privacy Policy<span class="ar">&#8599;</span></a>
+        <a class="doc" href="relicrevival/terms.html"><span class="n">02</span>Terms of Service<span class="ar">&#8599;</span></a>
+      </div>
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.carthage.relicrevival" target="_blank" rel="noopener"><span>Google Play listing &#8599;</span></a>
+    </article>
+
+  </div>
+
+  <dl class="notes">
+    <div>
+      <dt>Contact</dt>
+      <dd><a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a> &mdash; privacy questions, data deletion requests and support for any of the six apps.</dd>
+    </div>
+    <div>
+      <dt>Scope</dt>
+      <dd>These six apps only. Each policy states its own effective date; this index page was last updated 18 August 2026.</dd>
+    </div>
+    <div>
+      <dt>Publisher</dt>
+      <dd>Mehdi Snoussi &mdash; independent developer, Mahdia, Tunisia.</dd>
+    </div>
+  </dl>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Mehdi Snoussi</span>
+    <span><a href="/">&larr; Back to the portfolio</a> &middot; <a href="/#apps">The six apps</a></span>
+  </div>
+</footer>
+
 </body>
 </html>

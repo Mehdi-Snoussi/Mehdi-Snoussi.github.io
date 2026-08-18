@@ -4,57 +4,526 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cascade — Terms of Service</title>
-<link rel="stylesheet" href="../style.css">
+<meta name="description" content="Terms of Service for Cascade, the drop-and-merge orb game: your licence to use the App, the one-time Remove Ads purchase, in-game coins, refunds, and liability.">
+<meta name="theme-color" content="#0C0820">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   Cascade — legal pages, shared design system.
+   Signature: the 11-orb merge ladder (lib/game/tiers.dart) used as the
+   document spine and as the contents index. Orb shading is a CSS port of
+   Orb.render() in lib/game/orb.dart — lit top-left body gradient, lower-edge
+   rim light in a lightened tier colour, specular glint, bloom halo, and the
+   faceted inner ring the goal-class tiers get.
+   TERMS takes Nova gold — this document runs the ladder all the way to the
+   top tier and past it, where two Novas merge and clear.
+   PRIVACY takes the periwinkle seed accent. Everything else is identical.
+   ========================================================================== */
+:root{
+  /* the bin — exact app values (lib/main.dart) */
+  --bin-a:#1C1140; --bin-b:#0C0820; --deep:#150D36;
+  --panel:#181041;  /* reading surface */
+  --lift:#211653;   /* inset blocks */
+  --rail:#241858;   /* table head, pill track */
+  --line:rgba(126,145,242,.20);
+  --line-2:rgba(126,145,242,.36);
+  --lav:#A493DA;    /* bin wall lavender (lib/game/bin_decoration.dart) */
+  /* ink — ratios measured against --panel */
+  --ink:#ECE9F8;    /* 14.8:1 */
+  --ink-2:#C8C1EB;  /* 10.3:1 */
+  --dim:#A79DD2;    /*  7.1:1 */
+  /* role accent — TERMS = Nova gold, the top of the ladder */
+  --accent:#FFD24A;      /* 12.3:1 on panel */
+  --accent-deep:#D9A62F;
+  --accent-rule:rgba(255,210,74,.42);
+  --focus:#9DAEFF;
+  --gut:78px;
+}
+/* the merge ladder: base / light / dark / text-safe tint */
+.t0 {--c:#29A8FF;--l:#CCEAFF;--d:#004F85;--ct:#85CDFF}
+.t1 {--c:#35E0C2;--l:#C2F6ED;--d:#0F6354;--ct:#85ECDA}
+.t2 {--c:#1E88E5;--l:#B0D5F6;--d:#0A3256;--ct:#70B4EF}
+.t3 {--c:#5BD75B;--l:#DEF7DE;--d:#1C731C;--ct:#A5E9A5}
+.t4 {--c:#E8E337;--l:#F9F7C9;--d:#6F6C0D;--ct:#F1EF89}
+.t5 {--c:#FFA726;--l:#FFE9C9;--d:#824D00;--ct:#FFCC82}
+.t6 {--c:#FF5252;--l:#FFF5F5;--d:#AE0000;--ct:#FFAEAE}
+.t7 {--c:#FF7BAC;--l:#FFE2EC;--d:#D70050;--ct:#FFD7E6}
+.t8 {--c:#C33FD6;--l:#EDC5F3;--d:#54145E;--ct:#DB8BE6}
+.t9 {--c:#7C5CFF;--l:#DCD3FF;--d:#2400B8;--ct:#C6B8FF}
+.t10{--c:#FFD24A;--l:#FFF3CF;--d:#A67D00;--ct:#FFE9A6}
+.t8,.t9,.t10{--ring:rgba(255,255,255,.20)}  /* goal-class facet ring */
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bin-b);
+  background-image:linear-gradient(179deg,var(--bin-a) 0%,var(--bin-b) 62%);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px;line-height:1.72;
+  overflow-x:hidden;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+
+/* ---------- the orb (CSS port of Orb.render) ---------- */
+.orb{
+  position:relative;display:inline-block;flex:none;border-radius:50%;
+  width:var(--sz,16px);height:var(--sz,16px);
+  background:
+    /* secondary specular - Offset(r*.20, r*.12), radius r*.07, white 32% */
+    radial-gradient(4% 4% at 60% 56%,rgba(255,255,255,.34) 0 60%,rgba(255,255,255,0) 100%),
+    /* faceted inner ring the goal-class tiers get - r*.55, stroke r*.04 */
+    radial-gradient(closest-side,transparent 0 53%,var(--ring,transparent) 53% 57%,transparent 57%),
+    /* lit body - RadialGradient(center:(-0.4,-0.5)), ramp tightened from the
+       game's 1.15 radius so the tier colour still reads at 11px */
+    radial-gradient(62% 62% at 30% 25%,var(--l) 0%,var(--c) 46%,var(--d) 100%);
+}
+.orb::before{               /* rim light along the lower edge, tier-tinted */
+  content:"";position:absolute;inset:4%;border-radius:50%;opacity:.55;
+  background:conic-gradient(from 122deg,var(--l) 0deg,var(--l) 140deg,transparent 140deg);
+  -webkit-mask:radial-gradient(closest-side,transparent 0 88%,#000 91%);
+          mask:radial-gradient(closest-side,transparent 0 88%,#000 91%);
+}
+.orb::after{                /* primary specular - Offset(-r*.30,-r*.36), radius r*.22 */
+  content:"";position:absolute;left:24%;top:21%;width:22%;height:22%;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(255,255,255,.82) 0 46%,rgba(255,255,255,0) 100%);
+}
+.orb.cleared{               /* two Novas merge and clear: the empty ring */
+  background:none;box-shadow:inset 0 0 0 max(2px,calc(var(--sz)*.09)) var(--c);
+}
+.orb.cleared::before,.orb.cleared::after{display:none}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:sticky;top:0;z-index:9;
+  background:rgba(12,8,32,.94);border-bottom:1px solid var(--line);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;
+  gap:14px;flex-wrap:wrap;min-height:58px;padding-top:9px;padding-bottom:9px}
+.back{font-size:14.5px;font-weight:500;color:var(--dim);text-decoration:none;
+  border-bottom:1px solid transparent}
+.back:hover{color:var(--ink);border-bottom-color:var(--line-2)}
+/* privacy <-> terms, built like the segmented control in the game */
+.swap{display:flex;align-items:center;gap:2px;padding:3px;border-radius:999px;
+  background:var(--rail);border:1px solid var(--line)}
+.swap a,.swap span{
+  font-family:Poppins,system-ui,sans-serif;font-weight:700;font-size:12.5px;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--dim);
+  padding:6px 15px;border-radius:999px;text-decoration:none;border-bottom:0;
+  display:inline-flex;align-items:center;gap:7px;
+}
+.swap a:hover{color:#fff;background:rgba(126,145,242,.20)}
+.swap [aria-current]{color:#0C0820;background:var(--accent)}
+.swap .dot{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.65}
+.swap [aria-current] .dot{opacity:1}
+
+/* ---------- header: the drop ---------- */
+header{padding:34px 0 30px}
+.bin{
+  position:relative;overflow:hidden;
+  border:1px solid var(--line-2);border-radius:24px;
+  padding:clamp(26px,4.4vw,44px);
+  background:
+    radial-gradient(1.2px 1.2px at 18% 22%,rgba(255,255,255,.55),transparent),
+    radial-gradient(1px 1px at 74% 13%,rgba(255,255,255,.42),transparent),
+    radial-gradient(1.5px 1.5px at 88% 61%,rgba(255,255,255,.30),transparent),
+    radial-gradient(1px 1px at 36% 81%,rgba(255,255,255,.34),transparent),
+    radial-gradient(1px 1px at 57% 43%,rgba(255,255,255,.22),transparent),
+    radial-gradient(1.3px 1.3px at 8% 66%,rgba(255,255,255,.28),transparent),
+    linear-gradient(158deg,#241653 0%,var(--deep) 52%,var(--bin-b) 100%);
+  display:grid;grid-template-columns:1fr auto;gap:clamp(18px,4vw,40px);align-items:center;
+}
+.bin::before,.bin::after{      /* the lavender pips on the bin walls */
+  content:"";position:absolute;top:11px;width:9px;height:9px;border-radius:50%;
+  background:var(--lav);box-shadow:0 0 10px rgba(164,147,218,.75);
+}
+.bin::before{left:11px}
+.bin::after{right:11px}
+.eyebrow{display:flex;align-items:center;gap:11px;margin:0 0 18px;flex-wrap:wrap}
+.eyebrow img{width:38px;height:38px;border-radius:11px;display:block;
+  border:1px solid rgba(255,255,255,.16)}
+.eyebrow b{font-family:Poppins,sans-serif;font-weight:800;font-size:14px;
+  letter-spacing:.17em;text-transform:uppercase;color:var(--ink-2)}
+.eyebrow em{font-style:normal;color:var(--dim);font-size:13.5px;letter-spacing:.04em}
+h1{font-family:Poppins,system-ui,sans-serif;font-weight:900;
+  font-size:clamp(33px,6vw,50px);line-height:1.05;letter-spacing:-.022em;
+  margin:0 0 22px;color:#fff}
+.meta{margin:0;font-size:15px;color:var(--dim);max-width:54ch;
+  padding-top:16px;border-top:1px solid var(--line)}
+.drop{display:flex;flex-direction:column;align-items:center;align-self:stretch;
+  justify-content:flex-start;padding-top:4px}
+.drop .orb{--sz:clamp(84px,15vw,130px);
+  box-shadow:0 0 58px rgba(255,210,74,.34),0 18px 26px -14px rgba(0,0,0,.65)}
+.guide{flex:1;width:2px;min-height:34px;margin-top:14px;
+  background:repeating-linear-gradient(180deg,rgba(255,210,74,.5) 0 7px,transparent 7px 15px);
+  -webkit-mask:linear-gradient(180deg,#000 0 45%,transparent 100%);
+          mask:linear-gradient(180deg,#000 0 45%,transparent 100%)}
+
+/* ---------- shared block label ---------- */
+.lbl{font-family:Poppins,sans-serif;font-weight:800;font-size:12.5px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 4px}
+
+/* ---------- at a glance ---------- */
+.glance{margin:0 0 26px;padding:22px 26px 24px;border-radius:14px;
+  background:var(--lift);border:1px solid var(--line);
+  border-left:3px solid var(--accent-deep)}
+.glance p.sub{margin:0 0 15px;font-size:14.5px;color:var(--dim);max-width:60ch}
+.glance ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.glance li{display:flex;align-items:flex-start;gap:13px;font-size:16px;
+  line-height:1.6;color:var(--ink-2);max-width:62ch}
+.glance li .orb{--sz:13px;margin-top:7px}
+
+/* ---------- contents: the ladder, as an index ---------- */
+.index{margin:0 0 30px;padding:20px 24px 22px;border-radius:14px;
+  border:1px solid var(--line);background:rgba(33,22,83,.55)}
+.index ol{list-style:none;margin:0;padding:0;display:grid;gap:2px 26px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-rows:repeat(7,auto);grid-auto-flow:column}
+.index a{display:flex;align-items:baseline;gap:11px;padding:5px 0;font-size:15.5px;
+  line-height:1.45;color:var(--ink-2);text-decoration:none;border-bottom:0}
+.index a:hover{color:#fff}
+.index a:hover .num{color:var(--ct)}
+.index .orb{--sz:11px;align-self:center}
+.index .num{font-family:Poppins,sans-serif;font-weight:700;font-size:12.5px;
+  color:var(--dim);min-width:1.7ch;text-align:right;flex:none}
+
+/* ---------- document panel + the ladder spine ---------- */
+main{position:relative;background:var(--panel);border:1px solid var(--line);
+  border-radius:22px;margin-bottom:36px;
+  padding:clamp(26px,4vw,42px) clamp(20px,3.4vw,40px) 16px}
+.sections{position:relative}
+.sections::before{        /* the drop guide the orbs hang on */
+  content:"";position:absolute;left:26px;top:16px;bottom:26px;width:2px;opacity:.40;
+  background:linear-gradient(180deg,#29A8FF,#35E0C2,#1E88E5,#5BD75B,#E8E337,
+    #FFA726,#FF5252,#FF7BAC,#C33FD6,#7C5CFF,#FFD24A 84%,#FFD24A);
+  -webkit-mask:repeating-linear-gradient(180deg,#000 0 8px,transparent 8px 17px);
+          mask:repeating-linear-gradient(180deg,#000 0 8px,transparent 8px 17px);
+}
+section{position:relative;padding:0 0 34px var(--gut);scroll-margin-top:84px}
+section:last-of-type{padding-bottom:18px}
+section:target h2{text-shadow:0 0 24px var(--c)}  /* the section you jumped to lights up */
+.pip{position:absolute;left:0;top:0;width:54px;height:70px;
+  display:flex;align-items:center;justify-content:center;pointer-events:none}
+.pip::before{             /* bloom halo */
+  content:"";position:absolute;width:calc(var(--sz)*2);height:calc(var(--sz)*2);
+  border-radius:50%;opacity:.30;
+  background:radial-gradient(closest-side,var(--c),transparent);
+}
+.pip .orb{box-shadow:0 calc(var(--sz)*.07) calc(var(--sz)*.2) rgba(0,0,0,.4)}
+.pip .orb.cleared{box-shadow:inset 0 0 0 max(2px,calc(var(--sz)*.09)) var(--c)}
+.tier{font-family:Poppins,sans-serif;font-weight:700;font-size:11.5px;
+  letter-spacing:.20em;text-transform:uppercase;color:var(--ct);
+  margin:0 0 6px;line-height:1.2}
+h2{font-family:Poppins,system-ui,sans-serif;font-weight:800;
+  font-size:clamp(20px,2.4vw,23.5px);line-height:1.32;letter-spacing:-.012em;
+  color:#fff;margin:0 0 13px}
+h2 .n{color:var(--ct);font-weight:900}
+p{margin:0 0 15px;max-width:66ch;color:var(--ink)}
+p:last-child{margin-bottom:0}
+strong{font-weight:600;color:#fff}
+ul.body{margin:0;padding:0;list-style:none;max-width:66ch}
+ul.body li{position:relative;padding-left:22px;margin-bottom:12px}
+ul.body li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:8px;
+  border-radius:50%;background:var(--c)}
+ul.body li:last-child{margin-bottom:0}
+
+/* ---------- links ---------- */
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-rule);
+  overflow-wrap:break-word;
+  transition:color .15s,border-color .15s,background-color .15s}
+a:hover{color:#fff;border-bottom-color:#fff}
+a:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:4px}
+
+/* ---------- table ---------- */
+.tablewrap{overflow-x:auto;margin:0 0 18px;border:1px solid var(--line);
+  border-radius:14px;-webkit-overflow-scrolling:touch;
+  /* shadow-scroll: edge shadows show only while there is more table to reach */
+  background:
+    linear-gradient(90deg,var(--lift) 40%,rgba(33,22,83,0)) left/44px 100% no-repeat,
+    linear-gradient(270deg,var(--lift) 40%,rgba(33,22,83,0)) right/44px 100% no-repeat,
+    radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.55),rgba(0,0,0,0)) left/16px 100% no-repeat,
+    radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.55),rgba(0,0,0,0)) right/16px 100% no-repeat,
+    var(--lift);
+  background-attachment:local,local,scroll,scroll}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15.5px}
+th,td{text-align:left;padding:13px 16px;vertical-align:top;
+  border-bottom:1px solid rgba(126,145,242,.14)}
+th{font-family:Poppins,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--accent);background:var(--rail);
+  border-bottom:1px solid var(--line-2);white-space:nowrap;line-height:1.5}
+tr:last-child td{border-bottom:0}
+td{color:var(--ink-2);line-height:1.62}
+td:first-child{color:#fff;font-weight:500;width:22%}
+
+/* ---------- callout ---------- */
+.notice{margin:18px 0 0;padding:16px 20px;border-radius:12px;max-width:66ch;
+  background:var(--lift);border:1px solid var(--line);border-left:3px solid #FFD24A;
+  color:var(--ink-2);font-size:16px}
+.notice strong{font-family:Poppins,sans-serif;font-weight:700;letter-spacing:.03em;
+  color:#FFE9A6}
+
+/* ---------- footer ---------- */
+footer{padding:0 0 60px;color:var(--dim);font-size:15px}
+.flinks{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center;
+  padding-top:20px;border-top:1px solid var(--line)}
+.flinks a{color:var(--ink-2);border-bottom-color:transparent;font-weight:500}
+.flinks a:hover{color:#fff;border-bottom-color:var(--line-2)}
+.flinks .sep{flex:1 1 0}
+.flinks .play{color:#FFD24A;border-bottom-color:rgba(255,210,74,.40)}
+.flinks .play:hover{color:#fff;border-bottom-color:#fff}
+
+@media (max-width:860px){
+  .index ol{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}
+}
+@media (max-width:760px){
+  :root{--gut:0px}
+  body{font-size:16.5px}
+  .bin{grid-template-columns:1fr}
+  .drop{flex-direction:row;justify-content:flex-start;align-items:center;
+    gap:16px;padding-top:0;align-self:flex-start}
+  .drop .orb{--sz:76px}
+  .guide{flex:none;width:104px;height:2px;min-height:0;margin:0;
+    background:repeating-linear-gradient(90deg,rgba(255,210,74,.5) 0 7px,transparent 7px 15px);
+    -webkit-mask:linear-gradient(90deg,#000 0 35%,transparent 100%);
+            mask:linear-gradient(90deg,#000 0 35%,transparent 100%)}
+  .sections::before{display:none}
+  /* the ladder collapses to a slim tier-coloured rail down the left edge */
+  section{border-left:3px solid var(--c);border-radius:2px;padding:2px 0 30px 22px}
+  section:last-of-type{padding-bottom:14px}
+  .pip{left:-9.5px;top:13px;width:16px;height:16px}
+  .pip::before{display:none}
+  .pip .orb{--sz:16px}
+  main{padding-left:16px;padding-right:16px;border-radius:16px}
+  .glance,.index{padding:20px 18px}
+  table{min-width:540px}
+}
+@media (max-width:400px){
+  .wrap{padding:0 14px}
+  .eyebrow img{width:34px;height:34px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;
+    scroll-behavior:auto!important}
+}
+@media print{
+  html,body{background:#fff!important;color:#000!important;font-size:11pt;line-height:1.5}
+  body{background-image:none!important}
+  .topbar,.drop,.guide,.pip,.sections::before,.bin::before,.bin::after,
+  .orb,.tier{display:none!important}
+  .wrap{max-width:none;padding:0}
+  .bin,main{background:#fff!important;border:0!important;border-radius:0!important;
+    padding:0!important;margin:0 0 14pt!important;color:#000!important;display:block}
+  .glance ul{list-style:disc!important;padding-left:15pt!important}
+  .glance li{display:list-item!important}
+  .glance,.index,.notice,.tablewrap{background:#fff!important;background-image:none!important;
+    border:1px solid #999!important;
+    border-radius:0!important;padding:8pt!important;margin:0 0 12pt!important;color:#000!important}
+  h1,h2,strong,td:first-child,.eyebrow b,.lbl,.notice strong,h2 .n,
+  .index .num{color:#000!important}
+  h2{page-break-after:avoid;break-after:avoid}
+  p,.meta,td,li,.glance li,.glance p,.notice,footer,.eyebrow em,.index a{color:#000!important}
+  th{background:#eee!important;color:#000!important;border-bottom:1px solid #000!important}
+  section{padding:0 0 10pt 0!important;border:0!important;
+    page-break-inside:avoid;break-inside:avoid}
+  .index ol{grid-template-columns:repeat(2,1fr);grid-auto-flow:row;grid-template-rows:none}
+  .tablewrap{overflow:visible}
+  table{min-width:0}
+  a{color:#000!important;border:0!important;text-decoration:underline}
+  a[href^="http"]::after,a[href^="mailto"]::after{content:" (" attr(href) ")";
+    font-size:9pt;color:#333}
+  .flinks{border-top:1px solid #999}
+  ul.body li::before{background:#000!important}
+}
+</style>
 </head>
 <body>
-<p class="back"><a href="../index.html">&larr; All policies</a></p>
-<h1>Terms of Service</h1>
-<p class="meta">Cascade — Effective 18 June 2026.</p>
 
-<h2>1. Acceptance</h2>
-<p>By downloading or using Cascade (the &ldquo;App&rdquo;), you agree to these Terms. If you do not agree, do not use the App. The App is published by an independent developer (&ldquo;Developer&rdquo;, &ldquo;we&rdquo;). Contact: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+<nav class="topbar" aria-label="Policy navigation">
+  <div class="wrap">
+    <a class="back" href="../index.html">&larr; All policies</a>
+    <div class="swap">
+      <a href="privacy.html"><i class="dot"></i>Privacy</a>
+      <span aria-current="page"><i class="dot"></i>Terms</span>
+    </div>
+  </div>
+</nav>
 
-<h2>2. License</h2>
-<p>We grant you a personal, non-exclusive, non-transferable, revocable license to install and use the App on devices you own or control, for your personal, non-commercial use. You may not redistribute, decompile, or reverse-engineer the App.</p>
+<div class="wrap">
 
-<h2>3. Content &amp; ownership</h2>
-<p>The game, its artwork, and its orb skins are the property of the Developer. Boards are generated procedurally for your personal entertainment.</p>
+  <header>
+    <div class="bin">
+      <div class="bin-txt">
+        <p class="eyebrow">
+          <img src="../../assets/apps/cascade.webp" alt="Cascade app icon" width="38" height="38">
+          <b>Cascade</b><em>drop &middot; merge &middot; cascade</em>
+        </p>
+        <h1>Terms of Service</h1>
+        <p class="meta">Cascade — Effective 18 June 2026.</p>
+      </div>
+      <div class="drop t10" aria-hidden="true">
+        <span class="orb"></span>
+        <span class="guide"></span>
+      </div>
+    </div>
+  </header>
 
-<h2>4. Account-free use</h2>
-<p>The App does not require an account. Your progress and settings live on your device. We cannot recover them if you uninstall the App or switch devices, except the &ldquo;Remove Ads&rdquo; entitlement, which can be restored through Google Play.</p>
+  <main>
 
-<h2>5. Ads</h2>
-<p>The App is supported by ads served by Google AdMob. By using the free version you agree to see ads. Rewarded ads are optional. Ads can be removed via in-app purchase.</p>
+    <div class="glance">
+      <p class="lbl">At a glance</p>
+      <p class="sub">A summary of the sections below.</p>
+      <ul>
+        <li class="t0"><span class="orb" aria-hidden="true"></span><span>The App does not require an account. Your progress and settings live on your device.</span></li>
+        <li class="t3"><span class="orb" aria-hidden="true"></span><span>A one-time &ldquo;Remove Ads&rdquo; purchase, not a subscription, and it does not auto-renew.</span></li>
+        <li class="t5"><span class="orb" aria-hidden="true"></span><span>In-game coins are earned through play, cannot be bought, have no real-world value, and are not redeemable for cash.</span></li>
+        <li class="t8"><span class="orb" aria-hidden="true"></span><span>Refunds are handled by Google Play.</span></li>
+        <li class="t10"><span class="orb" aria-hidden="true"></span><span>These Terms are governed by the laws of Tunisia.</span></li>
+      </ul>
+    </div>
 
-<h2>6. Paid features</h2>
-<p>The App offers a single in-app purchase through Google Play Billing: a one-time &ldquo;Remove Ads&rdquo; purchase. The price is shown before you confirm. This is a one-time purchase, not a subscription, and does not auto-renew. In-game coins are earned through play, cannot be bought, have no real-world value, and are not redeemable for cash.</p>
-<div class="notice refund"><strong>Refunds</strong> are handled by Google Play under <a href="https://support.google.com/googleplay/answer/2479637">Google's refund policy</a>. We can support a request you submit to Google, but Google makes the final decision.</div>
+    <nav class="index" aria-label="Contents">
+      <p class="lbl">Contents</p>
+      <ol>
+        <li class="t0"><a href="#s1"><span class="orb" aria-hidden="true"></span><span class="num">1</span> Acceptance</a></li>
+        <li class="t1"><a href="#s2"><span class="orb" aria-hidden="true"></span><span class="num">2</span> License</a></li>
+        <li class="t2"><a href="#s3"><span class="orb" aria-hidden="true"></span><span class="num">3</span> Content &amp; ownership</a></li>
+        <li class="t3"><a href="#s4"><span class="orb" aria-hidden="true"></span><span class="num">4</span> Account-free use</a></li>
+        <li class="t4"><a href="#s5"><span class="orb" aria-hidden="true"></span><span class="num">5</span> Ads</a></li>
+        <li class="t5"><a href="#s6"><span class="orb" aria-hidden="true"></span><span class="num">6</span> Paid features</a></li>
+        <li class="t6"><a href="#s7"><span class="orb" aria-hidden="true"></span><span class="num">7</span> Acceptable use</a></li>
+        <li class="t7"><a href="#s8"><span class="orb" aria-hidden="true"></span><span class="num">8</span> Age rating</a></li>
+        <li class="t8"><a href="#s9"><span class="orb" aria-hidden="true"></span><span class="num">9</span> Disclaimer of warranties</a></li>
+        <li class="t9"><a href="#s10"><span class="orb" aria-hidden="true"></span><span class="num">10</span> Limitation of liability</a></li>
+        <li class="t10"><a href="#s11"><span class="orb" aria-hidden="true"></span><span class="num">11</span> Changes</a></li>
+        <li class="t10"><a href="#s12"><span class="orb cleared" aria-hidden="true"></span><span class="num">12</span> Termination</a></li>
+        <li class="t10"><a href="#s13"><span class="orb cleared" aria-hidden="true"></span><span class="num">13</span> Governing law</a></li>
+        <li class="t10"><a href="#s14"><span class="orb cleared" aria-hidden="true"></span><span class="num">14</span> Contact</a></li>
+      </ol>
+    </nav>
 
-<h2>7. Acceptable use</h2>
-<ul>
-<li>Do not use the App to violate any applicable law.</li>
-<li>Do not reverse-engineer, decompile, tamper with, or attempt to manipulate purchases or progress.</li>
-</ul>
+    <div class="sections">
 
-<h2>8. Age rating</h2>
-<p>Cascade is intended for a general audience. By using the App you confirm you may do so in your jurisdiction.</p>
+      <section id="s1" class="t0" style="--sz:14px">
+        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
+        <p class="tier" aria-hidden="true">Spark</p>
+        <h2><span class="n">1.</span> Acceptance</h2>
+        <p>By downloading or using Cascade (the &ldquo;App&rdquo;), you agree to these Terms. If you do not agree, do not use the App. The App is published by an independent developer (&ldquo;Developer&rdquo;, &ldquo;we&rdquo;). Contact: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+      </section>
 
-<h2>9. Disclaimer of warranties</h2>
-<p>The App is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo;, without warranty of any kind, express or implied. We do not warrant that the App will be uninterrupted or error-free.</p>
+      <section id="s2" class="t1" style="--sz:17px">
+        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
+        <p class="tier" aria-hidden="true">Dew</p>
+        <h2><span class="n">2.</span> License</h2>
+        <p>We grant you a personal, non-exclusive, non-transferable, revocable license to install and use the App on devices you own or control, for your personal, non-commercial use. You may not redistribute, decompile, or reverse-engineer the App.</p>
+      </section>
 
-<h2>10. Limitation of liability</h2>
-<p>To the maximum extent permitted by law, the Developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or loss of data, arising from your use of the App. Total liability for any claim is capped at the amount you paid us in the twelve months before the claim.</p>
+      <section id="s3" class="t2" style="--sz:20px">
+        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
+        <p class="tier" aria-hidden="true">Tide</p>
+        <h2><span class="n">3.</span> Content &amp; ownership</h2>
+        <p>The game, its artwork, and its orb skins are the property of the Developer. Boards are generated procedurally for your personal entertainment.</p>
+      </section>
 
-<h2>11. Changes</h2>
-<p>We may update these Terms. Material changes will be announced in the App. Continued use after a change means you accept the updated Terms.</p>
+      <section id="s4" class="t3" style="--sz:23px">
+        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
+        <p class="tier" aria-hidden="true">Leaf</p>
+        <h2><span class="n">4.</span> Account-free use</h2>
+        <p>The App does not require an account. Your progress and settings live on your device. We cannot recover them if you uninstall the App or switch devices, except the &ldquo;Remove Ads&rdquo; entitlement, which can be restored through Google Play.</p>
+      </section>
 
-<h2>12. Termination</h2>
-<p>We may suspend or terminate access if you breach these Terms. You may stop using the App at any time by uninstalling it.</p>
+      <section id="s5" class="t4" style="--sz:26px">
+        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
+        <p class="tier" aria-hidden="true">Bloom</p>
+        <h2><span class="n">5.</span> Ads</h2>
+        <p>The App is supported by ads served by Google AdMob. By using the free version you agree to see ads. Rewarded ads are optional. Ads can be removed via in-app purchase.</p>
+      </section>
 
-<h2>13. Governing law</h2>
-<p>These Terms are governed by the laws of Tunisia (the Developer's country of residence), without regard to conflict-of-laws principles, unless a mandatory consumer-protection law in your country gives you the right to a local forum.</p>
+      <section id="s6" class="t5" style="--sz:29px">
+        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
+        <p class="tier" aria-hidden="true">Amber</p>
+        <h2><span class="n">6.</span> Paid features</h2>
+        <p>The App offers a single in-app purchase through Google Play Billing: a one-time &ldquo;Remove Ads&rdquo; purchase. The price is shown before you confirm. This is a one-time purchase, not a subscription, and does not auto-renew. In-game coins are earned through play, cannot be bought, have no real-world value, and are not redeemable for cash.</p>
+        <div class="notice refund"><strong>Refunds</strong> are handled by Google Play under <a href="https://support.google.com/googleplay/answer/2479637">Google's refund policy</a>. We can support a request you submit to Google, but Google makes the final decision.</div>
+      </section>
 
-<h2>14. Contact</h2>
-<p>Questions: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+      <section id="s7" class="t6" style="--sz:32px">
+        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
+        <p class="tier" aria-hidden="true">Flare</p>
+        <h2><span class="n">7.</span> Acceptable use</h2>
+        <ul class="body">
+        <li>Do not use the App to violate any applicable law.</li>
+        <li>Do not reverse-engineer, decompile, tamper with, or attempt to manipulate purchases or progress.</li>
+        </ul>
+      </section>
+
+      <section id="s8" class="t7" style="--sz:35px">
+        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
+        <p class="tier" aria-hidden="true">Coral</p>
+        <h2><span class="n">8.</span> Age rating</h2>
+        <p>Cascade is intended for a general audience. By using the App you confirm you may do so in your jurisdiction.</p>
+      </section>
+
+      <section id="s9" class="t8" style="--sz:38px">
+        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
+        <p class="tier" aria-hidden="true">Rose</p>
+        <h2><span class="n">9.</span> Disclaimer of warranties</h2>
+        <p>The App is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo;, without warranty of any kind, express or implied. We do not warrant that the App will be uninterrupted or error-free.</p>
+      </section>
+
+      <section id="s10" class="t9" style="--sz:42px">
+        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
+        <p class="tier" aria-hidden="true">Orchid</p>
+        <h2><span class="n">10.</span> Limitation of liability</h2>
+        <p>To the maximum extent permitted by law, the Developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or loss of data, arising from your use of the App. Total liability for any claim is capped at the amount you paid us in the twelve months before the claim.</p>
+      </section>
+
+      <section id="s11" class="t10" style="--sz:46px">
+        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
+        <p class="tier" aria-hidden="true">Nova</p>
+        <h2><span class="n">11.</span> Changes</h2>
+        <p>We may update these Terms. Material changes will be announced in the App. Continued use after a change means you accept the updated Terms.</p>
+      </section>
+
+      <section id="s12" class="t10" style="--sz:46px">
+        <span class="pip" aria-hidden="true"><span class="orb cleared"></span></span>
+        <p class="tier" aria-hidden="true">Nova cleared</p>
+        <h2><span class="n">12.</span> Termination</h2>
+        <p>We may suspend or terminate access if you breach these Terms. You may stop using the App at any time by uninstalling it.</p>
+      </section>
+
+      <section id="s13" class="t10" style="--sz:46px">
+        <span class="pip" aria-hidden="true"><span class="orb cleared"></span></span>
+        <p class="tier" aria-hidden="true">Nova cleared</p>
+        <h2><span class="n">13.</span> Governing law</h2>
+        <p>These Terms are governed by the laws of Tunisia (the Developer's country of residence), without regard to conflict-of-laws principles, unless a mandatory consumer-protection law in your country gives you the right to a local forum.</p>
+      </section>
+
+      <section id="s14" class="t10" style="--sz:46px">
+        <span class="pip" aria-hidden="true"><span class="orb cleared"></span></span>
+        <p class="tier" aria-hidden="true">Nova cleared</p>
+        <h2><span class="n">14.</span> Contact</h2>
+        <p>Questions: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="flinks">
+      <a href="../index.html">All policies</a>
+      <a href="privacy.html">Cascade Privacy Policy</a>
+      <span class="sep"></span>
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.carthage.cascade">Cascade on Google Play &nearr;</a>
+    </div>
+  </footer>
+
+</div>
 </body>
 </html>

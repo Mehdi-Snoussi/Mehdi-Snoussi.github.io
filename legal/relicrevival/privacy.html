@@ -4,60 +4,403 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Relic Revival — Privacy Policy</title>
-<link rel="stylesheet" href="../style.css">
+<meta name="description" content="How Relic Revival: Clean &amp; Restore handles data — progress stays on your device, there is no sign-up and no login, no personal data is collected, and ad consent is yours to change. Published by Carthage Studio.">
+<meta name="theme-color" content="#1F3A3A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ── Relic Revival legal pages ──────────────────────────────────────────
+     "Museum catalogue": an ink-teal gallery wall carrying parchment specimen
+     cards, each introduced by an engraved accession placard. Reward gold
+     (#D4AF37) is reserved — it appears on the app identity and the accession
+     numbers, and nowhere else. Verdigris carries every ordinary accent on the
+     privacy sheet (amethyst does the same job on the terms sheet).
+     Tokens verified against relicrevival/lib/core/theme/palette.dart      */
+
+  :root{
+    --wall:#1F3A3A;        /* ink teal — gallery wall / page ground        */
+    --wall-deep:#162B2B;   /* plate shadow ramp                           */
+    --card:#F7F0E0;        /* parchment — the reading surface             */
+    --bench:#EFE6D3;       /* bench cream — secondary panels              */
+    --umber:#C9B79C;       /* hairlines + muted text on the wall  6.22:1  */
+    --ink:#1F3A3A;         /* body text on parchment            10.73:1   */
+    --ink-soft:#3A5350;    /* muted text on parchment            7.30:1   */
+    --cream:#EFE6D3;       /* text on the wall                   9.82:1   */
+    --gold:#D4AF37;        /* RESERVED: identity + accession     5.79:1   */
+    --accent:#3C6355;      /* deep verdigris — links/marks       5.95:1   */
+    --accent-lit:#5E8B7E;  /* verdigris — decorative rules only            */
+    --grime-a:#241D14;
+    --grime-b:#4A4230;
+    --focus:#FBF6EA;
+    --pad:clamp(20px,4vw,30px);
+    --col:720px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{background:var(--wall);-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:transparent;color:var(--ink);
+    font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    font-size:17px;line-height:1.72;-webkit-font-smoothing:antialiased;
+  }
+  /* the wall: a raking light shaft, a corner vignette, and a plaster tooth */
+  body::before{
+    content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(130% 78% at 10% -12%, rgba(255,247,236,.15), rgba(255,247,236,0) 62%),
+      radial-gradient(95% 65% at 102% 108%, rgba(8,20,20,.62), rgba(8,20,20,0) 66%),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.017) 0 1px, rgba(255,255,255,0) 1px 5px),
+      var(--wall);
+  }
+
+  .wrap{max-width:calc(var(--col) + 48px);margin:0 auto;padding:0 24px}
+  @media(max-width:480px){.wrap{padding:0 16px}}
+
+  a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+  a:hover{text-decoration-thickness:2px}
+  a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:3px}
+  .spec a:focus-visible,.glance a:focus-visible,.notice a:focus-visible{outline-color:var(--ink)}
+  strong{font-weight:600}
+  a[href^="mailto"],a[href^="http"]{overflow-wrap:break-word}
+
+  /* ── top rail ─────────────────────────────────────────────────────── */
+  .rail{display:flex;justify-content:space-between;align-items:center;gap:14px;
+        flex-wrap:wrap;padding:clamp(20px,4vw,34px) 0 16px;
+        border-bottom:1px solid rgba(201,183,156,.22)}
+  .rail a{color:var(--cream);text-decoration:none;font-size:15px;font-weight:500;
+          border-bottom:1px solid rgba(201,183,156,.45);padding-bottom:2px}
+  .rail a:hover{border-bottom-color:var(--cream)}
+
+  /* ── masthead ─────────────────────────────────────────────────────── */
+  .masthead{display:flex;align-items:center;gap:clamp(16px,3.5vw,28px);
+            margin:clamp(26px,5vw,42px) 0 0}
+  .frame{display:inline-flex;flex:0 0 auto;padding:6px;border-radius:22px;
+         background:linear-gradient(160deg,#F7F0E0,#D9CBAE);
+         box-shadow:0 0 0 1px rgba(110,78,18,.5),0 16px 34px rgba(8,20,20,.5)}
+  .frame img{display:block;width:88px;height:88px;border-radius:16px}
+  @media(max-width:420px){.frame img{width:64px;height:64px;border-radius:12px}}
+  .eyebrow{margin:0;font-size:11px;font-weight:600;letter-spacing:.24em;
+           text-transform:uppercase;color:var(--umber)}
+  h1{margin:.55rem 0 0;font-weight:400}
+  h1 .app{display:block;position:relative;font-family:'Cinzel',Georgia,'Times New Roman',serif;
+          font-weight:700;font-size:clamp(29px,6.2vw,44px);line-height:1.05;
+          letter-spacing:.015em;color:var(--gold)}
+  h1 .doc{display:block;margin-top:.5rem;font-size:clamp(14px,2.6vw,17px);
+          font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cream)}
+  /* one-shot: the identity wipes clean of grime, like the relic it names */
+  @keyframes grimewipe{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 0 0 100%)}}
+  h1 .app::after{
+    content:'';position:absolute;inset:-4px -8px;border-radius:3px;pointer-events:none;
+    background:linear-gradient(100deg,var(--grime-a),var(--grime-b) 72%,#5A5140);
+    mix-blend-mode:multiply;
+    /* base state is CLEAN: with animation:none (reduced motion, print) the
+       overlay is clipped away instead of burying the title in grime */
+    clip-path:inset(0 0 0 100%);
+    animation:grimewipe 700ms cubic-bezier(.35,0,.2,1) 120ms 1 both;
+  }
+  .meta{margin:1.15rem 0 0;color:var(--umber);font-size:16px;line-height:1.65;max-width:60ch}
+
+  /* ── document switch ──────────────────────────────────────────────── */
+  .switch{display:flex;gap:8px;flex-wrap:wrap;margin:clamp(22px,4vw,30px) 0 0}
+  .switch a{font-size:14px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+            padding:11px 17px;border-radius:10px;text-decoration:none;color:var(--cream);
+            border:1px solid rgba(201,183,156,.4)}
+  .switch a:hover{border-color:var(--cream);background:rgba(255,255,255,.05)}
+  .switch a[aria-current]{background:var(--bench);color:var(--ink);border-color:transparent;
+            box-shadow:0 8px 18px rgba(8,20,20,.36);
+            border-bottom:3px solid var(--accent-lit);padding-bottom:9px}
+  .switch a[aria-current]:hover{background:var(--card)}
+  @media(max-width:440px){.switch a{font-size:12.5px;padding:10px 13px;letter-spacing:.07em}
+    .switch a[aria-current]{padding-bottom:8px}}
+
+  /* ── at a glance ──────────────────────────────────────────────────── */
+  .glance{margin:clamp(28px,5vw,40px) 0 0;padding:clamp(20px,3.6vw,26px);
+          background:var(--bench);border:1px solid rgba(110,78,18,.2);border-radius:14px;
+          box-shadow:0 16px 34px rgba(8,20,20,.3)}
+  .glance-label{margin:0;font-size:11px;font-weight:600;letter-spacing:.24em;
+                text-transform:uppercase;color:var(--accent)}
+  .glance-note{margin:.35rem 0 0;font-size:15px;color:var(--ink-soft)}
+  .glance ul{list-style:none;margin:16px 0 0;padding:0}
+  @media(min-width:640px){.glance ul{columns:2;column-gap:30px}}
+  .glance li{position:relative;padding-left:27px;margin:0 0 11px;font-size:16px;
+        line-height:1.6;break-inside:avoid}
+  .glance li:last-child{margin-bottom:0}
+  .glance li::before{content:'';position:absolute;left:4px;top:.3em;width:.46em;height:.86em;
+        border:solid var(--accent);border-width:0 2px 2px 0;transform:rotate(42deg)}
+
+  /* ── specimen cards + accession placards (the signature) ──────────── */
+  .spec{position:relative;background:var(--card);border:1px solid rgba(201,183,156,.95);
+        border-radius:16px;margin:clamp(48px,7vw,66px) 0 0;
+        padding:calc(var(--pad) + 14px) var(--pad) var(--pad);
+        box-shadow:0 18px 38px rgba(8,20,20,.3),inset 0 1px 0 rgba(255,255,255,.65)}
+  .placard{position:relative;
+        margin:calc(-1 * (var(--pad) + 14px) - 22px) -8px 1.6rem;
+        padding:13px 20px 15px;border-radius:9px;border:1px solid rgba(11,26,26,.55);
+        background:linear-gradient(168deg,#2B4947 0%,#1E3937 46%,var(--wall-deep) 100%);
+        box-shadow:0 10px 20px rgba(8,20,20,.4),inset 0 1px 0 rgba(251,231,162,.2),
+                   inset 0 -1px 0 rgba(0,0,0,.38)}
+  .placard::before,.placard::after{content:'';position:absolute;top:50%;width:5px;height:5px;
+        border-radius:50%;transform:translateY(-50%);
+        background:radial-gradient(circle at 34% 30%,rgba(251,231,162,.55),rgba(0,0,0,.55))}
+  .placard::before{left:7px}
+  .placard::after{right:7px}
+  .plrow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .acc{font-size:12px;font-weight:600;letter-spacing:.18em;color:var(--gold)}
+  .cat{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--umber)}
+  .placard h2{margin:10px 0 0;font-family:'Cinzel',Georgia,'Times New Roman',serif;
+        font-weight:600;font-size:clamp(19px,3.4vw,23px);line-height:1.26;
+        letter-spacing:.045em;color:var(--cream)}
+  .placard h2::before{content:'';display:block;width:34px;height:1px;margin:0 0 9px;
+        background:var(--accent-lit)}
+  .placard h2 .n{color:var(--umber);margin-right:.3em}
+
+  .spec p{margin:0 0 1rem;max-width:68ch}
+  .spec p:last-child{margin-bottom:0}
+  .spec ul{margin:0 0 1rem;padding-left:1.2rem;max-width:68ch}
+  .spec ul:last-child{margin-bottom:0}
+  .spec li{margin:0 0 .6rem;line-height:1.7}
+  .spec li:last-child{margin-bottom:0}
+  .spec li::marker{color:var(--accent)}
+
+  /* ── the register (data table) ────────────────────────────────────── */
+  .scroller{overflow-x:auto;margin:.2rem 0 1.2rem;border:1px solid rgba(201,183,156,.95);
+            border-radius:12px;background:var(--bench)}
+  table{border-collapse:collapse;width:100%;min-width:640px;table-layout:fixed}
+  col.c1{width:20%}col.c2{width:34%}col.c3{width:18%}col.c4{width:28%}
+  th{background:var(--wall);color:var(--cream);text-align:left;padding:13px 15px;
+     font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+  td{padding:13px 15px;border-top:1px solid rgba(201,183,156,.8);vertical-align:top;
+     font-size:16px;line-height:1.6}
+  tbody tr:nth-child(odd) td{background:var(--card)}
+  .scrollnote{margin:-.85rem 0 1.2rem;font-size:14px;color:var(--ink-soft)}
+  @media(min-width:700px){.scrollnote{display:none}}
+
+  .notice{margin:1.2rem 0 0;padding:16px 19px;border-radius:12px;background:var(--bench);
+          border:1px solid rgba(201,183,156,.95);border-left:4px solid var(--accent-lit);
+          max-width:68ch}
+
+  /* ── colophon ─────────────────────────────────────────────────────── */
+  footer{margin:clamp(50px,8vw,74px) 0 0;padding:clamp(26px,5vw,34px) 0 clamp(44px,8vw,66px);
+         border-top:1px solid rgba(201,183,156,.26);color:var(--umber);font-size:16px}
+  .colophon{display:flex;gap:16px;align-items:flex-start}
+  .mark{flex:0 0 auto;width:30px;height:30px;color:var(--accent-lit);margin-top:3px}
+  .colophon p{margin:0 0 .4rem;max-width:56ch}
+  .colophon .fine{font-size:14px;line-height:1.6}
+  .flinks{display:flex;flex-wrap:wrap;gap:10px 22px;margin:16px 0 0;padding:0;list-style:none}
+  .flinks a{color:var(--cream);font-weight:500;font-size:15px}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+
+  @media print{
+    @page{margin:16mm}
+    html,body{background:#fff;color:#000;font-size:11.5pt}
+    body::before,.frame,.switch,.rail,.mark,.scrollnote{display:none!important}
+    .placard::before,.placard::after,.placard h2::before,.glance li::before,
+    h1 .app::after{display:none!important}
+    .wrap{max-width:none;padding:0}
+    h1 .app,h1 .doc,.eyebrow,.meta,.cat,.acc,.placard h2,.placard h2 .n,footer,.glance-label,.glance-note{color:#000!important}
+    .spec,.glance,.notice{background:#fff;border:0;box-shadow:none;border-radius:0;
+      padding:0;margin:0 0 18pt;break-inside:avoid;page-break-inside:avoid}
+    .notice{border-left:2pt solid #000;padding-left:10pt}
+    .glance ul{columns:1;list-style:disc;padding-left:18pt}
+    .glance li{padding-left:0}
+    .placard{background:none;box-shadow:none;border:0;border-bottom:1pt solid #000;
+      margin:0 0 8pt;padding:0 0 4pt;border-radius:0}
+    .scroller{overflow:visible;border:1pt solid #000;border-radius:0;background:#fff}
+    table{min-width:0}
+    th{background:#fff;color:#000;border-bottom:1pt solid #000}
+    td{border-top:.5pt solid #666}
+    a{color:#000;text-decoration:underline}
+    a::after{content:" (" attr(href) ")";font-size:.82em;word-break:break-all;color:#000}
+    footer{border-top:1pt solid #000}
+  }
+</style>
 </head>
 <body>
-<p class="back"><a href="../index.html">&larr; All policies</a></p>
-<h1>Privacy Policy</h1>
+
+<div class="wrap">
+
+<nav class="rail" aria-label="Breadcrumb">
+  <p class="back" style="margin:0"><a href="../index.html">&larr; All policies</a></p>
+  <a href="https://play.google.com/store/apps/details?id=com.carthage.relicrevival">View on Google Play</a>
+</nav>
+
+<header class="masthead">
+  <span class="frame"><img src="../../assets/apps/relicrevival.webp" width="88" height="88" alt="Relic Revival app icon"></span>
+  <div>
+    <p class="eyebrow">Carthage Studio</p>
+    <h1><span class="app">Relic Revival</span><span class="doc">Privacy Policy</span></h1>
+  </div>
+</header>
+
 <p class="meta">Relic Revival: Clean &amp; Restore — Effective 14 July 2026. Last updated 14 July 2026.</p>
 
-<h2>1. Who we are</h2>
-<p>Relic Revival (the &ldquo;App&rdquo;) is a relaxing restoration game in which you wipe grime from procedurally generated antiques, uncover what they really are, and build a museum. It is published by <strong>Carthage Studio</strong> (the &ldquo;Developer&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). Contact: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
-<p>This policy explains, in plain language, what data the App handles and why.</p>
+<nav class="switch" aria-label="Document">
+  <a href="privacy.html" aria-current="page">Privacy Policy</a>
+  <a href="terms.html">Terms of Service</a>
+</nav>
 
-<h2>2. Data we collect</h2>
-<table>
-<tr><th>Category</th><th>What it is</th><th>Why</th><th>Where it lives</th></tr>
-<tr><td>Game progress</td><td>Your coins, the relics you have revealed, your museum sets, your hired restorers and their levels, idle timestamps, your daily-reward streak, and your settings (sound, haptics, language, daily reminder).</td><td>To save your progress between sessions.</td><td>On your device only.</td></tr>
-<tr><td>Purchase records</td><td>A receipt confirming the &ldquo;Remove Ads&rdquo; purchase.</td><td>To unlock what you paid for.</td><td>Validated by Google Play. We store only a yes/no flag on your device.</td></tr>
-<tr><td>Advertising identifier</td><td>Your device's advertising ID.</td><td>So our ad partner (Google AdMob) can serve and measure ads.</td><td><strong>Collected by and shared with Google AdMob.</strong> We never receive or store it ourselves.</td></tr>
-<tr><td>App interactions &amp; diagnostics</td><td>Ad interactions, crash and performance diagnostics, and device/network information, gathered automatically by the Google Mobile Ads SDK.</td><td>To serve ads, measure them, and prevent fraud.</td><td>Sent to and shared with Google. We never receive or store it ourselves.</td></tr>
-</table>
-<p>We do <strong>not</strong> collect: your name, email address, phone number, contacts, SMS messages, calendar, precise location, microphone audio, or photos. The App has no sign-up and no login, and works fully offline apart from serving ads and processing the optional purchase.</p>
+<main>
 
-<h2>3. Third-party services</h2>
-<ul>
-<li><strong>Google AdMob</strong> &mdash; serves ads (only if you have not removed forced ads). AdMob collects and shares the data listed above. <a href="https://policies.google.com/technologies/ads">AdMob &amp; ads privacy</a></li>
-<li><strong>Google Play Billing</strong> &mdash; processes the &ldquo;Remove Ads&rdquo; purchase. Google processes the payment; we never see your payment method. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-<li><strong>Google Play In-App Review / In-App Update</strong> &mdash; shows the optional rating sheet and update prompt. No data is sent to us.</li>
-</ul>
+<section class="glance" aria-label="At a glance">
+  <p class="glance-label">At a glance</p>
+  <p class="glance-note">Every point here is restated in full in the sections below.</p>
+  <ul>
+    <li>The App has no sign-up and no login.</li>
+    <li>Your progress and settings live on your device only.</li>
+    <li>We never receive or store your advertising ID.</li>
+    <li>We do not collect your name, email address, phone number, contacts, SMS messages, calendar, precise location, microphone audio, or photos.</li>
+    <li>No banner ads, and no ads on launch or exit.</li>
+    <li>You can change or withdraw ad consent at any time in Settings &rarr; Privacy options.</li>
+    <li>We hold no server-side copy of your data.</li>
+    <li>We do not sell personal information.</li>
+  </ul>
+</section>
 
-<h2>4. Ads and your consent</h2>
-<p>The App may show <strong>interstitial</strong> ads (only after you finish appraising a relic, never during a wipe) and <strong>rewarded</strong> ads (only when you choose to watch one — for example to double an appraisal, or to double your offline earnings). It shows <strong>no banner ads</strong> and no ads on launch or exit.</p>
-<p>In the European Economic Area, the UK and Switzerland, and in US states where required, we show a consent prompt (Google's User Messaging Platform) <strong>before</strong> any ad is requested. You can change or withdraw that choice at any time from <strong>Settings &rarr; Privacy options</strong> inside the App. You can also disable ad personalisation at the OS level (Android: Settings &rarr; Google &rarr; Ads), or remove forced ads via the in-app purchase.</p>
+<section class="spec" id="s1">
+  <div class="placard">
+    <div class="plrow"><span class="acc">PP.2026.01</span><span class="cat">Identification</span></div>
+    <h2><span class="n">1.</span> Who we are</h2>
+  </div>
+  <p>Relic Revival (the &ldquo;App&rdquo;) is a relaxing restoration game in which you wipe grime from procedurally generated antiques, uncover what they really are, and build a museum. It is published by <strong>Carthage Studio</strong> (the &ldquo;Developer&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). Contact: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+  <p>This policy explains, in plain language, what data the App handles and why.</p>
+</section>
 
-<h2>5. Notifications</h2>
-<p>The App can show an optional <strong>local</strong> daily reminder. Notifications are scheduled entirely on your device — no data leaves it, and there is no push server and no device token. You can turn them off at any time in the App's settings or your device settings.</p>
+<section class="spec" id="s2">
+  <div class="placard">
+    <div class="plrow"><span class="acc">PP.2026.02</span><span class="cat">Collection</span></div>
+    <h2><span class="n">2.</span> Data we collect</h2>
+  </div>
+  <div class="scroller" tabindex="0" role="region" aria-label="Data we collect">
+  <table>
+  <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"></colgroup>
+  <thead>
+  <tr><th>Category</th><th>What it is</th><th>Why</th><th>Where it lives</th></tr>
+  </thead>
+  <tbody>
+  <tr><td>Game progress</td><td>Your coins, the relics you have revealed, your museum sets, your hired restorers and their levels, idle timestamps, your daily-reward streak, and your settings (sound, haptics, language, daily reminder).</td><td>To save your progress between sessions.</td><td>On your device only.</td></tr>
+  <tr><td>Purchase records</td><td>A receipt confirming the &ldquo;Remove Ads&rdquo; purchase.</td><td>To unlock what you paid for.</td><td>Validated by Google Play. We store only a yes/no flag on your device.</td></tr>
+  <tr><td>Advertising identifier</td><td>Your device's advertising ID.</td><td>So our ad partner (Google AdMob) can serve and measure ads.</td><td><strong>Collected by and shared with Google AdMob.</strong> We never receive or store it ourselves.</td></tr>
+  <tr><td>App interactions &amp; diagnostics</td><td>Ad interactions, crash and performance diagnostics, and device/network information, gathered automatically by the Google Mobile Ads SDK.</td><td>To serve ads, measure them, and prevent fraud.</td><td>Sent to and shared with Google. We never receive or store it ourselves.</td></tr>
+  </tbody>
+  </table>
+  </div>
+  <p class="scrollnote">Scroll the table sideways to read every column.</p>
+  <p>We do <strong>not</strong> collect: your name, email address, phone number, contacts, SMS messages, calendar, precise location, microphone audio, or photos. The App has no sign-up and no login, and works fully offline apart from serving ads and processing the optional purchase.</p>
+</section>
 
-<h2>6. Sharing a relic</h2>
-<p>If you tap Share, the App renders an image on your device and hands it to your system share sheet. <strong>Nothing is uploaded to us.</strong> Where it then goes is governed by the app you choose to share into.</p>
+<section class="spec" id="s3">
+  <div class="placard">
+    <div class="plrow"><span class="acc">PP.2026.03</span><span class="cat">Provenance</span></div>
+    <h2><span class="n">3.</span> Third-party services</h2>
+  </div>
+  <ul>
+  <li><strong>Google AdMob</strong> &mdash; serves ads (only if you have not removed forced ads). AdMob collects and shares the data listed above. <a href="https://policies.google.com/technologies/ads">AdMob &amp; ads privacy</a></li>
+  <li><strong>Google Play Billing</strong> &mdash; processes the &ldquo;Remove Ads&rdquo; purchase. Google processes the payment; we never see your payment method. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+  <li><strong>Google Play In-App Review / In-App Update</strong> &mdash; shows the optional rating sheet and update prompt. No data is sent to us.</li>
+  </ul>
+</section>
 
-<h2>7. Children</h2>
-<p>The App is intended for a general audience aged <strong>13 and over</strong>. It is not directed at children under 13, and we do not knowingly collect personal data from them. Ads are requested with settings appropriate for a general audience.</p>
+<section class="spec" id="s4">
+  <div class="placard">
+    <div class="plrow"><span class="acc">PP.2026.04</span><span class="cat">Display &amp; consent</span></div>
+    <h2><span class="n">4.</span> Ads and your consent</h2>
+  </div>
+  <p>The App may show <strong>interstitial</strong> ads (only after you finish appraising a relic, never during a wipe) and <strong>rewarded</strong> ads (only when you choose to watch one — for example to double an appraisal, or to double your offline earnings). It shows <strong>no banner ads</strong> and no ads on launch or exit.</p>
+  <p>In the European Economic Area, the UK and Switzerland, and in US states where required, we show a consent prompt (Google's User Messaging Platform) <strong>before</strong> any ad is requested. You can change or withdraw that choice at any time from <strong>Settings &rarr; Privacy options</strong> inside the App. You can also disable ad personalisation at the OS level (Android: Settings &rarr; Google &rarr; Ads), or remove forced ads via the in-app purchase.</p>
+</section>
 
-<h2>8. Data retention &amp; deletion</h2>
-<p>Your progress and settings live on your device and are removed when you uninstall the App or clear its data. We hold no server-side copy, so there is nothing for us to delete on our side. For any request, email <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>; we action verified requests within 30 days.</p>
+<section class="spec" id="s5">
+  <div class="placard">
+    <div class="plrow"><span class="acc">PP.2026.05</span><span class="cat">Reminders</span></div>
+    <h2><span class="n">5.</span> Notifications</h2>
+  </div>
+  <p>The App can show an optional <strong>local</strong> daily reminder. Notifications are scheduled entirely on your device — no data leaves it, and there is no push server and no device token. You can turn them off at any time in the App's settings or your device settings.</p>
+</section>
 
-<h2>9. Your rights (GDPR / CCPA)</h2>
-<p>If you are in the EU/UK (GDPR) or California (CCPA/CPRA), you have the right to access, delete, and object to processing of your data, and to withdraw consent at any time (Settings &rarr; Privacy options). <strong>We do not sell personal information.</strong></p>
+<section class="spec" id="s6">
+  <div class="placard">
+    <div class="plrow"><span class="acc">PP.2026.06</span><span class="cat">Reproduction</span></div>
+    <h2><span class="n">6.</span> Sharing a relic</h2>
+  </div>
+  <p>If you tap Share, the App renders an image on your device and hands it to your system share sheet. <strong>Nothing is uploaded to us.</strong> Where it then goes is governed by the app you choose to share into.</p>
+</section>
 
-<h2>10. Security</h2>
-<p>Network requests use HTTPS. Purchases are validated by Google Play directly — we never see your payment method.</p>
+<section class="spec" id="s7">
+  <div class="placard">
+    <div class="plrow"><span class="acc">PP.2026.07</span><span class="cat">Audience</span></div>
+    <h2><span class="n">7.</span> Children</h2>
+  </div>
+  <p>The App is intended for a general audience aged <strong>13 and over</strong>. It is not directed at children under 13, and we do not knowingly collect personal data from them. Ads are requested with settings appropriate for a general audience.</p>
+</section>
 
-<h2>11. Changes</h2>
-<p>If we materially change this policy we will update the date above and, where appropriate, notify you in the App.</p>
+<section class="spec" id="s8">
+  <div class="placard">
+    <div class="plrow"><span class="acc">PP.2026.08</span><span class="cat">Retention</span></div>
+    <h2><span class="n">8.</span> Data retention &amp; deletion</h2>
+  </div>
+  <p>Your progress and settings live on your device and are removed when you uninstall the App or clear its data. We hold no server-side copy, so there is nothing for us to delete on our side. For any request, email <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>; we action verified requests within 30 days.</p>
+</section>
 
-<h2>12. Contact</h2>
-<p>Questions or requests: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+<section class="spec" id="s9">
+  <div class="placard">
+    <div class="plrow"><span class="acc">PP.2026.09</span><span class="cat">Rights</span></div>
+    <h2><span class="n">9.</span> Your rights (GDPR / CCPA)</h2>
+  </div>
+  <p>If you are in the EU/UK (GDPR) or California (CCPA/CPRA), you have the right to access, delete, and object to processing of your data, and to withdraw consent at any time (Settings &rarr; Privacy options). <strong>We do not sell personal information.</strong></p>
+</section>
+
+<section class="spec" id="s10">
+  <div class="placard">
+    <div class="plrow"><span class="acc">PP.2026.10</span><span class="cat">Conservation</span></div>
+    <h2><span class="n">10.</span> Security</h2>
+  </div>
+  <p>Network requests use HTTPS. Purchases are validated by Google Play directly — we never see your payment method.</p>
+</section>
+
+<section class="spec" id="s11">
+  <div class="placard">
+    <div class="plrow"><span class="acc">PP.2026.11</span><span class="cat">Amendment</span></div>
+    <h2><span class="n">11.</span> Changes</h2>
+  </div>
+  <p>If we materially change this policy we will update the date above and, where appropriate, notify you in the App.</p>
+</section>
+
+<section class="spec" id="s12">
+  <div class="placard">
+    <div class="plrow"><span class="acc">PP.2026.12</span><span class="cat">Enquiries</span></div>
+    <h2><span class="n">12.</span> Contact</h2>
+  </div>
+  <p>Questions or requests: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="colophon">
+    <svg class="mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 3.2h6"/>
+        <path d="M10 3.2v1.9c0 1.3-3 2.3-3 6.2 0 3.8 2 5.8 2 7.7h6c0-1.9 2-3.9 2-7.7 0-3.9-3-4.9-3-6.2V3.2"/>
+        <path d="M9.6 19h4.8l-.5 1.9h-3.8z"/>
+        <path d="M7.3 7.6C5.7 8.2 5.7 10.6 7.5 11.2M16.7 7.6c1.6.6 1.6 3-.2 3.6"/>
+      </g>
+    </svg>
+    <div>
+      <p>Catalogue PP.2026 — Privacy Policy for Relic Revival, published by Carthage Studio.</p>
+      <p class="fine">Set in Cinzel and Poppins, the two typefaces the App itself ships.</p>
+      <ul class="flinks">
+        <li><a href="../index.html">All policies</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.carthage.relicrevival">Relic Revival on Google Play</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</div>
 </body>
 </html>
