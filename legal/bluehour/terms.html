@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Hour — Terms of Service</title>
+<meta name="description" content="The terms for using Blue Hour: Car Screen Launcher — licence, safe use while driving, information accuracy, the one-time Blue Hour Full purchase, head-unit compatibility and liability. Published by Carthage Studio.">
+<meta name="theme-color" content="#070B18">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&family=Saira:wdth,wght@100..125,200..600&display=swap" rel="stylesheet">
+<style>
+  /* ── Blue Hour legal pages ──────────────────────────────────────────────
+     "Night drive": the page is the app's own sky at dusk, deepening as you
+     scroll; reading panels are the dark HUD plates the app lays over its
+     scene. Sodium orange (the streetlamps) carries links and labels; the
+     taillight red appears only as the short light bar under each heading.
+     On the terms sheet the section labels take the blue-hour accent, so
+     the two documents read apart. Tokens: bluehour/lib/core/theme.dart  */
+
+  :root{
+    --sky-top:#070B18;     /* night zenith — page ground                    */
+    --sky-low:#15215C;     /* blue hour near the horizon                    */
+    --plate:#0F131B;       /* HUD plate — the reading surface               */
+    --plate-2:#151A23;     /* raised plate — tables, notes                  */
+    --line:rgba(242,244,247,.10);
+    --text:#EBEEF2;        /* body text on plate                 15.6:1     */
+    --muted:#A9B1BE;       /* secondary text on plate             8.6:1     */
+    --sodium:#FF9F43;      /* links + labels on plate             9.4:1     */
+    --dusk:#A3B4FF;        /* blue-hour accent on plate           9.1:1     */
+    --tail:#FF3B47;        /* taillight bar — decorative only               */
+    --focus:#FFFFFF;
+    --pad:clamp(20px,4vw,30px);
+    --col:720px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{background:var(--sky-top);-webkit-text-size-adjust:100%}
+  body{
+    margin:0;color:var(--text);
+    background:linear-gradient(180deg,var(--sky-top) 0%,#0B1236 38%,var(--sky-low) 100%) fixed;
+    font-family:'Barlow',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{max-width:calc(var(--col) + 48px);margin:0 auto;padding:0 24px}
+  @media(max-width:480px){.wrap{padding:0 16px}}
+
+  a{color:var(--sodium);text-underline-offset:3px;text-decoration-thickness:1px}
+  a:hover{text-decoration-thickness:2px}
+  a:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:3px}
+  strong{font-weight:600;color:#fff}
+  a[href^="mailto"],a[href^="http"]{overflow-wrap:break-word}
+
+  /* ── top rail ─────────────────────────────────────────────────────── */
+  .rail{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+        padding:clamp(20px,4vw,34px) 0 16px;border-bottom:1px solid var(--line)}
+  .rail a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;
+          border-bottom:1px solid rgba(255,159,67,.45);padding-bottom:2px}
+  .rail a:hover{border-bottom-color:var(--sodium)}
+  .rail .soon{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;
+          letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+
+  /* ── masthead ─────────────────────────────────────────────────────── */
+  .masthead{display:flex;align-items:center;gap:clamp(16px,3.5vw,28px);margin:clamp(26px,5vw,42px) 0 0}
+  .masthead img{display:block;width:88px;height:88px;border-radius:22px;flex:0 0 auto;
+          box-shadow:0 0 0 1px rgba(255,255,255,.12),0 18px 40px rgba(0,0,0,.55)}
+  @media(max-width:420px){.masthead img{width:64px;height:64px;border-radius:16px}}
+  .eyebrow{margin:0;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;
+           letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+  h1{margin:.4rem 0 0;font-weight:400}
+  h1 .app{display:block;font-family:'Saira',sans-serif;font-variation-settings:'wdth' 125;
+          font-weight:250;font-size:clamp(34px,7vw,52px);line-height:1;letter-spacing:-.01em;color:#fff}
+  h1 .doc{display:block;margin-top:.6rem;font-family:'Barlow Condensed',sans-serif;
+          font-size:clamp(15px,2.6vw,18px);font-weight:600;letter-spacing:.2em;
+          text-transform:uppercase;color:var(--sodium)}
+  .meta{margin:1.1rem 0 0;color:var(--muted);font-size:16px;max-width:60ch}
+
+  /* ── the horizon strip (signature): the four lights the app paints in ── */
+  .horizon{margin:clamp(22px,4vw,30px) 0 0}
+  .horizon .bar{height:10px;border-radius:5px;
+     background:linear-gradient(90deg,#141C3A 0 24%,#4258C4 24% 40%,#F0A04B 40% 56%,#A8C8E8 56% 100%)}
+  .horizon ol{display:flex;justify-content:space-between;gap:8px;margin:8px 0 0;padding:0;list-style:none;
+     font-family:'Barlow Condensed',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.16em;
+     text-transform:uppercase;color:var(--muted)}
+
+  /* ── document switch ──────────────────────────────────────────────── */
+  .switch{display:flex;gap:8px;flex-wrap:wrap;margin:clamp(22px,4vw,30px) 0 0}
+  .switch a{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;letter-spacing:.12em;
+     text-transform:uppercase;padding:10px 18px;border-radius:999px;text-decoration:none;color:var(--text);
+     border:1px solid rgba(242,244,247,.22);background:rgba(6,8,12,.45)}
+  .switch a:hover{border-color:var(--text)}
+  .switch a[aria-current]{background:var(--text);color:var(--sky-top);border-color:transparent}
+
+  /* ── at a glance ──────────────────────────────────────────────────── */
+  .glance{margin:clamp(28px,5vw,40px) 0 0;padding:clamp(20px,3.6vw,26px);background:var(--plate);
+     border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 40px rgba(0,0,0,.4)}
+  .label{margin:0;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;
+     letter-spacing:.22em;text-transform:uppercase;color:var(--dusk)}
+  .glance-note{margin:.35rem 0 0;font-size:15px;color:var(--muted)}
+  .glance ul{list-style:none;margin:16px 0 0;padding:0}
+  @media(min-width:640px){.glance ul{columns:2;column-gap:30px}}
+  .glance li{position:relative;padding-left:26px;margin:0 0 11px;font-size:16px;line-height:1.55;break-inside:avoid}
+  .glance li:last-child{margin-bottom:0}
+  .glance li::before{content:'';position:absolute;left:3px;top:.32em;width:.42em;height:.82em;
+     border:solid var(--sodium);border-width:0 2px 2px 0;transform:rotate(42deg)}
+
+  /* ── sections: HUD plates with a lit taillight bar under each title ── */
+  .plate{background:var(--plate);border:1px solid var(--line);border-radius:16px;
+     margin:clamp(22px,4vw,30px) 0 0;padding:var(--pad);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .plate h2{margin:.35rem 0 1.1rem;font-family:'Saira',sans-serif;font-variation-settings:'wdth' 112;
+     font-weight:400;font-size:clamp(22px,3.6vw,27px);line-height:1.2;color:#fff}
+  .plate h2::after{content:'';display:block;width:56px;height:4px;margin-top:12px;border-radius:2px;
+     background:var(--tail);box-shadow:0 0 14px rgba(255,59,71,.75)}
+  .plate p{margin:0 0 1rem;max-width:68ch}
+  .plate p:last-child{margin-bottom:0}
+  .plate ul{margin:0 0 1rem;padding-left:1.2rem;max-width:68ch}
+  .plate ul:last-child{margin-bottom:0}
+  .plate li{margin:0 0 .6rem}
+  .plate li:last-child{margin-bottom:0}
+  .plate li::marker{color:var(--sodium)}
+
+  /* ── data table ───────────────────────────────────────────────────── */
+  .scroller{overflow-x:auto;margin:.2rem 0 1.2rem;border:1px solid var(--line);border-radius:12px;background:var(--plate-2)}
+  table{border-collapse:collapse;width:100%;min-width:640px;table-layout:fixed}
+  col.c1{width:21%}col.c2{width:33%}col.c3{width:20%}col.c4{width:26%}
+  th{text-align:left;padding:12px 15px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;
+     letter-spacing:.14em;text-transform:uppercase;color:var(--dusk);border-bottom:1px solid var(--line)}
+  td{padding:12px 15px;border-top:1px solid var(--line);vertical-align:top;font-size:16px;line-height:1.55}
+  tbody tr:nth-child(odd) td{background:rgba(255,255,255,.02)}
+  .scrollnote{margin:-.85rem 0 1.2rem;font-size:14px;color:var(--muted)}
+  @media(min-width:700px){.scrollnote{display:none}}
+
+  .notice{margin:1.2rem 0 0;padding:15px 18px;border-radius:12px;background:var(--plate-2);
+     border:1px solid var(--line);border-left:3px solid var(--sodium);max-width:68ch}
+
+  /* ── colophon ─────────────────────────────────────────────────────── */
+  footer{margin:clamp(50px,8vw,74px) 0 0;padding:clamp(26px,5vw,34px) 0 clamp(44px,8vw,66px);
+     border-top:1px solid var(--line);color:var(--muted);font-size:16px}
+  footer p{margin:0 0 .4rem;max-width:56ch}
+  footer .fine{font-size:14px}
+  .flinks{display:flex;flex-wrap:wrap;gap:10px 22px;margin:16px 0 0;padding:0;list-style:none}
+  .flinks a{color:var(--text);font-weight:500;font-size:15px}
+
+  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+  @media print{
+    @page{margin:16mm}
+    html,body{background:#fff!important;color:#000;font-size:11.5pt}
+    .rail,.switch,.horizon,.masthead img,.scrollnote{display:none!important}
+    .wrap{max-width:none;padding:0}
+    h1 .app,h1 .doc,.eyebrow,.meta,.label,.glance-note,footer,strong,.plate h2,th{color:#000!important}
+    .glance,.plate,.notice{background:#fff;border:0;box-shadow:none;border-radius:0;padding:0;margin:0 0 16pt;break-inside:avoid}
+    .plate h2::after{display:none}
+    .glance ul{columns:1;list-style:disc;padding-left:18pt}
+    .glance li{padding-left:0}
+    .glance li::before{display:none}
+    .notice{border-left:2pt solid #000;padding-left:10pt}
+    .scroller{overflow:visible;border:1pt solid #000;border-radius:0;background:#fff}
+    table{min-width:0}
+    td{border-top:.5pt solid #666}
+    a{color:#000;text-decoration:underline}
+    a::after{content:" (" attr(href) ")";font-size:.82em;word-break:break-all}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<nav class="rail" aria-label="Breadcrumb">
+  <p style="margin:0"><a href="../index.html">&larr; All policies</a></p>
+  <span class="soon">Google Play listing coming soon</span>
+</nav>
+
+<header class="masthead">
+  <img src="../../assets/apps/bluehour.webp" width="88" height="88" alt="Blue Hour app icon">
+  <div>
+    <p class="eyebrow">Carthage Studio</p>
+    <h1><span class="app">Blue Hour</span><span class="doc">Terms of Service</span></h1>
+  </div>
+</header>
+
+<p class="meta">Blue Hour: Car Screen Launcher — Effective 4 October 2026.</p>
+
+<div class="horizon" aria-hidden="true">
+  <div class="bar"></div>
+  <ol><li>Night</li><li>Blue hour</li><li>Golden hour</li><li>Daylight</li></ol>
+</div>
+
+<nav class="switch" aria-label="Document">
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html" aria-current="page">Terms of Service</a>
+</nav>
+
+<main>
+
+<section class="glance" aria-label="At a glance">
+  <p class="label">At a glance</p>
+  <p class="glance-note">Every point here is restated in full in the sections below.</p>
+  <ul>
+    <li>Keep your eyes on the road: set the App up while parked and follow your local laws on using screens while driving.</li>
+    <li>Directions, speed and weather shown in the App can be late or wrong; the road and its signs always come first.</li>
+    <li>The App does not require an account.</li>
+    <li>Personal, non-commercial use only — no redistributing, decompiling or reverse-engineering.</li>
+    <li>One optional purchase: &ldquo;Blue Hour Full&rdquo;, a one-time purchase — not a subscription, and it does not auto-renew.</li>
+    <li>No ads, no randomized items and no loot boxes.</li>
+    <li>Head-unit firmware varies; Wake guard advice is provided as is.</li>
+    <li>Refunds are handled by Google Play.</li>
+  </ul>
+</section>
+
+<section class="plate" id="s1">
+  <p class="label">TS·01 · Assent</p>
+  <h2>1. Acceptance</h2>
+  <p>By downloading or using Blue Hour (the &ldquo;App&rdquo;), you agree to these Terms. If you do not agree, do not use the App. The App is published by <strong>Carthage Studio</strong> (&ldquo;Developer&rdquo;, &ldquo;we&rdquo;). Contact: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+</section>
+
+<section class="plate" id="s2">
+  <p class="label">TS·02 · Grant</p>
+  <h2>2. License</h2>
+  <p>We grant you a personal, non-exclusive, non-transferable, revocable license to install and use the App on devices you own or control, for your personal, non-commercial use. You may not redistribute, decompile, or reverse-engineer the App.</p>
+</section>
+
+<section class="plate" id="s3">
+  <p class="label">TS·03 · On the road</p>
+  <h2>3. Safe use while driving</h2>
+  <p>Driving safely is your responsibility. Set the App up, choose scenes and change settings only while the vehicle is parked. Do not look at or interact with the screen in a way that takes your attention from the road, and follow the laws of your country on using screens and devices while driving.</p>
+  <p>Drive mode reduces what the App shows while the vehicle is moving, but it does not make interacting with any screen safe, and it depends on your device's GPS, which can be late or unavailable.</p>
+</section>
+
+<section class="plate" id="s4">
+  <p class="label">TS·04 · Accuracy</p>
+  <h2>4. Directions, speed and weather</h2>
+  <p>The next turn shown in the App is copied from your navigation app's own notification, the speed comes from your device's GPS, and the weather comes from MET Norway. Any of them can be delayed, incomplete or wrong. They are shown for convenience only: always follow the road, its signs and your navigation app, and never rely on the App for safety-critical decisions.</p>
+  <p>The scene's light is computed from the sun's position and is an illustration, not a measurement of road or visibility conditions.</p>
+</section>
+
+<section class="plate" id="s5">
+  <p class="label">TS·05 · Ownership</p>
+  <h2>5. Content &amp; ownership</h2>
+  <p>The App, its scenes, its artwork and its interface are the property of the Developer. The cars in the App are generic illustrations and do not depict any real make or model. Names of other apps or services mentioned in the App or its listing belong to their owners.</p>
+</section>
+
+<section class="plate" id="s6">
+  <p class="label">TS·06 · Custody</p>
+  <h2>6. Account-free use</h2>
+  <p>The App does not require an account. Your settings live on your device. We cannot recover them if you uninstall the App or switch devices, except the &ldquo;Blue Hour Full&rdquo; entitlement, which can be restored through Google Play.</p>
+</section>
+
+<section class="plate" id="s7">
+  <p class="label">TS·07 · Consideration</p>
+  <h2>7. Paid features</h2>
+  <p>The App is free to use. It offers a single in-app purchase through Google Play Billing: &ldquo;Blue Hour Full&rdquo;, which unlocks every scene, every car style, the name on the plate, sharing without the Blue Hour mark, and scenes added later. The price is shown before you confirm. It is a one-time purchase, not a subscription, and does not auto-renew. <strong>The App shows no ads and sells no randomized items or loot boxes.</strong></p>
+  <div class="notice"><strong>Refunds</strong> are handled by Google Play under <a href="https://support.google.com/googleplay/answer/2479637">Google's refund policy</a>. We can support a request you submit to Google, but Google makes the final decision.</div>
+</section>
+
+<section class="plate" id="s8">
+  <p class="label">TS·08 · Other apps</p>
+  <h2>8. Other apps and services</h2>
+  <p>The App can open other apps you have installed and can control their media playback when you ask it to. Those apps, and the services they connect to, are provided by their own publishers under their own terms. We are not responsible for their content, availability or accuracy.</p>
+</section>
+
+<section class="plate" id="s9">
+  <p class="label">TS·09 · Hardware</p>
+  <h2>9. Head units and compatibility</h2>
+  <p>Aftermarket head units differ widely, and some firmware closes apps when the vehicle is switched off. Wake guard checks what Android reports and gives setup advice for the platforms it recognises; that advice is provided as is. Any third-party tool it mentions, such as a firmware utility, is provided by its own author and used at your own risk. We cannot guarantee that the App runs, stays open or behaves the same on every device.</p>
+</section>
+
+<section class="plate" id="s10">
+  <p class="label">TS·10 · Conduct</p>
+  <h2>10. Acceptable use</h2>
+  <ul>
+  <li>Do not use the App to violate any applicable law, including laws on device use while driving.</li>
+  <li>Do not reverse-engineer, decompile, tamper with, or attempt to manipulate purchases.</li>
+  </ul>
+</section>
+
+<section class="plate" id="s11">
+  <p class="label">TS·11 · Availability</p>
+  <h2>11. Availability &amp; changes</h2>
+  <p>We may update, change, or discontinue the App or any of its features at any time. The weather service may be unavailable at times; the App keeps working without it.</p>
+</section>
+
+<section class="plate" id="s12">
+  <p class="label">TS·12 · Liability</p>
+  <h2>12. Disclaimer &amp; liability</h2>
+  <p>The App is provided &ldquo;as is&rdquo;, without warranties of any kind to the fullest extent permitted by law. To the extent permitted by law, the Developer is not liable for indirect or consequential damages, or for any loss, accident, injury or fine arising from your use of the App or from information shown in it. Nothing in these Terms limits rights you have under mandatory consumer law.</p>
+</section>
+
+<section class="plate" id="s13">
+  <p class="label">TS·13 · Jurisdiction</p>
+  <h2>13. Governing law</h2>
+  <p>These Terms are governed by the laws of Tunisia, without regard to conflict-of-law rules, and without depriving you of the protections of the mandatory consumer law of your country of residence.</p>
+</section>
+
+<section class="plate" id="s14">
+  <p class="label">TS·14 · Enquiries</p>
+  <h2>14. Contact</h2>
+  <p>Questions: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+</section>
+
+</main>
+
+<footer>
+  <p>Terms of Service for Blue Hour, published by Carthage Studio.</p>
+  <p class="fine">Set in Saira, Barlow and Barlow Condensed, the typefaces the App itself ships.</p>
+  <ul class="flinks">
+    <li><a href="../index.html">All policies</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+  </ul>
+</footer>
+
+</div>
+</body>
+</html>

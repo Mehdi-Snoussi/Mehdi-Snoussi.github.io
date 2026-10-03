@@ -1,6 +1,6 @@
 # App Legal Center
 
-Privacy policies + terms of service for the six apps published on Google Play, hosted under
+Privacy policies + terms of service for the seven apps (six on Google Play, Blue Hour in testing), hosted under
 `/legal/` on the `Mehdi-Snoussi.github.io` GitHub Pages site (the portfolio stays at the root).
 Plain static HTML — no build step.
 
@@ -30,6 +30,7 @@ Set each app's **developer website** in the store listing to `https://mehdi-snou
 | Cascade | `com.carthage.cascade` | `https://mehdi-snoussi.github.io/legal/cascade/privacy.html` | `https://mehdi-snoussi.github.io/legal/cascade/terms.html` |
 | Zellia | `com.carthage.zellia` | `https://mehdi-snoussi.github.io/legal/zellia/privacy.html` | `https://mehdi-snoussi.github.io/legal/zellia/terms.html` |
 | Relic Revival | `com.carthage.relicrevival` | `https://mehdi-snoussi.github.io/legal/relicrevival/privacy.html` | `https://mehdi-snoussi.github.io/legal/relicrevival/terms.html` |
+| Blue Hour | `com.carthage.bluehour` | `https://mehdi-snoussi.github.io/legal/bluehour/privacy.html` | `https://mehdi-snoussi.github.io/legal/bluehour/terms.html` |
 
 Thirteen unpublished side apps (breedlens, creepid, cutout, leafsnap, mangaverse, mathcam,
 mycar, pawpulse, pixelup, scrollia, snapcal, thock, wallio) had pages here until 18 August 2026.
