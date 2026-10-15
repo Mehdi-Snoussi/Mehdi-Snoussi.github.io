@@ -7,7 +7,7 @@
 <meta name="description" content="I take mobile apps from empty repo to signed release — Flutter and React Native, plus the backend behind them. One engineer, architecture through store submission. Based in Mahdia, Tunisia." />
 <meta name="author" content="Mehdi Snoussi" />
 <meta property="og:title" content="Mehdi Snoussi — I build and ship mobile apps, solo" />
-<meta property="og:description" content="From empty repo to signed release: Flutter &amp; React Native apps and the backends behind them. Six apps shipped end to end by one person, live on Google Play." />
+<meta property="og:description" content="From empty repo to signed release: Flutter &amp; React Native apps and the backends behind them. Seven apps shipped end to end by one person, live on Google Play." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://mehdi-snoussi.github.io/" />
 <meta name="theme-color" content="#E7E8E2" />
@@ -231,7 +231,7 @@ footer{border-top:1px solid var(--rule);padding:26px 0;font-family:var(--mono);f
 footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
 footer a:hover{color:var(--signal)}
 
-/* ── sheet 03 · the shelf: one device, six apps ──────────────────── */
+/* ── sheet 03 · the shelf: one device, seven apps ──────────────────── */
 @property --wall{syntax:"<color>";inherits:true;initial-value:#0B2E14}
 @property --acc{syntax:"<color>";inherits:true;initial-value:#E8B23A}
 @property --acc2{syntax:"<color>";inherits:true;initial-value:#6FE08F}
@@ -308,6 +308,14 @@ footer a:hover{color:var(--signal)}
 .ap-thumbs button:hover,.ap-thumbs button:focus-visible{opacity:.85;transform:translateY(-3px)}
 .ap-thumbs button[aria-current="true"]{opacity:1;box-shadow:0 0 0 2px var(--acc)}
 .ap-thumbs button:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
+/* Blue Hour lives on a car head unit: a landscape screen in a stereo bezel */
+.phone.unit{width:clamp(280px,40vw,500px);padding:11px 13px;border-radius:12px;
+  background:linear-gradient(180deg,#2a2d33,#14161a 55%,#0c0d10);
+  box-shadow:0 44px 70px -34px rgba(0,0,0,.9),0 0 0 1px rgba(243,244,239,.13),inset 0 1px 0 rgba(255,255,255,.08)}
+.phone.unit::after{display:none}
+.unit .phone-screen{aspect-ratio:1920/1080;border-radius:4px}
+.unit + .ap-thumbs button{width:56px}
+.unit + .ap-thumbs button img{aspect-ratio:1920/1080;border-radius:3px}
 .ap-caption{text-align:center;margin-top:15px;min-height:1.2em;
   font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(243,244,239,.64)}
 
@@ -377,7 +385,7 @@ footer a:hover{color:var(--signal)}
   <div class="mast-in">
     <a href="#top" class="id">MEHDI<b>/</b>SNOUSSI</a>
     <div class="meta">
-      <span>REV <i>2026.08</i></span>
+      <span>REV <i>2026.10</i></span>
       <span>MAHDIA <i id="clock">--:--</i> GMT+1</span>
       <span><span class="dot"></span><i>Open for projects</i></span>
     </div>
@@ -396,7 +404,7 @@ footer a:hover{color:var(--signal)}
       <p class="lede" data-rv>Flutter and React Native, plus the backend behind them. You get <b>one engineer</b> who does the architecture, the code, the icon, the store listing and the release build &mdash; not a handoff chain between four freelancers.</p>
       <div class="hero-cta" data-rv>
         <a class="btn" href="#book">Book a call <span class="ar">&rarr;</span></a>
-        <a class="btn ghost" href="#apps">See six live apps I shipped alone <span class="ar">&darr;</span></a>
+        <a class="btn ghost" href="#apps">See seven live apps I shipped alone <span class="ar">&darr;</span></a>
       </div>
       <p class="hero-cta note" data-rv>Free 30 minutes. You leave knowing what I&rsquo;d cut from v1 and roughly what it costs &mdash; the written scope and fixed price follow within 2&ndash;3 days, whether or not you hire me.</p>
     </div>
@@ -411,7 +419,7 @@ footer a:hover{color:var(--signal)}
       <span>Live on Google Play</span><span>Apps built</span><span>Experience</span><span>Localised</span>
     </div>
     <div class="spec-r">
-      <span>6<i>shipped solo, start to store</i></span>
+      <span>7<i>shipped solo, start to store</i></span>
       <span>16<i>apps in the portfolio</i></span>
       <span>4 yrs<i>mobile + full-stack</i></span>
       <span>8<i>languages, incl. RTL</i></span>
@@ -479,7 +487,7 @@ footer a:hover{color:var(--signal)}
     </div>
     <div class="apps-head">
       <h2 class="h2" data-rv>This is what one person shipping alone looks like.</h2>
-      <p class="sub" data-rv>Every screen, icon, store listing and signed release below is mine &mdash; no designer, no team. Pick one and read exactly what is in it.</p>
+      <p class="sub" data-rv>Every screen, icon, store listing and signed release below is mine. No designer, no team. Pick one and read exactly what is in it.</p>
     </div>
 
     <div class="shelf" data-rv>
@@ -507,27 +515,31 @@ footer a:hover{color:var(--signal)}
         <img src="assets/apps/relicrevival.webp" alt="" width="192" height="192" loading="lazy" decoding="async">
         <span>Relic Revival</span>
       </button>
+      <button class="shelf-item" type="button" id="tab-bluehour">
+        <img src="assets/apps/bluehour.webp" alt="" width="192" height="192" loading="lazy" decoding="async">
+        <span>Blue Hour</span>
+      </button>
     </div>
 
     <div class="app-stage" data-rv>
       <div class="app-panel on" id="panel-dhikr"
-           data-wall="#0B2E14" data-acc="#E8B23A" data-acc2="#6FE08F">
+           data-wall="#133127" data-acc="#E9CE7A" data-acc2="#A8CDB3">
         <div class="ap-body">
           <div class="ap-cat">Lifestyle / Religion</div>
           <h3 class="ap-name">Dhikr</h3>
-          <div class="ap-tag">Tasbih, Azkar, Salah &amp; Quran</div>
-          <p class="ap-desc">A companion for daily Muslim practice — tasbih, azkar, prayer times, Qibla and the full Quran. Prayer times are computed on the device and Quran search accepts spoken Arabic through a bundled Whisper ONNX model, so everything but recitation audio and mosque search works with no connection.</p>
+          <div class="ap-tag">Tasbih, azkar, prayer times and the Quran, on the phone and the watch</div>
+          <p class="ap-desc">A companion for daily Muslim practice: tasbih, azkar, prayer times, the Qibla and the full Quran, with a Wear OS watch app. Prayer times are computed on the device, and Quran search listens to a recitation on the device too, through a speech model fetched once after install, so only recitation audio and mosque search need a connection.</p>
           <ul class="ap-feats">
-          <li>Full Quran reader: 114 surahs, 6,236 ayahs in Uthmani script with EN/FR translation</li>
-          <li>On-device Arabic voice search — bundled Whisper tiny + Silero VAD ONNX models</li>
-          <li>Offline prayer times, 7 calculation methods, per-prayer offsets, Athan alarm channel</li>
-          <li>Real-time Qibla compass and nearby-mosque search over the OpenStreetMap Overpass API</li>
-          <li>Tasbih counter with 7 presets, streaks and weekly / monthly charts, plus 9 app-wide badges</li>
-          <li>Four curated azkar sets — morning, evening, after-prayer, sleep — plus 25 prophet stories in 83 trilingual chapters</li>
+          <li>Full Quran reader: 114 surahs and 6,236 ayahs in Uthmani script, with English and French translation and Mishary Alafasy&rsquo;s recitation</li>
+          <li>Recite a few words to find the ayah: a Tilawi FastConformer model running on ONNX Runtime in native Kotlin</li>
+          <li>Offline prayer times with 7 calculation methods, per-prayer offsets and an Athan channel</li>
+          <li>A 33-bead misbaha on the phone and on Wear OS, the watch kept in step over the Wearable Data Layer, with a tile and a watch-face complication</li>
+          <li>Qibla compass, and nearby mosques over the OpenStreetMap Overpass API</li>
+          <li>Four azkar sets, 40 Quranic duas, 25 prophet stories in 83 chapters, 9 badges and two home-screen widgets</li>
           </ul>
-          <p class="ap-tech">Flutter · BLoC · get_it · GoRouter · Hive · adhan_dart · sherpa_onnx (Whisper + Silero VAD) · flutter_map · AdMob + UMP · in_app_purchase</p>
+          <p class="ap-tech">Flutter, BLoC, get_it, GoRouter, Hive, adhan_dart, ONNX Runtime (Kotlin), Jetpack Compose for Wear OS, flutter_map, AdMob + UMP, Play Billing</p>
           <div class="ap-meta">
-            <span>com.carthage.dhikr</span><span>v1.1.0</span><span>Android</span><span>Arabic · English · French</span>
+            <span>com.carthage.dhikr</span><span>v1.3.7</span><span>Android and Wear OS</span><span>Arabic, English, French</span>
             <a class="store" href="https://play.google.com/store/apps/details?id=com.carthage.dhikr" target="_blank" rel="noopener">Get it on Google Play &#8599;</a>
             <a href="/legal/dhikr/privacy.html">Privacy &#8599;</a>
             <a href="/legal/dhikr/terms.html">Terms &#8599;</a>
@@ -535,40 +547,40 @@ footer a:hover{color:var(--signal)}
         </div>
         <div class="ap-device">
           <div class="phone"><div class="phone-screen">
-            <img class="on" src="assets/apps/dhikr/1.webp" alt="Dhikr — Arabic home dashboard" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/dhikr/2.webp" alt="Dhikr — Uthmani Quran reader" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/dhikr/3.webp" alt="Dhikr — Qibla compass" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/dhikr/4.webp" alt="Dhikr — Azkar collections" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/dhikr/5.webp" alt="Dhikr — Surah browser" width="540" height="1200" loading="lazy" decoding="async">
+            <img class="on" src="assets/apps/dhikr/1.webp" alt="Dhikr: Home and today’s prayers" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/dhikr/2.webp" alt="Dhikr: Find an ayah by reciting" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/dhikr/3.webp" alt="Dhikr: The 33-bead misbaha" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/dhikr/4.webp" alt="Dhikr: Prayer times" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/dhikr/5.webp" alt="Dhikr: Quran reader" width="540" height="1200" loading="lazy" decoding="async">
           </div></div>
           <div class="ap-thumbs">
-          <button type="button" data-caption="Arabic home dashboard" aria-label="Show screen: Arabic home dashboard"><img src="assets/apps/dhikr/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Uthmani Quran reader" aria-label="Show screen: Uthmani Quran reader"><img src="assets/apps/dhikr/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Qibla compass" aria-label="Show screen: Qibla compass"><img src="assets/apps/dhikr/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Azkar collections" aria-label="Show screen: Azkar collections"><img src="assets/apps/dhikr/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Surah browser" aria-label="Show screen: Surah browser"><img src="assets/apps/dhikr/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Home and today’s prayers" aria-label="Show screen: Home and today’s prayers"><img src="assets/apps/dhikr/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Find an ayah by reciting" aria-label="Show screen: Find an ayah by reciting"><img src="assets/apps/dhikr/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="The 33-bead misbaha" aria-label="Show screen: The 33-bead misbaha"><img src="assets/apps/dhikr/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Prayer times" aria-label="Show screen: Prayer times"><img src="assets/apps/dhikr/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Quran reader" aria-label="Show screen: Quran reader"><img src="assets/apps/dhikr/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
           </div>
-          <div class="ap-caption" role="status">Arabic home dashboard</div>
+          <div class="ap-caption" role="status">Home and today’s prayers</div>
         </div>
       </div>
       <div class="app-panel" id="panel-sortflow"
-           data-wall="#1E1456" data-acc="#2BDDFB" data-acc2="#FFC845">
+           data-wall="#18231F" data-acc="#DDAE6E" data-acc2="#D1603D">
         <div class="ap-body">
           <div class="ap-cat">Game / Puzzle</div>
           <h3 class="ap-name">SortFlow</h3>
-          <div class="ap-tag">Color sort puzzle, solver-verified</div>
-          <p class="ap-desc">A color-sort puzzle with no authored level list. Every board is scrambled out of a solved state and then re-proved by a breadth-first solver, and that same search supplies the hints and sets the three-star threshold — so every shipped board is solvable by construction, with a par that is proven reachable.</p>
+          <div class="ap-tag">Color sort on a chemist's bench, solver-verified</div>
+          <p class="ap-desc">A color-sort puzzle with no authored level list. Every board is scrambled out of a solved state and then re-proved by a breadth-first solver, and that same search supplies the hints and sets the three-star threshold, so every board is solvable by construction, with a par that is proven reachable.</p>
           <ul class="ap-feats">
-          <li>No authored level list — every board is generated on the fly and re-proved by a BFS solver</li>
+          <li>No authored level list: every board is generated on the fly and re-proved by a BFS solver</li>
           <li>Generation and hints run on a background isolate, so a level load never blocks the UI</li>
-          <li>Star thresholds derive from the board's own BFS optimum plus a small fairness pad</li>
-          <li>6 star-gated worlds, 12 claimable achievements and a date-seeded daily challenge</li>
-          <li>8 tube skins and 6 backgrounds drawn in code with CustomPainter — no image assets</li>
-          <li>8 languages including Arabic RTL, JSON progress export / import, and no backend at all</li>
+          <li>Star thresholds come from the board&rsquo;s own BFS optimum plus a small fairness pad</li>
+          <li>6 star-gated worlds, 12 claimable achievements and a date-seeded daily challenge with a streak</li>
+          <li>Glass tubes, corks and the brass rack drawn in code with CustomPainter, with no image assets, including the Halloween Potion set and Haunted Night background</li>
+          <li>8 languages including Arabic RTL, progress backup export and import, and no backend at all</li>
           </ul>
-          <p class="ap-tech">Flutter (no game engine) · CustomPainter + AnimationController · BLoC · get_it · GoRouter · Hive · easy_localization · AdMob · in_app_purchase</p>
+          <p class="ap-tech">Flutter (no game engine), CustomPainter + AnimationController, BLoC, get_it, GoRouter, Hive, easy_localization, AdMob + UMP, Play Billing</p>
           <div class="ap-meta">
-            <span>com.sortflow.sortflow</span><span>v1.1.0</span><span>Android</span><span>8 languages, Arabic RTL</span>
+            <span>com.sortflow.sortflow</span><span>v1.3.4</span><span>Android</span><span>8 languages, Arabic RTL</span>
             <a class="store" href="https://play.google.com/store/apps/details?id=com.sortflow.sortflow" target="_blank" rel="noopener">Get it on Google Play &#8599;</a>
             <a href="/legal/sortflow/privacy.html">Privacy &#8599;</a>
             <a href="/legal/sortflow/terms.html">Terms &#8599;</a>
@@ -576,40 +588,40 @@ footer a:hover{color:var(--signal)}
         </div>
         <div class="ap-device">
           <div class="phone"><div class="phone-screen">
-            <img class="on" src="assets/apps/sortflow/1.webp" alt="SortFlow — Pour and sort" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/sortflow/2.webp" alt="SortFlow — Home and progress" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/sortflow/3.webp" alt="SortFlow — Star-gated worlds" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/sortflow/4.webp" alt="SortFlow — Daily challenge streak" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/sortflow/5.webp" alt="SortFlow — Power-up shop" width="540" height="1200" loading="lazy" decoding="async">
+            <img class="on" src="assets/apps/sortflow/1.webp" alt="SortFlow: Pour and sort" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/sortflow/2.webp" alt="SortFlow: Home on the bench" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/sortflow/3.webp" alt="SortFlow: Star-gated worlds" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/sortflow/4.webp" alt="SortFlow: Daily challenge" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/sortflow/5.webp" alt="SortFlow: Level complete" width="540" height="1200" loading="lazy" decoding="async">
           </div></div>
           <div class="ap-thumbs">
           <button type="button" data-caption="Pour and sort" aria-label="Show screen: Pour and sort"><img src="assets/apps/sortflow/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Home and progress" aria-label="Show screen: Home and progress"><img src="assets/apps/sortflow/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Home on the bench" aria-label="Show screen: Home on the bench"><img src="assets/apps/sortflow/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
           <button type="button" data-caption="Star-gated worlds" aria-label="Show screen: Star-gated worlds"><img src="assets/apps/sortflow/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Daily challenge streak" aria-label="Show screen: Daily challenge streak"><img src="assets/apps/sortflow/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Power-up shop" aria-label="Show screen: Power-up shop"><img src="assets/apps/sortflow/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Daily challenge" aria-label="Show screen: Daily challenge"><img src="assets/apps/sortflow/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Level complete" aria-label="Show screen: Level complete"><img src="assets/apps/sortflow/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
           </div>
           <div class="ap-caption" role="status">Pour and sort</div>
         </div>
       </div>
       <div class="app-panel" id="panel-aimystic"
-           data-wall="#0B0B1E" data-acc="#D4A856" data-acc2="#9B6DFF">
+           data-wall="#0B1430" data-acc="#D1AE6C" data-acc2="#7F9FE0">
         <div class="ap-body">
-          <div class="ap-cat">Lifestyle / Astrology</div>
+          <div class="ap-cat">Lifestyle / Tarot</div>
           <h3 class="ap-name">AI Mystic</h3>
-          <div class="ap-tag">AI tarot &amp; astrology readings</div>
-          <p class="ap-desc">A tarot and astrology app that writes its readings with Google Gemini in a fixed Oracle voice. The interesting part is the failure path: a content-keyed cache and hand-written fallback text mean the app always returns a reading, even with the model unreachable.</p>
+          <div class="ap-tag">AI tarot readings on a printed deck</div>
+          <p class="ap-desc">A tarot app that writes each reading with Google Gemini from the cards actually drawn, the question and the zodiac sign. The interesting part is the failure path: if the model is slow, out of quota or unreachable, the app writes the reading on the device from the cards' own meanings, so a reading never comes back empty.</p>
           <ul class="ap-feats">
-          <li>Full 78-card deck with hand-written upright and reversed meanings, drawn in CustomPainter</li>
-          <li>Gemini 2.0 Flash readings with a hand-written offline fallback and a content-keyed cache</li>
-          <li>Four question spreads plus the daily card, a 3-reading free cap, 2 more by rewarded video</li>
-          <li>Daily card seeded by the calendar date, so a given day always yields the same draw</li>
-          <li>1080×1920 share card whose Play link encodes the card id for deferred deep linking</li>
-          <li>Streak milestones at 7 / 30 / 100 / 365 days, a 78-card collection and a journal</li>
+          <li>A printed 78-card deck drawn in CustomPainter, dealt face down in each spread&rsquo;s real shape and turned by hand</li>
+          <li>Gemini over its REST API with a lite model first and a second model behind it, then the on-device oracle</li>
+          <li>Daily card, Yes or No and Past, Present, Future for everyone; Love and Career with Mystic Pro, monthly or yearly</li>
+          <li>Three free readings a day and two more by rewarded video; the daily card is seeded by the date</li>
+          <li>A 1080&times;1920 star-atlas share card whose Play link carries the card for deferred deep linking</li>
+          <li>A Grimoire of all 78 cards, a journal, a waxing-moon streak with milestones at 7, 30, 100 and 365 days, and a home-screen widget</li>
           </ul>
-          <p class="ap-tech">Flutter · BLoC · get_it · go_router · Hive · google_generative_ai (Gemini) · AdMob · Play Billing 8</p>
+          <p class="ap-tech">Flutter, BLoC, get_it, go_router, Hive, Gemini REST API, home_widget, AdMob + UMP, Play Billing subscriptions</p>
           <div class="ap-meta">
-            <span>com.carthage.aimystic</span><span>v1.1.0</span><span>Android</span><span>English</span>
+            <span>com.carthage.aimystic</span><span>v1.3.4</span><span>Android</span><span>English</span>
             <a class="store" href="https://play.google.com/store/apps/details?id=com.carthage.aimystic" target="_blank" rel="noopener">Get it on Google Play &#8599;</a>
             <a href="/legal/aimystic/privacy.html">Privacy &#8599;</a>
             <a href="/legal/aimystic/terms.html">Terms &#8599;</a>
@@ -617,40 +629,40 @@ footer a:hover{color:var(--signal)}
         </div>
         <div class="ap-device">
           <div class="phone"><div class="phone-screen">
-            <img class="on" src="assets/apps/aimystic/1.webp" alt="AI Mystic — Daily card orb" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/aimystic/2.webp" alt="AI Mystic — Card revelation" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/aimystic/3.webp" alt="AI Mystic — Zodiac wheel" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/aimystic/4.webp" alt="AI Mystic — Ask your question" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/aimystic/5.webp" alt="AI Mystic — Streaks and collection" width="540" height="1200" loading="lazy" decoding="async">
+            <img class="on" src="assets/apps/aimystic/1.webp" alt="AI Mystic: Home and today’s card" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/aimystic/2.webp" alt="AI Mystic: The daily reading" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/aimystic/3.webp" alt="AI Mystic: Past, present, future" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/aimystic/4.webp" alt="AI Mystic: Yes or no" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/aimystic/5.webp" alt="AI Mystic: The Grimoire" width="540" height="1200" loading="lazy" decoding="async">
           </div></div>
           <div class="ap-thumbs">
-          <button type="button" data-caption="Daily card orb" aria-label="Show screen: Daily card orb"><img src="assets/apps/aimystic/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Card revelation" aria-label="Show screen: Card revelation"><img src="assets/apps/aimystic/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Zodiac wheel" aria-label="Show screen: Zodiac wheel"><img src="assets/apps/aimystic/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Ask your question" aria-label="Show screen: Ask your question"><img src="assets/apps/aimystic/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Streaks and collection" aria-label="Show screen: Streaks and collection"><img src="assets/apps/aimystic/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Home and today’s card" aria-label="Show screen: Home and today’s card"><img src="assets/apps/aimystic/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="The daily reading" aria-label="Show screen: The daily reading"><img src="assets/apps/aimystic/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Past, present, future" aria-label="Show screen: Past, present, future"><img src="assets/apps/aimystic/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Yes or no" aria-label="Show screen: Yes or no"><img src="assets/apps/aimystic/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="The Grimoire" aria-label="Show screen: The Grimoire"><img src="assets/apps/aimystic/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
           </div>
-          <div class="ap-caption" role="status">Daily card orb</div>
+          <div class="ap-caption" role="status">Home and today’s card</div>
         </div>
       </div>
       <div class="app-panel" id="panel-cascade"
-           data-wall="#170C38" data-acc="#5BE3A0" data-acc2="#A9C8FF">
+           data-wall="#141A2E" data-acc="#C5CB75" data-acc2="#E0709F">
         <div class="ap-body">
           <div class="ap-cat">Game / Puzzle</div>
           <h3 class="ap-name">Cascade</h3>
-          <div class="ap-tag">Drop &amp; merge physics puzzle</div>
-          <p class="ap-desc">A drop-and-merge puzzle built on Flame and Forge2D, where merges resolve through real rigid-body contacts rather than a grid. The rewarded continue clears a band roughly two rows deep off the bottom and wakes the sleeping bodies above it, so the stack actually collapses into the gap.</p>
+          <div class="ap-tag">Drop and merge physics puzzle, printed in riso</div>
+          <p class="ap-desc">A drop-and-merge puzzle built on Flame and Forge2D, where merges resolve through real rigid-body contacts rather than a grid, and every orb is drawn like a two-ink risograph print. The rewarded continue clears a band about two rows deep off the bottom and wakes the sleeping bodies above it, so the stack actually collapses into the gap.</p>
           <ul class="ap-feats">
-          <li>Forge2D rigid-body board where same-tier orbs merge on contact — 11 tiers, Spark to Nova</li>
-          <li>Chain-merge combo window with up to 4× multiplier and triangular per-tier scoring</li>
+          <li>Forge2D rigid-body board where same-tier orbs merge on contact: 11 tiers, Spark to Nova</li>
+          <li>Chain-merge combo window with up to a 4&times; multiplier and triangular per-tier scoring</li>
           <li>Date-seeded daily challenge giving every player the same board, plus a day streak</li>
           <li>Three coin-priced power-ups (swap, undo, targeted bomb) and one ad-earned bomb per run</li>
-          <li>19 claim-to-collect achievements, 5 orb skins and a 7-day escalating login reward</li>
+          <li>19 claim-to-collect achievements, orb skins including the Halloween Pumpkin set, and a 7-day escalating login reward</li>
           <li>8 languages with Arabic RTL, an in-app language switcher and a reduced-motion mode</li>
           </ul>
-          <p class="ap-tech">Flutter · Flame 1.37 · flame_forge2d physics · easy_localization · shared_preferences · audioplayers · AdMob + UMP · in_app_purchase</p>
+          <p class="ap-tech">Flutter, Flame, flame_forge2d physics, easy_localization, shared_preferences, audioplayers, AdMob + UMP, Play Billing</p>
           <div class="ap-meta">
-            <span>com.carthage.cascade</span><span>v1.1.0</span><span>Android</span><span>8 languages, Arabic RTL</span>
+            <span>com.carthage.cascade</span><span>v1.3.4</span><span>Android</span><span>8 languages, Arabic RTL</span>
             <a class="store" href="https://play.google.com/store/apps/details?id=com.carthage.cascade" target="_blank" rel="noopener">Get it on Google Play &#8599;</a>
             <a href="/legal/cascade/privacy.html">Privacy &#8599;</a>
             <a href="/legal/cascade/terms.html">Terms &#8599;</a>
@@ -658,40 +670,40 @@ footer a:hover{color:var(--signal)}
         </div>
         <div class="ap-device">
           <div class="phone"><div class="phone-screen">
-            <img class="on" src="assets/apps/cascade/1.webp" alt="Cascade — Home menu" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/cascade/2.webp" alt="Cascade — Physics board" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/cascade/3.webp" alt="Cascade — Achievements and claims" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/cascade/4.webp" alt="Cascade — Orb skin shop" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/cascade/5.webp" alt="Cascade — 7-day reward ladder" width="540" height="1200" loading="lazy" decoding="async">
+            <img class="on" src="assets/apps/cascade/1.webp" alt="Cascade: Drop and merge" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/cascade/2.webp" alt="Cascade: Menu" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/cascade/3.webp" alt="Cascade: Daily challenge" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/cascade/4.webp" alt="Cascade: Orb skins" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/cascade/5.webp" alt="Cascade: Game over and continue" width="540" height="1200" loading="lazy" decoding="async">
           </div></div>
           <div class="ap-thumbs">
-          <button type="button" data-caption="Home menu" aria-label="Show screen: Home menu"><img src="assets/apps/cascade/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Physics board" aria-label="Show screen: Physics board"><img src="assets/apps/cascade/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Achievements and claims" aria-label="Show screen: Achievements and claims"><img src="assets/apps/cascade/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Orb skin shop" aria-label="Show screen: Orb skin shop"><img src="assets/apps/cascade/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="7-day reward ladder" aria-label="Show screen: 7-day reward ladder"><img src="assets/apps/cascade/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Drop and merge" aria-label="Show screen: Drop and merge"><img src="assets/apps/cascade/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Menu" aria-label="Show screen: Menu"><img src="assets/apps/cascade/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Daily challenge" aria-label="Show screen: Daily challenge"><img src="assets/apps/cascade/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Orb skins" aria-label="Show screen: Orb skins"><img src="assets/apps/cascade/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Game over and continue" aria-label="Show screen: Game over and continue"><img src="assets/apps/cascade/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
           </div>
-          <div class="ap-caption" role="status">Home menu</div>
+          <div class="ap-caption" role="status">Drop and merge</div>
         </div>
       </div>
       <div class="app-panel" id="panel-zellia"
-           data-wall="#0A3B44" data-acc="#F4C430" data-acc2="#E2734F">
+           data-wall="#0F3550" data-acc="#D9A11E" data-acc2="#5FB8C6">
         <div class="ap-body">
           <div class="ap-cat">Game / Puzzle</div>
           <h3 class="ap-name">Zellia</h3>
-          <div class="ap-tag">Cozy triple tile match</div>
-          <p class="ap-desc">A triple-tile-match puzzle set in the zellige mosaics of Fez and Granada. Every board comes out of a constructive reverse-deal generator that lays the winning line down first, so no level can ever be dealt unsolvable.</p>
+          <div class="ap-tag">Cozy triple tile match in cut zellige</div>
+          <p class="ap-desc">A triple-tile-match puzzle set in the cut-tile mosaics of Fes. Every board comes out of a constructive reverse-deal generator that lays the winning line down first, so no board can be dealt unsolvable.</p>
           <ul class="ap-feats">
-          <li>Constructive reverse-deal generator proves every board solvable, unit-tested to level 150</li>
+          <li>Constructive reverse-deal generator proves every board solvable, unit-tested from level 1 to 150</li>
           <li>Shuffle re-runs the deal on the live position, tray included, and is tested to stay winnable</li>
-          <li>Six girih motifs on a pre-rasterised 256 px sprite set — tiles separate by silhouette, not just colour</li>
-          <li>Palace restoration meta: 8 areas × 4 stages bought with tesserae earned per board</li>
-          <li>Daily board on a launch-stable seed, endless Zen mode and a freeze-forgiving streak</li>
+          <li>16 tile types cut like real zellige, a glazed square with a star piece set in lime grout, pre-rasterised to 192 px sprites; types differ by silhouette, not just colour</li>
+          <li>Palace restoration: 8 areas of 4 arches bought with tesserae, each finished area adding its own board shape</li>
+          <li>Daily board on a launch-stable seed, the endless Courtyard and a freeze-forgiving streak</li>
           <li>No banner ads: interstitials every 2nd board on an 80 s cooldown, plus opt-in rewarded</li>
           </ul>
-          <p class="ap-tech">Flutter · Flame · pure-Dart solvable-board generator · shared_preferences · easy_localization · AdMob + UMP · in_app_purchase · flutter_local_notifications</p>
+          <p class="ap-tech">Flutter, Flame, pure-Dart solvable-board generator, shared_preferences, easy_localization, AdMob + UMP, Play Billing, flutter_local_notifications</p>
           <div class="ap-meta">
-            <span>com.carthage.zellia</span><span>v1.1.0</span><span>Android</span><span>8 languages, Arabic RTL</span>
+            <span>com.carthage.zellia</span><span>v1.3.4</span><span>Android</span><span>8 languages, Arabic RTL</span>
             <a class="store" href="https://play.google.com/store/apps/details?id=com.carthage.zellia" target="_blank" rel="noopener">Get it on Google Play &#8599;</a>
             <a href="/legal/zellia/privacy.html">Privacy &#8599;</a>
             <a href="/legal/zellia/terms.html">Terms &#8599;</a>
@@ -699,40 +711,40 @@ footer a:hover{color:var(--signal)}
         </div>
         <div class="ap-device">
           <div class="phone"><div class="phone-screen">
-            <img class="on" src="assets/apps/zellia/1.webp" alt="Zellia — Core match loop" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/zellia/2.webp" alt="Zellia — Palace restoration" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/zellia/3.webp" alt="Zellia — Daily board" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/zellia/4.webp" alt="Zellia — Mode select" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/zellia/5.webp" alt="Zellia — Zen mode" width="540" height="1200" loading="lazy" decoding="async">
+            <img class="on" src="assets/apps/zellia/1.webp" alt="Zellia: A board mid-game" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/zellia/2.webp" alt="Zellia: Menu" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/zellia/3.webp" alt="Zellia: The palace" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/zellia/4.webp" alt="Zellia: The Courtyard" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/zellia/5.webp" alt="Zellia: Level complete" width="540" height="1200" loading="lazy" decoding="async">
           </div></div>
           <div class="ap-thumbs">
-          <button type="button" data-caption="Core match loop" aria-label="Show screen: Core match loop"><img src="assets/apps/zellia/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Palace restoration" aria-label="Show screen: Palace restoration"><img src="assets/apps/zellia/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Daily board" aria-label="Show screen: Daily board"><img src="assets/apps/zellia/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Mode select" aria-label="Show screen: Mode select"><img src="assets/apps/zellia/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Zen mode" aria-label="Show screen: Zen mode"><img src="assets/apps/zellia/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="A board mid-game" aria-label="Show screen: A board mid-game"><img src="assets/apps/zellia/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Menu" aria-label="Show screen: Menu"><img src="assets/apps/zellia/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="The palace" aria-label="Show screen: The palace"><img src="assets/apps/zellia/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="The Courtyard" aria-label="Show screen: The Courtyard"><img src="assets/apps/zellia/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Level complete" aria-label="Show screen: Level complete"><img src="assets/apps/zellia/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
           </div>
-          <div class="ap-caption" role="status">Core match loop</div>
+          <div class="ap-caption" role="status">A board mid-game</div>
         </div>
       </div>
       <div class="app-panel" id="panel-relicrevival"
-           data-wall="#1C1309" data-acc="#D4AF37" data-acc2="#7FB0A2">
+           data-wall="#1F3A3A" data-acc="#D4AF37" data-acc2="#D08A5B">
         <div class="ap-body">
           <div class="ap-cat">Game / Casual</div>
           <h3 class="ap-name">Relic Revival</h3>
-          <div class="ap-tag">Antique restore &amp; museum builder</div>
-          <p class="ap-desc">A swipe-to-clean restoration game: wipe away the grime and a relic's hidden identity emerges. Every relic is composed from an integer id plus a per-install salt by a seeded FNV-1a / SplitMix64 pipeline, and drawn entirely in CustomPainter — the game itself ships with no bitmap art.</p>
+          <div class="ap-tag">Antique restore and museum builder</div>
+          <p class="ap-desc">A swipe-to-clean restoration game: wipe away the grime and a relic's hidden identity emerges. Every relic is composed from an integer id plus a per-install salt by a seeded FNV-1a and SplitMix64 pipeline, and drawn entirely in CustomPainter, so the game ships with no bitmap art.</p>
           <ul class="ap-feats">
-          <li>Swipe-to-wipe reveal driven by a GPU erase mask plus a 64×64 CPU coverage grid</li>
-          <li>Deterministic composer: FNV-1a-64 + SplitMix64 turns a relic id into vector art</li>
-          <li>Five rarity tiers at 60 / 25 / 10 / 4.5 / 0.5 drop weights — higher tiers resist the wipe</li>
-          <li>A museum of 8 themed sets across 61 pedestals, each completion adding permanent income</li>
+          <li>Swipe-to-wipe reveal driven by a GPU erase mask plus a 64&times;64 CPU coverage grid</li>
+          <li>Deterministic composer: FNV-1a-64 and SplitMix64 turn a relic id into vector art</li>
+          <li>Five rarity tiers at 60 / 25 / 10 / 4.5 / 0.5 drop weights; higher tiers resist the wipe</li>
+          <li>A museum of 8 themed sets across 61 places, each completion adding permanent income</li>
           <li>Offline idle income from a 4-restorer roster, capped at 6 h and proof against clock edits</li>
-          <li>1080×1080 before / after share card rendered by the same painter, plus 8 UI languages</li>
+          <li>1080&times;1080 before-and-after share card from the same painter, 8 UI languages, and the Cursed Relics event</li>
           </ul>
-          <p class="ap-tech">Flutter · CustomPainter-only art (no game engine) · shared_preferences · easy_localization · AdMob · in_app_purchase · audioplayers</p>
+          <p class="ap-tech">Flutter, CustomPainter-only art (no game engine), shared_preferences, easy_localization, AdMob + UMP, Play Billing, audioplayers</p>
           <div class="ap-meta">
-            <span>com.carthage.relicrevival</span><span>v1.1.0</span><span>Android</span><span>8 languages, incl. Arabic</span>
+            <span>com.carthage.relicrevival</span><span>v1.3.4</span><span>Android</span><span>8 languages, Arabic RTL</span>
             <a class="store" href="https://play.google.com/store/apps/details?id=com.carthage.relicrevival" target="_blank" rel="noopener">Get it on Google Play &#8599;</a>
             <a href="/legal/relicrevival/privacy.html">Privacy &#8599;</a>
             <a href="/legal/relicrevival/terms.html">Terms &#8599;</a>
@@ -740,23 +752,66 @@ footer a:hover{color:var(--signal)}
         </div>
         <div class="ap-device">
           <div class="phone"><div class="phone-screen">
-            <img class="on" src="assets/apps/relicrevival/1.webp" alt="Relic Revival — Epic reveal and appraisal" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/relicrevival/2.webp" alt="Relic Revival — Mid-wipe reveal" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/relicrevival/3.webp" alt="Relic Revival — Museum collection sets" width="540" height="1200" loading="lazy" decoding="async">
-            <img src="assets/apps/relicrevival/4.webp" alt="Relic Revival — Restorer roster" width="540" height="1200" loading="lazy" decoding="async">
+            <img class="on" src="assets/apps/relicrevival/1.webp" alt="Relic Revival: Wiping the grime" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/relicrevival/2.webp" alt="Relic Revival: A rare find" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/relicrevival/3.webp" alt="Relic Revival: The museum" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/relicrevival/4.webp" alt="Relic Revival: Restorers" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/relicrevival/5.webp" alt="Relic Revival: The gallery" width="540" height="1200" loading="lazy" decoding="async">
           </div></div>
           <div class="ap-thumbs">
-          <button type="button" data-caption="Epic reveal and appraisal" aria-label="Show screen: Epic reveal and appraisal"><img src="assets/apps/relicrevival/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Mid-wipe reveal" aria-label="Show screen: Mid-wipe reveal"><img src="assets/apps/relicrevival/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Museum collection sets" aria-label="Show screen: Museum collection sets"><img src="assets/apps/relicrevival/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
-          <button type="button" data-caption="Restorer roster" aria-label="Show screen: Restorer roster"><img src="assets/apps/relicrevival/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Wiping the grime" aria-label="Show screen: Wiping the grime"><img src="assets/apps/relicrevival/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="A rare find" aria-label="Show screen: A rare find"><img src="assets/apps/relicrevival/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="The museum" aria-label="Show screen: The museum"><img src="assets/apps/relicrevival/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Restorers" aria-label="Show screen: Restorers"><img src="assets/apps/relicrevival/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="The gallery" aria-label="Show screen: The gallery"><img src="assets/apps/relicrevival/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
           </div>
-          <div class="ap-caption" role="status">Epic reveal and appraisal</div>
+          <div class="ap-caption" role="status">Wiping the grime</div>
+        </div>
+      </div>
+      <div class="app-panel" id="panel-bluehour"
+           data-wall="#1C2549" data-acc="#F0B46A" data-acc2="#8FA3E6">
+        <div class="ap-body">
+          <div class="ap-cat">Auto / Launcher</div>
+          <h3 class="ap-name">Blue Hour</h3>
+          <div class="ap-tag">A car screen lit by the real sun</div>
+          <p class="ap-desc">A home screen for Android head units and phones in a dashboard mount: a road, your car and a sky lit by the real sun at your GPS position, with the music, the next turn and your apps on top. Cheap head units force-stop third-party launchers when the car sleeps, so Wake guard recognises FYT, MTCD, Reglink and DuraSpeed units and walks the owner through keeping Blue Hour alive.</p>
+          <ul class="ap-feats">
+          <li>Sun position computed on the device from GPS; the sky moves through night, blue hour, golden hour and day</li>
+          <li>Real weather from MET Norway on a position rounded to about 1 km, cached for drives without signal</li>
+          <li>Four scenes and six car bodies drawn in CustomPainter, at 30 fps and 20 on weak units, paused while another app is in front</li>
+          <li>Now playing and the next turn read from notifications on the device, never stored or sent</li>
+          <li>Drive mode from GPS speed: the scene holds still, directions grow, and Settings, Share and search wait until parked</li>
+          <li>Layouts from 800&times;480 to 1920&times;720 head units, phones in either orientation and portrait car screens, in 26 languages</li>
+          </ul>
+          <p class="ap-tech">Flutter, Kotlin (launcher intents, notification listener, head-unit detection), geolocator, MET Norway Locationforecast, Play Billing</p>
+          <div class="ap-meta">
+            <span>com.carthage.bluehour</span><span>v1.1.3</span><span>Android head units and phones</span><span>26 languages</span>
+            <a class="store" href="https://play.google.com/store/apps/details?id=com.carthage.bluehour" target="_blank" rel="noopener">Get it on Google Play &#8599;</a>
+            <a href="/legal/bluehour/privacy.html">Privacy &#8599;</a>
+            <a href="/legal/bluehour/terms.html">Terms &#8599;</a>
+          </div>
+        </div>
+        <div class="ap-device">
+          <div class="phone unit"><div class="phone-screen">
+            <img class="on" src="assets/apps/bluehour/1.webp" alt="Blue Hour: Coastal Road, golden hour" width="960" height="540" loading="lazy" decoding="async">
+            <img src="assets/apps/bluehour/2.webp" alt="Blue Hour: Night City, blue hour" width="960" height="540" loading="lazy" decoding="async">
+            <img src="assets/apps/bluehour/3.webp" alt="Blue Hour: Rain at night" width="960" height="540" loading="lazy" decoding="async">
+            <img src="assets/apps/bluehour/4.webp" alt="Blue Hour: The garage" width="960" height="540" loading="lazy" decoding="async">
+            <img src="assets/apps/bluehour/5.webp" alt="Blue Hour: Wake guard" width="960" height="540" loading="lazy" decoding="async">
+          </div></div>
+          <div class="ap-thumbs">
+          <button type="button" data-caption="Coastal Road, golden hour" aria-label="Show screen: Coastal Road, golden hour"><img src="assets/apps/bluehour/t1.webp" alt="" width="128" height="72" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Night City, blue hour" aria-label="Show screen: Night City, blue hour"><img src="assets/apps/bluehour/t2.webp" alt="" width="128" height="72" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Rain at night" aria-label="Show screen: Rain at night"><img src="assets/apps/bluehour/t3.webp" alt="" width="128" height="72" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="The garage" aria-label="Show screen: The garage"><img src="assets/apps/bluehour/t4.webp" alt="" width="128" height="72" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Wake guard" aria-label="Show screen: Wake guard"><img src="assets/apps/bluehour/t5.webp" alt="" width="128" height="72" loading="lazy" decoding="async"></button>
+          </div>
+          <div class="ap-caption" role="status">Coastal Road, golden hour</div>
         </div>
       </div>
     </div>
 
-    <p class="apps-note" data-rv>All six are live on Google Play &mdash; install any of them and hold the work in your hand before you talk to me. I&rsquo;ll also screen-share the codebase on the call. Privacy policy and terms for each one live at <a href="/legal/">/legal</a>.</p>
+    <p class="apps-note" data-rv>All seven are live on Google Play. Install any of them and hold the work in your hand before you talk to me. I&rsquo;ll also screen-share the codebase on the call. Privacy policy and terms for each one live at <a href="/legal/">/legal</a>.</p>
   </div>
 </section>
 
@@ -875,9 +930,9 @@ footer a:hover{color:var(--signal)}
     <details class="qa" data-rv><summary><span class="qn">Q-02</span> How long until it's in the stores?</summary>
       <div class="a">I scope first releases to a six-to-ten week window, and the exact date goes into the written scope before you pay anything. A rescue starts with a one-week fixed-price audit so neither of us is guessing. Store review adds a few days on Google Play, and can add longer on the App Store.</div></details>
     <details class="qa" data-rv><summary><span class="qn">Q-03</span> Do you do the design as well?</summary>
-      <div class="a">There was no designer on any of the six apps above; I drew every screen, icon and store screenshot myself. If you already have a designer or a Figma file I&rsquo;ll build to that instead, and if you don&rsquo;t, you&rsquo;re not blocked waiting for one.</div></details>
+      <div class="a">There was no designer on any of the seven apps above; I drew every screen, icon and store screenshot myself. If you already have a designer or a Figma file I&rsquo;ll build to that instead, and if you don&rsquo;t, you&rsquo;re not blocked waiting for one.</div></details>
     <details class="qa" data-rv><summary><span class="qn">Q-04</span> iOS as well as Android?</summary>
-      <div class="a">Flutter and React Native both build one codebase for both platforms, and I have taken client apps through submission on both stores. My own six apps are Android-first because that is where their audience is, not because of a platform limit.</div></details>
+      <div class="a">Flutter and React Native both build one codebase for both platforms, and I have taken client apps through submission on both stores. My own seven apps are Android-first because that is where their audience is, not because of a platform limit.</div></details>
     <details class="qa" data-rv><summary><span class="qn">Q-05</span> Who owns the code?</summary>
       <div class="a">You do. The work happens in your repository, under your account, with your name on the store listing and your signing keys in your hands from day one. Full IP assignment is written into the contract and completes on final payment. No lock-in, nothing to buy back at the end.</div></details>
     <details class="qa" data-rv><summary><span class="qn">Q-06</span> What happens after launch?</summary>
@@ -899,7 +954,7 @@ footer a:hover{color:var(--signal)}
     <div data-rv>
       <h2 class="h2" style="max-width:24ch">Four years inside other people&rsquo;s platforms taught me what to build on my own.</h2>
       <p style="margin-top:20px">Angular and TypeScript on the front, Symfony, NestJS, Spring Boot and PostgreSQL behind them &mdash; <b>enterprise systems where a bad release costs somebody real money</b>. That's where I learned to care about release pipelines, permissions and the boring parts.</p>
-      <p>Alongside that I built sixteen apps of my own, six of them all the way to signed, release-ready builds: Flutter, clean architecture, BLoC, localisation into eight languages, AdMob and in-app purchases, store listings, privacy policies. <b>Every part of that was me</b> &mdash; which is why I know exactly how long each part takes.</p>
+      <p>Alongside that I built sixteen apps of my own, seven of them all the way to signed, release-ready builds: Flutter, clean architecture, BLoC, localisation into eight languages, AdMob and in-app purchases, store listings, privacy policies. <b>Every part of that was me</b> &mdash; which is why I know exactly how long each part takes.</p>
       <p>So the person on the call is the person who writes the code. I&rsquo;ve done every part of this job &mdash; architecture, UI, store submission &mdash; on my own, more than once.</p>
     </div>
     <dl class="facts" data-rv>
@@ -1049,7 +1104,7 @@ footer a:hover{color:var(--signal)}
     });
   }
 
-// ── The shelf: one device, six apps ──────────────────────────────
+// ── The shelf: one device, seven apps ──────────────────────────────
   var shelf = document.getElementById('apps');
   if(shelf && shelf.querySelector('.shelf-item')){
     var tabs   = [].slice.call(shelf.querySelectorAll('.shelf-item'));
