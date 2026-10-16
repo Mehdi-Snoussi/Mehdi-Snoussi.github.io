@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carthage Studio apps</title>
+<meta name="description" content="Seven Android apps by Carthage Studio, each free on Google Play: Dhikr, SortFlow, AI Mystic, Cascade, Zellia, Relic Revival and Blue Hour.">
+<meta name="author" content="Mehdi Snoussi">
+<meta name="theme-color" content="#E7E8E2">
+<meta name="color-scheme" content="light">
+<meta property="og:title" content="Carthage Studio apps">
+<meta property="og:description" content="Seven Android apps, each free on Google Play.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2314161A'/%3E%3Crect x='8' y='8' width='84' height='84' fill='none' stroke='%231A33DC' stroke-width='5'/%3E%3Ctext x='50' y='68' font-family='monospace' font-size='52' font-weight='700' fill='%23E7E8E2' text-anchor='middle'%3EMS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* /apps/ — the link in the TikTok and Instagram bios. One column, made for
+   a phone opened from a short: each app's own icon carries its colour, the
+   page stays the site's paper and ink. ?src=tiktok|instagram|youtube tags
+   the Play links so installs show their source in Play Console. */
+:root{
+  --paper:#E7E8E2; --card:#F3F4EF; --ink:#14161A; --ink-2:#4E545C; --ink-3:#63686F;
+  --rule:#C4C7BF; --hair:#D4D6CF; --signal:#1A33DC;
+  --sans:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.5;
+  background-image:linear-gradient(var(--hair) 1px,transparent 1px),linear-gradient(90deg,var(--hair) 1px,transparent 1px);
+  background-size:64px 64px;background-position:-1px -1px}
+a{color:inherit}
+main{max-width:560px;margin:0 auto;padding:40px 16px 48px}
+h1{font-size:34px;line-height:1.1;font-weight:700;letter-spacing:-.01em}
+.lede{margin-top:10px;color:var(--ink-2);max-width:30em}
+ol{list-style:none;margin-top:28px;border-top:1px solid var(--ink)}
+li{background:var(--card);border-bottom:1px solid var(--rule);padding:18px 16px 16px}
+li:last-child{border-bottom:1px solid var(--ink)}
+.head{display:flex;gap:14px;align-items:center}
+.head img{width:64px;height:64px;border-radius:15px;flex:0 0 auto;box-shadow:0 1px 0 rgba(20,22,26,.25)}
+h2{font-size:20px;line-height:1.2;font-weight:600}
+.kind{color:var(--ink-3);font-size:15px}
+.what{margin-top:10px;color:var(--ink-2);font-size:15px}
+.get{display:flex;align-items:center;justify-content:center;margin-top:14px;min-height:48px;padding:10px 16px;
+  background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:16px;border-radius:10px}
+.get:active{background:#2B2F36}
+.get:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+.soon{margin-top:14px;min-height:48px;display:flex;align-items:center;justify-content:center;
+  border:1px dashed var(--ink-3);color:var(--ink-2);font-size:15px;border-radius:10px}
+footer{margin-top:28px;font-size:14px;color:var(--ink-3)}
+footer a{text-decoration:underline;text-underline-offset:3px}
+footer a:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+@media (max-width:360px){h1{font-size:30px}.head img{width:56px;height:56px;border-radius:13px}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Carthage Studio</h1>
+  <p class="lede">Seven Android apps, made in Tunisia by Mehdi Snoussi. Each one is free on Google Play.</p>
+
+  <ol>
+    <li id="dhikr">
+      <div class="head"><img src="../assets/apps/dhikr.webp" alt="" width="64" height="64"><div><h2>Dhikr</h2><p class="kind">Tasbih, azkar and Quran</p></div></div>
+      <p class="what">Tasbih counter, azkar, prayer times with the adhan, the qibla and the Quran, offline.</p>
+      <a class="get" data-pkg="com.carthage.dhikr" href="https://play.google.com/store/apps/details?id=com.carthage.dhikr">Install Dhikr on Google Play</a>
+    </li>
+    <li id="sortflow">
+      <div class="head"><img src="../assets/apps/sortflow.webp" alt="" width="64" height="64"><div><h2>SortFlow</h2><p class="kind">Color sort puzzle</p></div></div>
+      <p class="what">Pour colors from tube to tube until each holds one. A calm water sort, offline.</p>
+      <a class="get" data-pkg="com.sortflow.sortflow" href="https://play.google.com/store/apps/details?id=com.sortflow.sortflow">Install SortFlow on Google Play</a>
+    </li>
+    <li id="aimystic">
+      <div class="head"><img src="../assets/apps/aimystic.webp" alt="" width="64" height="64"><div><h2>AI Mystic</h2><p class="kind">Tarot card reading</p></div></div>
+      <p class="what">Pull a daily tarot card and get an AI tarot reading written for your sign.</p>
+      <a class="get" data-pkg="com.carthage.aimystic" href="https://play.google.com/store/apps/details?id=com.carthage.aimystic">Install AI Mystic on Google Play</a>
+    </li>
+    <li id="cascade">
+      <div class="head"><img src="../assets/apps/cascade.webp" alt="" width="64" height="64"><div><h2>Cascade</h2><p class="kind">Drop and merge puzzle</p></div></div>
+      <p class="what">Drop orbs, merge two alike and chain big cascades. A calm merge puzzle, offline.</p>
+      <a class="get" data-pkg="com.carthage.cascade" href="https://play.google.com/store/apps/details?id=com.carthage.cascade">Install Cascade on Google Play</a>
+    </li>
+    <li id="zellia">
+      <div class="head"><img src="../assets/apps/zellia.webp" alt="" width="64" height="64"><div><h2>Zellia</h2><p class="kind">Tile match palace</p></div></div>
+      <p class="what">Tap three tiles alike to clear them and restore a palace of zellige. No timer.</p>
+      <a class="get" data-pkg="com.carthage.zellia" href="https://play.google.com/store/apps/details?id=com.carthage.zellia">Install Zellia on Google Play</a>
+    </li>
+    <li id="relicrevival">
+      <div class="head"><img src="../assets/apps/relicrevival.webp" alt="" width="64" height="64"><div><h2>Relic Revival</h2><p class="kind">Clean and restore</p></div></div>
+      <p class="what">Wipe the grime off old relics and find out what you found. A calm restore game.</p>
+      <a class="get" data-pkg="com.carthage.relicrevival" href="https://play.google.com/store/apps/details?id=com.carthage.relicrevival">Install Relic Revival on Google Play</a>
+    </li>
+    <li id="bluehour">
+      <div class="head"><img src="../assets/apps/bluehour.webp" alt="" width="64" height="64"><div><h2>Blue Hour</h2><p class="kind">Car screen launcher</p></div></div>
+      <p class="what">Car launcher with a living scene, lit by the real sun and weather. No ads.</p>
+      <a class="get" data-pkg="com.carthage.bluehour" data-from="2026-10-21" href="https://play.google.com/store/apps/details?id=com.carthage.bluehour">Install Blue Hour on Google Play</a>
+    </li>
+  </ol>
+
+  <footer>
+    <p><a href="../legal/">Privacy policies and terms</a></p>
+  </footer>
+</main>
+<script>
+(function(){
+  var src = 'site';
+  try { src = (new URLSearchParams(location.search).get('src') || 'site').toLowerCase().replace(/[^a-z]/g, '').slice(0, 20) || 'site'; } catch (e) {}
+  var now = new Date();
+  document.querySelectorAll('a.get[data-pkg]').forEach(function(a){
+    var from = a.getAttribute('data-from');
+    if (from && now < new Date(from + 'T00:00:00')) {
+      var p = document.createElement('p');
+      p.className = 'soon';
+      p.textContent = 'On Google Play from ' + new Date(from + 'T12:00:00').toLocaleDateString('en-GB', {day: 'numeric', month: 'long'});
+      a.replaceWith(p);
+      return;
+    }
+    a.href = 'https://play.google.com/store/apps/details?id=' + a.getAttribute('data-pkg') +
+      '&referrer=' + encodeURIComponent('utm_source=' + src + '&utm_medium=bio&utm_campaign=shorts_2026_10');
+  });
+})();
+</script>
+</body>
+</html>
