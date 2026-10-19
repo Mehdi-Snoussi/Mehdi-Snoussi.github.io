@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Me — Privacy Policy</title>
+<meta name="description" content="How Mini Me handles your data: no account, no ads, no tracking, no server. Everything you log stays on your phone; steps and sleep are read from Health Connect and never stored or sent. Published by Carthage Studio.">
+<meta name="theme-color" content="#FFF0F6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1A1322" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..800&family=Grandstander:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  /* ── Mini Me legal pages ────────────────────────────────────────────────
+     The app's own sticker world: Mimi's pink dot ground (18px grid, the
+     app's DotGround), white sticker cards with a 2.5px ink border and a
+     hard 4px offset shadow, Grandstander for display and DM Sans for text.
+     Section numbers are tilted stickers on the yellow the app uses for
+     "selected"; "at a glance" is the yellow card the Plus screen uses.
+     No all-caps labels: the app has none. Dark mode is Mimi's night set.
+     Tokens verified against minime/lib/theme/mini_tokens.dart             */
+
+  :root{
+    --bg:#FFF0F6; --dot:#F7C6DC;
+    --tx:#1F1B2D; --mu:#4A4560;
+    --s1:#FFFFFF; --s2:#FFF7FB; --s3:#FFE3EF;
+    --line:#1F1B2D; --acc:#FF5FA2;
+    --sel:#FFE45C; --selLine:#1F1B2D; --selTx:#1F1B2D;
+    --lime:#C6F35E;
+    --bw:2.5px; --sh:4px 4px 0 var(--line); --ghost:3px 3px 0 var(--line);
+    --pad:clamp(18px,4vw,26px); --col:720px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#1A1322; --dot:rgba(255,95,162,.22);
+      --tx:#FFF2F8; --mu:#CDB8CF;
+      --s1:#2A1F35; --s2:#33263F; --s3:#45304F;
+      --line:#07040B;
+      --sel:#4A3A12; --selLine:#FFE45C; --selTx:#FFF2F8;
+    }
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{background:var(--bg);-webkit-text-size-adjust:100%}
+  body{
+    margin:0;color:var(--tx);background-color:var(--bg);
+    background-image:radial-gradient(var(--dot) 1.4px,transparent 1.5px);
+    background-size:18px 18px;
+    font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  .dsp{font-family:'Grandstander','DM Sans',system-ui,sans-serif;font-weight:800;letter-spacing:-.015em}
+
+  .wrap{max-width:calc(var(--col) + 48px);margin:0 auto;padding:0 24px}
+  @media(max-width:480px){.wrap{padding:0 16px}}
+
+  a{color:var(--tx);text-decoration:underline;text-decoration-color:var(--acc);
+    text-decoration-thickness:2px;text-underline-offset:3px;font-weight:600}
+  a:hover{text-decoration-thickness:3px}
+  a:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:4px}
+  strong{font-weight:800}
+  a[href^="mailto"],a[href^="http"]{overflow-wrap:break-word}
+  code{font-family:ui-monospace,'Cascadia Mono',Consolas,monospace;font-size:.9em;font-weight:600;
+       padding:1px 6px;border-radius:8px;background:var(--s3)}
+
+  /* ── top rail ─────────────────────────────────────────────────────── */
+  .rail{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+        padding:clamp(18px,4vw,30px) 0 0}
+  .pill{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border-radius:999px;
+        background:var(--s1);border:var(--bw) solid var(--line);box-shadow:var(--ghost);
+        font-size:14px;font-weight:800;color:var(--tx);text-decoration:none}
+  a.pill:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--line)}
+  .pill.soon{background:var(--s2);color:var(--mu);box-shadow:none;border-style:dashed}
+
+  /* ── masthead ─────────────────────────────────────────────────────── */
+  .masthead{display:flex;align-items:center;gap:clamp(16px,3.5vw,24px);margin:clamp(24px,5vw,38px) 0 0}
+  .masthead img{display:block;width:88px;height:88px;border-radius:24px;flex:0 0 auto;
+        border:var(--bw) solid var(--line);box-shadow:var(--sh);transform:rotate(-4deg)}
+  @media(max-width:420px){.masthead img{width:68px;height:68px;border-radius:20px}}
+  .eyebrow{margin:0;font-size:14px;font-weight:800;color:var(--mu)}
+  h1{margin:.15rem 0 0;font-weight:800}
+  h1 .app{display:block;font-size:clamp(38px,8vw,56px);line-height:1}
+  h1 .doc{display:inline-block;margin-top:.55rem;padding:3px 12px;border-radius:999px;
+          background:var(--acc);color:#1F1B2D;border:var(--bw) solid var(--line);
+          font-size:clamp(15px,2.6vw,18px);line-height:1.3;transform:rotate(1.5deg)}
+  .meta{margin:1.1rem 0 0;color:var(--mu);font-size:16px;font-weight:600;max-width:60ch}
+
+  /* ── document switch: the app's chips ─────────────────────────────── */
+  .switch{display:flex;gap:10px;flex-wrap:wrap;margin:clamp(20px,4vw,26px) 0 0}
+  .switch a{display:inline-flex;align-items:center;height:42px;padding:0 16px;border-radius:999px;
+     text-decoration:none;font-size:15px;font-weight:800;color:var(--tx);
+     background:var(--s2);border:1px solid var(--line)}
+  .switch a[aria-current]{background:var(--sel);color:var(--selTx);border:2px solid var(--selLine);transform:translateY(-2px)}
+
+  /* ── cards ────────────────────────────────────────────────────────── */
+  .card{background:var(--s1);border:var(--bw) solid var(--line);border-radius:24px;
+     box-shadow:var(--sh);padding:var(--pad);margin:clamp(22px,4vw,28px) 0 0}
+  .glance{background:var(--sel);color:var(--selTx);border-color:var(--selLine)}
+  .glance h2{margin:0;font-size:22px}
+  .glance-note{margin:.2rem 0 0;font-size:15px;font-weight:600;opacity:.85}
+  .glance ul{list-style:none;margin:14px 0 0;padding:0}
+  @media(min-width:640px){.glance ul{columns:2;column-gap:28px}}
+  .glance li{position:relative;padding-left:28px;margin:0 0 10px;font-size:16px;line-height:1.5;
+     font-weight:600;break-inside:avoid}
+  .glance li:last-child{margin-bottom:0}
+  .glance li::before{content:'';position:absolute;left:4px;top:.3em;width:.45em;height:.85em;
+     border:solid currentColor;border-width:0 3px 3px 0;transform:rotate(42deg);border-radius:1px}
+
+  .card .head{display:flex;align-items:center;gap:12px;margin:0 0 .9rem}
+  .num{flex:0 0 auto;display:grid;place-items:center;min-width:40px;height:40px;padding:0 8px;
+     border-radius:14px;background:var(--sel);color:var(--selTx);border:var(--bw) solid var(--selLine);
+     box-shadow:var(--ghost);font-size:19px;transform:rotate(-5deg)}
+  .card:nth-of-type(even) .num{transform:rotate(4deg)}
+  .card h2{margin:0;font-size:clamp(21px,3.6vw,25px);line-height:1.2}
+  .card p{margin:0 0 1rem;max-width:68ch}
+  .card p:last-child{margin-bottom:0}
+  .card ul{margin:0 0 1rem;padding-left:1.25rem;max-width:68ch}
+  .card ul:last-child{margin-bottom:0}
+  .card li{margin:0 0 .6rem}
+  .card li:last-child{margin-bottom:0}
+  .card li::marker{color:var(--acc)}
+
+  /* ── data table ───────────────────────────────────────────────────── */
+  .scroller{overflow-x:auto;margin:.2rem 0 1.1rem;border:var(--bw) solid var(--line);border-radius:18px;background:var(--s2)}
+  table{border-collapse:collapse;width:100%;min-width:640px;table-layout:fixed}
+  col.c1{width:20%}col.c2{width:32%}col.c3{width:22%}col.c4{width:26%}
+  th{text-align:left;padding:12px 14px;font-size:15px;font-weight:800;background:var(--s3);
+     border-bottom:var(--bw) solid var(--line)}
+  td{padding:12px 14px;border-top:2px dashed color-mix(in srgb,var(--mu) 45%,transparent);vertical-align:top;font-size:16px;line-height:1.5}
+  tbody tr:first-child td{border-top:0}
+  .scrollnote{margin:-.7rem 0 1.1rem;font-size:14px;font-weight:600;color:var(--mu)}
+  @media(min-width:700px){.scrollnote{display:none}}
+
+  .bubble{margin:1.1rem 0 0;padding:14px 16px;border-radius:18px;background:var(--s3);
+     border:var(--bw) solid var(--line);max-width:68ch}
+
+  /* ── colophon ─────────────────────────────────────────────────────── */
+  footer{margin:clamp(44px,8vw,66px) 0 0;padding:clamp(22px,5vw,30px) 0 clamp(40px,8vw,60px);
+     border-top:2.5px dashed var(--line);color:var(--mu);font-size:16px;font-weight:600}
+  footer p{margin:0 0 .4rem;max-width:56ch}
+  footer .fine{font-size:14px}
+  .flinks{display:flex;flex-wrap:wrap;gap:10px 22px;margin:16px 0 0;padding:0;list-style:none}
+  .flinks a{font-size:15px}
+
+  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+  @media print{
+    @page{margin:16mm}
+    html,body{background:#fff!important;color:#000;font-size:11.5pt}
+    .rail,.switch,.masthead img,.scrollnote{display:none!important}
+    .wrap{max-width:none;padding:0}
+    h1 .doc{background:none;border:0;padding:0;transform:none}
+    h1 .app,h1 .doc,.eyebrow,.meta,.glance-note,footer,strong,.card h2,th,.num{color:#000!important}
+    .card,.glance,.bubble{background:#fff;border:0;box-shadow:none;border-radius:0;padding:0;margin:0 0 16pt;break-inside:avoid}
+    .num{background:none;border:0;box-shadow:none;transform:none;min-width:0;padding:0}
+    .glance ul{columns:1;list-style:disc;padding-left:18pt}
+    .glance li{padding-left:0}
+    .glance li::before{display:none}
+    .bubble{border-left:2pt solid #000;padding-left:10pt}
+    .scroller{overflow:visible;border:1pt solid #000;border-radius:0;background:#fff}
+    table{min-width:0}
+    th{background:#fff}
+    td{border-top:.5pt solid #666}
+    a{color:#000;text-decoration:underline}
+    a::after{content:" (" attr(href) ")";font-size:.82em;word-break:break-all}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<nav class="rail" aria-label="Breadcrumb">
+  <a class="pill" href="../index.html">&larr; All policies</a>
+  <span class="pill soon">Coming to Google Play</span>
+</nav>
+
+<header class="masthead">
+  <img src="../../assets/apps/minime.webp" width="88" height="88" alt="Mini Me app icon">
+  <div>
+    <p class="eyebrow">Carthage Studio</p>
+    <h1 class="dsp"><span class="app">Mini Me</span><span class="doc">Privacy Policy</span></h1>
+  </div>
+</header>
+
+<p class="meta">Mini Me — Effective 19 October 2026. Last updated 19 October 2026.</p>
+
+<nav class="switch" aria-label="Document">
+  <a href="privacy.html" aria-current="page">Privacy Policy</a>
+  <a href="terms.html">Terms of Service</a>
+</nav>
+
+<main>
+
+<section class="card glance" aria-label="At a glance">
+  <h2 class="dsp">At a glance</h2>
+  <p class="glance-note">Every point here is restated in full in the sections below.</p>
+  <ul>
+    <li>No account, no sign-up and no login.</li>
+    <li>No ads, no advertising ID, no analytics, no crash reporting and no tracking.</li>
+    <li>Everything you log stays on your phone. We have no server and keep no copy.</li>
+    <li>Steps and sleep are read from Health Connect only if you allow it. They are shown on your phone and never stored, sent or shared.</li>
+    <li>Your cycle log never appears on the widget, over your apps or in a notification.</li>
+    <li>Google backup is used only when it is end-to-end encrypted, and you can turn it off.</li>
+    <li>This version has no friends features: nothing you do is shown to anyone else.</li>
+    <li>Mini Me is for people aged 13 and over.</li>
+    <li>We do not sell personal information.</li>
+  </ul>
+</section>
+
+<section class="card" id="s1">
+  <div class="head"><span class="num dsp" aria-hidden="true">1</span><h2 class="dsp">Who we are</h2></div>
+  <p>Mini Me (the &ldquo;App&rdquo;) is a tiny you that lives on your phone: you dress your mini, look after it, and it walks over your apps, sits on your home screen and reacts to your real day. It is published by <strong>Carthage Studio</strong> (the &ldquo;Developer&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). Contact: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+  <p>This policy explains, in plain language, what data the App handles and why.</p>
+</section>
+
+<section class="card" id="s2">
+  <div class="head"><span class="num dsp" aria-hidden="true">2</span><h2 class="dsp">Data the App handles</h2></div>
+  <div class="scroller" tabindex="0" role="region" aria-label="Data the App handles">
+  <table>
+  <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"></colgroup>
+  <thead>
+  <tr><th>Category</th><th>What it is</th><th>Why</th><th>Where it lives</th></tr>
+  </thead>
+  <tbody>
+  <tr><td>Your mini</td><td>Which mini you chose, its looks, the clothes and room things you own, your coins, and its needs, level and points.</td><td>To run the game.</td><td>On your phone.</td></tr>
+  <tr><td>Age group</td><td>The age group you pick: under 13, 13&ndash;15, 16&ndash;17 or 18 and over.</td><td>To keep the App to people aged 13 and over.</td><td>On your phone.</td></tr>
+  <tr><td>Check-ins and statuses</td><td>Your morning mood and its tags, your evening answer, and the status you set, including any words you write for it.</td><td>To show your days and moods, and your status on Home.</td><td>On your phone. Words you write for a status are always private to you.</td></tr>
+  <tr><td>Cycle log (optional)</td><td>Days you mark as period days, their flow, and how you felt.</td><td>To estimate your next &ldquo;cosy days&rdquo; and, with Plus, to show your patterns.</td><td>On your phone. See section 4.</td></tr>
+  <tr><td>Workouts, focus and trips (optional)</td><td>The kind and length of workouts you log, focus sessions, and your mini's trips and postcards.</td><td>To reward you and show your week.</td><td>On your phone.</td></tr>
+  <tr><td>Ramadan mode (optional)</td><td>The city you pick from a built-in list, and fasts you mark to make up.</td><td>To show Suhoor and Iftar times, calculated on your phone.</td><td>On your phone. No location permission is used.</td></tr>
+  <tr><td>Steps and sleep (optional)</td><td>Your steps for the last 7 days and last night's sleep, read from Health Connect.</td><td>To show My day, and to unlock your mini's trip on an active day or after a good night.</td><td>Read on your phone and held in memory while shown. Never stored, sent or shared. See section 3.</td></tr>
+  <tr><td>Purchases</td><td>Confirmation of a Mini Me Plus plan or a pack you bought.</td><td>To give you what you paid for.</td><td>Validated by Google Play. We store only which items you own, on your phone.</td></tr>
+  <tr><td>Settings</td><td>Language, light or dark, reminders, the mini over your apps, backup, and where your mini was left on the screen.</td><td>To remember your choices.</td><td>On your phone.</td></tr>
+  </tbody>
+  </table>
+  </div>
+  <p class="scrollnote">Scroll the table sideways to read every column.</p>
+  <p>We do <strong>not</strong> collect your name, email address, phone number, contacts, location, photos, camera, microphone audio, messages or advertising ID. The App contains no ads and no analytics or crash-reporting services, and it sends nothing to us or to any server of ours.</p>
+</section>
+
+<section class="card" id="s3">
+  <div class="head"><span class="num dsp" aria-hidden="true">3</span><h2 class="dsp">Health Connect</h2></div>
+  <p>If you choose to connect, the App asks Android's Health Connect for read access to two kinds of data: <strong>Steps</strong> and <strong>Sleep</strong>. It reads your steps for the last 7 days and last night's sleep when you open My day or your mini's trip, and again when you come back to them. It uses them only to show your day and to unlock your mini's trip on an active day or after a good night. It never writes to Health Connect and asks for nothing else.</p>
+  <p>The data is read on your phone and held in memory while it is shown. It is not stored by the App, not included in backups or in your export file, and never sent to us or to anyone else. No person reads it.</p>
+  <p>Mini Me's use of information received from Health Connect adheres to the <a href="https://support.google.com/googleplay/android-developer/answer/12991134">Health Connect Permissions policy</a>, including the Limited Use requirements. Health data is never used for advertising, never sold, never transferred to anyone, and never used to decide creditworthiness or for lending.</p>
+  <p>You can turn either permission off at any time in Health Connect's settings, or from <strong>Settings &rarr; Health Connect</strong> in the App. The App keeps working without them.</p>
+</section>
+
+<section class="card" id="s4">
+  <div class="head"><span class="num dsp" aria-hidden="true">4</span><h2 class="dsp">Your cycle log</h2></div>
+  <p>The cycle log is optional and is off until you switch it on. What you log stays in the App's private storage on your phone. The App calls these days &ldquo;cosy days&rdquo; everywhere outside the cycle screen: cycle words never appear on the home-screen widget, on the mini that walks over your apps, or in a notification.</p>
+  <p>Your cycle log is included in your Google backup only when that backup is end-to-end encrypted (section 6), and in an export file only when you make one yourself. <strong>Delete everything</strong> in Settings removes it from your phone.</p>
+</section>
+
+<section class="card" id="s5">
+  <div class="head"><span class="num dsp" aria-hidden="true">5</span><h2 class="dsp">On your phone: permissions and features</h2></div>
+  <ul>
+  <li><strong>Notifications</strong> &mdash; reminders, at most one a day, are planned and scheduled on your phone. Nothing is sent to us. You can turn each one off in <strong>Reminders</strong>.</li>
+  <li><strong>Display over other apps</strong> &mdash; lets your mini walk over your apps when you switch it on. The App only draws your mini; it does not see, read or record what other apps show. You can turn it off in Settings or in Android's settings.</li>
+  <li><strong>Home-screen widgets</strong> &mdash; pictures of your mini drawn on your phone.</li>
+  <li><strong>Start after a restart</strong> &mdash; puts your reminders and the walking mini back after the phone restarts.</li>
+  <li><strong>Vibration</strong> &mdash; small taps when you play with your mini.</li>
+  </ul>
+</section>
+
+<section class="card" id="s6">
+  <div class="head"><span class="num dsp" aria-hidden="true">6</span><h2 class="dsp">Backups and your export file</h2></div>
+  <p><strong>Google backup.</strong> Android can back up the App's data to your Google account. The App allows this only when the backup is end-to-end encrypted with your phone's screen lock (Android 9 and later), so neither Google nor we can read it. It contains your mini, your logs and your settings, including your cycle log, but never health data from Health Connect. You can turn it off in <strong>Settings &rarr; Back up to Google</strong>. Google stores and deletes Android backups under its own terms.</p>
+  <p><strong>Export file.</strong> <strong>Export my data</strong> writes a file named <code>mini-me-backup.json</code> to your phone's Downloads folder, only when you tap it. The file holds your mini, your logs and your settings, including your cycle log, and it is <strong>not encrypted</strong>: anyone who has the file can read it, so keep it somewhere safe. <strong>Restore from a file</strong> checks a file before it replaces anything.</p>
+</section>
+
+<section class="card" id="s7">
+  <div class="head"><span class="num dsp" aria-hidden="true">7</span><h2 class="dsp">WhatsApp stickers</h2></div>
+  <p>The App draws twelve sticker pictures of your mini on your phone. When you tap <strong>Add to WhatsApp</strong>, WhatsApp on the same phone receives those pictures with the pack's name and our contact and policy links. When your mini's look changes, the pack is redrawn so WhatsApp can update it. Nothing else is shared with WhatsApp. Once a sticker is in WhatsApp, WhatsApp's own privacy policy applies, including to stickers you send in chats.</p>
+</section>
+
+<section class="card" id="s8">
+  <div class="head"><span class="num dsp" aria-hidden="true">8</span><h2 class="dsp">Third-party services</h2></div>
+  <ul>
+  <li><strong>Google Play Billing</strong> &mdash; processes Mini Me Plus and pack purchases, and tells the App which ones you own. Google processes the payment; we never see your payment method. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+  <li><strong>Health Connect</strong> (by Google, on your phone) &mdash; provides steps and sleep if you allow it (section 3).</li>
+  <li><strong>Android backup</strong> (Google) &mdash; keeps your encrypted backup if it is on (section 6).</li>
+  <li><strong>WhatsApp</strong> &mdash; receives sticker pictures only when you add them (section 7).</li>
+  </ul>
+  <p>The App uses no other services.</p>
+</section>
+
+<section class="card" id="s9">
+  <div class="head"><span class="num dsp" aria-hidden="true">9</span><h2 class="dsp">Children and teens</h2></div>
+  <p>Mini Me is for people aged 13 and over. The App asks for an age group before it starts, and it does not open for anyone who picks &ldquo;under 13&rdquo;. We do not knowingly collect personal data from children under 13. The App has no ads, no chat and, in this version, no friends features.</p>
+</section>
+
+<section class="card" id="s10">
+  <div class="head"><span class="num dsp" aria-hidden="true">10</span><h2 class="dsp">Data retention &amp; deletion</h2></div>
+  <p>Your data lives on your phone until you remove it. <strong>Delete everything</strong> in Settings erases your mini, coins, check-ins, cycle log and every other record at once; uninstalling the App or clearing its data does the same. An export file you made stays where you put it until you delete it. We hold no server-side copy of anything, so there is nothing for us to delete on our side. For any request, email <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>; we action verified requests within 30 days.</p>
+</section>
+
+<section class="card" id="s11">
+  <div class="head"><span class="num dsp" aria-hidden="true">11</span><h2 class="dsp">Your rights (GDPR / CCPA)</h2></div>
+  <p>If you are in the EU/UK (GDPR) or California (CCPA/CPRA), you have the right to access, delete and object to processing of your data, and to withdraw any permission at any time from your phone's settings or Health Connect. Because your data stays on your phone, you can see it in the App, export it and delete it yourself. <strong>We do not sell personal information.</strong></p>
+</section>
+
+<section class="card" id="s12">
+  <div class="head"><span class="num dsp" aria-hidden="true">12</span><h2 class="dsp">Security</h2></div>
+  <p>Your data is kept in the App's private storage, which other apps cannot read. Google backups are end-to-end encrypted. Purchases are validated by Google Play directly. An export file is not encrypted (section 6).</p>
+</section>
+
+<section class="card" id="s13">
+  <div class="head"><span class="num dsp" aria-hidden="true">13</span><h2 class="dsp">Changes</h2></div>
+  <p>If we materially change this policy we will update the date above and, where appropriate, tell you in the App. If a future version adds friends features, this policy will say what they share before they arrive.</p>
+</section>
+
+<section class="card" id="s14">
+  <div class="head"><span class="num dsp" aria-hidden="true">14</span><h2 class="dsp">Contact</h2></div>
+  <p>Questions or requests: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+</section>
+
+</main>
+
+<footer>
+  <p>Privacy Policy for Mini Me, published by Carthage Studio.</p>
+  <p class="fine">Set in Grandstander and DM Sans, the typefaces the App itself ships.</p>
+  <ul class="flinks">
+    <li><a href="../index.html">All policies</a></li>
+    <li><a href="terms.html">Terms of Service</a></li>
+  </ul>
+</footer>
+
+</div>
+</body>
+</html>
