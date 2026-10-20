@@ -1,6 +1,6 @@
 # App Legal Center
 
-Privacy policies + terms of service for the eight apps (six on Google Play, Blue Hour and Mini Me on their way), hosted under
+Privacy policies + terms of service for the eight apps on Google Play, hosted under
 `/legal/` on the `Mehdi-Snoussi.github.io` GitHub Pages site (the portfolio stays at the root).
 Plain static HTML — no build step.
 

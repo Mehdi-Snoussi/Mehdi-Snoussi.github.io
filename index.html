@@ -7,7 +7,7 @@
 <meta name="description" content="I take mobile apps from empty repo to signed release — Flutter and React Native, plus the backend behind them. One engineer, architecture through store submission. Based in Mahdia, Tunisia." />
 <meta name="author" content="Mehdi Snoussi" />
 <meta property="og:title" content="Mehdi Snoussi — I build and ship mobile apps, solo" />
-<meta property="og:description" content="From empty repo to signed release: Flutter &amp; React Native apps and the backends behind them. Seven apps shipped end to end by one person, live on Google Play." />
+<meta property="og:description" content="From empty repo to signed release: Flutter &amp; React Native apps and the backends behind them. Eight apps shipped end to end by one person, live on Google Play." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://mehdi-snoussi.github.io/" />
 <meta name="theme-color" content="#E7E8E2" />
@@ -231,7 +231,7 @@ footer{border-top:1px solid var(--rule);padding:26px 0;font-family:var(--mono);f
 footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
 footer a:hover{color:var(--signal)}
 
-/* ── sheet 03 · the shelf: one device, seven apps ──────────────────── */
+/* ── sheet 03 · the shelf: one device, eight apps ──────────────────── */
 @property --wall{syntax:"<color>";inherits:true;initial-value:#0B2E14}
 @property --acc{syntax:"<color>";inherits:true;initial-value:#E8B23A}
 @property --acc2{syntax:"<color>";inherits:true;initial-value:#6FE08F}
@@ -404,7 +404,7 @@ footer a:hover{color:var(--signal)}
       <p class="lede" data-rv>Flutter and React Native, plus the backend behind them. You get <b>one engineer</b> who does the architecture, the code, the icon, the store listing and the release build &mdash; not a handoff chain between four freelancers.</p>
       <div class="hero-cta" data-rv>
         <a class="btn" href="#book">Book a call <span class="ar">&rarr;</span></a>
-        <a class="btn ghost" href="#apps">See seven live apps I shipped alone <span class="ar">&darr;</span></a>
+        <a class="btn ghost" href="#apps">See eight live apps I shipped alone <span class="ar">&darr;</span></a>
       </div>
       <p class="hero-cta note" data-rv>Free 30 minutes. You leave knowing what I&rsquo;d cut from v1 and roughly what it costs &mdash; the written scope and fixed price follow within 2&ndash;3 days, whether or not you hire me.</p>
     </div>
@@ -419,10 +419,10 @@ footer a:hover{color:var(--signal)}
       <span>Live on Google Play</span><span>Apps built</span><span>Experience</span><span>Localised</span>
     </div>
     <div class="spec-r">
-      <span>7<i>shipped solo, start to store</i></span>
-      <span>16<i>apps in the portfolio</i></span>
+      <span>8<i>shipped solo, start to store</i></span>
+      <span>17<i>apps in the portfolio</i></span>
       <span>4 yrs<i>mobile + full-stack</i></span>
-      <span>8<i>languages, incl. RTL</i></span>
+      <span>26<i>languages, incl. RTL</i></span>
     </div>
   </div>
 </section>
@@ -518,6 +518,10 @@ footer a:hover{color:var(--signal)}
       <button class="shelf-item" type="button" id="tab-bluehour">
         <img src="assets/apps/bluehour.webp" alt="" width="192" height="192" loading="lazy" decoding="async">
         <span>Blue Hour</span>
+      </button>
+      <button class="shelf-item" type="button" id="tab-minime">
+        <img src="assets/apps/minime.webp" alt="" width="192" height="192" loading="lazy" decoding="async">
+        <span>Mini Me</span>
       </button>
     </div>
 
@@ -809,9 +813,50 @@ footer a:hover{color:var(--signal)}
           <div class="ap-caption" role="status">Coastal Road, golden hour</div>
         </div>
       </div>
+      <div class="app-panel" id="panel-minime"
+           data-wall="#2A1F35" data-acc="#FF5FA2" data-acc2="#C6F35E">
+        <div class="ap-body">
+          <div class="ap-cat">Lifestyle / Virtual pet</div>
+          <h3 class="ap-name">Mini Me</h3>
+          <div class="ap-tag">A tiny you that walks over your apps and mirrors your real day</div>
+          <p class="ap-desc">A virtual pet that is you. Pick Mimi&rsquo;s candy sticker world or Kai&rsquo;s street one, dress your mini, look after it, and let it walk over your other apps, sit in a home-screen widget and follow your day from Health Connect. No account and no server: everything stays on your phone and your own watch, and steps and sleep are only read, never stored on the phone.</p>
+          <ul class="ap-feats">
+          <li>An SVG avatar rig ported one to one from the design kit&rsquo;s JavaScript, 226 looks checked against the original, animated part by part with an idle brain</li>
+          <li>Walks over other apps in a native Kotlin overlay window, and lives in two home-screen widgets that Flutter draws offscreen</li>
+          <li>Steps and sleep from Health Connect, a morning check-in, statuses, focus sessions and trips the mini comes back from, with at most one reminder a day planned on the device</li>
+          <li>Optional extras: a private cycle log that only ever says &ldquo;cosy&rdquo; outside its own screen, a workout log, and a Ramadan mode with offline Suhoor and Iftar times</li>
+          <li>Twelve WhatsApp stickers drawn from your own mini, and a Wear OS app with a tile, complications and a Watch Face Format face</li>
+          <li>Mini Me Plus on Play Billing 8: monthly, yearly with a free trial, or once for life; Google backup only when it is end-to-end encrypted</li>
+          </ul>
+          <p class="ap-tech">Flutter, Riverpod, go_router, drift (SQLite), flutter_svg, Health Connect, Kotlin (overlay, widgets, stickers), Jetpack Compose for Wear OS, Watch Face Format, Play Billing</p>
+          <div class="ap-meta">
+            <span>com.carthage.minime</span><span>v1.0.0</span><span>Android and Wear OS</span><span>10 languages, Arabic RTL</span>
+            <a class="store" href="https://play.google.com/store/apps/details?id=com.carthage.minime" target="_blank" rel="noopener">Get it on Google Play &#8599;</a>
+            <a href="/legal/minime/privacy.html">Privacy &#8599;</a>
+            <a href="/legal/minime/terms.html">Terms &#8599;</a>
+          </div>
+        </div>
+        <div class="ap-device">
+          <div class="phone"><div class="phone-screen">
+            <img class="on" src="assets/apps/minime/1.webp" alt="Mini Me: Mimi on Home" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/minime/2.webp" alt="Mini Me: Make your mini" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/minime/3.webp" alt="Mini Me: My day" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/minime/4.webp" alt="Mini Me: Kai&rsquo;s wardrobe" width="540" height="1200" loading="lazy" decoding="async">
+            <img src="assets/apps/minime/5.webp" alt="Mini Me: Stickers from your mini" width="540" height="1200" loading="lazy" decoding="async">
+          </div></div>
+          <div class="ap-thumbs">
+          <button type="button" data-caption="Mimi on Home" aria-label="Show screen: Mimi on Home"><img src="assets/apps/minime/t1.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Make your mini" aria-label="Show screen: Make your mini"><img src="assets/apps/minime/t2.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="My day" aria-label="Show screen: My day"><img src="assets/apps/minime/t3.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Kai’s wardrobe" aria-label="Show screen: Kai’s wardrobe"><img src="assets/apps/minime/t4.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          <button type="button" data-caption="Stickers from your mini" aria-label="Show screen: Stickers from your mini"><img src="assets/apps/minime/t5.webp" alt="" width="132" height="293" loading="lazy" decoding="async"></button>
+          </div>
+          <div class="ap-caption" role="status">Mimi on Home</div>
+        </div>
+      </div>
     </div>
 
-    <p class="apps-note" data-rv>All seven are live on Google Play. Install any of them and hold the work in your hand before you talk to me. I&rsquo;ll also screen-share the codebase on the call. Privacy policy and terms for each one live at <a href="/legal/">/legal</a>.</p>
+    <p class="apps-note" data-rv>All eight are live on Google Play. Install any of them and hold the work in your hand before you talk to me. I&rsquo;ll also screen-share the codebase on the call. Privacy policy and terms for each one live at <a href="/legal/">/legal</a>.</p>
   </div>
 </section>
 
@@ -930,9 +975,9 @@ footer a:hover{color:var(--signal)}
     <details class="qa" data-rv><summary><span class="qn">Q-02</span> How long until it's in the stores?</summary>
       <div class="a">I scope first releases to a six-to-ten week window, and the exact date goes into the written scope before you pay anything. A rescue starts with a one-week fixed-price audit so neither of us is guessing. Store review adds a few days on Google Play, and can add longer on the App Store.</div></details>
     <details class="qa" data-rv><summary><span class="qn">Q-03</span> Do you do the design as well?</summary>
-      <div class="a">There was no designer on any of the seven apps above; I drew every screen, icon and store screenshot myself. If you already have a designer or a Figma file I&rsquo;ll build to that instead, and if you don&rsquo;t, you&rsquo;re not blocked waiting for one.</div></details>
+      <div class="a">There was no designer on any of the eight apps above; I drew every screen, icon and store screenshot myself. If you already have a designer or a Figma file I&rsquo;ll build to that instead, and if you don&rsquo;t, you&rsquo;re not blocked waiting for one.</div></details>
     <details class="qa" data-rv><summary><span class="qn">Q-04</span> iOS as well as Android?</summary>
-      <div class="a">Flutter and React Native both build one codebase for both platforms, and I have taken client apps through submission on both stores. My own seven apps are Android-first because that is where their audience is, not because of a platform limit.</div></details>
+      <div class="a">Flutter and React Native both build one codebase for both platforms, and I have taken client apps through submission on both stores. My own eight apps are Android-first because that is where their audience is, not because of a platform limit.</div></details>
     <details class="qa" data-rv><summary><span class="qn">Q-05</span> Who owns the code?</summary>
       <div class="a">You do. The work happens in your repository, under your account, with your name on the store listing and your signing keys in your hands from day one. Full IP assignment is written into the contract and completes on final payment. No lock-in, nothing to buy back at the end.</div></details>
     <details class="qa" data-rv><summary><span class="qn">Q-06</span> What happens after launch?</summary>
@@ -954,7 +999,7 @@ footer a:hover{color:var(--signal)}
     <div data-rv>
       <h2 class="h2" style="max-width:24ch">Four years inside other people&rsquo;s platforms taught me what to build on my own.</h2>
       <p style="margin-top:20px">Angular and TypeScript on the front, Symfony, NestJS, Spring Boot and PostgreSQL behind them &mdash; <b>enterprise systems where a bad release costs somebody real money</b>. That's where I learned to care about release pipelines, permissions and the boring parts.</p>
-      <p>Alongside that I built sixteen apps of my own, seven of them all the way to signed, release-ready builds: Flutter, clean architecture, BLoC, localisation into eight languages, AdMob and in-app purchases, store listings, privacy policies. <b>Every part of that was me</b> &mdash; which is why I know exactly how long each part takes.</p>
+      <p>Alongside that I built seventeen apps of my own, eight of them all the way to signed, release-ready builds: Flutter, clean architecture, BLoC and Riverpod, localisation into as many as 26 languages, AdMob and in-app purchases, store listings, privacy policies. <b>Every part of that was me</b> &mdash; which is why I know exactly how long each part takes.</p>
       <p>So the person on the call is the person who writes the code. I&rsquo;ve done every part of this job &mdash; architecture, UI, store submission &mdash; on my own, more than once.</p>
     </div>
     <dl class="facts" data-rv>
@@ -1104,7 +1149,7 @@ footer a:hover{color:var(--signal)}
     });
   }
 
-// ── The shelf: one device, seven apps ──────────────────────────────
+// ── The shelf: one device, eight apps ──────────────────────────────
   var shelf = document.getElementById('apps');
   if(shelf && shelf.querySelector('.shelf-item')){
     var tabs   = [].slice.call(shelf.querySelectorAll('.shelf-item'));
