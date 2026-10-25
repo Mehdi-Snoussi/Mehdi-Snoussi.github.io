@@ -1,0 +1,11 @@
+/* Shared by the five banner proposals: YouTube channel art 2048 x 1152.
+   Every device shows y 407-745; phones only x 406-1641 of that band. */
+@font-face { font-family: Archivo; src: url(../fonts/Archivo-var.ttf); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: Plex; src: url(../fonts/IBMPlexMono-SemiBold.ttf); font-weight: 600; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 2048px; height: 1152px; overflow: hidden; }
+body { position: relative; -webkit-font-smoothing: antialiased; }
+.abs { position: absolute; }
+.center { position: absolute; left: 50%; top: 576px; transform: translate(-50%, -50%); text-align: center; }
+.dsp { font-family: Archivo; font-weight: 820; font-stretch: 92%; letter-spacing: -0.012em; line-height: 1; white-space: nowrap; }
+.mono { font-family: Plex, monospace; font-weight: 600; }

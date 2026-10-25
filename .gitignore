@@ -1,2 +1,4 @@
 # local render/preview scratch files
 _*
+# kept (and, starting with _, not published by GitHub Pages): brand sources
+!_brand/

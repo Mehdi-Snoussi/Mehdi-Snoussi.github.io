@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>s2_pink</title>
+<link rel="stylesheet" href="base.css">
+<style>
+/* A sheet of die-cut stickers: bright plain shapes with a thick white cut
+   edge, an ink outline and a hard offset shadow, around the words. */
+body { background: #FF9EC9; background-image: radial-gradient(#F07AB0 1.6px, transparent 1.8px); background-size: 22px 22px; }
+svg { position: absolute; inset: 0; }
+.words h1 { font-size: 74px; color: #14161A; }
+.words p { margin-top: 16px; font-size: 30px; color: #FFE45C; background: #14161A; display: inline-block; padding: 11px 20px 10px; transform: rotate(-1.5deg); }
+</style></head>
+<body>
+<svg id="s" width="2048" height="1152" viewBox="0 0 2048 1152"></svg>
+<div class="center words"><h1 class="dsp" id="h">Fun games and useful apps</h1><p class="mono">Subscribe for the next one</p></div>
+<script>
+// fit the headline to 820 px at most, once its font has loaded
+const h = document.getElementById('h');
+document.fonts.ready.then(() => {
+  let size = 74;
+  while (h.getBoundingClientRect().width > 820 && size > 40) { size -= 1; h.style.fontSize = size + 'px'; }
+});
+const NS = 'http://www.w3.org/2000/svg', s = document.getElementById('s');
+const ink = '#14161A';
+const items = [["flower", 200, 560, 120, 12, "#FFE45C"], ["circle", 370, 680, 70, -8, "#3550C4"], ["ring", 455, 478, 50, 10, "#C6F35E"], ["half", 1600, 520, 72, -14, "#2A8A73"], ["square", 1560, 700, 52, 18, "#FF7A1A"], ["circle", 1840, 600, 110, 0, "#3EA3D8"], ["pill", 1030, 430, 58, -4, "#8A3484"], ["bolt", 1700, 700, 46, 8, "#FFE45C"], ["circle", 120, 200, 160, 0, "#FFE45C"], ["square", 520, 240, 120, -10, "#3550C4"], ["star", 860, 160, 110, 6, "#C6F35E"], ["half", 1260, 220, 140, 20, "#2A8A73"], ["blob", 1700, 180, 170, -12, "#FF7A1A"], ["blob", 200, 960, 170, 8, "#3EA3D8"], ["circle", 640, 960, 130, 0, "#8A3484"], ["square", 1040, 1000, 120, 14, "#FFE45C"], ["star", 1460, 960, 120, -8, "#FFE45C"], ["wave", 1860, 990, 150, 10, "#3550C4"]];
+function shape(kind, r) {
+  switch (kind) {
+    case 'circle': return `<circle r="${r}"/>`;
+    case 'square': return `<rect x="${-r}" y="${-r}" width="${2 * r}" height="${2 * r}" rx="${r * 0.28}"/>`;
+    case 'half': return `<path d="M${-r} ${r * 0.35} A ${r} ${r} 0 0 1 ${r} ${r * 0.35} Z"/>`;
+    case 'star': { let d = ''; for (let i = 0; i < 10; i++) { const a = Math.PI / 5 * i - Math.PI / 2, rr = i % 2 ? r * 0.5 : r; d += (i ? 'L' : 'M') + (rr * Math.cos(a)).toFixed(1) + ' ' + (rr * Math.sin(a)).toFixed(1); } return `<path d="${d}Z" stroke-linejoin="round"/>`; }
+    case 'blob': return `<path d="M${-r} 0 C ${-r} ${-r * 0.9}, ${r * 0.2} ${-r * 1.05}, ${r * 0.8} ${-r * 0.5} S ${r * 1.05} ${r * 0.8}, ${r * 0.1} ${r * 0.85} S ${-r} ${r * 0.6}, ${-r} 0 Z"/>`;
+    case 'wave': return `<path d="M${-r} ${-r * 0.3} q ${r / 2} ${-r * 0.5} ${r} 0 t ${r} 0 v ${r * 0.6} q ${-r / 2} ${r * 0.5} ${-r} 0 t ${-r} 0 Z"/>`;
+    case 'bolt': return `<path d="M${r * 0.2} ${-r} L${-r * 0.6} ${r * 0.15} H${0} L${-r * 0.2} ${r} L${r * 0.6} ${-r * 0.15} H${0} Z" stroke-linejoin="round"/>`;
+    case 'ring': return `<path fill-rule="evenodd" d="M${-r} 0 a ${r} ${r} 0 1 0 ${2 * r} 0 a ${r} ${r} 0 1 0 ${-2 * r} 0 Z M${-r * 0.45} 0 a ${r * 0.45} ${r * 0.45} 0 1 1 ${r * 0.9} 0 a ${r * 0.45} ${r * 0.45} 0 1 1 ${-r * 0.9} 0 Z"/>`;
+    case 'pill': return `<rect x="${-r}" y="${-r * 0.45}" width="${2 * r}" height="${r * 0.9}" rx="${r * 0.45}"/>`;
+    case 'tri': return `<path d="M0 ${-r} L${r * 0.95} ${r * 0.7} L${-r * 0.95} ${r * 0.7} Z" stroke-linejoin="round"/>`;
+    case 'flower': { let d = ''; for (let i = 0; i < 6; i++) { const a = Math.PI / 3 * i; d += `<circle cx="${(r * 0.52 * Math.cos(a)).toFixed(1)}" cy="${(r * 0.52 * Math.sin(a)).toFixed(1)}" r="${r * 0.48}"/>`; } return d + `<circle r="${r * 0.55}"/>`; }
+  }
+}
+let html = '';
+for (const [k, x, y, r, rot, c] of items) {
+  const g = shape(k, r);
+  html += `<g transform="translate(${x} ${y}) rotate(${rot})">`
+    + `<g transform="translate(9 9)" fill="${ink}" stroke="${ink}" stroke-width="22">${g}</g>`
+    + `<g fill="#FFFFFF" stroke="#FFFFFF" stroke-width="22">${g}</g>`
+    + `<g fill="${c}" stroke="${ink}" stroke-width="4">${g}</g></g>`;
+}
+s.innerHTML = html;
+</script>
+</body></html>
