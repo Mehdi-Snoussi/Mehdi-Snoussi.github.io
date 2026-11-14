@@ -1,0 +1,39 @@
+/* Blue Hour: lib/core/theme.dart (the settings ground, the sodium of street lamps, the blue of the road sign)
+   and lib/core/sun.dart, whose zenith and horizon colours paint the strip of sky at the top. The strip is lit
+   for the hour on the reader's clock, as the app lights its scene for the real sun; without a script it stays
+   at blue hour. Section numbers are road signs: a blue plate in a white frame, like the app's next turn. */
+:root{--bg:#0D1118;--raised:#151A22;--ink:#F2F4F7;--muted:#AEB6C2;--link:#A3B4FF;--sodium:#FF9F43;--sign:#1B3C86;
+  --rule:rgba(255,255,255,.15);--focus:#FF9F43;--zen:#15215C;--hor:#5568B5;--sun:transparent;--sun-y:70%;--lamp:1;
+  --body:"Barlow","Segoe UI",system-ui,sans-serif;--title:"Saira","Segoe UI",system-ui,sans-serif;--label:"Barlow Condensed","Barlow",sans-serif;
+  --size:1.09rem;--lead:1.6}
+:root[data-sky=night]{--zen:#050817;--hor:#0D1530}
+:root[data-sky=golden]{--zen:#2E4A8C;--hor:#F3A160;--sun:#FFB45E;--sun-y:66%;--lamp:0}
+:root[data-sky=day]{--zen:#3A78C2;--hor:#BCD6EC;--sun:#FFFFFF;--sun-y:22%;--lamp:0}
+.sky{position:relative;height:8.4rem;margin-top:.3rem;overflow:hidden;border-radius:10px;background:linear-gradient(var(--zen),var(--hor) 78%)}
+.sky .sun{position:absolute;left:68%;top:var(--sun-y);width:2rem;height:2rem;margin:-1rem 0 0 -1rem;border-radius:50%;background:var(--sun)}
+.sky .lamps{position:absolute;inset:auto 0 1.9rem 0;height:6px;opacity:var(--lamp);
+  background:radial-gradient(circle,var(--sodium) 0 2.2px,transparent 2.7px) 14px 0/72px 6px repeat-x}
+.sky .road{position:absolute;inset:auto 0 0 0;height:1.9rem;background:#10141C;border-top:1px solid rgba(255,255,255,.22)}
+.sky .road::after{content:"";position:absolute;left:0;right:0;top:50%;height:3px;margin-top:-1.5px;
+  background:repeating-linear-gradient(90deg,rgba(242,244,247,.78) 0 26px,transparent 26px 54px)}
+.app{margin:1.5rem 0 0;display:flex;align-items:center;gap:.7rem;font-weight:600;line-height:1.25}
+.app img{border-radius:10px;flex:none}
+h1{margin-top:1.1rem;font-weight:500;font-size:clamp(2.1rem,8vw,3rem);letter-spacing:-.01em}
+.dates{margin:.7rem 0 0;color:var(--muted)}
+.lit{margin:.35rem 0 0;color:var(--muted);font:600 .98rem/1.4 var(--label)}
+h2{font-weight:600;font-size:1.36rem}
+article h2{display:flex;align-items:center;gap:.7rem}
+.n{flex:none;display:inline-grid;place-items:center;min-width:2rem;height:1.7rem;padding:0 .35rem;background:var(--sign);color:#fff;
+  border:1.5px solid #fff;border-radius:5px;box-shadow:0 0 0 2px var(--sign);font:600 .98rem/1 var(--title)}
+h3{font-family:var(--body);font-weight:600}
+strong,tbody th{font-weight:600;color:#fff}
+.summary{margin-top:2rem;background:var(--raised);border:1px solid var(--rule);border-radius:12px;padding:1.2rem 1.15rem 1.25rem}
+.summary h2{color:var(--sodium)}
+thead th{font:600 .95rem/1.3 var(--label);color:var(--muted)}
+td::before{font-family:var(--label);font-size:1.02em;color:var(--muted)}
+.contents ol{padding-left:1.6rem}
+.contents a{text-decoration:none}
+.contents a:hover{text-decoration:underline}
+.contents li::marker{font-family:var(--label);font-weight:600;color:var(--muted)}
+.note{border-left:3px solid var(--sodium);padding-left:.85rem}
+@media (max-width:42rem){.summary{padding-inline:1rem}.sky{height:7rem}}

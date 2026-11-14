@@ -1,0 +1,39 @@
+title: Delete your Friends account
+description: How to delete your Mini Me Friends account, in the app or by email, what is deleted, and what is kept for a short while.
+summary: In short
+---
+Mini Me itself has no account. This page is about the optional Friends and Duo, which use a Google sign-in and our server.
+
+- In the app: Settings, then Friends account, then "Delete my Friends account".
+- Without the app: email us from the Google account you signed in with.
+- After an email request, your Friends data is deleted from our server within 30 days.
+- Your mini and everything you log were never on our server. They are on your phone.
+
+## In the app
+
+Open Mini Me and go to Settings, then Friends account. Tap "Delete my Friends account", then "Delete account". Google may ask you to sign in once more before the account can be deleted. The deletion happens straight away.
+
+"Delete everything" in Settings deletes your Friends account as well, together with everything on your phone.
+
+## Without the app
+
+If you no longer have Mini Me, write to [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com) with the subject "Delete my Mini Me Friends account". Send it from the Google account you used to sign in to Friends, or tell us your friend code (it looks like NOUR-4821). That is how we find your account and know the request is yours. We delete it within 30 days and reply when it is done.
+
+## What is deleted
+
+- Your Friends profile: the name friends see, your friend code, your mini's look, and when Mini Me was last open.
+- Your friend and duo requests, your friendships, your close friends list and the people you blocked.
+- The statuses you shared, the visits you sent and received, and your duo.
+- Your Firebase sign-in account, with the Google email, name and picture link it kept.
+
+## What is kept, and for how long
+
+- **Reports** you sent, or that were sent about you, are kept until we have looked at them, and for 90 days at most, so that a report can still be checked.
+- **Google's backups** of Firebase Authentication lose the deleted account within 180 days.
+- **Your phone.** Your mini, coins, check-ins and everything else you log never were on our server. They stay on your phone until you use "Delete everything" or uninstall Mini Me.
+
+The [privacy policy](privacy.html) has the full account, under Friends and Duo.
+
+## Contact
+
+Mini Me is published by Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

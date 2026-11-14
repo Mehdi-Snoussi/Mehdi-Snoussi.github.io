@@ -1,0 +1,33 @@
+/* AI Mystic: lib/core/theme/mystic_colors.dart. The page is one card of the deck lying on the night-blue table:
+   a parchment face inside a double line of gold ink, the reading text in EB Garamond, the small print in Inter. */
+:root{--bg:#0B0B1E;--ink:#EDE4D3;--muted:#A0A0B8;--link:#A9BCE2;--rule:rgba(237,228,211,.2);--focus:#F2D98B;
+  --card:#EDE4D3;--card-ink:#10111D;--card-muted:#4D4F63;--card-link:#2B3C74;--gold:#9C8250;--red:#A4442C;
+  --body:"EB Garamond",Georgia,serif;--title:"EB Garamond",Georgia,serif;--ui:"Inter","Segoe UI",system-ui,sans-serif;
+  --size:1.22rem;--lead:1.5;--measure:44rem}
+.top,.foot{font-family:var(--ui);font-size:.9rem}
+.head,main{background:var(--card);color:var(--card-ink);border-inline:6px double var(--gold);padding-inline:1.5rem;
+  --ink:var(--card-ink);--muted:var(--card-muted);--link:var(--card-link);--rule:rgba(16,17,29,.22);--focus:#A4442C}
+.head{border-top:6px double var(--gold);padding-top:1.7rem;border-radius:14px 14px 0 0}
+main{border-bottom:6px double var(--gold);padding-bottom:2.4rem;border-radius:0 0 14px 14px;display:flow-root}
+.app{margin:0;display:flex;align-items:center;gap:.7rem;font:600 .98rem/1.3 var(--ui)}
+.app img{border-radius:10px;flex:none}
+h1{margin-top:1.3rem;font-weight:500;font-size:clamp(2.3rem,9vw,3.3rem);letter-spacing:-.01em}
+.dates{margin:.5rem 0 0;font-style:italic;color:var(--card-muted);padding-bottom:1.4rem;border-bottom:1px solid var(--gold)}
+h2{font-weight:500;font-size:1.62rem}
+article h2{display:flex;align-items:baseline;gap:.55rem}
+.n{flex:none;color:var(--red);font-weight:500}
+.n::after{content:"."}
+h3{font:600 1rem/1.3 var(--ui)}
+strong{font-weight:500;font-family:var(--body);color:#000}
+table,.summary li{font-family:var(--ui);font-size:.9rem;line-height:1.55}
+tbody th,thead th{font-weight:600}
+thead th{color:var(--card-muted);font-size:.82rem}
+td::before{font-weight:600}
+.summary{margin-top:1.7rem}
+.contents ol{font-family:var(--ui);font-size:.93rem;padding-left:1.5rem}
+.contents a{text-decoration:none}
+.contents a:hover{text-decoration:underline}
+.contents li::marker{color:var(--red);font-weight:600}
+.note{border-left:2px solid var(--gold);padding-left:.85rem;font-style:italic}
+.foot{border-top:0;margin-top:1.6rem}
+@media (max-width:46rem){.top{padding-inline:1.125rem}.head,main{margin-inline:.55rem;padding-inline:1.05rem}}

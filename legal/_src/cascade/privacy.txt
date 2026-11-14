@@ -1,0 +1,85 @@
+title: Privacy policy
+description: Cascade saves your score, coins and skins on your phone. Ads, the one purchase and a card you choose to share are the only things that leave it.
+summary: What leaves your phone
+---
+| What | Where it goes | When | How to stop it |
+| Advertising ID, IP address, what you do with an ad | Google AdMob | While ads show | Buy Remove ads, or use Android's ad settings |
+| The Remove ads purchase | Google Play | Each time you buy or restore it | Nothing is sent until you buy |
+| A score card | The app you pick in Android's share sheet | Each time you tap Share | Skip the share |
+| A backup of your save | Your own Google account | While Android's backup is on | Turn the backup off in Android's settings |
+| A problem report | Our support mailbox | Only if you press send | Discard the draft |
+
+Nothing else goes anywhere. There is no account to make, and the game runs offline.
+
+## Who publishes Cascade
+
+Cascade: Drop & Merge Puzzle is an Android game from Carthage Studio (Mehdi Snoussi), in Tunisia. That is the name you see on its Google Play page. The address for anything about your data is [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com). Where this page says "we", it means the publisher.
+
+## What stays on your phone
+
+Cascade saves a small file of its own on the phone. In it:
+
+- your best score and your coins;
+- the orb skins you own and the one you play with, event skins such as the Pumpkin included;
+- your achievements, your daily reward streak and how far you got in an event;
+- your choices in Settings: sound, haptics, language, the daily reminder.
+
+We cannot read that file. Android can copy it into the backup of your Google account if you have backup on, and restore it when you move to a new phone.
+
+## Ads
+
+The free game shows ads supplied by Google AdMob: a banner, a full-screen ad between some games, and videos you start yourself, for example to double the coins of a run or of a daily reward.
+
+Google's ad software runs inside the game and collects for Google, not for us: the advertising ID and app set ID of your phone, its IP address (which gives Google a rough idea of where it is), which ads you were shown and tapped, when the game was opened, and how the ad software performed. Google's own page says [how it uses that](https://policies.google.com/technologies/partner-sites).
+
+Your choices:
+
+- If you are in the European Economic Area, the UK or Switzerland, Cascade asks for your consent before personalised ads. You can reopen that choice from "Privacy options" in Settings.
+- On any phone, Android's settings (Google, then Ads) let you reset or delete the advertising ID.
+- "Remove ads" is one payment. After it there are no ads at all, the optional videos included.
+
+## The purchase
+
+"Remove ads" is the only thing sold in Cascade. Google Play handles the payment and tells the game whether it succeeded. We learn that a sale happened, and nothing about the buyer. A yes-or-no flag on your phone remembers it, and the game confirms it with Google Play when it starts. Coins cannot be bought.
+
+## The daily reminder
+
+If you switch on "Daily reminder", the game sets one notification on days when that day's board is still open, and during an event such as Halloween Night it adds one note when the event starts and one on its last day. Your phone holds the schedule. No server sends these, and no token identifies your phone to us. Switch the reminder off in Settings, or block the game's notifications in Android.
+
+## Sharing a score, reporting a problem
+
+**Share** draws a card of your score on the phone and passes it to whichever app you choose. Where it goes after that is up to that app.
+
+**Report a problem** writes an email in your own mail app. It lists the game's version, your Android version, the phone's model and the latest error messages. You see all of it before anything is sent, and you can delete what you do not want to send.
+
+## What we can see
+
+As a publisher we get Google Play's totals for Cascade: how many installs and uninstalls, the ratings, and crash rates from phones that share diagnostics with Google. They are counts. We cannot tell who played or what score they reached.
+
+## Children
+
+Cascade is for a general audience. It is not designed for children under 13, and it has nothing a child could use to post or message. We do not knowingly collect a child's personal data; if a child's email reaches us, a parent can ask us to delete it.
+
+## Keeping and deleting
+
+The save file lives as long as the game is installed. Uninstall Cascade, or clear its data in Android's settings, and it is erased. A backup in your Google account follows Google's rules and your own backup setting. We keep nothing on our side apart from emails sent to us, and those remain in the support mailbox until the question is answered or you ask for them to be removed.
+
+## Your rights
+
+Write to us and we will tell you, within 30 days, what we hold about you and delete it if you ask. In practice we hold nothing, since the game keeps its data on your phone.
+
+People in the EU and the UK have rights under the GDPR (to see, correct, delete or move their data, to object, to withdraw consent), and California and other places have laws with similar rights. Under the GDPR we rely on your consent for personalised ads and the reminder, on a contract for the purchase, and on our legitimate interest in repairing the game for any report you send.
+
+The data ads produce is Google's to manage: see [[Ads]] above and [Google's My Ad Center](https://myadcenter.google.com/). We sell no personal data. You have the right to complain to your country's data protection authority.
+
+## Security
+
+Connections to Google's ad and payment services are encrypted. Google Play verifies the purchase. The save file sits in storage only Cascade can open, protected by the lock on your phone.
+
+## Changes to this policy
+
+This page changes when Cascade changes how it handles data, and the date at the top moves with it. If the change is one you would want to know about, the game or its Google Play notes will say so.
+
+## Contact
+
+Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

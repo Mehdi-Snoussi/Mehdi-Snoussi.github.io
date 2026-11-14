@@ -1,0 +1,101 @@
+title: Privacy policy
+description: A reading in AI Mystic sends your cards, your question and your zodiac sign to Google's Gemini. Your name, birth date and journal stay on your phone. The rest is on this page.
+summary: What leaves your phone
+---
+| What | Where it goes | When | How to stop it |
+| The cards you drew, your question, your zodiac sign | Google's Gemini API | Each time you ask for a reading | Leave the question empty, or go offline: the reading is then written on the phone |
+| Advertising ID, IP address, what you do with an ad | Google AdMob | While ads show | Subscribe to Mystic Pro, or use Android's ad settings |
+| A subscription | Google Play | Each time you subscribe or restore | Nothing is sent until you subscribe |
+| A card you share | The app you pick in Android's share sheet | Each time you tap Share | Keep the card |
+| A backup of your journal and settings | Your own Google account | While Android's backup is on | Turn the backup off in Android's settings |
+| A reading you report, or a problem report | Our support mailbox | Only if you press send | Close the draft |
+
+Your first name and birth date never leave the phone. AI Mystic has no account.
+
+## Who publishes AI Mystic
+
+AI Mystic: Tarot Card Reading is an Android app from Carthage Studio (Mehdi Snoussi), in Tunisia, the publisher named on Google Play. Questions about this page go to [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com). "We" is the publisher.
+
+## What a reading sends to Google
+
+The readings are written by an AI model, Google's Gemini. To write one, the app sends Gemini:
+
+- the cards you drew, each one upright or reversed, and its place in the spread;
+- which spread it is;
+- your question, if you typed one, up to 300 characters;
+- your zodiac sign.
+
+Nothing else goes with it. Your name, your birth date and your journal are not in the request, and it carries no account or device ID. Google does see your IP address, as it would for any request.
+
+AI Mystic uses Gemini's free tier. Under the [Gemini API terms](https://ai.google.dev/gemini-api/terms), Google may keep what it receives and what it writes back, use both to improve its services, and let people review them. So please keep the question free of names, health matters or anything else private.
+
+If Gemini cannot be reached, the app writes the reading itself, on the phone, from the cards' own meanings. Then nothing is sent.
+
+> A reading is for reflection and entertainment. It does not predict the future, and it is not medical, legal, financial or psychological advice.
+
+## What stays on your phone
+
+- the first name and birth date you may give at setup. The name greets you; the date is used to work out your zodiac sign;
+- your journal of saved readings and the cards you have found;
+- your streak, your reminder time and your settings;
+- the card of the day shown by the home-screen widget.
+
+We cannot see any of this. If backup is on for your Google account, Android may store a copy there and return it on a new phone.
+
+## Ads
+
+Without a subscription the app shows ads from Google AdMob: a banner, and at times a full-screen ad. You can also choose to watch a short video for a further reading, up to two a day.
+
+Google's ad software inside the app collects for Google, never for us: the phone's advertising ID and app set ID, its IP address (which tells Google roughly where the phone is), the ads shown and tapped, when the app is opened, and diagnostics about the ad software. Google explains [its use of this data](https://policies.google.com/technologies/partner-sites).
+
+- In the European Economic Area, the UK and Switzerland, the app asks for your choice before personalised ads, and "Privacy options" in Settings lets you change it.
+- In Android's settings, under Google and then Ads, you can reset or delete the advertising ID.
+- Mystic Pro removes the ads.
+
+## The subscription
+
+Mystic Pro is a subscription, monthly or yearly, sold by Google Play. Google charges you and tells the app whether the subscription is active. We do not receive your name or your payment details. The app keeps a yes-or-no note on the phone and checks it with Google Play at each start.
+
+## Reminders and the widget
+
+The daily reminder is a notification your phone schedules itself, at the time you set. The home-screen widget shows the day's card from data the app wrote on the phone. Neither sends anything.
+
+## Sharing, shared links and reports
+
+**Sharing a card.** Share draws a picture on the phone and passes it to the app you pick. The link that goes with it leads to Google Play and names the card, so that a friend who installs the app from it lands on the same card. The app reads that tag from Google Play once, on the friend's phone; it does not say who shared it.
+
+**Report this reading.** Under every reading there is a link to report it. It opens a draft in your own mail app containing the text of that reading, addressed to us. It is sent only if you send it.
+
+**Report a problem** works the same way, with the app's version, your Android version, your phone's model and recent error messages.
+
+## What we can see
+
+Google Play gives us totals: installs, uninstalls, ratings, subscriptions sold, and crash rates from phones that share diagnostics with Google. No reading, question or name is among them. We never see the readings Gemini writes for you, unless you send one in a report.
+
+## Adults only
+
+AI Mystic deals with mature themes and is meant for people aged 17 and over. It is not for children, and we do not knowingly collect a child's personal data.
+
+## Keeping and deleting
+
+Your journal and settings last until you uninstall the app or clear its data in Android's settings. What a reading sent to Gemini is kept by Google under the Gemini API terms; we keep no copy of it and cannot delete it for you. A backup stays in your Google account while backup is on. Emails you send us remain in our support mailbox until the matter is closed or you ask us to delete them.
+
+## Your rights
+
+Ask us what we hold about you, or ask for it to be deleted, and we will answer within 30 days. We hold only what you have emailed us.
+
+The GDPR (in the EU and the UK), and laws in California and other places, give you the right to see, correct, delete and move your data, to object to its use and to withdraw consent. For the GDPR our grounds are: your consent for personalised ads and the reminder; a contract with you for writing the reading you asked for and for the subscription; our legitimate interest in fixing the app, and in looking into a reading you report.
+
+For data held by Google, whether from a reading or from ads, your controls are in [[Ads]], in [Google's My Ad Center](https://myadcenter.google.com/) and in Google's own privacy policy. We do not sell personal data. You may complain to the data protection authority of your country.
+
+## Security
+
+Reading requests, ads and payments all travel over HTTPS. Google Play verifies the subscription. Your journal is in the app's private storage, behind your phone's lock.
+
+## Changes to this policy
+
+When the app changes what it sends or stores, this page and its date change too. We announce a change that matters in the app or in its notes on Google Play.
+
+## Contact
+
+Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

@@ -1,0 +1,106 @@
+title: Terms of service
+description: The terms for Mini Me: it is a game for people aged 13 and over, not a medical app; coins are earned, never sold; Mini Me Plus is optional; and Friends has a few rules of kindness.
+summary: In short
+---
+- Mini Me is for people aged 13 and over.
+- It is a game, not a medical app. Never use its cycle estimates for birth control or to plan a pregnancy.
+- You need no account. Your data is on your phone, and we cannot bring it back unless you backed it up. Only the optional Friends and Duo need a Google sign-in.
+- Be kind in Friends. Block and Report are always there.
+- Coins are earned in the game. They cannot be bought, sold or cashed out.
+- Mini Me Plus is optional: by the month or the year, renewing until you cancel in Google Play, or lifetime, paid once.
+- There are no ads, no random items and no loot boxes.
+- Google Play decides refunds. Tunisian law applies, with the consumer law of your own country.
+
+## Agreeing to these terms
+
+Mini Me: Avatar Pet & Widget is published by Carthage Studio (Mehdi Snoussi), in Tunisia. These terms are the agreement between you and us, and they cover Mini Me for Wear OS and the Mini Me watch face too. You accept them by installing or using Mini Me. If you do not accept them, uninstall it. Google Play's terms also apply, to the download and to anything you buy.
+
+## Your age
+
+You must be 13 or older to use Mini Me. If you are under the age of majority where you live, use it and buy things in it only with the permission of a parent or guardian.
+
+## What you may do with Mini Me
+
+You may install Mini Me on phones and watches you own or control, and use it for yourself. That permission is yours alone and cannot be sold or passed on. Please do not copy the app to other stores, take it apart to reuse it, or share a changed version, unless the law gives you that right whatever a licence says. We can end the permission if you break these terms.
+
+## A game, not medical advice
+
+Mini Me is a game. Nothing in it is medical advice, a diagnosis or a treatment, and it is not a medical device.
+
+- **Cycle log.** The cosy days it shows are rough estimates from the days you logged. Never use them for birth control, or to plan or avoid a pregnancy. If something about your cycle worries you, talk to a doctor.
+- **Steps, sleep, workouts and period dates.** These come from Health Connect and from the apps and devices that write to it. They can be missing or wrong. Mini Me's goals are for fun and are not health targets.
+- **Water.** The daily goal is a starting point you can change, not a recommendation for your body.
+- **Ramadan mode.** Suhoor and Iftar are calculated on your phone for the city you pick. They can differ from your mosque or local authority by a few minutes. Follow your local times.
+
+## Your data and your Friends account
+
+Mini Me has no account of its own. Everything you log lives on your phone, and what your watch shows lives on your watch. If you lose your phone, uninstall the app or use "Delete everything", we cannot bring it back. Only a Google backup or an export file you made can, as the [privacy policy](privacy.html) explains. "Restore purchases" returns what you bought through Google Play.
+
+Friends and Duo are optional and need a Google sign-in. Your Friends account (the name friends see, your friend code, your friends and your duo) lives on our server, so it comes back when you sign in on a new phone. Your mini and everything else you log do not. You can sign out or delete your Friends account in Settings whenever you like.
+
+## Coins and items
+
+Coins are earned by playing: caring for your mini, checking in, and the other things the app rewards. They cannot be bought with real money. Coins, and the items you get with them, have no cash value and cannot be sold, transferred or exchanged outside Mini Me. We may change prices in coins, rewards and the items on offer, for example to keep the game balanced.
+
+## Mini Me Plus, packs and refunds
+
+Mini Me is free to use. What is sold goes through Google Play, and the price and the billing period are shown before you confirm.
+
+| What | How you pay | What to know |
+| Mini Me Plus, monthly or yearly | A subscription | Renews by itself until you cancel in Google Play. The Plus screen lists what it includes before you buy |
+| Mini Me Plus, lifetime | Once | Not a subscription. It never renews |
+| The Cosy pack and the season packs | Once each | A pack you buy stays yours. Plus includes every season pack while your Plus is active |
+
+- Cancel a subscription in Google Play, under Payments and subscriptions, at least 24 hours before the period ends, to avoid the next charge. Uninstalling the app does not cancel it.
+- A free trial, when one is offered, turns into a paid subscription at its stated price unless you cancel before it ends.
+- We may add to Plus and change the items it brings each week. If we ever take a Plus perk away, we will say so in the app before your next renewal.
+- A purchase that is refunded or has ended is removed from the app.
+
+Mini Me shows no ads and sells no random items or loot boxes.
+
+Refunds are handled under [Google Play's refund policy](https://support.google.com/googleplay/answer/2479637). We can support a request you send to Google, and Google decides. If you live in the EU or the UK, the rights the law gives you over digital purchases, the right to withdraw among them, are not changed by these terms.
+
+## Friends: be kind
+
+- Do not pick a name that insults or threatens anyone, pretends to be someone else, or gives away private details such as a phone number or an address.
+- Do not use Friends to bother people. Do not send requests to people who do not want them, and do not try to get around a block.
+- Do not try to reach the Friends server other than through the app.
+
+We may change a name that breaks these rules. We may close a Friends account that keeps breaking them, after looking at the reports about it. Closing a Friends account does not touch the rest of Mini Me or your purchases.
+
+## Fair use
+
+- Use Mini Me within the law of the place you are in.
+- Do not tamper with the app, or with coins, items or purchases.
+
+## Your mini and its stickers
+
+Mini Me, its minis, clothes, rooms, artwork and interface belong to the publisher. You may send the WhatsApp stickers of your own mini in your personal chats. You may not sell them or use them to advertise anything.
+
+## Other services
+
+Mini Me works with services that others provide under their own terms: Google Play, Health Connect, Android backup, Wear OS, WhatsApp, and Google Sign-In and Firebase for Friends and Duo. We are not responsible for what they show, for whether they are available, or for their accuracy.
+
+## No warranty
+
+Mini Me is provided "as is" and "as available". We may update it, change it or stop offering it or any part of it. Reminders and the mini over your apps depend on your phone's settings and battery rules, and some phones delay or stop them. Your watch catches up with your phone when the two are connected. We do not promise that Mini Me is free of faults or fits a particular purpose.
+
+## Limit of our liability
+
+As far as the law allows, we are not liable for indirect or consequential loss, for lost data, or for any loss arising from the use of Mini Me or from what it shows. Our total liability for any claim is limited to what you paid us in the twelve months before it.
+
+Nothing in these terms limits liability that the law does not let us limit, and nothing takes away a right the consumer law of your country gives you.
+
+## Changes and ending
+
+We may change these terms, for example when Mini Me gains a feature. The date at the top of this page marks the current version, and we tell you in the app about a change that matters. Using Mini Me after a change means you accept it.
+
+You can stop whenever you like: cancel any subscription in Google Play, delete your Friends account if you have one, then uninstall. We can end your permission to use Mini Me if you break these terms.
+
+## Law that applies
+
+These terms follow the law of Tunisia, where the publisher lives. If you are a consumer, the mandatory protections of the law of your own country still apply to you, and you may bring a claim in your local courts where that law says so.
+
+## Contact
+
+Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

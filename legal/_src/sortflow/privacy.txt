@@ -1,0 +1,91 @@
+title: Privacy policy
+description: SortFlow keeps your levels and coins on your phone. This page lists the few things that leave it (ads, a purchase, a result you share) and how to stop each one.
+summary: What leaves your phone
+---
+| What | Where it goes | When | How to stop it |
+| Advertising ID, IP address, what you do with an ad | Google AdMob | While ads show | Remove Ads, the Premium Bundle, or Android's ad settings |
+| A purchase | Google Play | Each time you buy or restore | Nothing is sent until you buy |
+| A result you share | The app you pick in Android's share sheet | Each time you tap Share | Keep the result to yourself |
+| Your progress, as a file | Wherever you send the file | Each time you tap Export progress | Leave Export alone |
+| A backup of your progress | Your own Google account | While Android's backup is on | Turn the backup off in Android's settings |
+| A problem report | Our support mailbox | Only if you press send | Close the draft |
+
+That is the whole list. SortFlow has no account, carries no analytics of ours, and plays without a connection.
+
+## Who publishes SortFlow
+
+SortFlow: Water Sort Puzzle is a game for Android. It is published by Carthage Studio (Mehdi Snoussi), in Tunisia, the name on its Google Play page. To reach us about anything on this page, write to [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com). "We" below means the publisher.
+
+## What stays on your phone
+
+The game writes these to its own storage, which other apps cannot open:
+
+- the levels you cleared, their stars, your coins and power-ups;
+- the tube skins and backgrounds you bought with coins, and the ones you wear;
+- your daily challenge streak, today's free hints and wheel spins, and how far you are in an event such as Witch's Brew;
+- your settings: theme, sound, vibration, colour-blind marks, language, reminders;
+- the hour you usually play, worked out from when you open the game, so a reminder comes at a sensible time.
+
+None of it is sent to us. If backup is on for your Google account, Android may copy this storage there along with your other apps' data, and bring it back on a new phone.
+
+## Ads
+
+SortFlow is free because it shows ads from Google AdMob. A banner sits under the board. A full-screen ad can follow a finished level: never before level 6, never after a board you failed, and at least three minutes after the last one. Videos are always your choice. You can watch one for a hint, an undo, an extra tube, to skip a level, to double a win's coins, for another spin of the wheel, to repair a missed day of your streak, for a power-up in the shop, or to hide ads for an hour.
+
+To show and measure ads, Google's ad software gathers data on its own account. We never receive it. It covers the phone's advertising ID and app set ID, its IP address (enough for Google to place you roughly on a map), the ads you see and tap, when the game starts, and how the ad software itself runs. Google explains [what it does with this](https://policies.google.com/technologies/partner-sites).
+
+- In the European Economic Area, the UK and Switzerland, the game asks what you agree to before it shows personalised ads. "Ad privacy options" in Settings opens that choice again.
+- In Android's settings, under Google, then Ads, you can reset or delete the advertising ID on any phone.
+- Remove Ads and the Premium Bundle take away the banner and the full-screen ads for good. What a video used to pay for is then given without one.
+
+## Purchases
+
+There are two things to buy, both once: Remove Ads, and the Premium Bundle, which removes ads and adds 500 coins. Google Play takes the payment. We are told that a purchase was made, never who made it or with which card. The game keeps a note on the phone that ads are off and checks it with Google Play at each start, which is how the purchase returns on a new phone and ends after a refund.
+
+## Reminders
+
+Reminders are off until you switch them on. When they are on, the game sets one for each of the next seven days, at the hour you usually play, between nine in the morning and nine at night. Today's is dropped once you have played the daily challenge. During an event such as Witch's Brew, one note marks its opening and one its last day. The phone schedules them itself; there is no server behind them. Turn them off under Notifications in Settings, or in Android's settings for the game.
+
+## Sharing, exports and problem reports
+
+**Sharing a result.** "Share result" hands a picture or a line of coloured squares to the app you choose. We get nothing. The Google Play link that goes with it carries a tag naming the screen it came from, such as "daily". It says nothing about you; Google Play shows us how many installs each tag brought.
+
+**Export and import.** "Export progress", under Data & Backup, writes your progress to a file and opens the share sheet so you can save or send it. "Import progress" reads such a file back. The file is plain text, holds no purchase, and can be read by anyone you give it to.
+
+**Report a problem.** This opens a draft in your own mail app, addressed to us, with the game's last 15 errors: the time of each, the game's version, your Android version and your phone's model. You can edit it. It goes nowhere unless you send it.
+
+## What we can see
+
+Google Play shows every publisher totals for its apps: installs, uninstalls, ratings, and crash rates gathered from phones whose owners share diagnostics with Google. No person can be picked out of them. Apart from that and the emails you send, we cannot see how you play.
+
+## Children
+
+SortFlow is a puzzle for a general audience and is not aimed at children under 13. It has no chat, no profiles and no account, and we do not knowingly collect personal data from a child. If you believe a child has emailed us, tell us and we will delete the message.
+
+## Keeping and deleting
+
+Your progress stays on your phone until you uninstall the game or clear its data in Android's settings; either wipes it. An export file lasts until you delete it. A backup lasts in your Google account until you switch backup off or remove it there. On our side there is nothing to delete except emails you wrote to us, which stay in the support mailbox until the matter is closed or you ask us to remove them.
+
+## Your rights
+
+Ask us what we hold about you, or ask us to delete it, and you will have an answer within 30 days. Because the game stores your data on your own phone, that answer is usually "nothing".
+
+If you live in the EU or the UK, the GDPR gives you the right to see, correct, delete and move your data, to object to its use and to withdraw a consent. California and several other places give similar rights. The legal grounds the GDPR asks us to name are:
+
+- consent, for personalised ads and for reminders;
+- a contract, for a purchase;
+- our legitimate interest in fixing the game, for a problem report you send.
+
+Ad data is held by Google, not by us. Your controls are in [[Ads]] and in [Google's My Ad Center](https://myadcenter.google.com/). We do not sell personal data. You may complain to the data protection authority of your country if you think we got something wrong.
+
+## Security
+
+Ads and purchases travel over encrypted connections. Purchases are verified by Google Play. Your progress is in the game's private storage, behind your phone's lock. An export file has no such protection, so treat it like any other document.
+
+## Changes to this policy
+
+If a new version of SortFlow handles data differently, this page and the date at its top change with it. A change that matters is also mentioned in the game or in its notes on Google Play.
+
+## Contact
+
+Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

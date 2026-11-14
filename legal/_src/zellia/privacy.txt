@@ -1,0 +1,83 @@
+title: Privacy policy
+description: Zellia keeps your boards, coins and palace on your phone. Ads between boards, the one purchase and a card you share are what leave it, and each can be stopped.
+summary: What leaves your phone
+---
+| What | Where it goes | When | How to stop it |
+| Advertising ID, IP address, what you do with an ad | Google AdMob | While ads show | Buy Remove Ads, or use Android's ad settings |
+| The Remove Ads purchase | Google Play | Each time you buy or restore it | Nothing is sent until you buy |
+| A palace card | The app you pick in Android's share sheet | Each time you tap Share | Leave Share untouched |
+| A backup of your progress | Your own Google account | While Android's backup is on | Turn the backup off in Android's settings |
+| A problem report | Our support mailbox | Only if you press send | Delete the draft |
+
+The rest never leaves the phone. Zellia asks for no account and no permission beyond notifications, and every board can be played offline.
+
+## Who publishes Zellia
+
+Zellia: Triple Tile Match is published on Google Play by Carthage Studio (Mehdi Snoussi), in Tunisia. For any question about this page, the address is [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com). "We" means the publisher.
+
+## What stays on your phone
+
+Your game is saved on the phone, in storage that belongs to Zellia alone:
+
+- your campaign level, your coins and your tesserae;
+- how much of the palace you have restored;
+- your Daily Board streak and its streak freezes, your Courtyard boards, and your progress and reward in an event such as Lantern Night;
+- your settings: sound, haptics, reduce motion, language, the daily reminder.
+
+We receive none of this. Android may include it in the backup of your Google account when backup is on, which is also how it can reappear on a new phone.
+
+## Ads
+
+Zellia has no banner. A full-screen ad can appear between two boards, never while you are playing one. Videos only play when you ask for one: to revive a full tray, to double a level's coins, or for an extra shuffle.
+
+The ads come from Google AdMob. Its software, built into the game, collects data for Google: your phone's advertising ID and app set ID, its IP address (from which Google can tell roughly where the phone is), the ads shown and tapped, when the game is opened, and diagnostics about the ad software. We do not receive any of it. Google describes [how it uses this data](https://policies.google.com/technologies/partner-sites).
+
+- In the European Economic Area, the UK and Switzerland, and in US states that require it, the game asks for your choice before personalised ads. "Ad privacy options" in Settings brings the question back.
+- Android's settings, under Google and then Ads, let you reset or delete the advertising ID.
+- After you buy Remove Ads, no ad is shown again, and the revive, the doubled coins and the extra shuffle are given without a video.
+
+## The purchase
+
+Remove Ads is the single purchase in Zellia. Google Play takes the payment and confirms it to the game. We are not told who paid or how. The game stores one yes-or-no flag and checks it against Google Play each time it starts. Coins and tesserae are earned on the boards and are not for sale.
+
+## Reminders
+
+The daily reminder is optional. When it is on, the phone shows one notification at 19:00, your local time, for the Daily Board. While Lantern Night runs you also get one note when it begins and one on its last day. The schedule is kept on the phone; nothing is sent to set it up. You can switch it off in Settings or in Android's notification settings.
+
+## Sharing a card, reporting a problem
+
+**Share** makes a picture of your palace on the phone and gives it to the app you select. We are not involved after that.
+
+**Report a problem** prepares an email in your own mail app, with the game's version, your Android version, your phone's model and recent error messages. It stays a draft until you send it, and you can change it first.
+
+## What we can see
+
+Google Play reports totals to us: installs, uninstalls, ratings, and crash rates from phones set to share diagnostics with Google. These numbers do not identify anyone, and they are all we know about how Zellia is used.
+
+## Children
+
+Zellia is meant for a general audience and is not directed at children under 13. We do not knowingly collect a child's personal data. Should a child have written to us, a parent can ask for the message to be deleted.
+
+## Keeping and deleting
+
+Progress remains on your phone until the game is uninstalled or its data is cleared in Android's settings. A backup stays in your Google account for as long as Google keeps it and your backup is on. We have no copy of our own. Emails you send us stay in the support mailbox until your question is dealt with, or until you ask us to delete them.
+
+## Your rights
+
+You may ask what we hold about you and have it deleted. We reply within 30 days. Since Zellia saves its data on your phone, we normally hold nothing.
+
+The GDPR in the EU and the UK, and laws in California and elsewhere, give you rights to see, correct, delete and move your data, to object to how it is used and to withdraw a consent. For the GDPR, the grounds we rely on are consent (personalised ads, the reminder), a contract (the purchase) and our legitimate interest in fixing faults (a report you send).
+
+Ad data belongs to Google's systems. Use the controls in [[Ads]], or [Google's My Ad Center](https://myadcenter.google.com/). We do not sell personal data. You can also take a complaint to the data protection authority in your country.
+
+## Security
+
+Ads and payments use encrypted connections, and Google Play verifies the purchase. Your progress is held in the game's private storage and is as safe as the lock on your phone.
+
+## Changes to this policy
+
+When the way Zellia handles data changes, so do this page and the date at its top. We mention changes that matter in the game or in its notes on Google Play.
+
+## Contact
+
+Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

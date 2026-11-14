@@ -1,0 +1,60 @@
+/* What every legal page shares: how it reads. How it looks is each app's theme.css. */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:1.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--size,1.0625rem)/var(--lead,1.62) var(--body);overflow-wrap:break-word}
+img{max-width:100%;display:block}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--focus,var(--link));outline-offset:3px}
+.skip{position:absolute;left:-999rem}
+.skip:focus{left:1rem;top:1rem;z-index:9;background:var(--bg);color:var(--ink);padding:.5rem .8rem}
+.top,.head,main,.foot{max-width:var(--measure,43rem);margin-inline:auto;padding-inline:1.125rem}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem 1.25rem;flex-wrap:wrap;padding-block:1rem .9rem;font-size:.95rem}
+.top .pages{display:flex;gap:1.15rem;flex-wrap:wrap}
+.top [aria-current]{color:var(--ink);font-weight:700;text-decoration:none}
+h1,h2,h3{font-family:var(--title);line-height:1.18;margin:0;text-wrap:balance}
+h1{font-size:clamp(2rem,7vw,2.8rem)}
+h2{font-size:1.42rem}
+h3{font-size:1.1rem;margin-top:1.6rem}
+p,ul,table{margin:.85rem 0 0}
+ul{padding-left:1.15rem}
+li+li{margin-top:.42rem}
+strong{font-weight:700}
+article section{margin-top:2.7rem}
+.summary{margin-top:2.2rem}
+.contents{margin-top:2.4rem}
+.contents ol{margin:.7rem 0 0;padding-left:1.5rem;columns:2 15rem;column-gap:2.5rem}
+.contents li{break-inside:avoid}
+.contents li+li{margin-top:.28rem}
+.note{color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:.96rem;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:.62rem .9rem .62rem 0;border-top:1px solid var(--rule);font-weight:400}
+th:last-child,td:last-child{padding-right:0}
+thead th{border-top:0;font-weight:700;padding-top:0}
+tbody th{font-weight:700}
+@media (max-width:42rem){
+  table,tbody,tr,th,td{display:block}
+  thead{position:absolute;left:-999rem}
+  tr{border-top:1px solid var(--rule);padding:.75rem 0 .8rem}
+  .summary h2+table tbody tr:first-child{border-top:0}
+  th,td{border:0;padding:0}
+  tbody th{font-size:1.02rem}
+  td{margin-top:.3rem}
+  td::before{content:attr(data-th) ": ";font-weight:700}
+}
+.foot{margin-top:3.6rem;padding-block:1.4rem 3.2rem;border-top:1px solid var(--rule);font-size:.95rem}
+.foot p{margin:0 0 .55rem}
+.foot .links{display:flex;flex-wrap:wrap;gap:.3rem 1.25rem}
+.foot .colophon{color:var(--muted);margin-top:1rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{
+  :root{--bg:#fff;--ink:#000;--muted:#333;--link:#000;--rule:#999}
+  body{background:#fff!important;color:#000;font-size:10.5pt}
+  .top,.skip,.contents,.head .deco,.switch{display:none!important}
+  .head,main,.foot{max-width:none;padding:0}
+  *{background-image:none!important;box-shadow:none!important;text-shadow:none!important}
+  .head *,.summary,.summary *{background:#fff!important;color:#000!important}
+  h2,h3{break-after:avoid}
+  tr,li{break-inside:avoid}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8.5pt}
+}

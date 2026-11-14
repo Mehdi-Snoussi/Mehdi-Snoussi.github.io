@@ -1,0 +1,96 @@
+title: Terms of service
+description: The terms for Blue Hour: set it up while parked, treat the turn, speed and weather it shows as a convenience, and what the one payment for Blue Hour Full gives you.
+summary: In short
+---
+- Keep your eyes on the road. Set Blue Hour up while parked, and follow your country's law on screens in cars.
+- The next turn, the speed and the weather it shows can be late or wrong. The road and its signs come first.
+- Blue Hour is free and has no ads. Blue Hour Full is one payment, once; your first seven days of use include all of it.
+- There is no account. Your settings and your car book are on your device.
+- Head units differ. We cannot promise Blue Hour stays open on every one.
+- Google Play decides refunds. Tunisian law applies, with your own country's consumer law.
+
+## Agreeing to these terms
+
+Blue Hour: Car Screen Launcher is published by Carthage Studio (Mehdi Snoussi), in Tunisia. These terms are the agreement between you and us. You accept them by installing or using Blue Hour, and if you do not accept them you should uninstall it. Google Play's terms apply as well, to the download and to the purchase.
+
+## What you may do with Blue Hour
+
+You may install Blue Hour on head units and phones that you own or control, and use it for yourself. That permission is personal. You may not sell it, publish the app elsewhere, take it apart to reuse it, or hand on a changed copy, except where the law gives you that right whatever a licence says. We can end the permission if you break these terms.
+
+## Driving comes first
+
+You are the driver, and driving safely is your responsibility. Choose scenes, dress the car, type in the car book and change settings only while the vehicle is parked. On the move, do not look at or touch the screen in a way that takes your attention off the road, and obey the law of your country on screens and devices in vehicles.
+
+Drive mode shows less while the car is moving and holds back Settings, sharing and the car book until you park. It does not make any screen safe to use while driving. It also depends on your device's GPS, which can lag or drop out, so it can switch late or not at all.
+
+## The turn, the speed and the weather
+
+- The next turn is copied from your navigation app's own notification.
+- The speed, and everything the car book works out from it, comes from your device's GPS.
+- The weather comes from MET Norway.
+
+Any of these can be delayed, incomplete or wrong. They are there for convenience. Follow the road, its signs and your navigation app, and never rely on Blue Hour for a decision that affects safety. The speed on screen is not your speedometer and is no defence against a fine.
+
+The light in the scene is worked out from the sun's position. It is a picture, not a measurement of visibility or of the state of the road. The car book's consumption and cost figures are arithmetic on what you typed, not an official record.
+
+## The app, its cars and its scenes
+
+Blue Hour, its scenes, its artwork and its interface belong to the publisher. The cars are generic drawings and depict no real make or model. The number plates follow the general look of each country's plates; a plate drawn in the app is a picture, has no legal standing and must not be used to pass as a real one. Names of other apps and services that appear in Blue Hour or on its store page belong to their owners.
+
+## No account
+
+Blue Hour never asks you to sign up. Your settings and your car book are kept on your device. If you uninstall the app, clear its data or change device, they are gone unless Android's backup brings them back, and we have no copy. "Restore purchase" returns Blue Hour Full through Google Play.
+
+## Free, Full and refunds
+
+Blue Hour is free to use and shows no ads. It sells one thing through Google Play, at a price shown before you confirm.
+
+| | Free | Blue Hour Full |
+| Scenes | Night City | All five, and scenes added later |
+| The car | The sedan, six paints, every country's plate | Every body, paint, tail light and garage part, and a plate of your own |
+| Car book | One car, the last seven days of drives | Several cars, every drive |
+| Postcards | The latest drive | Every drive |
+| Sharing | With the Blue Hour mark | Without it |
+
+Full is one payment. It is not a subscription and never renews. Blue Hour sells no random items.
+
+Your first seven days of use include everything in Full, at no charge and with nothing to cancel. Only days on which you use the app count. After the seventh, Blue Hour asks once whether you want to keep Full, and then carries on as the free version if you do not. Nothing you made is deleted: a look or a drive that belongs to Full waits until you have it.
+
+Refunds are handled under [Google Play's refund policy](https://support.google.com/googleplay/answer/2479637). We can support a request you make, and Google decides. If you live in the EU or the UK, your legal rights over digital purchases are unchanged by these terms.
+
+## Other apps and services
+
+Blue Hour opens the apps you have installed and, when you ask, sends play, pause and skip to your player. Those apps and the services behind them belong to their own publishers and run under their own terms. We are not responsible for what they show, for whether they are available, or for their accuracy.
+
+## Head units
+
+Aftermarket head units vary a great deal, and some firmware closes apps when the car is switched off. Wake guard reads what Android reports and gives setup advice for the platforms it recognises. That advice is given as it is. A tool it points to, such as a firmware utility, comes from its own author and is used at your own risk. We cannot guarantee that Blue Hour starts, stays open or behaves the same on every unit.
+
+## Fair use
+
+- Use Blue Hour within the law, the law on devices at the wheel included.
+- Do not tamper with the app or with its purchase.
+
+## No warranty
+
+Blue Hour is provided "as is" and "as available". We may change it or stop offering it, and the weather service can be unreachable at times; the app keeps working without it. We do not promise that Blue Hour is free of faults or fits a particular purpose.
+
+## Limit of our liability
+
+As far as the law allows, we are not liable for indirect or consequential loss, for lost settings or a lost car book, or for any accident, injury, damage or fine arising from the use of Blue Hour or from what it shows. Our total liability for any claim is limited to what you paid us in the twelve months before it.
+
+Nothing in these terms limits liability that the law does not let us limit, and nothing removes a right the consumer law of your country gives you.
+
+## Changes and ending
+
+We may change these terms, for instance when Blue Hour gains a feature. The date at the top of this page marks the current version, and a change that matters is named in the app's notes on Google Play. Using Blue Hour after a change means you accept it.
+
+You can stop at any time by uninstalling the app. We can end your permission to use it if you break these terms.
+
+## Law that applies
+
+These terms follow the law of Tunisia, where the publisher lives. If you are a consumer, the mandatory protections of your own country's law still apply to you, and you may bring a claim in your local courts where that law provides for it.
+
+## Contact
+
+Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

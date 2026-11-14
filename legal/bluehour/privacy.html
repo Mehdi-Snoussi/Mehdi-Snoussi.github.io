@@ -2,330 +2,218 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blue Hour — Privacy Policy</title>
-<meta name="description" content="How Blue Hour: Car Screen Launcher handles data — no account, no ads, no tracking. Your position stays on your device; only a rounded position is used to get the weather. Published by Carthage Studio.">
-<meta name="theme-color" content="#070B18">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&family=Saira:wdth,wght@100..125,200..600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy for Blue Hour</title>
+<meta name="description" content="Blue Hour has no ads and no account. A position rounded to about 1 km goes to MET Norway for the weather; your drives, your car book and your settings stay on the device.">
+<meta name="theme-color" content="#0D1118">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="../../assets/apps/bluehour.webp">
 <style>
-  /* ── Blue Hour legal pages ──────────────────────────────────────────────
-     "Night drive": the page is the app's own sky at dusk, deepening as you
-     scroll; reading panels are the dark HUD plates the app lays over its
-     scene. Sodium orange (the streetlamps) carries links and labels; the
-     taillight red appears only as the short light bar under each heading.
-     Tokens verified against bluehour/lib/core/theme.dart                 */
+@font-face{font-family:"Saira";src:url(../fonts/Saira-Variable.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Barlow";src:url(../fonts/Barlow-Regular.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Barlow";src:url(../fonts/Barlow-SemiBold.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Barlow Condensed";src:url(../fonts/BarlowCondensed-SemiBold.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
+/* What every legal page shares: how it reads. How it looks is each app's theme.css. */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:1.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--size,1.0625rem)/var(--lead,1.62) var(--body);overflow-wrap:break-word}
+img{max-width:100%;display:block}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--focus,var(--link));outline-offset:3px}
+.skip{position:absolute;left:-999rem}
+.skip:focus{left:1rem;top:1rem;z-index:9;background:var(--bg);color:var(--ink);padding:.5rem .8rem}
+.top,.head,main,.foot{max-width:var(--measure,43rem);margin-inline:auto;padding-inline:1.125rem}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem 1.25rem;flex-wrap:wrap;padding-block:1rem .9rem;font-size:.95rem}
+.top .pages{display:flex;gap:1.15rem;flex-wrap:wrap}
+.top [aria-current]{color:var(--ink);font-weight:700;text-decoration:none}
+h1,h2,h3{font-family:var(--title);line-height:1.18;margin:0;text-wrap:balance}
+h1{font-size:clamp(2rem,7vw,2.8rem)}
+h2{font-size:1.42rem}
+h3{font-size:1.1rem;margin-top:1.6rem}
+p,ul,table{margin:.85rem 0 0}
+ul{padding-left:1.15rem}
+li+li{margin-top:.42rem}
+strong{font-weight:700}
+article section{margin-top:2.7rem}
+.summary{margin-top:2.2rem}
+.contents{margin-top:2.4rem}
+.contents ol{margin:.7rem 0 0;padding-left:1.5rem;columns:2 15rem;column-gap:2.5rem}
+.contents li{break-inside:avoid}
+.contents li+li{margin-top:.28rem}
+.note{color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:.96rem;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:.62rem .9rem .62rem 0;border-top:1px solid var(--rule);font-weight:400}
+th:last-child,td:last-child{padding-right:0}
+thead th{border-top:0;font-weight:700;padding-top:0}
+tbody th{font-weight:700}
+@media (max-width:42rem){
+  table,tbody,tr,th,td{display:block}
+  thead{position:absolute;left:-999rem}
+  tr{border-top:1px solid var(--rule);padding:.75rem 0 .8rem}
+  .summary h2+table tbody tr:first-child{border-top:0}
+  th,td{border:0;padding:0}
+  tbody th{font-size:1.02rem}
+  td{margin-top:.3rem}
+  td::before{content:attr(data-th) ": ";font-weight:700}
+}
+.foot{margin-top:3.6rem;padding-block:1.4rem 3.2rem;border-top:1px solid var(--rule);font-size:.95rem}
+.foot p{margin:0 0 .55rem}
+.foot .links{display:flex;flex-wrap:wrap;gap:.3rem 1.25rem}
+.foot .colophon{color:var(--muted);margin-top:1rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{
+  :root{--bg:#fff;--ink:#000;--muted:#333;--link:#000;--rule:#999}
+  body{background:#fff!important;color:#000;font-size:10.5pt}
+  .top,.skip,.contents,.head .deco,.switch{display:none!important}
+  .head,main,.foot{max-width:none;padding:0}
+  *{background-image:none!important;box-shadow:none!important;text-shadow:none!important}
+  .head *,.summary,.summary *{background:#fff!important;color:#000!important}
+  h2,h3{break-after:avoid}
+  tr,li{break-inside:avoid}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8.5pt}
+}
 
-  :root{
-    --sky-top:#070B18;     /* night zenith — page ground                    */
-    --sky-low:#15215C;     /* blue hour near the horizon                    */
-    --plate:#0F131B;       /* HUD plate — the reading surface               */
-    --plate-2:#151A23;     /* raised plate — tables, notes                  */
-    --line:rgba(242,244,247,.10);
-    --text:#EBEEF2;        /* body text on plate                 15.6:1     */
-    --muted:#A9B1BE;       /* secondary text on plate             8.6:1     */
-    --sodium:#FF9F43;      /* links + labels on plate             9.4:1     */
-    --dusk:#A3B4FF;        /* blue-hour accent on plate           9.1:1     */
-    --tail:#FF3B47;        /* taillight bar — decorative only               */
-    --focus:#FFFFFF;
-    --pad:clamp(20px,4vw,30px);
-    --col:720px;
-  }
+/* Blue Hour: lib/core/theme.dart (the settings ground, the sodium of street lamps, the blue of the road sign)
+   and lib/core/sun.dart, whose zenith and horizon colours paint the strip of sky at the top. The strip is lit
+   for the hour on the reader's clock, as the app lights its scene for the real sun; without a script it stays
+   at blue hour. Section numbers are road signs: a blue plate in a white frame, like the app's next turn. */
+:root{--bg:#0D1118;--raised:#151A22;--ink:#F2F4F7;--muted:#AEB6C2;--link:#A3B4FF;--sodium:#FF9F43;--sign:#1B3C86;
+  --rule:rgba(255,255,255,.15);--focus:#FF9F43;--zen:#15215C;--hor:#5568B5;--sun:transparent;--sun-y:70%;--lamp:1;
+  --body:"Barlow","Segoe UI",system-ui,sans-serif;--title:"Saira","Segoe UI",system-ui,sans-serif;--label:"Barlow Condensed","Barlow",sans-serif;
+  --size:1.09rem;--lead:1.6}
+:root[data-sky=night]{--zen:#050817;--hor:#0D1530}
+:root[data-sky=golden]{--zen:#2E4A8C;--hor:#F3A160;--sun:#FFB45E;--sun-y:66%;--lamp:0}
+:root[data-sky=day]{--zen:#3A78C2;--hor:#BCD6EC;--sun:#FFFFFF;--sun-y:22%;--lamp:0}
+.sky{position:relative;height:8.4rem;margin-top:.3rem;overflow:hidden;border-radius:10px;background:linear-gradient(var(--zen),var(--hor) 78%)}
+.sky .sun{position:absolute;left:68%;top:var(--sun-y);width:2rem;height:2rem;margin:-1rem 0 0 -1rem;border-radius:50%;background:var(--sun)}
+.sky .lamps{position:absolute;inset:auto 0 1.9rem 0;height:6px;opacity:var(--lamp);
+  background:radial-gradient(circle,var(--sodium) 0 2.2px,transparent 2.7px) 14px 0/72px 6px repeat-x}
+.sky .road{position:absolute;inset:auto 0 0 0;height:1.9rem;background:#10141C;border-top:1px solid rgba(255,255,255,.22)}
+.sky .road::after{content:"";position:absolute;left:0;right:0;top:50%;height:3px;margin-top:-1.5px;
+  background:repeating-linear-gradient(90deg,rgba(242,244,247,.78) 0 26px,transparent 26px 54px)}
+.app{margin:1.5rem 0 0;display:flex;align-items:center;gap:.7rem;font-weight:600;line-height:1.25}
+.app img{border-radius:10px;flex:none}
+h1{margin-top:1.1rem;font-weight:500;font-size:clamp(2.1rem,8vw,3rem);letter-spacing:-.01em}
+.dates{margin:.7rem 0 0;color:var(--muted)}
+.lit{margin:.35rem 0 0;color:var(--muted);font:600 .98rem/1.4 var(--label)}
+h2{font-weight:600;font-size:1.36rem}
+article h2{display:flex;align-items:center;gap:.7rem}
+.n{flex:none;display:inline-grid;place-items:center;min-width:2rem;height:1.7rem;padding:0 .35rem;background:var(--sign);color:#fff;
+  border:1.5px solid #fff;border-radius:5px;box-shadow:0 0 0 2px var(--sign);font:600 .98rem/1 var(--title)}
+h3{font-family:var(--body);font-weight:600}
+strong,tbody th{font-weight:600;color:#fff}
+.summary{margin-top:2rem;background:var(--raised);border:1px solid var(--rule);border-radius:12px;padding:1.2rem 1.15rem 1.25rem}
+.summary h2{color:var(--sodium)}
+thead th{font:600 .95rem/1.3 var(--label);color:var(--muted)}
+td::before{font-family:var(--label);font-size:1.02em;color:var(--muted)}
+.contents ol{padding-left:1.6rem}
+.contents a{text-decoration:none}
+.contents a:hover{text-decoration:underline}
+.contents li::marker{font-family:var(--label);font-weight:600;color:var(--muted)}
+.note{border-left:3px solid var(--sodium);padding-left:.85rem}
+@media (max-width:42rem){.summary{padding-inline:1rem}.sky{height:7rem}}
 
-  *,*::before,*::after{box-sizing:border-box}
-  html{background:var(--sky-top);-webkit-text-size-adjust:100%}
-  body{
-    margin:0;color:var(--text);
-    background:linear-gradient(180deg,var(--sky-top) 0%,#0B1236 38%,var(--sky-low) 100%) fixed;
-    font-family:'Barlow',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
-    font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;
-  }
-
-  .wrap{max-width:calc(var(--col) + 48px);margin:0 auto;padding:0 24px}
-  @media(max-width:480px){.wrap{padding:0 16px}}
-
-  a{color:var(--sodium);text-underline-offset:3px;text-decoration-thickness:1px}
-  a:hover{text-decoration-thickness:2px}
-  a:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:3px}
-  strong{font-weight:600;color:#fff}
-  a[href^="mailto"],a[href^="http"]{overflow-wrap:break-word}
-
-  /* ── top rail ─────────────────────────────────────────────────────── */
-  .rail{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
-        padding:clamp(20px,4vw,34px) 0 16px;border-bottom:1px solid var(--line)}
-  .rail a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;
-          border-bottom:1px solid rgba(255,159,67,.45);padding-bottom:2px}
-  .rail a:hover{border-bottom-color:var(--sodium)}
-  .rail .play{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;
-          letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-
-  /* ── masthead ─────────────────────────────────────────────────────── */
-  .masthead{display:flex;align-items:center;gap:clamp(16px,3.5vw,28px);margin:clamp(26px,5vw,42px) 0 0}
-  .masthead img{display:block;width:88px;height:88px;border-radius:22px;flex:0 0 auto;
-          box-shadow:0 0 0 1px rgba(255,255,255,.12),0 18px 40px rgba(0,0,0,.55)}
-  @media(max-width:420px){.masthead img{width:64px;height:64px;border-radius:16px}}
-  .eyebrow{margin:0;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;
-           letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
-  h1{margin:.4rem 0 0;font-weight:400}
-  h1 .app{display:block;font-family:'Saira',sans-serif;font-variation-settings:'wdth' 125;
-          font-weight:250;font-size:clamp(34px,7vw,52px);line-height:1;letter-spacing:-.01em;color:#fff}
-  h1 .doc{display:block;margin-top:.6rem;font-family:'Barlow Condensed',sans-serif;
-          font-size:clamp(15px,2.6vw,18px);font-weight:600;letter-spacing:.2em;
-          text-transform:uppercase;color:var(--sodium)}
-  .meta{margin:1.1rem 0 0;color:var(--muted);font-size:16px;max-width:60ch}
-
-  /* ── the horizon strip (signature): the four lights the app paints in ── */
-  .horizon{margin:clamp(22px,4vw,30px) 0 0}
-  .horizon .bar{height:10px;border-radius:5px;
-     background:linear-gradient(90deg,#141C3A 0 24%,#4258C4 24% 40%,#F0A04B 40% 56%,#A8C8E8 56% 100%)}
-  .horizon ol{display:flex;justify-content:space-between;gap:8px;margin:8px 0 0;padding:0;list-style:none;
-     font-family:'Barlow Condensed',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.16em;
-     text-transform:uppercase;color:var(--muted)}
-
-  /* ── document switch ──────────────────────────────────────────────── */
-  .switch{display:flex;gap:8px;flex-wrap:wrap;margin:clamp(22px,4vw,30px) 0 0}
-  .switch a{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;letter-spacing:.12em;
-     text-transform:uppercase;padding:10px 18px;border-radius:999px;text-decoration:none;color:var(--text);
-     border:1px solid rgba(242,244,247,.22);background:rgba(6,8,12,.45)}
-  .switch a:hover{border-color:var(--text)}
-  .switch a[aria-current]{background:var(--text);color:var(--sky-top);border-color:transparent}
-
-  /* ── at a glance ──────────────────────────────────────────────────── */
-  .glance{margin:clamp(28px,5vw,40px) 0 0;padding:clamp(20px,3.6vw,26px);background:var(--plate);
-     border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 40px rgba(0,0,0,.4)}
-  .label{margin:0;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;
-     letter-spacing:.22em;text-transform:uppercase;color:var(--sodium)}
-  .glance-note{margin:.35rem 0 0;font-size:15px;color:var(--muted)}
-  .glance ul{list-style:none;margin:16px 0 0;padding:0}
-  @media(min-width:640px){.glance ul{columns:2;column-gap:30px}}
-  .glance li{position:relative;padding-left:26px;margin:0 0 11px;font-size:16px;line-height:1.55;break-inside:avoid}
-  .glance li:last-child{margin-bottom:0}
-  .glance li::before{content:'';position:absolute;left:3px;top:.32em;width:.42em;height:.82em;
-     border:solid var(--sodium);border-width:0 2px 2px 0;transform:rotate(42deg)}
-
-  /* ── sections: HUD plates with a lit taillight bar under each title ── */
-  .plate{background:var(--plate);border:1px solid var(--line);border-radius:16px;
-     margin:clamp(22px,4vw,30px) 0 0;padding:var(--pad);box-shadow:0 18px 40px rgba(0,0,0,.35)}
-  .plate h2{margin:.35rem 0 1.1rem;font-family:'Saira',sans-serif;font-variation-settings:'wdth' 112;
-     font-weight:400;font-size:clamp(22px,3.6vw,27px);line-height:1.2;color:#fff}
-  .plate h2::after{content:'';display:block;width:56px;height:4px;margin-top:12px;border-radius:2px;
-     background:var(--tail);box-shadow:0 0 14px rgba(255,59,71,.75)}
-  .plate p{margin:0 0 1rem;max-width:68ch}
-  .plate p:last-child{margin-bottom:0}
-  .plate ul{margin:0 0 1rem;padding-left:1.2rem;max-width:68ch}
-  .plate ul:last-child{margin-bottom:0}
-  .plate li{margin:0 0 .6rem}
-  .plate li:last-child{margin-bottom:0}
-  .plate li::marker{color:var(--sodium)}
-
-  /* ── data table ───────────────────────────────────────────────────── */
-  .scroller{overflow-x:auto;margin:.2rem 0 1.2rem;border:1px solid var(--line);border-radius:12px;background:var(--plate-2)}
-  table{border-collapse:collapse;width:100%;min-width:640px;table-layout:fixed}
-  col.c1{width:21%}col.c2{width:33%}col.c3{width:20%}col.c4{width:26%}
-  th{text-align:left;padding:12px 15px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;
-     letter-spacing:.14em;text-transform:uppercase;color:var(--dusk);border-bottom:1px solid var(--line)}
-  td{padding:12px 15px;border-top:1px solid var(--line);vertical-align:top;font-size:16px;line-height:1.55}
-  tbody tr:nth-child(odd) td{background:rgba(255,255,255,.02)}
-  .scrollnote{margin:-.85rem 0 1.2rem;font-size:14px;color:var(--muted)}
-  @media(min-width:700px){.scrollnote{display:none}}
-
-  .notice{margin:1.2rem 0 0;padding:15px 18px;border-radius:12px;background:var(--plate-2);
-     border:1px solid var(--line);border-left:3px solid var(--sodium);max-width:68ch}
-
-  /* ── colophon ─────────────────────────────────────────────────────── */
-  footer{margin:clamp(50px,8vw,74px) 0 0;padding:clamp(26px,5vw,34px) 0 clamp(44px,8vw,66px);
-     border-top:1px solid var(--line);color:var(--muted);font-size:16px}
-  footer p{margin:0 0 .4rem;max-width:56ch}
-  footer .fine{font-size:14px}
-  .flinks{display:flex;flex-wrap:wrap;gap:10px 22px;margin:16px 0 0;padding:0;list-style:none}
-  .flinks a{color:var(--text);font-weight:500;font-size:15px}
-
-  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
-
-  @media print{
-    @page{margin:16mm}
-    html,body{background:#fff!important;color:#000;font-size:11.5pt}
-    .rail,.switch,.horizon,.masthead img,.scrollnote{display:none!important}
-    .wrap{max-width:none;padding:0}
-    h1 .app,h1 .doc,.eyebrow,.meta,.label,.glance-note,footer,strong,.plate h2,th{color:#000!important}
-    .glance,.plate,.notice{background:#fff;border:0;box-shadow:none;border-radius:0;padding:0;margin:0 0 16pt;break-inside:avoid}
-    .plate h2::after{display:none}
-    .glance ul{columns:1;list-style:disc;padding-left:18pt}
-    .glance li{padding-left:0}
-    .glance li::before{display:none}
-    .notice{border-left:2pt solid #000;padding-left:10pt}
-    .scroller{overflow:visible;border:1pt solid #000;border-radius:0;background:#fff}
-    table{min-width:0}
-    td{border-top:.5pt solid #666}
-    a{color:#000;text-decoration:underline}
-    a::after{content:" (" attr(href) ")";font-size:.82em;word-break:break-all}
-  }
 </style>
 </head>
-<body>
-
-<div class="wrap">
-
-<nav class="rail" aria-label="Breadcrumb">
-  <p style="margin:0"><a href="../index.html">&larr; All policies</a></p>
-  <a class="play" href="https://play.google.com/store/apps/details?id=com.carthage.bluehour">Blue Hour on Google Play &#8599;</a>
+<body class="privacy">
+<a class="skip" href="#main">Skip to the text</a>
+<nav class="top" aria-label="Legal pages">
+<a href="../index.html">All eight apps</a>
+<span class="pages"><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></span>
 </nav>
-
-<header class="masthead">
-  <img src="../../assets/apps/bluehour.webp" width="88" height="88" alt="Blue Hour app icon">
-  <div>
-    <p class="eyebrow">Carthage Studio</p>
-    <h1><span class="app">Blue Hour</span><span class="doc">Privacy Policy</span></h1>
-  </div>
+<header class="head">
+<div class="sky deco" aria-hidden="true"><i class="sun"></i><i class="lamps"></i><i class="road"></i></div>
+<p class="app"><img src="../../assets/apps/bluehour.webp" alt="" width="40" height="40"><span>Blue Hour: Car Screen Launcher</span></p>
+<h1>Privacy policy</h1>
+<p class="dates">In force since 4 October 2026. Last changed 14 November 2026. Published by Carthage Studio.</p>
+<p class="lit deco" id="lit" aria-hidden="true" hidden></p>
+<script>(function(){var h=new Date().getHours(),s=h<5||h>=21?"night":h<7||h>=19?"dusk":h<9||h>=17?"golden":"day",n={night:"night",dusk:"blue hour",golden:"golden hour",day:"daylight"}[s],e=document.getElementById("lit");document.documentElement.setAttribute("data-sky",s);if(e){e.textContent="The sky above is lit for the hour on your clock: "+n+".";e.hidden=false}})();</script>
 </header>
-
-<p class="meta">Blue Hour: Car Screen Launcher — Effective 4 October 2026. Last updated 13 November 2026.</p>
-
-<div class="horizon" aria-hidden="true">
-  <div class="bar"></div>
-  <ol><li>Night</li><li>Blue hour</li><li>Golden hour</li><li>Daylight</li></ol>
-</div>
-
-<nav class="switch" aria-label="Document">
-  <a href="privacy.html" aria-current="page">Privacy Policy</a>
-  <a href="terms.html">Terms of Service</a>
+<main id="main">
+<section class="summary" aria-labelledby="sum">
+<h2 id="sum">What leaves your device</h2>
+<table><thead><tr><th scope="col">What</th><th scope="col">Where it goes</th><th scope="col">When</th><th scope="col">How to stop it</th></tr></thead><tbody><tr><th scope="row">Your position, rounded to about 1 km</th><td data-th="Where it goes">MET Norway, for the weather</td><td data-th="When">When Blue Hour starts or comes back to the screen, and at most about every 15 minutes while it is open</td><td data-th="How to stop it">Turn location off for Blue Hour. The request then names the main city of your time zone, not where you are</td></tr><tr><th scope="row">The Blue Hour Full purchase</th><td data-th="Where it goes">Google Play</td><td data-th="When">Each time you buy or restore it</td><td data-th="How to stop it">Nothing is sent until you buy</td></tr><tr><th scope="row">A picture of your scene, or a drive postcard</th><td data-th="Where it goes">The app you pick in Android’s share sheet</td><td data-th="When">Each time you tap Share</td><td data-th="How to stop it">Don’t share</td></tr><tr><th scope="row">A backup of your settings and car book</th><td data-th="Where it goes">Your own Google account</td><td data-th="When">While Android’s backup is on</td><td data-th="How to stop it">Turn the backup off in Android’s settings</td></tr><tr><th scope="row">A problem report</th><td data-th="Where it goes">Our support mailbox</td><td data-th="When">Only if you send it</td><td data-th="How to stop it">Leave the draft unsent</td></tr></tbody></table>
+<p>Blue Hour shows no ads. It has no account, no advertising ID, no analytics and no crash reporting, and we run no server of our own.</p>
+</section>
+<nav class="contents" aria-labelledby="con">
+<h2 id="con">On this page</h2>
+<ol><li><a href="#s1">Who publishes Blue Hour</a></li><li><a href="#s2">What stays on your device</a></li><li><a href="#s3">Your position</a></li><li><a href="#s4">The weather request</a></li><li><a href="#s5">Music and directions</a></li><li><a href="#s6">The car book and its postcards</a></li><li><a href="#s7">Sharing</a></li><li><a href="#s8">The purchase and the week of Full</a></li><li><a href="#s9">Problem reports and the error log</a></li><li><a href="#s10">Other apps and links</a></li><li><a href="#s11">What we can see</a></li><li><a href="#s12">Children</a></li><li><a href="#s13">Keeping and deleting</a></li><li><a href="#s14">Your rights</a></li><li><a href="#s15">Security</a></li><li><a href="#s16">Changes to this policy</a></li><li><a href="#s17">Contact</a></li></ol>
 </nav>
-
-<main>
-
-<section class="glance" aria-label="At a glance">
-  <p class="label">At a glance</p>
-  <p class="glance-note">Every point here is restated in full in the sections below.</p>
-  <ul>
-    <li>No account, no sign-up and no login.</li>
-    <li>No ads, no advertising ID, no analytics and no tracking.</li>
-    <li>Your position stays on your device. Only a rounded position, about 1 km, is sent to get the weather.</li>
-    <li>Track names and directions are read on your device and never stored or sent.</li>
-    <li>Your settings, car style and dock live on your device only.</li>
-    <li>Your car book (drives, fill-ups, services, costs) lives on your device only.</li>
-    <li>Location behind other apps is used only if you turn on &ldquo;Record trips behind other apps&rdquo;, with a notification on screen while it runs.</li>
-    <li>Location and notification access are optional; the app works without them.</li>
-    <li>We hold no server-side copy of your data.</li>
-    <li>We do not sell personal information.</li>
-    <li>&ldquo;Report a problem&rdquo; sends nothing by itself: you see the email before you send it.</li>
-  </ul>
+<article>
+<section id="s1"><h2><span class="n">1</span> Who publishes Blue Hour</h2>
+<p>Blue Hour: Car Screen Launcher is a home screen for car head units and for phones in a dashboard mount. It is published by Carthage Studio (Mehdi Snoussi), in Tunisia, the name on its Google Play page. For anything about this page, write to <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>. “We” means the publisher, and “device” means the head unit or phone Blue Hour runs on.</p>
 </section>
-
-<section class="plate" id="s1">
-  <p class="label">Identification</p>
-  <h2>1. Who we are</h2>
-  <p>Blue Hour (the &ldquo;App&rdquo;) is a home screen for car displays and for phones in a dashboard mount. It shows a scene lit by the real sun and weather where you are, with your music, your next turn and your apps on top. It is published by <strong>Carthage Studio</strong> (the &ldquo;Developer&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). Contact: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
-  <p>This policy explains, in plain language, what data the App handles and why.</p>
+<section id="s2"><h2><span class="n">2</span> What stays on your device</h2>
+<ul><li><strong>Settings</strong>: your car’s body, paint, parts and plate, the scene, the weather and unit choices, the dock, the language.</li><li><strong>The car book</strong>: each drive (when, how far, how fast, and a short sketch of the way), and the odometer, fill-ups, services and costs you type in.</li><li><strong>The list of your apps</strong>: their names and icons, read from Android to fill the dock and the drawer, and used on the device only.</li><li><strong>Counters</strong>: the days you have used Blue Hour, for the week of Full and the rating request; how often the screen came back after going dark, for Wake guard; on head units that announce the ignition, how many times the key was turned and when last.</li><li><strong>The last forecast</strong>, so the weather still shows without a signal.</li><li><strong>An error log</strong>: the app’s last few error messages.</li></ul>
+<p>None of this is sent to us. If Android’s backup is on for a Google account on the device, Android can store a copy of the settings and the car book in that account.</p>
 </section>
-
-<section class="plate" id="s2">
-  <p class="label">Collection</p>
-  <h2>2. Data the App handles</h2>
-  <div class="scroller" tabindex="0" role="region" aria-label="Data the App handles">
-  <table>
-  <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"></colgroup>
-  <thead>
-  <tr><th>Category</th><th>What it is</th><th>Why</th><th>Where it lives</th></tr>
-  </thead>
-  <tbody>
-  <tr><td>Location</td><td>Your device's position and, while driving, its speed.</td><td>To light the scene with the real sun where you are, to switch drive mode on and off, and to record your drives in the car book.</td><td>On your device only. A rounded position is used for the weather (row below).</td></tr>
-  <tr><td>Rounded position for weather</td><td>Latitude and longitude rounded to two decimal places, about 1 km.</td><td>To show the real weather in the scene.</td><td><strong>Sent to MET Norway</strong> over HTTPS with each weather request, with no identifier. Not stored by us. The forecast that comes back is kept on your device so the weather still shows without signal.</td></tr>
-  <tr><td>Media and directions</td><td>The title, artist and artwork of what is playing, and the text and arrow of your navigation app's next-turn notification. Only with notification access, which you turn on.</td><td>To show them on screen and to send play, pause and skip to your player.</td><td>On your device only, held in memory while shown. Never stored or sent.</td></tr>
-  <tr><td>Car book</td><td>Your drives (when, how far, how fast, and a short sketch of the way you drove), and the odometer, fill-ups, services and costs you type.</td><td>For the car book, the trip computer and the drive postcards.</td><td>On your device only. We never receive them.</td></tr>
-  <tr><td>Ignition signal</td><td>On head units that announce when the key is turned: a count, and the time of the last signal.</td><td>To save the drive the moment the car is switched off.</td><td>On your device only.</td></tr>
-  <tr><td>Installed apps</td><td>The names and icons of apps you can open.</td><td>To show your dock and the app drawer.</td><td>On your device only.</td></tr>
-  <tr><td>Settings</td><td>Your car style, scene, weather, unit and visual-effects choices, dock and language, plus a count of returns after the screen went off (Wake guard).</td><td>To remember your choices.</td><td>On your device only.</td></tr>
-  <tr><td>Purchase record</td><td>Confirmation of the &ldquo;Blue Hour Full&rdquo; purchase.</td><td>To unlock what you paid for.</td><td>Validated by Google Play. We store only a yes/no flag on your device.</td></tr>
-  <tr><td>Error log and problem reports</td><td>The App's last few error messages. If you tap Report a problem, also your device model and Android version, whether Blue Hour is set up as the home screen, and your language and effects settings.</td><td>To help us fix a problem you report.</td><td>The error log stays on your device. It reaches us only inside an email you choose to send, or text you paste yourself (section 6).</td></tr>
-  </tbody>
-  </table>
-  </div>
-  <p class="scrollnote">Scroll the table sideways to read every column.</p>
-  <p>We do <strong>not</strong> collect your name, email address, phone number, contacts, messages, calendar, photos, microphone audio or advertising ID. The App contains no ads and no analytics or crash-reporting services.</p>
+<section id="s3"><h2><span class="n">3</span> Your position</h2>
+<p>Blue Hour asks for your position while it is in use. It uses it on the device for three things: to light the scene with the real sun where you are, to switch drive mode on when the car moves and off when it stops, and to record your drives in the car book. It reads the GPS’s own clock too, to correct a head unit that has forgotten the time.</p>
+<p>If you say no, the scene is lit for the main city of your time zone, drive mode changes only when you tap it, and no drives are recorded.</p>
+<p><strong>Drives behind other apps.</strong> “Record trips behind other apps” is off until you turn it on in Settings. With it on, Blue Hour keeps reading your position during a drive while another app, your maps for instance, is in front, so the whole drive reaches the car book. Android shows a notification, “Car book: this drive”, for as long as that lasts. It can only begin while Blue Hour is on screen, and it stops by itself once you have parked. If you leave the app while parked, it keeps watching for a drive for up to 15 minutes, then stops.</p>
+<p>Blue Hour sends your exact position nowhere. The one copy of your drives that can leave the device is the car book inside your own Android backup, if you use one.</p>
 </section>
-
-<section class="plate" id="s3">
-  <p class="label">Services</p>
-  <h2>3. Third-party services</h2>
-  <ul>
-  <li><strong>MET Norway</strong> (the Norwegian Meteorological Institute) &mdash; provides the weather from a rounded position sent over HTTPS. Their terms: <a href="https://api.met.no/doc/TermsOfService">api.met.no terms of service</a>. Weather data is licensed under <a href="https://api.met.no/doc/License">CC BY 4.0</a>.</li>
-  <li><strong>Google Play Billing</strong> &mdash; processes the optional &ldquo;Blue Hour Full&rdquo; purchase. Google processes the payment; we never see your payment method. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-  </ul>
-  <p><strong>Google Play</strong> also shows the optional rating sheet and update prompt, and checks the Full purchase. When you open another app from the dock or the drawer, that app's own privacy policy applies.</p>
+<section id="s4"><h2><span class="n">4</span> The weather request</h2>
+<p>The weather comes from MET Norway, the Norwegian Meteorological Institute. Each request carries a latitude and longitude rounded to two decimals, about 1 km, and the app’s name and version. It carries nothing that identifies you or your device, though MET Norway sees the IP address the request comes from, as any site does. We do not receive or store these requests.</p>
+<p>The forecast that comes back is kept on the device. The time stamped on MET Norway’s answer is also used to correct the device’s clock when it is wrong.</p>
+<p>MET Norway publishes <a href="https://api.met.no/doc/TermsOfService">its terms of service</a>, and its weather data is licensed under <a href="https://api.met.no/doc/License">CC BY 4.0</a>.</p>
 </section>
-
-<section class="plate" id="s4">
-  <p class="label">Position</p>
-  <h2>4. Location</h2>
-  <p>The App asks for location while it is in use. If you decline, the scene is lit for the main city of your time zone instead, drive mode switches only when you tap it, and no drives are recorded.</p>
-  <p><strong>Drives behind other apps.</strong> Only if you turn on &ldquo;Record trips behind other apps&rdquo; in Settings (it is off until you do): while a drive is being recorded, and for up to 15 minutes after you leave the App without driving, it keeps reading your location while another app, such as your maps, is in front, so the whole drive reaches the car book. This uses Android&rsquo;s location foreground service, which can start only while the App is on screen, and Android shows a notification for as long as it runs. It stops by itself after you park. What it reads stays in the car book on your device.</p>
-  <p>You can change this at any time in your device settings.</p>
+<section id="s5"><h2><span class="n">5</span> Music and directions</h2>
+<p>To show what is playing and your next turn, Blue Hour needs Android’s notification access, which you grant yourself in the system settings. With it, the app reads two things: the media sessions of your music apps (title, artist, artwork) and the ongoing navigation notification of your maps app (the arrow and the text of the next turn). It sends play, pause and skip to your player when you tap them.</p>
+<p>It holds this in memory while it is on screen. It does not store it, does not send it, and does not read any other notification. Blue Hour never takes audio focus, so it cannot interrupt your music or your radio. You can take the access back in Android’s settings; the rest of the app works without it.</p>
 </section>
-
-<section class="plate" id="s5">
-  <p class="label">Notifications</p>
-  <h2>5. Notification access</h2>
-  <p>Notification access is optional and is turned on by you in your device's system settings. With it, the App reads the media sessions of your music apps and the navigation notifications of apps such as your map app, so it can show what is playing and your next turn, and send play, pause and skip to your player. It does not read, store or send any other notification content.</p>
-  <p>The App never takes audio focus, so it does not interrupt your player or your radio. You can turn notification access off at any time in your device settings.</p>
+<section id="s6"><h2><span class="n">6</span> The car book and its postcards</h2>
+<p>Drives are recorded from GPS: start and end, distance, time, speeds, and a sketch of the way made of points along it. Fill-ups, services and costs are what you type. All of it stays in the car book on the device, and the trip computer and the drive postcards are drawn from it there.</p>
+<p>In the free version the book shows one car and the last seven days of drives. Older drives are kept, not deleted, and Blue Hour Full shows them all.</p>
 </section>
-
-<section class="plate" id="s6">
-  <p class="label">Sharing</p>
-  <h2>6. Sharing a scene or a drive, and reporting a problem</h2>
-  <p>If you tap Share, the App renders an image of the scene, or the postcard of a drive, on your device and hands it to your system share sheet. <strong>Nothing is uploaded to us.</strong> Where it then goes is governed by the app you choose to share into.</p>
-  <p>A drive postcard shows the date, the distance, the time and a small sketch of the way you drove, without a map or place names. From version 1.1.5 the sketch leaves out the first and the last 800&nbsp;m of the drive, where home and work usually are; a drive too short for that is shared without a sketch. Your car book on your device keeps the whole way.</p>
-  <p>The text that goes with a shared image includes a link to Blue Hour on Google Play.</p>
-  <p>If you tap Report a problem in Settings, the App prepares an email to us in your own email app with the details listed in section 2. You see it before you send it, and nothing is sent unless you send it. On a device without an email app, the report is copied for you to paste instead.</p>
+<section id="s7"><h2><span class="n">7</span> Sharing</h2>
+<p>“Share this scene” draws a picture of your scene on the device and hands it to Android’s share sheet. A drive postcard is shared the same way. We receive neither.</p>
+<p>A postcard shows the date, the distance, the time and the sketch of the way, with no map and no place names. From version 1.1.5 the shared sketch leaves out the first and the last 800 m of the drive, where home and work usually are. A drive too short for that is shared with no sketch. The car book on your device keeps the whole way.</p>
+<p>The text that goes with a shared picture ends with a link to Blue Hour on Google Play. The link carries a tag saying it came from a share. It says nothing about you.</p>
 </section>
-
-<section class="plate" id="s7">
-  <p class="label">Audience</p>
-  <h2>7. Children</h2>
-  <p>The App is made for drivers and is intended for adults. It is not directed at children under 13, and we do not knowingly collect personal data from them.</p>
+<section id="s8"><h2><span class="n">8</span> The purchase and the week of Full</h2>
+<p>Blue Hour Full is bought once, through Google Play. Google handles the payment and tells the app whether you own Full. We never see how you paid. The app keeps a yes-or-no note on the device and checks it with Google Play.</p>
+<p>Your first seven days of use include everything in Full. Those days are counted on the device, and nothing is sent to count them.</p>
 </section>
-
-<section class="plate" id="s8">
-  <p class="label">Retention</p>
-  <h2>8. Data retention &amp; deletion</h2>
-  <p>Your settings and records live on your device and are removed when you uninstall the App or clear its data. Weather requests are not stored by us, and we hold no server-side copy of anything, so there is nothing for us to delete on our side. For any request, email <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>; we action verified requests within 30 days.</p>
+<section id="s9"><h2><span class="n">9</span> Problem reports and the error log</h2>
+<p>The error log never leaves the device by itself. “Report a problem” in Settings prepares an email to us in your own mail app. It contains Blue Hour’s version, the device’s maker and model, its Android version, memory and processor count, whether Blue Hour is the home screen, has notification access and is free of battery limits, your effects and language settings, your country as the time zone gives it, and the last eight errors. You read it before it goes, and it goes only if you send it. On a device with no mail app, the same text is copied so you can paste it where you like.</p>
 </section>
-
-<section class="plate" id="s9">
-  <p class="label">Rights</p>
-  <h2>9. Your rights (GDPR / CCPA)</h2>
-  <p>If you are in the EU/UK (GDPR) or California (CCPA/CPRA), you have the right to access, delete and object to processing of your data, and to withdraw any permission at any time from your device settings. <strong>We do not sell personal information.</strong></p>
+<section id="s10"><h2><span class="n">10</span> Other apps and links</h2>
+<p>When you open an app from the dock or the drawer, that app’s own privacy policy applies from there. Wake guard may offer a link to a firmware tool’s website for some head units; it opens in your browser, on a site that is not ours. Google Play shows its own rating card and update prompt inside the app from time to time.</p>
 </section>
-
-<section class="plate" id="s10">
-  <p class="label">Security</p>
-  <h2>10. Security</h2>
-  <p>Network requests use HTTPS. Purchases are validated by Google Play directly — we never see your payment method.</p>
+<section id="s11"><h2><span class="n">11</span> What we can see</h2>
+<p>Google Play gives us totals for Blue Hour: installs, uninstalls, ratings, sales, and crash rates from devices that share diagnostics with Google. They identify no one. We cannot see your drives, your car or your position.</p>
 </section>
-
-<section class="plate" id="s11">
-  <p class="label">Amendment</p>
-  <h2>11. Changes</h2>
-  <p>If we materially change this policy we will update the date above and, where appropriate, notify you in the App.</p>
+<section id="s12"><h2><span class="n">12</span> Children</h2>
+<p>Blue Hour is made for drivers, so for adults. It is not directed at children under 13, and we do not knowingly collect personal data from them.</p>
 </section>
-
-<section class="plate" id="s12">
-  <p class="label">Enquiries</p>
-  <h2>12. Contact</h2>
-  <p>Questions or requests: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+<section id="s13"><h2><span class="n">13</span> Keeping and deleting</h2>
+<p>Settings and the car book stay on the device until you uninstall Blue Hour or clear its data in Android’s settings; both erase everything. A backup lives in your Google account until you turn backup off or delete it there. A picture you shared belongs to wherever you sent it.</p>
+<p>We hold nothing about you, apart from emails you sent us. They stay in the support mailbox until the matter is closed or you ask us to delete them.</p>
 </section>
-
+<section id="s14"><h2><span class="n">14</span> Your rights</h2>
+<p>Ask us what we hold about you, or ask us to delete it, and we answer within 30 days. With no account and no server, there is nothing for us to look up beyond your emails.</p>
+<p>The GDPR in the EU and the UK, and laws in California and elsewhere, give you rights to see, correct, delete and move your data, to object to its use and to withdraw a consent. You withdraw a permission in Android’s settings, at any time. For the GDPR, the grounds are:</p>
+<ul><li>your consent, for location (its rounded use for the weather included) and for notification access;</li><li>a contract with you, for the purchase;</li><li>our legitimate interest in fixing faults, for a report you send.</li></ul>
+<p>We do not sell personal data. You can complain to the data protection authority where you live.</p>
+</section>
+<section id="s15"><h2><span class="n">15</span> Security</h2>
+<p>The weather request and the purchase travel over HTTPS, and Google Play verifies the purchase. Everything else stays in the app’s private storage on the device. A head unit is often left unlocked in a parked car: anyone who can use the unit can open the car book.</p>
+</section>
+<section id="s16"><h2><span class="n">16</span> Changes to this policy</h2>
+<p>When a new version of Blue Hour handles data differently, we change this page and the date at its top. A change that matters is also named in the app’s notes on Google Play.</p>
+</section>
+<section id="s17"><h2><span class="n">17</span> Contact</h2>
+<p>Carthage Studio (Mehdi Snoussi), Tunisia. <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a></p>
+</section>
+</article>
 </main>
-
-<footer>
-  <p>Privacy Policy for Blue Hour, published by Carthage Studio.</p>
-  <p class="fine">Set in Saira, Barlow and Barlow Condensed, the typefaces the App itself ships.</p>
-  <ul class="flinks">
-    <li><a href="../index.html">All policies</a></li>
-    <li><a href="terms.html">Terms of Service</a></li>
-  </ul>
+<footer class="foot">
+<p>Blue Hour is published by Carthage Studio (Mehdi Snoussi), Tunisia. Write to <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+<p class="links"><a href="terms.html">Terms of service</a><a href="../index.html">All eight apps</a><a href="https://play.google.com/store/apps/details?id=com.carthage.bluehour">Blue Hour on Google Play</a></p>
+<p class="colophon">Set in Saira, Barlow and Barlow Condensed, the faces on the car's screen. The sky at the top uses the app's own sky colours, picked by the hour on your clock.</p>
 </footer>
 
-</div>
 </body>
 </html>

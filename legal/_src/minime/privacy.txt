@@ -1,0 +1,205 @@
+title: Privacy policy
+description: Mini Me has no ads and needs no account. What you log stays on your phone. This page says what Health Connect, your watch, WhatsApp, backups and the optional Friends server each receive.
+summary: What leaves Mini Me
+---
+| What | Where it goes | When | How to stop it |
+| A purchase: Mini Me Plus or a pack | Google Play | When you buy or restore | Nothing is sent until you buy |
+| Your mini's pictures and needs, today's steps, and whether today is a cosy day | Your own Wear OS watch | Once Mini Me is on your watch | Remove it from the watch |
+| Twelve sticker pictures of your mini | WhatsApp, on the same phone | When you tap Add to WhatsApp | Don't add the pack |
+| Each drink you log | Health Connect, on the same phone | Only with Save to Health Connect on | Switch it off on the Water screen |
+| A backup of your mini and your logs | Your own Google account, and only end-to-end encrypted | While Back up to Google is on | Switch it off in Settings |
+| An export file | Your phone's Downloads folder | When you tap Export my data | Don't export |
+| Your Google email, name and picture link | Firebase Authentication (Google), in the United States | Only if you sign in to Friends | Don't sign in, or use Delete my Friends account |
+| The name friends see, your friend code, your mini's look, your friends, shared statuses, visits and your duo | Our Friends server (Google Cloud Firestore), in the European Union | Only if you sign in to Friends | Don't sign in, or use Delete my Friends account |
+
+Your steps, sleep, water, cycle log, check-ins, moods, workouts and coins are never sent to us. Mini Me has no ads, no advertising ID, no analytics and no crash reporting.
+
+## Who publishes Mini Me
+
+Mini Me: Avatar Pet & Widget is an Android app with a Wear OS watch app and a watch face. Carthage Studio (Mehdi Snoussi), in Tunisia, publishes it; that is the name on its Google Play page. You can write to us at [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com). On this page "Mini Me" covers the phone app, the watch app and the watch face, and "we" is the publisher.
+
+## What stays on your phone
+
+Mini Me keeps what you do in its own private storage on your phone.
+
+| What | What it is for |
+| Your mini: which one you chose, its looks, the clothes and room things you own, your coins, its needs, level and points | To run the game |
+| The age group you pick: under 13, 13–15, 16–17, or 18 and over | To keep Mini Me to people aged 13 and over |
+| Check-ins and statuses: your morning mood and its tags, your evening answer, the status you set and any words you write for it | To show your days and your status on Home. Words you write are always private to you |
+| Your cycle log, if you switch it on | See [[Your cycle log]] |
+| Water: each drink (when, the cup, what it was), your daily goal, your sip reminders | To show today's water, your week and your streak |
+| Workouts, focus sessions, your mini's trips and postcards | To reward you and show your week |
+| Ramadan mode: the city you pick from a built-in list, and fasts you mark to make up | To work out Suhoor and Iftar on your phone. No location permission is used |
+| Which Plus plan or packs you own | To give you what you paid for |
+| Settings: language, light or dark, background, reminders, the mini over your apps, backup, where your mini was left on the screen | To remember your choices |
+
+Unless you sign in to Friends, we do not collect your name or your email address. We never collect your phone number, contacts, location, photos, camera, microphone audio, messages or advertising ID.
+
+A photo you take with your duo is a picture of the two minis. It is saved to your phone's own pictures and goes nowhere else.
+
+## Health Connect
+
+Health Connect is Android's own store for health data, on your phone. Mini Me asks it only for what you allow, one permission at a time.
+
+**Steps and Sleep.** If you choose to connect, Mini Me asks for read access to Steps and Sleep. It reads your steps for the last 7 days and last night's sleep when you open My day or your mini's trip, and again when you come back to them. It uses them to show your day, and to unlock your mini's trip on an active day or after a good night.
+
+**Exercise.** Read only if you turn on "Read workouts from Health Connect" on the Workouts screen. Mini Me reads when this week's workouts from your other apps started and ended, and what kind they were. Walks are left out. They show in your week and earn no coins.
+
+**Menstruation.** Read only if you allow "Period dates" on Connect your day, which is offered only when the cycle log is on. Mini Me reads which days your other apps marked as period days, shows them on the cycle screen and counts them in its estimates. Outside the cycle screen they follow the same rule as your own log: they are only ever "cosy days".
+
+**Hydration.** If you turn on "Save to Health Connect" on the Water screen, Mini Me asks for write access to Hydration. It then writes each drink you log there (how much, and when) and removes it again if you undo it. It writes nothing else and reads no hydration data.
+
+What Mini Me reads from Health Connect is held in memory while it is on screen, and read again each time you come back. It is not stored by the app, not put in a backup or an export file, and never sent to us or to anyone else. No person reads it. There is one exception, and it is yours to make: if you tap "It ended" while period days from Health Connect run up to today, Mini Me writes those days into your own cycle log, as if you had marked them.
+
+If you use Mini Me on a Wear OS watch, today's step count is also sent to that watch, your own device, so its tile and face can show it. The watch keeps only today's count, until the next one replaces it. Your sleep, workouts and period dates never go to the watch. It is told only whether today is a cosy day.
+
+Mini Me's use of information received from Health Connect adheres to the [Health Connect Permissions policy](https://support.google.com/googleplay/android-developer/answer/12991134), including the Limited Use requirements. Health data is never used for advertising, never sold, never transferred to anyone (today's steps and the cosy-day yes or no go only to your own watch, as above), and never used to decide creditworthiness or for lending.
+
+You can take back any of these permissions in Health Connect's own settings, from Settings, then Health Connect, inside Mini Me, or with the switches on the Water and Workouts screens. The app keeps working without them.
+
+## Your cycle log
+
+The cycle log is off until you switch it on. What you log is the days you mark as period days, their flow, how you felt and how strongly, your mood, and whether you packed your kit. It is used to estimate your next cosy days and, with Plus, to show your patterns. It stays in the app's private storage on your phone.
+
+Everywhere outside the cycle screen, Mini Me says "cosy days". Cycle words never appear on the home-screen widget, on the mini that walks over your apps, on your watch or in a notification. The two cycle reminders say only "Time to pack your kit" and "Cosy days over?". Your watch learns one thing, whether today is a cosy day, so your mini can wear its cosy look there.
+
+You can tap a past day on the cycle screen's month to log it, and tap it again to take it back. Days read from Health Connect are drawn with a ring so you can tell them from your own. Mini Me does not save them.
+
+**Lock Cycle** asks for your phone's own lock (fingerprint, face, PIN or pattern) before the cycle screen opens. Android does the checking. Mini Me never sees your fingerprint, face or PIN, and stores only that the lock is on.
+
+Your cycle log goes into your Google backup only when that backup is end-to-end encrypted, and into an export file only when you make one. "Delete everything" in Settings removes it from your phone.
+
+## What Mini Me can do on your phone
+
+- **Notifications.** Reminders are planned and scheduled on your phone, at most one a day. Outside that limit come water's sip reminders if you choose them, "Focus done" when a focus you started ends, and a note two days before a Plus free trial you started on this phone runs out. Nothing is sent to us to make them work. Each reminder has a switch in Reminders, and sips also on the Water screen.
+- **Alarms and reminders.** If you allow it, timed reminders such as Iftar and "Focus done" arrive on the minute. Without it they can be a little late.
+- **Display over other apps.** Lets your mini walk over your apps once you switch that on, now and then with a friend's mini that came to say hi or a cheer for your steps, and lets it cover other apps during a focus if you turn on "Hide other apps". Mini Me only draws your mini. It does not see, read or record what other apps show.
+- **Usage access.** Used only with "Hide other apps" on, and only while a focus you started is running. Mini Me checks which app is in front so your mini can cover it. It never sees what is inside an app, keeps no record of the apps you use and sends nothing. Home, calls, alarms and Settings are never covered.
+- **Fingerprint or screen lock.** Used only for Lock Cycle.
+- **Home-screen widgets.** Pictures of your mini, drawn on your phone.
+- **Start after a restart.** Puts your reminders and the walking mini back when the phone restarts.
+
+You can take any of these back in Mini Me's Settings or in Android's.
+
+## Backups and your export file
+
+**Back up to Google.** Android can back up Mini Me's data to your Google account. Mini Me allows this only when the backup is end-to-end encrypted with your phone's screen lock (Android 9 and later), so that neither Google nor we can read it. The backup holds your mini, your logs and your settings, your cycle log included. It never holds data from Health Connect. Mini Me on your watch is not backed up: your phone sends it everything again. The switch is in Settings. Google stores and deletes backups under its own terms.
+
+**Export my data.** This writes a file named mini-me-backup.json to your phone's Downloads folder, and only when you tap it. The file holds your mini, your logs and your settings, your cycle log included. It is not encrypted: anyone who has the file can read it, so keep it somewhere safe. "Restore from a file" checks a file before it replaces anything.
+
+## WhatsApp stickers
+
+Mini Me draws twelve sticker pictures of your mini on your phone. When you tap "Add to WhatsApp", WhatsApp on the same phone receives those pictures, the pack's name, and our contact and policy links. When your mini's look changes, the pack is drawn again so WhatsApp can update it. Nothing else is shared with WhatsApp. Once a sticker is in WhatsApp, WhatsApp's own privacy policy covers it, and that includes the stickers you send in chats.
+
+## Mini Me on your watch
+
+The Wear OS app, with its tile, its complications and its watch face, is optional. If you install it on a watch paired with your phone, the phone sends it what it needs to show your mini:
+
+- your mini's pictures, needs, coins and level;
+- today's mood and your streak;
+- your status, but never words you wrote for it;
+- your trips, workouts, focus sessions and Iftar times, if you use them;
+- whether today is a cosy day;
+- today's step count.
+
+What you do on the watch (a check-in, a status, a workout, a focus session, playing with your mini) goes back to your phone, which saves it as if you had done it there.
+
+All of this travels between your own phone and your own watch, over the Wear OS link that Google Play services provides. It never reaches us. The watch keeps only the latest copy, and "Delete everything" on your phone clears the watch too. The Mini Me watch face holds no data of its own: it shows what the watch app gives it.
+
+## Friends and Duo
+
+Friends and Duo are optional. The rest of Mini Me works without them and without an account. They are the only part that uses a server: Google's Firebase, set up by us for Mini Me.
+
+### Signing in
+
+Friends asks you to sign in with your Google account, so that each Friends account belongs to a real person. Firebase Authentication then keeps your Google email address, your name and the link to your profile picture, a Firebase user ID, and when you signed up and last signed in. It also logs IP addresses for a few weeks, to stop abuse. It processes all of this in the United States. Mini Me shows your email in Settings and offers your Google name as a first draft of the name friends see. Your friends never see your email, your Google name or your picture.
+
+### What our Friends server keeps
+
+The server is Cloud Firestore, and its data is stored in the European Union.
+
+- **Your profile.** The name you choose (letters only, up to 16), your friend code, whether your mini is Mimi or Kai, your mini's look, and when Mini Me was last open. You and your friends see it.
+- **Friend requests.** When you type someone's code, they receive a request with your name, code and mini. Nobody can search for people or list them. A request needs the exact code, and you become friends only when the other person says yes.
+- **Your friends** and since when, your close friends, and the people you block. Only you see your close friends and your blocks.
+- **Statuses you share.** The preset status, whether it is for all your friends or your close friends, and until when. A status set to "Only me", and any words you write for a status, never leave your phone.
+- **Visits.** Which of six preset phrases your mini brought, and when. The friend you visited sees it until they put it away.
+- **Your duo**, if you have one: the two of you, since when, the last hug and snack, and the Together bar. Only the two of you see it.
+- **Reports.** When you tap Report: who sent it, about whom, and the last preset phrase that person sent you. Only we read reports.
+
+Never on the server: your steps, sleep, water, cycle log, check-ins, moods, workouts, coins, room, or anything else you log. Nobody can type a message to anybody. Minis talk in preset phrases only, with no chat, no photos and no free text.
+
+### On your phone
+
+Mini Me keeps a copy of what your friends share with you (their names, codes, minis and statuses) in its private storage, so the Friends tab still works offline. That copy is never put in your Google backup or your export file. With a duo, your home-screen widget shows your duo friend's name and mini.
+
+### The real app only
+
+With its requests to the server, Mini Me sends a Google Play Integrity check, through Firebase App Check, so that our server can turn away requests that do not come from the real Mini Me. Firebase uses this check only to protect the server.
+
+### Signing out and deleting
+
+"Sign out", under Friends account in Settings, keeps your Friends data on the server for when you come back.
+
+"Delete my Friends account" deletes your profile, friend code, requests, friendships, close friends, blocks, statuses, the visits you sent and received, your duo, and your Firebase account with its Google email. Google may ask you to sign in again first. "Delete everything" does the same. Google then removes the account from Firebase Authentication's backups within 180 days.
+
+A report is not removed with an account. We delete each report once we have looked at it, and within 90 days at the latest.
+
+If you uninstalled Mini Me without deleting your Friends account, [this page says how to ask us](delete-account.html).
+
+### Who else can see it
+
+Google runs Firebase for us as our service provider, under the Firebase Data Processing and Security Terms. We can open the server's data in the Firebase console, and we do so only to look at a report, to answer a request from you or to fix a problem. Friends data is never sold, never shared with anyone else and never used for advertising.
+
+## Purchases and other services
+
+- **Google Play Billing** takes the payment for Mini Me Plus and for packs, and tells the app which ones you own. We never see how you paid. Mini Me keeps only the list of what you own, on your phone.
+- **Google Play** also shows its own rating card now and then, and offers a newer version of the app when there is one. A review you write goes to Google Play under Google's terms; Mini Me sends nothing with it.
+- **Health Connect**, **Android backup**, **Wear OS**, **WhatsApp**, **Google Sign-In** and **Firebase** (Authentication, Cloud Firestore and App Check) do what the sections above describe, and nothing more.
+
+[Google's privacy policy](https://policies.google.com/privacy) and [Firebase's page on privacy and security](https://firebase.google.com/support/privacy) cover those services. Mini Me uses no other service.
+
+## What we can see
+
+Google Play gives us totals: installs, uninstalls, ratings, sales, and crash rates from phones that share diagnostics with Google. They name no one. In the Firebase console we can see Friends data, as [[Friends and Duo]] says. We see nothing else of how you use Mini Me.
+
+## Children and teens
+
+Mini Me is for people aged 13 and over. It asks for an age group before it starts and does not open for anyone who picks "under 13". We do not knowingly collect personal data from children under 13.
+
+There are no ads and there is no chat. Friends is built to be safe for teens: you become friends only with a code and a yes, minis speak in preset phrases, there are no photos, and every friend has Block and Report.
+
+## Keeping and deleting
+
+Your data lives on your phone until you remove it. "Delete everything" in Settings erases your mini, coins, check-ins, cycle log and every other record at once, clears your watch and deletes your Friends account. Uninstalling Mini Me, or clearing its data in Android's settings, does the same on your phone. Uninstalling it from your watch removes what the watch kept. An export file stays where you put it until you delete it.
+
+Our server holds Friends and Duo data only, and keeps it until you delete your Friends account or ask us to. We have no copy of anything else. Emails you send us stay in our support mailbox until the matter is settled or you ask us to delete them.
+
+## Your rights
+
+You can ask us what we hold about you and ask us to delete it. We answer within 30 days.
+
+What is on your phone you can see in the app, export and delete yourself. Your Friends data is shown in the app: you can change your name there, and "Delete my Friends account" removes it. For a copy of what our server holds about you, write to us.
+
+The GDPR in the EU and the UK, and laws in California and other places, give you rights to see, correct, delete and move your data, to object to its use and to withdraw a consent. You withdraw a permission in Android's settings or in Health Connect, whenever you like. For the GDPR, our grounds are:
+
+- your consent, for every permission you grant, for Health Connect and for your cycle log;
+- a contract with you, for Friends and Duo, which you chose to use, and for purchases;
+- our legitimate interest in keeping Friends safe, for reports and the Play Integrity check.
+
+We do not sell personal data. You can complain to the data protection authority where you live.
+
+## Security
+
+Your data sits in Mini Me's private storage, which other apps cannot read, on your phone and on your watch. What your watch shows travels only over the Wear OS link between your own devices. Google backups are end-to-end encrypted. Purchases are verified by Google Play. An export file is not encrypted.
+
+The Friends server accepts only Google sign-ins and checks every read and write against strict rules: only your friends can read your profile and the statuses you share with them, only you can change or delete your own records, and anything else is refused. Friends data travels over HTTPS, and Google encrypts it where it is stored.
+
+If Mini Me runs into an error, it notes the last few in a small file in its own folder on your phone, so a problem can be traced on the phone it happened on. The file holds the app's error messages, not your entries. It is never sent anywhere and goes when you uninstall. If Mini Me cannot open its saved data, it offers to put a copy of that data in your Downloads, for you to keep.
+
+## Changes to this policy
+
+When Mini Me changes what it does with data, we change this page and the date at its top. For a change that matters, we also tell you in the app.
+
+## Contact
+
+Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

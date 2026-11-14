@@ -2,384 +2,198 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Mystic — Privacy Policy</title>
-<meta name="description" content="Privacy Policy for AI Mystic, the AI tarot and astrology app: what the app collects, how AI readings are generated, ads and consent, retention, and your GDPR/CCPA rights.">
-<meta name="theme-color" content="#05050F">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy for AI Mystic</title>
+<meta name="description" content="A reading in AI Mystic sends your cards, your question and your zodiac sign to Google&#x27;s Gemini. Your name, birth date and journal stay on your phone. The rest is on this page.">
+<meta name="theme-color" content="#0B0B1E">
 <meta name="color-scheme" content="dark">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../../assets/apps/aimystic.webp">
 <style>
-/* ============================================================
-   AI MYSTIC — legal pages.  "The back of a tarot card."
-   Palette from aimystic/lib/core/theme/mystic_colors.dart
-   ============================================================ */
-:root{
-  --void:#05050F;        /* page ground */
-  --cosmos:#0B0B1E;      /* card face   */
-  --nebula:#141432;      /* inset panel */
-  --stardust:#1E1E4A;    /* neutral hairline */
-  --gold:#D4A856;        /* foil: numerals, labels, markers */
-  --gold-light:#F2D98B;  /* engraved headings */
-  --gold-dim:#8B7340;    /* frame lines ONLY - 4.3:1, never text */
-  --parchment:#EDE4D3;   /* body copy */
-  --silver:#A0A0B8;      /* meta */
-  --frame:rgba(139,115,64,.50);
-  --frame-in:rgba(139,115,64,.24);
-  --accent:#C4A6FF;
-  --accent-deep:#9B6DFF;
-  --rule:rgba(30,30,74,.95);
-}
+@font-face{font-family:"EB Garamond";src:url(../fonts/EBGaramond-Regular.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"EB Garamond";src:url(../fonts/EBGaramond-Medium.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"EB Garamond";src:url(../fonts/EBGaramond-Italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Inter";src:url(../fonts/Inter-Regular.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Inter";src:url(../fonts/Inter-SemiBold.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
+/* What every legal page shares: how it reads. How it looks is each app's theme.css. */
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{
-  margin:0;
-  background:var(--void);
-  color:var(--parchment);
-  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  font-size:17px;
-  line-height:1.72;
-  overflow-x:hidden;
+html{-webkit-text-size-adjust:100%;scroll-padding-top:1.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--size,1.0625rem)/var(--lead,1.62) var(--body);overflow-wrap:break-word}
+img{max-width:100%;display:block}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--focus,var(--link));outline-offset:3px}
+.skip{position:absolute;left:-999rem}
+.skip:focus{left:1rem;top:1rem;z-index:9;background:var(--bg);color:var(--ink);padding:.5rem .8rem}
+.top,.head,main,.foot{max-width:var(--measure,43rem);margin-inline:auto;padding-inline:1.125rem}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem 1.25rem;flex-wrap:wrap;padding-block:1rem .9rem;font-size:.95rem}
+.top .pages{display:flex;gap:1.15rem;flex-wrap:wrap}
+.top [aria-current]{color:var(--ink);font-weight:700;text-decoration:none}
+h1,h2,h3{font-family:var(--title);line-height:1.18;margin:0;text-wrap:balance}
+h1{font-size:clamp(2rem,7vw,2.8rem)}
+h2{font-size:1.42rem}
+h3{font-size:1.1rem;margin-top:1.6rem}
+p,ul,table{margin:.85rem 0 0}
+ul{padding-left:1.15rem}
+li+li{margin-top:.42rem}
+strong{font-weight:700}
+article section{margin-top:2.7rem}
+.summary{margin-top:2.2rem}
+.contents{margin-top:2.4rem}
+.contents ol{margin:.7rem 0 0;padding-left:1.5rem;columns:2 15rem;column-gap:2.5rem}
+.contents li{break-inside:avoid}
+.contents li+li{margin-top:.28rem}
+.note{color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:.96rem;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:.62rem .9rem .62rem 0;border-top:1px solid var(--rule);font-weight:400}
+th:last-child,td:last-child{padding-right:0}
+thead th{border-top:0;font-weight:700;padding-top:0}
+tbody th{font-weight:700}
+@media (max-width:42rem){
+  table,tbody,tr,th,td{display:block}
+  thead{position:absolute;left:-999rem}
+  tr{border-top:1px solid var(--rule);padding:.75rem 0 .8rem}
+  .summary h2+table tbody tr:first-child{border-top:0}
+  th,td{border:0;padding:0}
+  tbody th{font-size:1.02rem}
+  td{margin-top:.3rem}
+  td::before{content:attr(data-th) ": ";font-weight:700}
 }
-/* ---------- starfield ---------- */
-.sky{position:fixed;inset:0;z-index:-2;background:var(--void);pointer-events:none}
-.sky::before,.sky::after{content:"";position:absolute;inset:0}
-.sky::before{
-  background-image:
-    radial-gradient(1.1px 1.1px at 26px 44px,rgba(237,228,211,.60),transparent),
-    radial-gradient(1px 1px at 168px 22px,rgba(160,160,184,.50),transparent),
-    radial-gradient(1.3px 1.3px at 92px 148px,rgba(237,228,211,.42),transparent),
-    radial-gradient(1px 1px at 232px 106px,rgba(196,166,255,.40),transparent),
-    radial-gradient(1px 1px at 300px 214px,rgba(237,228,211,.34),transparent),
-    radial-gradient(1.2px 1.2px at 52px 268px,rgba(212,168,86,.42),transparent),
-    radial-gradient(1px 1px at 204px 300px,rgba(160,160,184,.34),transparent),
-    radial-gradient(1px 1px at 128px 214px,rgba(237,228,211,.26),transparent);
-  background-size:340px 340px;
-}
-.sky::after{
-  background-image:
-    radial-gradient(1.6px 1.6px at 420px 96px,rgba(242,217,139,.55),transparent),
-    radial-gradient(1.4px 1.4px at 96px 372px,rgba(237,228,211,.45),transparent),
-    radial-gradient(1.5px 1.5px at 300px 480px,rgba(212,168,86,.40),transparent),
-    radial-gradient(1.3px 1.3px at 512px 296px,rgba(196,166,255,.38),transparent),
-    radial-gradient(1.4px 1.4px at 190px 168px,rgba(237,228,211,.34),transparent);
-  background-size:560px 560px;
-  animation:drift 150s linear infinite;
-}
-@keyframes drift{0%,100%{opacity:.55}50%{opacity:1}}
-.veil{position:fixed;inset:0;z-index:-1;pointer-events:none;
-  background:radial-gradient(120% 62% at 50% -12%,rgba(30,30,74,.42),rgba(5,5,15,0) 62%)}
-/* ---------- shell ---------- */
-.wrap{max-width:880px;margin:0 auto;padding:0 22px 72px}
-.vh{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
-  clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
-/* ---------- top bar ---------- */
-.topbar{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;
-  padding:26px 0 30px}
-.back{font-size:14px;letter-spacing:.06em;color:var(--silver);text-decoration:none}
-.back:hover{color:var(--gold-light)}
-.deck{display:inline-flex;border:1px solid var(--frame);border-radius:999px;overflow:hidden;
-  background:rgba(11,11,30,.85)}
-.deck a{padding:9px 20px;font-family:Cinzel,Georgia,serif;font-size:14px;letter-spacing:.12em;
-  color:var(--silver);text-decoration:none;position:relative;transition:color .2s}
-.deck a+a{border-left:1px solid var(--frame-in)}
-.deck a:hover{color:var(--gold-light)}
-.deck a[aria-current="page"]{color:var(--gold-light);background:var(--nebula)}
-.deck a[aria-current="page"]::after{content:"";position:absolute;left:20px;right:20px;bottom:5px;
-  height:1px;background:var(--accent-deep)}
-/* ---------- the card (SIGNATURE) ---------- */
-.card{position:relative;background:var(--cosmos);border:1px solid var(--frame);
-  border-radius:14px;padding:46px 32px 36px;margin:0 0 26px}
-.card .frame{position:absolute;inset:6px;border:1px solid var(--frame-in);border-radius:9px;
-  pointer-events:none}
-.pip{position:absolute;top:0;left:50%;-webkit-user-select:none;user-select:none;transform:translate(-50%,-50%);background:var(--cosmos);
-  border:1px solid var(--frame);border-radius:3px;padding:4px 12px;
-  font-family:Cinzel,Georgia,serif;font-size:13px;font-weight:600;letter-spacing:.22em;
-  text-indent:.22em;color:var(--gold);line-height:1.15}
-.pip.emblem{padding:5px 13px;text-indent:0;color:var(--gold)}
-.pip svg{display:block}
-.fl{position:absolute;width:26px;height:26px;color:var(--gold-dim);pointer-events:none}
-.fl svg{display:block;width:100%;height:100%}
-.fl.tl{top:12px;left:12px}
-.fl.tr{top:12px;right:12px;transform:rotate(90deg)}
-.fl.br{bottom:12px;right:12px;transform:rotate(180deg)}
-.fl.bl{bottom:12px;left:12px;transform:rotate(270deg)}
-/* ---------- masthead ---------- */
-.masthead{padding-top:52px}
-.lockup{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
-.lockup img{width:76px;height:76px;border-radius:20px;border:1px solid var(--frame);display:block}
-.eyebrow{margin:0 0 6px;font-family:Cinzel,Georgia,serif;font-size:13px;font-weight:600;
-  letter-spacing:.34em;text-indent:.34em;color:var(--gold);text-transform:uppercase}
-h1{margin:0;font-family:Cinzel,Georgia,serif;font-weight:400;letter-spacing:.045em;
-  font-size:clamp(30px,6vw,44px);line-height:1.14;color:var(--gold-light)}
-.meta{margin:16px 0 0;color:var(--silver);font-size:16px;line-height:1.6}
-/* ---------- at a glance ---------- */
-.glance{background:var(--nebula);border:1px solid var(--stardust);
-  border-left:2px solid var(--accent-deep);border-radius:10px;padding:22px 24px;margin:0 0 26px}
-.glance-title{margin:0 0 14px;font-family:Cinzel,Georgia,serif;font-size:14px;font-weight:600;
-  letter-spacing:.2em;text-indent:.2em;text-transform:uppercase;color:var(--gold-light)}
-.glance ul{list-style:none;margin:0;padding:0}
-.glance li{position:relative;padding-left:22px;margin:0 0 10px;font-size:16.5px;line-height:1.65;
-  color:var(--parchment);max-width:64ch}
-.glance li::before{content:"";position:absolute;left:2px;top:.66em;width:5px;height:5px;
-  background:var(--accent);transform:rotate(45deg)}
-.glance-foot{margin:15px 0 0;font-size:16px;color:var(--silver);letter-spacing:.01em}
-/* ---------- section type ---------- */
-h2{margin:0;font-family:Cinzel,Georgia,serif;font-weight:600;letter-spacing:.055em;
-  font-size:clamp(19px,2.5vw,22px);line-height:1.35;color:var(--gold-light)}
-.hr{position:relative;height:1px;margin:15px 0 20px;
-  background:linear-gradient(90deg,rgba(139,115,64,.8),rgba(139,115,64,0) 76%)}
-.hr::after{content:"";position:absolute;left:0;top:-2.5px;width:6px;height:6px;
-  background:var(--accent-deep);transform:rotate(45deg)}
-.card p{margin:0 0 14px;max-width:64ch;color:var(--parchment)}
-.card p:last-child{margin-bottom:0}
-.card ul{list-style:none;margin:0 0 4px;padding:0}
-.card li{position:relative;padding-left:22px;margin:0 0 11px;max-width:64ch;line-height:1.7}
-.card li::before{content:"";position:absolute;left:2px;top:.68em;width:5px;height:5px;
-  background:var(--gold);transform:rotate(45deg)}
-strong{color:var(--gold-light);font-weight:600}
-/* ---------- links ---------- */
-a{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;
-  text-underline-offset:3px;text-decoration-color:rgba(160,160,184,.5);transition:color .18s;
-  overflow-wrap:anywhere}
-p,li,td,th,h1,h2,.meta{overflow-wrap:break-word}
-a:hover{color:var(--gold-light);text-decoration-color:var(--gold-dim)}
-a:focus-visible{outline:2px solid var(--gold-light);outline-offset:3px;border-radius:2px}
-/* .deck clips its children, so the tab ring must sit inside the pill */
-.deck a:focus-visible{outline-offset:-3px;border-radius:0}
-.table-wrap:focus-visible{outline:2px solid var(--gold-light);outline-offset:2px}
-/* ---------- notices ---------- */
-.notice{background:var(--nebula);border:1px solid var(--stardust);border-left:2px solid var(--accent-deep);
-  border-radius:9px;padding:19px 22px;margin:20px 0 6px;max-width:66ch}
-.notice.refund{border-left-color:var(--gold)}
-.notice strong{display:inline;font-family:Cinzel,Georgia,serif;font-weight:600;letter-spacing:.03em}
-.notice p{margin:0;max-width:none}
-/* ---------- table ---------- */
-.table-wrap{overflow-x:auto;margin:20px 0 18px;border:1px solid var(--rule);border-radius:9px;
-  -webkit-overflow-scrolling:touch}
-table{border-collapse:collapse;width:100%;min-width:660px;font-size:16px;line-height:1.62}
-th{background:var(--nebula);font-family:Cinzel,Georgia,serif;font-weight:600;font-size:16px;
-  letter-spacing:.07em;color:var(--gold-light);text-align:left;padding:13px 16px;
-  border-bottom:1px solid var(--frame-in);white-space:nowrap}
-td{padding:14px 16px;border-bottom:1px solid var(--rule);color:var(--parchment);vertical-align:top}
-tr:last-child td{border-bottom:0}
-td:first-child{color:var(--gold);white-space:nowrap}
-/* ---------- footer ---------- */
-footer{margin-top:12px;text-align:center;padding-top:14px}
-.foot-links{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;margin:0 0 16px;
-  padding:0;list-style:none}
-.foot-links li{font-size:15px}
-.foot-note{margin:0;font-family:Cinzel,Georgia,serif;font-size:13px;letter-spacing:.28em;
-  text-indent:.28em;color:var(--gold);text-transform:uppercase}
-/* ---------- responsive ---------- */
-@media (max-width:640px){
-  .card{padding:42px 20px 30px}
-  .masthead{padding-top:46px}
-  .fl{width:19px;height:19px}
-  .fl.tl,.fl.tr{top:9px}
-  .fl.br,.fl.bl{bottom:9px}
-  .fl.tl,.fl.bl{left:9px}
-  .fl.tr,.fl.br{right:9px}
-  .lockup img{width:60px;height:60px;border-radius:16px}
-  .lockup{gap:16px}
-  .topbar{padding:20px 0 24px}
-  .deck a{padding:9px 16px;font-size:13px}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-}
-/* ---------- print ---------- */
+.foot{margin-top:3.6rem;padding-block:1.4rem 3.2rem;border-top:1px solid var(--rule);font-size:.95rem}
+.foot p{margin:0 0 .55rem}
+.foot .links{display:flex;flex-wrap:wrap;gap:.3rem 1.25rem}
+.foot .colophon{color:var(--muted);margin-top:1rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media print{
-  /* 1. strip every ornament */
-  .sky,.veil,.fl,.card .frame,.pip,.hr::after,.glance li::before,.card li::before,
-  .deck a[aria-current="page"]::after{display:none!important}
-  /* 2. force ink on paper - element colors must beat inheritance */
-  html,body,p,li,td,th,h1,h2,strong,span,div,a,header,footer,section,aside,nav,
-  .meta,.glance-foot,.glance-title,.back,.eyebrow,.foot-note,.pip,.deck a{
-    color:#000!important;background-color:transparent!important}
-  html,body{background:#fff!important;font-size:11.5pt;line-height:1.5}
-  .wrap{max-width:none;padding:0}
-  /* 3. reveal the arabic section numbers for the archived copy */
-  .vh{position:static!important;width:auto;height:auto;padding:0;margin:0;clip:auto;
-    clip-path:none;overflow:visible;white-space:normal}
-  /* 4. blocks */
-  .card{border:1px solid #999;border-radius:0;padding:14px 16px 12px;margin:0 0 14px;
-    break-inside:avoid;page-break-inside:avoid}
-  .masthead{padding-top:14px;border:0;border-bottom:2px solid #000;margin-bottom:18px}
-  .glance,.notice{border:1px solid #999;border-left:2px solid #000;break-inside:avoid;
-    page-break-inside:avoid;max-width:none}
-  .glance ul,.card ul{list-style:disc;padding-left:20px;margin-left:0}
-  .glance li,.card li{padding-left:0}
-  .card p,.glance li,.card li,.notice p{max-width:none}
-  .hr{background:#999;margin:10px 0 12px}
-  .lockup img{filter:grayscale(1)}
-  h1,h2{page-break-after:avoid;break-after:avoid}
-  /* 5. tables */
-  .table-wrap{border:1px solid #999;overflow:visible;break-inside:avoid;page-break-inside:avoid}
-  table{min-width:0;font-size:10.5pt}
-  th{background:#eee!important;white-space:normal}
-  td,th{border-color:#999}
-  /* 6. links: show the destination */
-  a{text-decoration:underline}
-  .deck{border:1px solid #999}
-  a[href^="http"]::after,a[href^="mailto:"]::after{content:" (" attr(href) ")";
-    font-size:.82em;word-break:break-all}
-  .deck a::after,.back::after{content:""!important}
+  :root{--bg:#fff;--ink:#000;--muted:#333;--link:#000;--rule:#999}
+  body{background:#fff!important;color:#000;font-size:10.5pt}
+  .top,.skip,.contents,.head .deco,.switch{display:none!important}
+  .head,main,.foot{max-width:none;padding:0}
+  *{background-image:none!important;box-shadow:none!important;text-shadow:none!important}
+  .head *,.summary,.summary *{background:#fff!important;color:#000!important}
+  h2,h3{break-after:avoid}
+  tr,li{break-inside:avoid}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8.5pt}
 }
+
+/* AI Mystic: lib/core/theme/mystic_colors.dart. The page is one card of the deck lying on the night-blue table:
+   a parchment face inside a double line of gold ink, the reading text in EB Garamond, the small print in Inter. */
+:root{--bg:#0B0B1E;--ink:#EDE4D3;--muted:#A0A0B8;--link:#A9BCE2;--rule:rgba(237,228,211,.2);--focus:#F2D98B;
+  --card:#EDE4D3;--card-ink:#10111D;--card-muted:#4D4F63;--card-link:#2B3C74;--gold:#9C8250;--red:#A4442C;
+  --body:"EB Garamond",Georgia,serif;--title:"EB Garamond",Georgia,serif;--ui:"Inter","Segoe UI",system-ui,sans-serif;
+  --size:1.22rem;--lead:1.5;--measure:44rem}
+.top,.foot{font-family:var(--ui);font-size:.9rem}
+.head,main{background:var(--card);color:var(--card-ink);border-inline:6px double var(--gold);padding-inline:1.5rem;
+  --ink:var(--card-ink);--muted:var(--card-muted);--link:var(--card-link);--rule:rgba(16,17,29,.22);--focus:#A4442C}
+.head{border-top:6px double var(--gold);padding-top:1.7rem;border-radius:14px 14px 0 0}
+main{border-bottom:6px double var(--gold);padding-bottom:2.4rem;border-radius:0 0 14px 14px;display:flow-root}
+.app{margin:0;display:flex;align-items:center;gap:.7rem;font:600 .98rem/1.3 var(--ui)}
+.app img{border-radius:10px;flex:none}
+h1{margin-top:1.3rem;font-weight:500;font-size:clamp(2.3rem,9vw,3.3rem);letter-spacing:-.01em}
+.dates{margin:.5rem 0 0;font-style:italic;color:var(--card-muted);padding-bottom:1.4rem;border-bottom:1px solid var(--gold)}
+h2{font-weight:500;font-size:1.62rem}
+article h2{display:flex;align-items:baseline;gap:.55rem}
+.n{flex:none;color:var(--red);font-weight:500}
+.n::after{content:"."}
+h3{font:600 1rem/1.3 var(--ui)}
+strong{font-weight:500;font-family:var(--body);color:#000}
+table,.summary li{font-family:var(--ui);font-size:.9rem;line-height:1.55}
+tbody th,thead th{font-weight:600}
+thead th{color:var(--card-muted);font-size:.82rem}
+td::before{font-weight:600}
+.summary{margin-top:1.7rem}
+.contents ol{font-family:var(--ui);font-size:.93rem;padding-left:1.5rem}
+.contents a{text-decoration:none}
+.contents a:hover{text-decoration:underline}
+.contents li::marker{color:var(--red);font-weight:600}
+.note{border-left:2px solid var(--gold);padding-left:.85rem;font-style:italic}
+.foot{border-top:0;margin-top:1.6rem}
+@media (max-width:46rem){.top{padding-inline:1.125rem}.head,main{margin-inline:.55rem;padding-inline:1.05rem}}
+
 </style>
 </head>
-<body>
-<div class="sky" aria-hidden="true"></div><div class="veil" aria-hidden="true"></div>
-<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
-<symbol id="fl" viewBox="0 0 26 26">
-<path d="M25.5 1H7.6L1 7.6V25.5" fill="none" stroke="currentColor" stroke-width="1"/>
-<path d="M25.5 5.6H9.6L5.6 9.6V25.5" fill="none" stroke="currentColor" stroke-width="1" opacity=".55"/>
-<path d="M6.1 4.7 7.5 6.1 6.1 7.5 4.7 6.1Z" fill="currentColor"/>
-</symbol>
-</svg>
-<div class="wrap">
-<nav class="topbar" aria-label="Policy navigation">
-<a class="back" href="../index.html">&larr; All policies</a>
-<span class="deck"><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></span>
+<body class="privacy">
+<a class="skip" href="#main">Skip to the text</a>
+<nav class="top" aria-label="Legal pages">
+<a href="../index.html">All eight apps</a>
+<span class="pages"><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></span>
 </nav>
-<main>
-<header class="card masthead">
-<span class="frame" aria-hidden="true"></span><span class="fl tl"><svg><use href="#fl"/></svg></span><span class="fl tr"><svg><use href="#fl"/></svg></span><span class="fl br"><svg><use href="#fl"/></svg></span><span class="fl bl"><svg><use href="#fl"/></svg></span>
-<span class="pip emblem" aria-hidden="true"><svg viewBox="0 0 44 24" width="34" height="19" aria-hidden="true" focusable="false"><path d="M20 4A8 8 0 1 0 20 20 9 9 0 0 1 20 4Z" fill="currentColor"/><path d="M31 6.4 32.2 9.2 35 10.4 32.2 11.6 31 14.4 29.8 11.6 27 10.4 29.8 9.2Z" fill="currentColor"/></svg></span>
-<div class="lockup">
-<img src="../../assets/apps/aimystic.webp" width="76" height="76" alt="AI Mystic app icon">
-<div>
-<p class="eyebrow">AI Mystic</p>
-<h1>Privacy Policy</h1>
-</div></div>
-<p class="meta">AI Mystic — Effective 4 June 2026. Last updated 15 October 2026.</p>
+<header class="head">
+<p class="app"><img src="../../assets/apps/aimystic.webp" alt="" width="40" height="40"><span>AI Mystic: Tarot Card Reading</span></p>
+<h1>Privacy policy</h1>
+<p class="dates">In force since 4 June 2026. Last changed 14 November 2026. Published by Carthage Studio.</p>
 </header>
-<aside class="glance" aria-labelledby="glance-t">
-<p class="glance-title" id="glance-t">At a glance</p>
-<ul>
-<li>The App has no sign-up or login.</li>
-<li>To write a reading, the App sends the cards you drew, your question and your zodiac sign to Google&rsquo;s Gemini API. Nothing else about you goes with it.</li>
-<li>Your name and birth date, if you give them, stay on your device. Only the zodiac sign worked out from the date is used in readings.</li>
-<li>Readings are written by an AI model, for reflection and entertainment.</li>
-<li>Your journal, streak and settings live on your device only.</li>
-<li>We do not sell personal information.</li>
-</ul>
-<p class="glance-foot">This summary is not a substitute for the full policy below.</p>
-</aside>
-<section class="card" aria-labelledby="s1">
-<span class="frame" aria-hidden="true"></span><span class="fl tl"><svg><use href="#fl"/></svg></span><span class="fl tr"><svg><use href="#fl"/></svg></span><span class="fl br"><svg><use href="#fl"/></svg></span><span class="fl bl"><svg><use href="#fl"/></svg></span>
-<span class="pip" aria-hidden="true">I</span>
-<h2 id="s1"><span class="vh">1. </span>Who we are</h2>
-<div class="hr" aria-hidden="true"></div>
-<p>AI Mystic (the &ldquo;App&rdquo;) is an AI tarot and astrology app, published by an independent developer (the &ldquo;Developer&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). Contact: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
-<div class="notice info"><p><strong>AI-generated content.</strong> Readings in this App are written by an AI model and are provided for reflection and entertainment. They are not predictions of the future and are not professional, medical, legal, financial, or psychological advice. You can report a reading from within the App (&ldquo;Report this reading&rdquo;), or by emailing <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p></div>
+<main id="main">
+<section class="summary" aria-labelledby="sum">
+<h2 id="sum">What leaves your phone</h2>
+<table><thead><tr><th scope="col">What</th><th scope="col">Where it goes</th><th scope="col">When</th><th scope="col">How to stop it</th></tr></thead><tbody><tr><th scope="row">The cards you drew, your question, your zodiac sign</th><td data-th="Where it goes">Google’s Gemini API</td><td data-th="When">Each time you ask for a reading</td><td data-th="How to stop it">Leave the question empty, or go offline: the reading is then written on the phone</td></tr><tr><th scope="row">Advertising ID, IP address, what you do with an ad</th><td data-th="Where it goes">Google AdMob</td><td data-th="When">While ads show</td><td data-th="How to stop it">Subscribe to Mystic Pro, or use Android’s ad settings</td></tr><tr><th scope="row">A subscription</th><td data-th="Where it goes">Google Play</td><td data-th="When">Each time you subscribe or restore</td><td data-th="How to stop it">Nothing is sent until you subscribe</td></tr><tr><th scope="row">A card you share</th><td data-th="Where it goes">The app you pick in Android’s share sheet</td><td data-th="When">Each time you tap Share</td><td data-th="How to stop it">Keep the card</td></tr><tr><th scope="row">A backup of your journal and settings</th><td data-th="Where it goes">Your own Google account</td><td data-th="When">While Android’s backup is on</td><td data-th="How to stop it">Turn the backup off in Android’s settings</td></tr><tr><th scope="row">A reading you report, or a problem report</th><td data-th="Where it goes">Our support mailbox</td><td data-th="When">Only if you press send</td><td data-th="How to stop it">Close the draft</td></tr></tbody></table>
+<p>Your first name and birth date never leave the phone. AI Mystic has no account.</p>
 </section>
-
-<section class="card" aria-labelledby="s2">
-<span class="frame" aria-hidden="true"></span><span class="fl tl"><svg><use href="#fl"/></svg></span><span class="fl tr"><svg><use href="#fl"/></svg></span><span class="fl br"><svg><use href="#fl"/></svg></span><span class="fl bl"><svg><use href="#fl"/></svg></span>
-<span class="pip" aria-hidden="true">II</span>
-<h2 id="s2"><span class="vh">2. </span>Data we collect</h2>
-<div class="hr" aria-hidden="true"></div>
-<div class="table-wrap" tabindex="0" role="region" aria-labelledby="s2">
-<table>
-<thead>
-<tr><th>Category</th><th>What it is</th><th>Why</th><th>Where it lives</th></tr>
-</thead>
-<tbody>
-<tr><td>Reading request</td><td>The cards you drew (each card, upright or reversed, and its place in the spread), the spread, your question if you type one (up to 300 characters) and your zodiac sign.</td><td>To write the reading.</td><td>Sent over HTTPS to the Google Gemini API each time you ask for a reading. We do not keep a copy. See section 3 for what Google does with it.</td></tr>
-<tr><td>Name and birth date</td><td>The first name and birth date you may enter during setup.</td><td>To greet you, and to work out your zodiac sign.</td><td>On your device only. Never sent to Gemini or to us.</td></tr>
-<tr><td>Journal and preferences</td><td>Your saved readings, the cards you have found, your streak, reminder time and settings.</td><td>To keep your journal and restore your experience between sessions.</td><td>On your device only.</td></tr>
-<tr><td>Purchase records</td><td>Your Mystic Pro subscription (monthly or yearly).</td><td>To unlock Pro.</td><td>Validated by Google Play. We store only a yes/no flag on your device.</td></tr>
-<tr><td>Advertising identifier</td><td>Your device&rsquo;s advertising ID, unless you subscribe or opt out in your device settings.</td><td>So our ad partner (Google AdMob) can show ads.</td><td>Sent to Google AdMob. We do not store it.</td></tr>
-<tr><td>Shared-card link</td><td>If you install the App from a card a friend shared, the tag in that Google Play link.</td><td>To open the card they shared.</td><td>Read once from Google Play on your device.</td></tr>
-<tr><td>Problem reports</td><td>If you choose &ldquo;Report a problem&rdquo;, an email your own mail app writes, with the app and Android versions, the device model and recent error messages.</td><td>To fix what went wrong.</td><td>Sent only if you press send, to our support address.</td></tr>
-</tbody>
-</table>
-</div>
-<p>We do <strong>not</strong> collect: your email address, phone number, contacts, SMS messages, calendar, location, microphone audio, or photos. The App has no sign-up or login.</p>
+<nav class="contents" aria-labelledby="con">
+<h2 id="con">On this page</h2>
+<ol><li><a href="#s1">Who publishes AI Mystic</a></li><li><a href="#s2">What a reading sends to Google</a></li><li><a href="#s3">What stays on your phone</a></li><li><a href="#s4">Ads</a></li><li><a href="#s5">The subscription</a></li><li><a href="#s6">Reminders and the widget</a></li><li><a href="#s7">Sharing, shared links and reports</a></li><li><a href="#s8">What we can see</a></li><li><a href="#s9">Adults only</a></li><li><a href="#s10">Keeping and deleting</a></li><li><a href="#s11">Your rights</a></li><li><a href="#s12">Security</a></li><li><a href="#s13">Changes to this policy</a></li><li><a href="#s14">Contact</a></li></ol>
+</nav>
+<article>
+<section id="s1"><h2><span class="n">1</span> Who publishes AI Mystic</h2>
+<p>AI Mystic: Tarot Card Reading is an Android app from Carthage Studio (Mehdi Snoussi), in Tunisia, the publisher named on Google Play. Questions about this page go to <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>. “We” is the publisher.</p>
 </section>
-
-<section class="card" aria-labelledby="s3">
-<span class="frame" aria-hidden="true"></span><span class="fl tl"><svg><use href="#fl"/></svg></span><span class="fl tr"><svg><use href="#fl"/></svg></span><span class="fl br"><svg><use href="#fl"/></svg></span><span class="fl bl"><svg><use href="#fl"/></svg></span>
-<span class="pip" aria-hidden="true">III</span>
-<h2 id="s3"><span class="vh">3. </span>Third-party services</h2>
-<div class="hr" aria-hidden="true"></div>
-<ul>
-<li><strong>Google Gemini API</strong> &mdash; writes the reading from the reading request above. <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a></li>
-<li><strong>Google Play Billing</strong> &mdash; processes the Mystic Pro subscription. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-<li><strong>Google AdMob</strong> and Google&rsquo;s consent tool &mdash; show ads to free users and ask for consent where required. <a href="https://policies.google.com/technologies/ads">AdMob &amp; ads privacy</a></li>
-<li><strong>Google Play</strong> &mdash; install referrer, in-app reviews and in-app updates. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-</ul>
-<div class="notice info"><p><strong>What Google does with a reading request.</strong> The App uses the Gemini API on Google&rsquo;s free tier. Under the Gemini API terms, Google may keep the text it receives and the reading it writes, use them to improve its services, and have people review them. As with any internet request, Google also sees your device&rsquo;s IP address. Please do not put anything private in your question. If the Gemini API can&rsquo;t be reached, the App writes the reading on your device from the cards&rsquo; own meanings, and nothing is sent.</p></div>
+<section id="s2"><h2><span class="n">2</span> What a reading sends to Google</h2>
+<p>The readings are written by an AI model, Google’s Gemini. To write one, the app sends Gemini:</p>
+<ul><li>the cards you drew, each one upright or reversed, and its place in the spread;</li><li>which spread it is;</li><li>your question, if you typed one, up to 300 characters;</li><li>your zodiac sign.</li></ul>
+<p>Nothing else goes with it. Your name, your birth date and your journal are not in the request, and it carries no account or device ID. Google does see your IP address, as it would for any request.</p>
+<p>AI Mystic uses Gemini’s free tier. Under the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a>, Google may keep what it receives and what it writes back, use both to improve its services, and let people review them. So please keep the question free of names, health matters or anything else private.</p>
+<p>If Gemini cannot be reached, the app writes the reading itself, on the phone, from the cards’ own meanings. Then nothing is sent.</p>
+<p class="note">A reading is for reflection and entertainment. It does not predict the future, and it is not medical, legal, financial or psychological advice.</p>
 </section>
-
-<section class="card" aria-labelledby="s4">
-<span class="frame" aria-hidden="true"></span><span class="fl tl"><svg><use href="#fl"/></svg></span><span class="fl tr"><svg><use href="#fl"/></svg></span><span class="fl br"><svg><use href="#fl"/></svg></span><span class="fl bl"><svg><use href="#fl"/></svg></span>
-<span class="pip" aria-hidden="true">IV</span>
-<h2 id="s4"><span class="vh">4. </span>Ads</h2>
-<div class="hr" aria-hidden="true"></div>
-<p>Free users may see banner and interstitial ads via Google AdMob, and can choose to watch a short rewarded video for up to two more readings a day. Ads are personalised only where you allow it. In the European Economic Area, the UK, and Switzerland we show a consent prompt before serving personalised ads. You can disable ad personalisation in your device settings (Android: Settings &rarr; Google &rarr; Ads) or remove ads by subscribing.</p>
+<section id="s3"><h2><span class="n">3</span> What stays on your phone</h2>
+<ul><li>the first name and birth date you may give at setup. The name greets you; the date is used to work out your zodiac sign;</li><li>your journal of saved readings and the cards you have found;</li><li>your streak, your reminder time and your settings;</li><li>the card of the day shown by the home-screen widget.</li></ul>
+<p>We cannot see any of this. If backup is on for your Google account, Android may store a copy there and return it on a new phone.</p>
 </section>
-
-<section class="card" aria-labelledby="s5">
-<span class="frame" aria-hidden="true"></span><span class="fl tl"><svg><use href="#fl"/></svg></span><span class="fl tr"><svg><use href="#fl"/></svg></span><span class="fl br"><svg><use href="#fl"/></svg></span><span class="fl bl"><svg><use href="#fl"/></svg></span>
-<span class="pip" aria-hidden="true">V</span>
-<h2 id="s5"><span class="vh">5. </span>Children</h2>
-<div class="hr" aria-hidden="true"></div>
-<p>The App is intended for users aged 17 and over and is not directed at children. We do not knowingly collect personal data from children.</p>
+<section id="s4"><h2><span class="n">4</span> Ads</h2>
+<p>Without a subscription the app shows ads from Google AdMob: a banner, and at times a full-screen ad. You can also choose to watch a short video for a further reading, up to two a day.</p>
+<p>Google’s ad software inside the app collects for Google, never for us: the phone’s advertising ID and app set ID, its IP address (which tells Google roughly where the phone is), the ads shown and tapped, when the app is opened, and diagnostics about the ad software. Google explains <a href="https://policies.google.com/technologies/partner-sites">its use of this data</a>.</p>
+<ul><li>In the European Economic Area, the UK and Switzerland, the app asks for your choice before personalised ads, and “Privacy options” in Settings lets you change it.</li><li>In Android’s settings, under Google and then Ads, you can reset or delete the advertising ID.</li><li>Mystic Pro removes the ads.</li></ul>
 </section>
-
-<section class="card" aria-labelledby="s6">
-<span class="frame" aria-hidden="true"></span><span class="fl tl"><svg><use href="#fl"/></svg></span><span class="fl tr"><svg><use href="#fl"/></svg></span><span class="fl br"><svg><use href="#fl"/></svg></span><span class="fl bl"><svg><use href="#fl"/></svg></span>
-<span class="pip" aria-hidden="true">VI</span>
-<h2 id="s6"><span class="vh">6. </span>Data retention &amp; deletion</h2>
-<div class="hr" aria-hidden="true"></div>
-<p>Reading requests are sent to the Gemini API to write a reading and are not kept by us; Google keeps them as its terms describe (section 3). Your saved readings and settings live on your device and are removed when you uninstall the App or clear its data. For any request, email <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>; we action verified requests within 30 days.</p>
+<section id="s5"><h2><span class="n">5</span> The subscription</h2>
+<p>Mystic Pro is a subscription, monthly or yearly, sold by Google Play. Google charges you and tells the app whether the subscription is active. We do not receive your name or your payment details. The app keeps a yes-or-no note on the phone and checks it with Google Play at each start.</p>
 </section>
-
-<section class="card" aria-labelledby="s7">
-<span class="frame" aria-hidden="true"></span><span class="fl tl"><svg><use href="#fl"/></svg></span><span class="fl tr"><svg><use href="#fl"/></svg></span><span class="fl br"><svg><use href="#fl"/></svg></span><span class="fl bl"><svg><use href="#fl"/></svg></span>
-<span class="pip" aria-hidden="true">VII</span>
-<h2 id="s7"><span class="vh">7. </span>Your rights (GDPR / CCPA)</h2>
-<div class="hr" aria-hidden="true"></div>
-<p>If you are in the EU/UK (GDPR) or California (CCPA/CPRA), you have the right to access, delete, and object to processing of your data, and to withdraw consent. We do not sell personal information.</p>
+<section id="s6"><h2><span class="n">6</span> Reminders and the widget</h2>
+<p>The daily reminder is a notification your phone schedules itself, at the time you set. The home-screen widget shows the day’s card from data the app wrote on the phone. Neither sends anything.</p>
 </section>
-
-<section class="card" aria-labelledby="s8">
-<span class="frame" aria-hidden="true"></span><span class="fl tl"><svg><use href="#fl"/></svg></span><span class="fl tr"><svg><use href="#fl"/></svg></span><span class="fl br"><svg><use href="#fl"/></svg></span><span class="fl bl"><svg><use href="#fl"/></svg></span>
-<span class="pip" aria-hidden="true">VIII</span>
-<h2 id="s8"><span class="vh">8. </span>Security</h2>
-<div class="hr" aria-hidden="true"></div>
-<p>Network requests use HTTPS. Purchases are validated by Google Play directly — we never see your payment method.</p>
+<section id="s7"><h2><span class="n">7</span> Sharing, shared links and reports</h2>
+<p><strong>Sharing a card.</strong> Share draws a picture on the phone and passes it to the app you pick. The link that goes with it leads to Google Play and names the card, so that a friend who installs the app from it lands on the same card. The app reads that tag from Google Play once, on the friend’s phone; it does not say who shared it.</p>
+<p><strong>Report this reading.</strong> Under every reading there is a link to report it. It opens a draft in your own mail app containing the text of that reading, addressed to us. It is sent only if you send it.</p>
+<p><strong>Report a problem</strong> works the same way, with the app’s version, your Android version, your phone’s model and recent error messages.</p>
 </section>
-
-<section class="card" aria-labelledby="s9">
-<span class="frame" aria-hidden="true"></span><span class="fl tl"><svg><use href="#fl"/></svg></span><span class="fl tr"><svg><use href="#fl"/></svg></span><span class="fl br"><svg><use href="#fl"/></svg></span><span class="fl bl"><svg><use href="#fl"/></svg></span>
-<span class="pip" aria-hidden="true">IX</span>
-<h2 id="s9"><span class="vh">9. </span>Changes</h2>
-<div class="hr" aria-hidden="true"></div>
-<p>If we materially change this policy we will update the date above and, where appropriate, notify you in the App.</p>
+<section id="s8"><h2><span class="n">8</span> What we can see</h2>
+<p>Google Play gives us totals: installs, uninstalls, ratings, subscriptions sold, and crash rates from phones that share diagnostics with Google. No reading, question or name is among them. We never see the readings Gemini writes for you, unless you send one in a report.</p>
 </section>
-
-<section class="card" aria-labelledby="s10">
-<span class="frame" aria-hidden="true"></span><span class="fl tl"><svg><use href="#fl"/></svg></span><span class="fl tr"><svg><use href="#fl"/></svg></span><span class="fl br"><svg><use href="#fl"/></svg></span><span class="fl bl"><svg><use href="#fl"/></svg></span>
-<span class="pip" aria-hidden="true">X</span>
-<h2 id="s10"><span class="vh">10. </span>Contact</h2>
-<div class="hr" aria-hidden="true"></div>
-<p>Questions or requests: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+<section id="s9"><h2><span class="n">9</span> Adults only</h2>
+<p>AI Mystic deals with mature themes and is meant for people aged 17 and over. It is not for children, and we do not knowingly collect a child’s personal data.</p>
 </section>
-
+<section id="s10"><h2><span class="n">10</span> Keeping and deleting</h2>
+<p>Your journal and settings last until you uninstall the app or clear its data in Android’s settings. What a reading sent to Gemini is kept by Google under the Gemini API terms; we keep no copy of it and cannot delete it for you. A backup stays in your Google account while backup is on. Emails you send us remain in our support mailbox until the matter is closed or you ask us to delete them.</p>
+</section>
+<section id="s11"><h2><span class="n">11</span> Your rights</h2>
+<p>Ask us what we hold about you, or ask for it to be deleted, and we will answer within 30 days. We hold only what you have emailed us.</p>
+<p>The GDPR (in the EU and the UK), and laws in California and other places, give you the right to see, correct, delete and move your data, to object to its use and to withdraw consent. For the GDPR our grounds are: your consent for personalised ads and the reminder; a contract with you for writing the reading you asked for and for the subscription; our legitimate interest in fixing the app, and in looking into a reading you report.</p>
+<p>For data held by Google, whether from a reading or from ads, your controls are in <a href="#s4">section 4</a>, in <a href="https://myadcenter.google.com/">Google’s My Ad Center</a> and in Google’s own privacy policy. We do not sell personal data. You may complain to the data protection authority of your country.</p>
+</section>
+<section id="s12"><h2><span class="n">12</span> Security</h2>
+<p>Reading requests, ads and payments all travel over HTTPS. Google Play verifies the subscription. Your journal is in the app’s private storage, behind your phone’s lock.</p>
+</section>
+<section id="s13"><h2><span class="n">13</span> Changes to this policy</h2>
+<p>When the app changes what it sends or stores, this page and its date change too. We announce a change that matters in the app or in its notes on Google Play.</p>
+</section>
+<section id="s14"><h2><span class="n">14</span> Contact</h2>
+<p>Carthage Studio (Mehdi Snoussi), Tunisia. <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a></p>
+</section>
+</article>
 </main>
-<footer>
-<ul class="foot-links">
-<li><a href="terms.html">Terms of Service</a></li>
-<li><a href="../index.html">All policies</a></li>
-<li><a href="https://play.google.com/store/apps/details?id=com.carthage.aimystic">AI Mystic on Google Play</a></li>
-<li><a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a></li>
-</ul>
-<p class="foot-note">AI Mystic</p>
+<footer class="foot">
+<p>AI Mystic is published by Carthage Studio (Mehdi Snoussi), Tunisia. Write to <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+<p class="links"><a href="terms.html">Terms of service</a><a href="../index.html">All eight apps</a><a href="https://play.google.com/store/apps/details?id=com.carthage.aimystic">AI Mystic on Google Play</a></p>
+<p class="colophon">Set in EB Garamond and Inter, as the app is, and laid out as one card of its deck: parchment face, double gold line, on the night-blue table.</p>
 </footer>
-</div>
+
 </body>
 </html>

@@ -2,312 +2,218 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mini Me — Terms of Service</title>
-<meta name="description" content="The terms for using Mini Me: 13 and over, a game and not medical advice, coins earned only, optional Mini Me Plus through Google Play. Published by Carthage Studio.">
-<meta name="theme-color" content="#FFF0F6" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1A1322" media="(prefers-color-scheme: dark)">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..800&family=Grandstander:wght@700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of service for Mini Me</title>
+<meta name="description" content="The terms for Mini Me: it is a game for people aged 13 and over, not a medical app; coins are earned, never sold; Mini Me Plus is optional; and Friends has a few rules of kindness.">
+<meta name="theme-color" content="#FFF0F6">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="../../assets/apps/minime.webp">
 <style>
-  /* ── Mini Me legal pages ────────────────────────────────────────────────
-     The app's own sticker world: Mimi's pink dot ground (18px grid, the
-     app's DotGround), white sticker cards with a 2.5px ink border and a
-     hard 4px offset shadow, Grandstander for display and DM Sans for text.
-     Section numbers are tilted stickers on the yellow the app uses for
-     "selected"; "at a glance" is the yellow card the Plus screen uses.
-     No all-caps labels: the app has none. Dark mode is Mimi's night set.
-     Tokens verified against minime/lib/theme/mini_tokens.dart             */
+@font-face{font-family:"Grandstander";src:url(../fonts/Grandstander-Variable.woff2) format("woff2");font-weight:700 800;font-style:normal;font-display:swap}
+@font-face{font-family:"DM Sans";src:url(../fonts/DMSans-Variable.woff2) format("woff2");font-weight:400 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Lilita One";src:url(../fonts/LilitaOne-Regular.ttf) format("truetype");font-weight:400;font-style:normal;font-display:swap}
+/* What every legal page shares: how it reads. How it looks is each app's theme.css. */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:1.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--size,1.0625rem)/var(--lead,1.62) var(--body);overflow-wrap:break-word}
+img{max-width:100%;display:block}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--focus,var(--link));outline-offset:3px}
+.skip{position:absolute;left:-999rem}
+.skip:focus{left:1rem;top:1rem;z-index:9;background:var(--bg);color:var(--ink);padding:.5rem .8rem}
+.top,.head,main,.foot{max-width:var(--measure,43rem);margin-inline:auto;padding-inline:1.125rem}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem 1.25rem;flex-wrap:wrap;padding-block:1rem .9rem;font-size:.95rem}
+.top .pages{display:flex;gap:1.15rem;flex-wrap:wrap}
+.top [aria-current]{color:var(--ink);font-weight:700;text-decoration:none}
+h1,h2,h3{font-family:var(--title);line-height:1.18;margin:0;text-wrap:balance}
+h1{font-size:clamp(2rem,7vw,2.8rem)}
+h2{font-size:1.42rem}
+h3{font-size:1.1rem;margin-top:1.6rem}
+p,ul,table{margin:.85rem 0 0}
+ul{padding-left:1.15rem}
+li+li{margin-top:.42rem}
+strong{font-weight:700}
+article section{margin-top:2.7rem}
+.summary{margin-top:2.2rem}
+.contents{margin-top:2.4rem}
+.contents ol{margin:.7rem 0 0;padding-left:1.5rem;columns:2 15rem;column-gap:2.5rem}
+.contents li{break-inside:avoid}
+.contents li+li{margin-top:.28rem}
+.note{color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:.96rem;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:.62rem .9rem .62rem 0;border-top:1px solid var(--rule);font-weight:400}
+th:last-child,td:last-child{padding-right:0}
+thead th{border-top:0;font-weight:700;padding-top:0}
+tbody th{font-weight:700}
+@media (max-width:42rem){
+  table,tbody,tr,th,td{display:block}
+  thead{position:absolute;left:-999rem}
+  tr{border-top:1px solid var(--rule);padding:.75rem 0 .8rem}
+  .summary h2+table tbody tr:first-child{border-top:0}
+  th,td{border:0;padding:0}
+  tbody th{font-size:1.02rem}
+  td{margin-top:.3rem}
+  td::before{content:attr(data-th) ": ";font-weight:700}
+}
+.foot{margin-top:3.6rem;padding-block:1.4rem 3.2rem;border-top:1px solid var(--rule);font-size:.95rem}
+.foot p{margin:0 0 .55rem}
+.foot .links{display:flex;flex-wrap:wrap;gap:.3rem 1.25rem}
+.foot .colophon{color:var(--muted);margin-top:1rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{
+  :root{--bg:#fff;--ink:#000;--muted:#333;--link:#000;--rule:#999}
+  body{background:#fff!important;color:#000;font-size:10.5pt}
+  .top,.skip,.contents,.head .deco,.switch{display:none!important}
+  .head,main,.foot{max-width:none;padding:0}
+  *{background-image:none!important;box-shadow:none!important;text-shadow:none!important}
+  .head *,.summary,.summary *{background:#fff!important;color:#000!important}
+  h2,h3{break-after:avoid}
+  tr,li{break-inside:avoid}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8.5pt}
+}
 
-  :root{
-    --bg:#FFF0F6; --dot:#F7C6DC;
-    --tx:#1F1B2D; --mu:#4A4560;
-    --s1:#FFFFFF; --s2:#FFF7FB; --s3:#FFE3EF;
-    --line:#1F1B2D; --acc:#FF5FA2;
-    --sel:#FFE45C; --selLine:#1F1B2D; --selTx:#1F1B2D;
-    --lime:#C6F35E;
-    --bw:2.5px; --sh:4px 4px 0 var(--line); --ghost:3px 3px 0 var(--line);
-    --pad:clamp(18px,4vw,26px); --col:720px;
-  }
-  @media (prefers-color-scheme:dark){
-    :root{
-      --bg:#1A1322; --dot:rgba(255,95,162,.22);
-      --tx:#FFF2F8; --mu:#CDB8CF;
-      --s1:#2A1F35; --s2:#33263F; --s3:#45304F;
-      --line:#07040B;
-      --sel:#4A3A12; --selLine:#FFE45C; --selTx:#FFF2F8;
-    }
-  }
+/* Mini Me: design-kit/design-tokens/tokens.json. Two worlds, as in the app: Mimi's candy (pink and yellow on
+   ink #1F1B2D, Grandstander) and Kai's street (orange and yellow on navy #14213D, Lilita One). Sticker
+   rules from the kit: 2.5px ink borders, hard offset shadows, no gradients, no glow, plain ground. The switch
+   in the header is the app's first screen, choosing Mimi or Kai, and repaints the page without a script. */
+:root{--bg:#FFF0F6;--ink:#1F1B2D;--muted:#4A4560;--s1:#FFFFFF;--s3:#FFE3EF;--acc:#FF5FA2;--sel:#FFE45C;--link:#1F1B2D;
+  --rule:rgba(31,27,45,.22);--focus:#1F1B2D;--r:24px;--bw:2.5px;
+  --body:"DM Sans","Segoe UI",system-ui,sans-serif;--title:"Grandstander","DM Sans",sans-serif;--tw:800;--size:1.04rem;--lead:1.62}
+:root:has(#w-kai:checked){--bg:#EEF4FF;--ink:#14213D;--muted:#4A5675;--s3:#DCE7FF;--acc:#FF7A1A;--sel:#FFD23F;--link:#14213D;
+  --rule:rgba(20,33,61,.22);--focus:#14213D;--r:22px;--title:"Lilita One","DM Sans",sans-serif;--tw:400}
+a{text-decoration-color:var(--acc);text-decoration-thickness:2px}
+a:hover{text-decoration-thickness:3px}
+.top [aria-current]{background:var(--sel);border:var(--bw) solid var(--ink);border-radius:999px;padding:.05rem .6rem}
+.top{align-items:center}
+.sticker,.summary{background:var(--s1);border:var(--bw) solid var(--ink);border-radius:var(--r);box-shadow:4px 4px 0 var(--ink)}
+.sticker{margin-top:.4rem;padding:1.3rem 1.25rem 1.2rem}
+.app{margin:0;display:flex;align-items:center;gap:.7rem;font-weight:700;line-height:1.25}
+.app img{border-radius:12px;border:var(--bw) solid var(--ink);flex:none}
+h1,h2{font-weight:var(--tw)}
+h1{margin-top:1.1rem;font-size:clamp(2rem,8vw,2.8rem);line-height:1.08}
+.dates{margin:.6rem 0 0;color:var(--muted)}
+.switch{margin:1.1rem 0 0;padding:0;border:0;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .6rem}
+.switch legend{float:left;padding:0;margin-right:.3rem;font-weight:700;font-size:.95rem}
+.switch label{position:relative;display:inline-block;cursor:pointer}
+.switch input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.switch span{display:inline-block;padding:.5rem .95rem;border:var(--bw) solid var(--ink);border-radius:999px;background:var(--s1);font-weight:700;font-size:.95rem;line-height:1.3}
+.switch input:checked+span{background:var(--sel);box-shadow:3px 3px 0 var(--ink);transform:translate(-1px,-2px)}
+.switch input:focus-visible+span{outline:3px solid var(--ink);outline-offset:3px}
+h2{font-size:1.45rem}
+article h2{display:flex;align-items:center;gap:.65rem}
+.n{flex:none;display:inline-grid;place-items:center;min-width:2.1rem;height:2.1rem;padding:0 .4rem;background:var(--acc);color:var(--ink);
+  border:var(--bw) solid var(--ink);border-radius:999px;box-shadow:2px 2px 0 var(--ink);font:var(--tw) 1rem/1 var(--title)}
+h3{font-family:var(--body);font-weight:800;font-size:1.06rem}
+strong,tbody th,thead th{font-weight:700}
+.summary{margin-top:2.1rem;padding:1.25rem 1.2rem 1.3rem}
+thead th{color:var(--muted);font-size:.9rem}
+th,td{border-top-width:2px}
+.contents ol{padding-left:1.6rem}
+.contents a{text-decoration:none}
+.contents a:hover{text-decoration:underline;text-decoration-color:var(--acc)}
+.contents li::marker{font-weight:800;color:var(--ink)}
+ul{list-style:none;padding-left:0}
+article li,.summary li{position:relative;padding-left:1.35rem}
+article li::before,.summary li::before{content:"";position:absolute;left:.05rem;top:.5em;width:.5rem;height:.5rem;border-radius:50%;background:var(--acc);border:2px solid var(--ink)}
+.note{background:var(--s3);border:var(--bw) solid var(--ink);border-radius:18px;padding:.75rem 1rem;color:var(--ink)}
+.foot{border-top:var(--bw) solid var(--ink)}
+@media (max-width:42rem){.summary,.sticker{padding-inline:1rem}tr{border-top-width:2px}}
 
-  *,*::before,*::after{box-sizing:border-box}
-  html{background:var(--bg);-webkit-text-size-adjust:100%}
-  body{
-    margin:0;color:var(--tx);background-color:var(--bg);
-    background-image:radial-gradient(var(--dot) 1.4px,transparent 1.5px);
-    background-size:18px 18px;
-    font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
-    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
-  }
-  .dsp{font-family:'Grandstander','DM Sans',system-ui,sans-serif;font-weight:800;letter-spacing:-.015em}
-
-  .wrap{max-width:calc(var(--col) + 48px);margin:0 auto;padding:0 24px}
-  @media(max-width:480px){.wrap{padding:0 16px}}
-
-  a{color:var(--tx);text-decoration:underline;text-decoration-color:var(--acc);
-    text-decoration-thickness:2px;text-underline-offset:3px;font-weight:600}
-  a:hover{text-decoration-thickness:3px}
-  a:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:4px}
-  strong{font-weight:800}
-  a[href^="mailto"],a[href^="http"]{overflow-wrap:break-word}
-  code{font-family:ui-monospace,'Cascadia Mono',Consolas,monospace;font-size:.9em;font-weight:600;
-       padding:1px 6px;border-radius:8px;background:var(--s3)}
-
-  /* ── top rail ─────────────────────────────────────────────────────── */
-  .rail{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
-        padding:clamp(18px,4vw,30px) 0 0}
-  .pill{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border-radius:999px;
-        background:var(--s1);border:var(--bw) solid var(--line);box-shadow:var(--ghost);
-        font-size:14px;font-weight:800;color:var(--tx);text-decoration:none}
-  a.pill:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--line)}
-
-  /* ── masthead ─────────────────────────────────────────────────────── */
-  .masthead{display:flex;align-items:center;gap:clamp(16px,3.5vw,24px);margin:clamp(24px,5vw,38px) 0 0}
-  .masthead img{display:block;width:88px;height:88px;border-radius:24px;flex:0 0 auto;
-        border:var(--bw) solid var(--line);box-shadow:var(--sh);transform:rotate(-4deg)}
-  @media(max-width:420px){.masthead img{width:68px;height:68px;border-radius:20px}}
-  .eyebrow{margin:0;font-size:14px;font-weight:800;color:var(--mu)}
-  h1{margin:.15rem 0 0;font-weight:800}
-  h1 .app{display:block;font-size:clamp(38px,8vw,56px);line-height:1}
-  h1 .doc{display:inline-block;margin-top:.55rem;padding:3px 12px;border-radius:999px;
-          background:var(--acc);color:#1F1B2D;border:var(--bw) solid var(--line);
-          font-size:clamp(15px,2.6vw,18px);line-height:1.3;transform:rotate(1.5deg)}
-  .meta{margin:1.1rem 0 0;color:var(--mu);font-size:16px;font-weight:600;max-width:60ch}
-
-  /* ── document switch: the app's chips ─────────────────────────────── */
-  .switch{display:flex;gap:10px;flex-wrap:wrap;margin:clamp(20px,4vw,26px) 0 0}
-  .switch a{display:inline-flex;align-items:center;height:42px;padding:0 16px;border-radius:999px;
-     text-decoration:none;font-size:15px;font-weight:800;color:var(--tx);
-     background:var(--s2);border:1px solid var(--line)}
-  .switch a[aria-current]{background:var(--sel);color:var(--selTx);border:2px solid var(--selLine);transform:translateY(-2px)}
-
-  /* ── cards ────────────────────────────────────────────────────────── */
-  .card{background:var(--s1);border:var(--bw) solid var(--line);border-radius:24px;
-     box-shadow:var(--sh);padding:var(--pad);margin:clamp(22px,4vw,28px) 0 0}
-  .glance{background:var(--sel);color:var(--selTx);border-color:var(--selLine)}
-  .glance h2{margin:0;font-size:22px}
-  .glance-note{margin:.2rem 0 0;font-size:15px;font-weight:600;opacity:.85}
-  .glance ul{list-style:none;margin:14px 0 0;padding:0}
-  @media(min-width:640px){.glance ul{columns:2;column-gap:28px}}
-  .glance li{position:relative;padding-left:28px;margin:0 0 10px;font-size:16px;line-height:1.5;
-     font-weight:600;break-inside:avoid}
-  .glance li:last-child{margin-bottom:0}
-  .glance li::before{content:'';position:absolute;left:4px;top:.3em;width:.45em;height:.85em;
-     border:solid currentColor;border-width:0 3px 3px 0;transform:rotate(42deg);border-radius:1px}
-
-  .card .head{display:flex;align-items:center;gap:12px;margin:0 0 .9rem}
-  .num{flex:0 0 auto;display:grid;place-items:center;min-width:40px;height:40px;padding:0 8px;
-     border-radius:14px;background:var(--sel);color:var(--selTx);border:var(--bw) solid var(--selLine);
-     box-shadow:var(--ghost);font-size:19px;transform:rotate(-5deg)}
-  .card:nth-of-type(even) .num{transform:rotate(4deg)}
-  .card h2{margin:0;font-size:clamp(21px,3.6vw,25px);line-height:1.2}
-  .card p{margin:0 0 1rem;max-width:68ch}
-  .card p:last-child{margin-bottom:0}
-  .card ul{margin:0 0 1rem;padding-left:1.25rem;max-width:68ch}
-  .card ul:last-child{margin-bottom:0}
-  .card li{margin:0 0 .6rem}
-  .card li:last-child{margin-bottom:0}
-  .card li::marker{color:var(--acc)}
-
-  /* ── data table ───────────────────────────────────────────────────── */
-  .scroller{overflow-x:auto;margin:.2rem 0 1.1rem;border:var(--bw) solid var(--line);border-radius:18px;background:var(--s2)}
-  table{border-collapse:collapse;width:100%;min-width:640px;table-layout:fixed}
-  col.c1{width:20%}col.c2{width:32%}col.c3{width:22%}col.c4{width:26%}
-  th{text-align:left;padding:12px 14px;font-size:15px;font-weight:800;background:var(--s3);
-     border-bottom:var(--bw) solid var(--line)}
-  td{padding:12px 14px;border-top:2px dashed color-mix(in srgb,var(--mu) 45%,transparent);vertical-align:top;font-size:16px;line-height:1.5}
-  tbody tr:first-child td{border-top:0}
-  .scrollnote{margin:-.7rem 0 1.1rem;font-size:14px;font-weight:600;color:var(--mu)}
-  @media(min-width:700px){.scrollnote{display:none}}
-
-  .bubble{margin:1.1rem 0 0;padding:14px 16px;border-radius:18px;background:var(--s3);
-     border:var(--bw) solid var(--line);max-width:68ch}
-
-  /* ── colophon ─────────────────────────────────────────────────────── */
-  footer{margin:clamp(44px,8vw,66px) 0 0;padding:clamp(22px,5vw,30px) 0 clamp(40px,8vw,60px);
-     border-top:2.5px dashed var(--line);color:var(--mu);font-size:16px;font-weight:600}
-  footer p{margin:0 0 .4rem;max-width:56ch}
-  footer .fine{font-size:14px}
-  .flinks{display:flex;flex-wrap:wrap;gap:10px 22px;margin:16px 0 0;padding:0;list-style:none}
-  .flinks a{font-size:15px}
-
-  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
-
-  @media print{
-    @page{margin:16mm}
-    html,body{background:#fff!important;color:#000;font-size:11.5pt}
-    .rail,.switch,.masthead img,.scrollnote{display:none!important}
-    .wrap{max-width:none;padding:0}
-    h1 .doc{background:none;border:0;padding:0;transform:none}
-    h1 .app,h1 .doc,.eyebrow,.meta,.glance-note,footer,strong,.card h2,th,.num{color:#000!important}
-    .card,.glance,.bubble{background:#fff;border:0;box-shadow:none;border-radius:0;padding:0;margin:0 0 16pt;break-inside:avoid}
-    .num{background:none;border:0;box-shadow:none;transform:none;min-width:0;padding:0}
-    .glance ul{columns:1;list-style:disc;padding-left:18pt}
-    .glance li{padding-left:0}
-    .glance li::before{display:none}
-    .bubble{border-left:2pt solid #000;padding-left:10pt}
-    .scroller{overflow:visible;border:1pt solid #000;border-radius:0;background:#fff}
-    table{min-width:0}
-    th{background:#fff}
-    td{border-top:.5pt solid #666}
-    a{color:#000;text-decoration:underline}
-    a::after{content:" (" attr(href) ")";font-size:.82em;word-break:break-all}
-  }
 </style>
 </head>
-<body>
-
-<div class="wrap">
-
-<nav class="rail" aria-label="Breadcrumb">
-  <a class="pill" href="../index.html">&larr; All policies</a>
-  <a class="pill" href="https://play.google.com/store/apps/details?id=com.carthage.minime" target="_blank" rel="noopener">Mini Me on Google Play &#8599;</a>
+<body class="terms">
+<a class="skip" href="#main">Skip to the text</a>
+<nav class="top" aria-label="Legal pages">
+<a href="../index.html">All eight apps</a>
+<span class="pages"><a href="privacy.html">Privacy</a><a href="terms.html" aria-current="page">Terms</a><a href="delete-account.html">Delete account</a></span>
 </nav>
-
-<header class="masthead">
-  <img src="../../assets/apps/minime.webp" width="88" height="88" alt="Mini Me app icon">
-  <div>
-    <p class="eyebrow">Carthage Studio</p>
-    <h1 class="dsp"><span class="app">Mini Me</span><span class="doc">Terms of Service</span></h1>
-  </div>
+<header class="head">
+<div class="sticker">
+<p class="app"><img src="../../assets/apps/minime.webp" alt="" width="40" height="40"><span>Mini Me: Avatar Pet &amp; Widget</span></p>
+<h1>Terms of service</h1>
+<p class="dates">In force since 19 October 2026. Last changed 14 November 2026. Published by Carthage Studio.</p>
+<fieldset class="switch">
+<legend>Page colours</legend>
+<label><input type="radio" name="world" id="w-mimi" checked><span>Mimi's</span></label>
+<label><input type="radio" name="world" id="w-kai"><span>Kai's</span></label>
+</fieldset>
+</div>
 </header>
-
-<p class="meta">Mini Me — Effective 19 October 2026. Last updated 25 October 2026.</p>
-
-<nav class="switch" aria-label="Document">
-  <a href="privacy.html">Privacy Policy</a>
-  <a href="terms.html" aria-current="page">Terms of Service</a>
-  <a href="delete-account.html">Delete account</a>
+<main id="main">
+<section class="summary" aria-labelledby="sum">
+<h2 id="sum">In short</h2>
+<ul><li>Mini Me is for people aged 13 and over.</li><li>It is a game, not a medical app. Never use its cycle estimates for birth control or to plan a pregnancy.</li><li>You need no account. Your data is on your phone, and we cannot bring it back unless you backed it up. Only the optional Friends and Duo need a Google sign-in.</li><li>Be kind in Friends. Block and Report are always there.</li><li>Coins are earned in the game. They cannot be bought, sold or cashed out.</li><li>Mini Me Plus is optional: by the month or the year, renewing until you cancel in Google Play, or lifetime, paid once.</li><li>There are no ads, no random items and no loot boxes.</li><li>Google Play decides refunds. Tunisian law applies, with the consumer law of your own country.</li></ul>
+</section>
+<nav class="contents" aria-labelledby="con">
+<h2 id="con">On this page</h2>
+<ol><li><a href="#s1">Agreeing to these terms</a></li><li><a href="#s2">Your age</a></li><li><a href="#s3">What you may do with Mini Me</a></li><li><a href="#s4">A game, not medical advice</a></li><li><a href="#s5">Your data and your Friends account</a></li><li><a href="#s6">Coins and items</a></li><li><a href="#s7">Mini Me Plus, packs and refunds</a></li><li><a href="#s8">Friends: be kind</a></li><li><a href="#s9">Fair use</a></li><li><a href="#s10">Your mini and its stickers</a></li><li><a href="#s11">Other services</a></li><li><a href="#s12">No warranty</a></li><li><a href="#s13">Limit of our liability</a></li><li><a href="#s14">Changes and ending</a></li><li><a href="#s15">Law that applies</a></li><li><a href="#s16">Contact</a></li></ol>
 </nav>
-
-<main>
-
-<section class="card glance" aria-label="At a glance">
-  <h2 class="dsp">At a glance</h2>
-  <p class="glance-note">Every point here is restated in full in the sections below.</p>
-  <ul>
-    <li>Mini Me is for people aged 13 and over.</li>
-    <li>It is a game, not a medical app: cycle estimates must never be used for birth control or to plan a pregnancy.</li>
-    <li>No account needed: your data is on your phone, and we cannot recover it unless you backed it up. Only the optional Friends and Duo need a Google sign-in.</li>
-    <li>Be kind in Friends: no names that insult, impersonate or share private details. Block and Report are always there.</li>
-    <li>Coins are earned in the game only. They cannot be bought, sold or cashed out.</li>
-    <li>Mini Me Plus is optional: monthly or yearly, renewing until you cancel in Google Play, or lifetime, paid once.</li>
-    <li>No ads, no randomized items and no loot boxes.</li>
-    <li>Personal, non-commercial use only &mdash; no redistributing, decompiling or reverse-engineering.</li>
-    <li>Refunds are handled by Google Play.</li>
-  </ul>
+<article>
+<section id="s1"><h2><span class="n">1</span> Agreeing to these terms</h2>
+<p>Mini Me: Avatar Pet &amp; Widget is published by Carthage Studio (Mehdi Snoussi), in Tunisia. These terms are the agreement between you and us, and they cover Mini Me for Wear OS and the Mini Me watch face too. You accept them by installing or using Mini Me. If you do not accept them, uninstall it. Google Play’s terms also apply, to the download and to anything you buy.</p>
 </section>
-
-<section class="card" id="s1">
-  <div class="head"><span class="num dsp" aria-hidden="true">1</span><h2 class="dsp">Acceptance</h2></div>
-  <p>By downloading or using Mini Me (the &ldquo;App&rdquo;), you agree to these Terms. If you do not agree, do not use the App. The App includes Mini Me for Wear OS and the Mini Me watch face, and these Terms cover them too. The App is published by <strong>Carthage Studio</strong> (&ldquo;Developer&rdquo;, &ldquo;we&rdquo;). Contact: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+<section id="s2"><h2><span class="n">2</span> Your age</h2>
+<p>You must be 13 or older to use Mini Me. If you are under the age of majority where you live, use it and buy things in it only with the permission of a parent or guardian.</p>
 </section>
-
-<section class="card" id="s2">
-  <div class="head"><span class="num dsp" aria-hidden="true">2</span><h2 class="dsp">Age</h2></div>
-  <p>You must be 13 or older to use the App. If you are under the age of majority where you live, use the App and make purchases only with the permission of a parent or guardian.</p>
+<section id="s3"><h2><span class="n">3</span> What you may do with Mini Me</h2>
+<p>You may install Mini Me on phones and watches you own or control, and use it for yourself. That permission is yours alone and cannot be sold or passed on. Please do not copy the app to other stores, take it apart to reuse it, or share a changed version, unless the law gives you that right whatever a licence says. We can end the permission if you break these terms.</p>
 </section>
-
-<section class="card" id="s3">
-  <div class="head"><span class="num dsp" aria-hidden="true">3</span><h2 class="dsp">License</h2></div>
-  <p>We grant you a personal, non-exclusive, non-transferable, revocable license to install and use the App on devices you own or control, for your personal, non-commercial use. You may not redistribute, decompile, or reverse-engineer the App.</p>
+<section id="s4"><h2><span class="n">4</span> A game, not medical advice</h2>
+<p>Mini Me is a game. Nothing in it is medical advice, a diagnosis or a treatment, and it is not a medical device.</p>
+<ul><li><strong>Cycle log.</strong> The cosy days it shows are rough estimates from the days you logged. Never use them for birth control, or to plan or avoid a pregnancy. If something about your cycle worries you, talk to a doctor.</li><li><strong>Steps, sleep, workouts and period dates.</strong> These come from Health Connect and from the apps and devices that write to it. They can be missing or wrong. Mini Me’s goals are for fun and are not health targets.</li><li><strong>Water.</strong> The daily goal is a starting point you can change, not a recommendation for your body.</li><li><strong>Ramadan mode.</strong> Suhoor and Iftar are calculated on your phone for the city you pick. They can differ from your mosque or local authority by a few minutes. Follow your local times.</li></ul>
 </section>
-
-<section class="card" id="s4">
-  <div class="head"><span class="num dsp" aria-hidden="true">4</span><h2 class="dsp">Not medical advice</h2></div>
-  <p>Mini Me is a game. Nothing in it is medical advice, a diagnosis or a treatment, and it is not a medical device.</p>
-  <ul>
-  <li><strong>Cycle log.</strong> The &ldquo;cosy days&rdquo; it shows are rough estimates from the days you logged. <strong>Never use them for birth control or to plan or avoid a pregnancy.</strong> If something about your cycle worries you, talk to a doctor.</li>
-  <li><strong>Steps, sleep, workouts and period dates.</strong> These come from Health Connect and the apps and devices that write to it. They can be missing or wrong, and the App's goals are for fun, not health targets.</li>
-  <li><strong>Ramadan mode.</strong> Suhoor and Iftar times are calculated on your phone for the city you pick and can differ from your local mosque or authority by a few minutes. Follow your local times.</li>
-  </ul>
+<section id="s5"><h2><span class="n">5</span> Your data and your Friends account</h2>
+<p>Mini Me has no account of its own. Everything you log lives on your phone, and what your watch shows lives on your watch. If you lose your phone, uninstall the app or use “Delete everything”, we cannot bring it back. Only a Google backup or an export file you made can, as the <a href="privacy.html">privacy policy</a> explains. “Restore purchases” returns what you bought through Google Play.</p>
+<p>Friends and Duo are optional and need a Google sign-in. Your Friends account (the name friends see, your friend code, your friends and your duo) lives on our server, so it comes back when you sign in on a new phone. Your mini and everything else you log do not. You can sign out or delete your Friends account in Settings whenever you like.</p>
 </section>
-
-<section class="card" id="s5">
-  <div class="head"><span class="num dsp" aria-hidden="true">5</span><h2 class="dsp">Your data</h2></div>
-  <p>The App does not require an account. Everything you log lives on your phone, and what your watch shows lives on your watch if you use Mini Me there. We cannot recover it if you lose your phone, uninstall the App or use <strong>Delete everything</strong>, except from a Google backup or an export file you made (see the <a href="privacy.html">Privacy Policy</a>). Purchases can always be restored through Google Play.</p>
-  <p>Friends and Duo are optional and need a Google sign-in. Your Friends account (your name for friends, friend code, friends and duo) lives on our server, so it comes back when you sign in on a new phone; your mini and everything else you log do not. You can sign out or delete your Friends account at any time in Settings.</p>
+<section id="s6"><h2><span class="n">6</span> Coins and items</h2>
+<p>Coins are earned by playing: caring for your mini, checking in, and the other things the app rewards. They cannot be bought with real money. Coins, and the items you get with them, have no cash value and cannot be sold, transferred or exchanged outside Mini Me. We may change prices in coins, rewards and the items on offer, for example to keep the game balanced.</p>
 </section>
-
-<section class="card" id="s6">
-  <div class="head"><span class="num dsp" aria-hidden="true">6</span><h2 class="dsp">Coins and items</h2></div>
-  <p>Coins are earned by playing: caring for your mini, checking in, and the other things the App rewards. They cannot be bought with real money, and they and the items you get with them have no cash value and cannot be sold, transferred or exchanged outside the App. We may change prices in coins, rewards and the items on offer, for example to keep the game balanced.</p>
+<section id="s7"><h2><span class="n">7</span> Mini Me Plus, packs and refunds</h2>
+<p>Mini Me is free to use. What is sold goes through Google Play, and the price and the billing period are shown before you confirm.</p>
+<table><thead><tr><th scope="col">What</th><th scope="col">How you pay</th><th scope="col">What to know</th></tr></thead><tbody><tr><th scope="row">Mini Me Plus, monthly or yearly</th><td data-th="How you pay">A subscription</td><td data-th="What to know">Renews by itself until you cancel in Google Play. The Plus screen lists what it includes before you buy</td></tr><tr><th scope="row">Mini Me Plus, lifetime</th><td data-th="How you pay">Once</td><td data-th="What to know">Not a subscription. It never renews</td></tr><tr><th scope="row">The Cosy pack and the season packs</th><td data-th="How you pay">Once each</td><td data-th="What to know">A pack you buy stays yours. Plus includes every season pack while your Plus is active</td></tr></tbody></table>
+<ul><li>Cancel a subscription in Google Play, under Payments and subscriptions, at least 24 hours before the period ends, to avoid the next charge. Uninstalling the app does not cancel it.</li><li>A free trial, when one is offered, turns into a paid subscription at its stated price unless you cancel before it ends.</li><li>We may add to Plus and change the items it brings each week. If we ever take a Plus perk away, we will say so in the app before your next renewal.</li><li>A purchase that is refunded or has ended is removed from the app.</li></ul>
+<p>Mini Me shows no ads and sells no random items or loot boxes.</p>
+<p>Refunds are handled under <a href="https://support.google.com/googleplay/answer/2479637">Google Play’s refund policy</a>. We can support a request you send to Google, and Google decides. If you live in the EU or the UK, the rights the law gives you over digital purchases, the right to withdraw among them, are not changed by these terms.</p>
 </section>
-
-<section class="card" id="s7">
-  <div class="head"><span class="num dsp" aria-hidden="true">7</span><h2 class="dsp">Mini Me Plus and purchases</h2></div>
-  <p>The App is free to use. Mini Me Plus is an optional upgrade through Google Play Billing, offered as a monthly or yearly subscription or as a lifetime purchase. What Plus includes is listed on the Plus screen before you buy, and the price and billing period are shown before you confirm.</p>
-  <ul>
-  <li><strong>Subscriptions</strong> renew automatically until you cancel them in the Google Play subscriptions panel; cancel at least 24 hours before the period ends to avoid the next charge. A free trial, if offered, turns into a paid subscription at its stated price unless you cancel before it ends.</li>
-  <li><strong>Lifetime</strong> is a one-time purchase. It is not a subscription and does not renew.</li>
-  <li><strong>Packs</strong> of items for your mini (the Cosy pack and the season packs) are one-time purchases. Mini Me Plus includes every season pack while your Plus is active; a pack you buy on its own stays yours.</li>
-  </ul>
-  <p>We may add to Plus and change the items it brings each week. If we ever take a Plus perk away, we will say so in the App before your next renewal. <strong>The App shows no ads and sells no randomized items or loot boxes.</strong></p>
-  <div class="bubble"><strong>Refunds</strong> are handled by Google Play under <a href="https://support.google.com/googleplay/answer/2479637">Google's refund policy</a>. We can support a request you submit to Google, but Google makes the final decision. A refunded or ended purchase is removed from the App.</div>
+<section id="s8"><h2><span class="n">8</span> Friends: be kind</h2>
+<ul><li>Do not pick a name that insults or threatens anyone, pretends to be someone else, or gives away private details such as a phone number or an address.</li><li>Do not use Friends to bother people. Do not send requests to people who do not want them, and do not try to get around a block.</li><li>Do not try to reach the Friends server other than through the app.</li></ul>
+<p>We may change a name that breaks these rules. We may close a Friends account that keeps breaking them, after looking at the reports about it. Closing a Friends account does not touch the rest of Mini Me or your purchases.</p>
 </section>
-
-<section class="card" id="s8">
-  <div class="head"><span class="num dsp" aria-hidden="true">8</span><h2 class="dsp">Content and stickers</h2></div>
-  <p>The App, its minis, clothes, rooms, artwork and interface are the property of the Developer. You may send the WhatsApp stickers of your own mini in your personal chats. You may not sell them or use them for commercial purposes.</p>
+<section id="s9"><h2><span class="n">9</span> Fair use</h2>
+<ul><li>Use Mini Me within the law of the place you are in.</li><li>Do not tamper with the app, or with coins, items or purchases.</li></ul>
 </section>
-
-<section class="card" id="s9">
-  <div class="head"><span class="num dsp" aria-hidden="true">9</span><h2 class="dsp">Other apps and services</h2></div>
-  <p>The App works with services provided by others under their own terms: Google Play, Health Connect, Android backup, Wear OS, WhatsApp, and Google Sign-In and Firebase for Friends and Duo. We are not responsible for their content, availability or accuracy.</p>
+<section id="s10"><h2><span class="n">10</span> Your mini and its stickers</h2>
+<p>Mini Me, its minis, clothes, rooms, artwork and interface belong to the publisher. You may send the WhatsApp stickers of your own mini in your personal chats. You may not sell them or use them to advertise anything.</p>
 </section>
-
-<section class="card" id="s10">
-  <div class="head"><span class="num dsp" aria-hidden="true">10</span><h2 class="dsp">Acceptable use</h2></div>
-  <ul>
-  <li>Do not use the App to violate any applicable law.</li>
-  <li>Do not reverse-engineer, decompile, tamper with, or attempt to manipulate coins, items or purchases.</li>
-  <li>In Friends, do not pick a name that insults or threatens anyone, pretends to be someone else, or shares private details such as a phone number or address.</li>
-  <li>Do not use Friends to bother people: do not send requests to people who do not want them, do not get around a block, and do not try to reach the Friends server other than through the App.</li>
-  </ul>
-  <p>We may change a name that breaks these rules, and we may close a Friends account that keeps breaking them, after looking at the reports about it. Closing a Friends account does not affect the rest of the App or your purchases.</p>
+<section id="s11"><h2><span class="n">11</span> Other services</h2>
+<p>Mini Me works with services that others provide under their own terms: Google Play, Health Connect, Android backup, Wear OS, WhatsApp, and Google Sign-In and Firebase for Friends and Duo. We are not responsible for what they show, for whether they are available, or for their accuracy.</p>
 </section>
-
-<section class="card" id="s11">
-  <div class="head"><span class="num dsp" aria-hidden="true">11</span><h2 class="dsp">Availability &amp; changes</h2></div>
-  <p>We may update, change, or discontinue the App or any of its features at any time. Reminders and the mini over your apps depend on your phone's settings and battery rules, and some phones delay or stop them. Your watch catches up with your phone when the two are connected.</p>
+<section id="s12"><h2><span class="n">12</span> No warranty</h2>
+<p>Mini Me is provided “as is” and “as available”. We may update it, change it or stop offering it or any part of it. Reminders and the mini over your apps depend on your phone’s settings and battery rules, and some phones delay or stop them. Your watch catches up with your phone when the two are connected. We do not promise that Mini Me is free of faults or fits a particular purpose.</p>
 </section>
-
-<section class="card" id="s12">
-  <div class="head"><span class="num dsp" aria-hidden="true">12</span><h2 class="dsp">Disclaimer &amp; liability</h2></div>
-  <p>The App is provided &ldquo;as is&rdquo;, without warranties of any kind to the fullest extent permitted by law. To the extent permitted by law, the Developer is not liable for indirect or consequential damages, or for any loss arising from your use of the App or from information shown in it. Nothing in these Terms limits rights you have under mandatory consumer law.</p>
+<section id="s13"><h2><span class="n">13</span> Limit of our liability</h2>
+<p>As far as the law allows, we are not liable for indirect or consequential loss, for lost data, or for any loss arising from the use of Mini Me or from what it shows. Our total liability for any claim is limited to what you paid us in the twelve months before it.</p>
+<p>Nothing in these terms limits liability that the law does not let us limit, and nothing takes away a right the consumer law of your country gives you.</p>
 </section>
-
-<section class="card" id="s13">
-  <div class="head"><span class="num dsp" aria-hidden="true">13</span><h2 class="dsp">Governing law</h2></div>
-  <p>These Terms are governed by the laws of Tunisia, without regard to conflict-of-law rules, and without depriving you of the protections of the mandatory consumer law of your country of residence.</p>
+<section id="s14"><h2><span class="n">14</span> Changes and ending</h2>
+<p>We may change these terms, for example when Mini Me gains a feature. The date at the top of this page marks the current version, and we tell you in the app about a change that matters. Using Mini Me after a change means you accept it.</p>
+<p>You can stop whenever you like: cancel any subscription in Google Play, delete your Friends account if you have one, then uninstall. We can end your permission to use Mini Me if you break these terms.</p>
 </section>
-
-<section class="card" id="s14">
-  <div class="head"><span class="num dsp" aria-hidden="true">14</span><h2 class="dsp">Contact</h2></div>
-  <p>Questions: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+<section id="s15"><h2><span class="n">15</span> Law that applies</h2>
+<p>These terms follow the law of Tunisia, where the publisher lives. If you are a consumer, the mandatory protections of the law of your own country still apply to you, and you may bring a claim in your local courts where that law says so.</p>
 </section>
-
+<section id="s16"><h2><span class="n">16</span> Contact</h2>
+<p>Carthage Studio (Mehdi Snoussi), Tunisia. <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a></p>
+</section>
+</article>
 </main>
-
-<footer>
-  <p>Terms of Service for Mini Me, published by Carthage Studio.</p>
-  <p class="fine">Set in Grandstander and DM Sans, the typefaces the App itself ships.</p>
-  <ul class="flinks">
-    <li><a href="../index.html">All policies</a></li>
-    <li><a href="privacy.html">Privacy Policy</a></li>
-  </ul>
+<footer class="foot">
+<p>Mini Me is published by Carthage Studio (Mehdi Snoussi), Tunisia. Write to <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+<p class="links"><a href="privacy.html">Privacy policy</a><a href="delete-account.html">Delete your Friends account</a><a href="../index.html">All eight apps</a><a href="https://play.google.com/store/apps/details?id=com.carthage.minime">Mini Me on Google Play</a></p>
+<p class="colophon">Set in Grandstander and DM Sans in Mimi's world, Lilita One and DM Sans in Kai's: the app's own faces, borders and colours. The colour switch at the top is the first choice the app asks you to make: Mimi or Kai.</p>
 </footer>
 
-</div>
 </body>
 </html>

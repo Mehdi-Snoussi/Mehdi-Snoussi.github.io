@@ -1,0 +1,17 @@
+{
+  "name": "Dhikr",
+  "store_title": "Dhikr: Tasbih Counter & Azkar",
+  "package": "com.carthage.dhikr",
+  "effective": "4 June 2026",
+  "theme_color": "#F4ECD9",
+  "scheme": "light",
+  "pages": ["privacy", "terms"],
+  "colophon": "Set in Amiri and Alegreya Sans, the two faces Dhikr itself is set in. The page is cut like the leaf on the app's Home.",
+  "fonts": [
+    ["Amiri", "400", "normal", "dhikr/assets/fonts/Amiri-Regular.ttf"],
+    ["Amiri", "700", "normal", "dhikr/assets/fonts/Amiri-Bold.ttf"],
+    ["Alegreya Sans", "400", "normal", "dhikr/assets/fonts/AlegreyaSans-Regular.ttf"],
+    ["Alegreya Sans", "700", "normal", "dhikr/assets/fonts/AlegreyaSans-Bold.ttf"],
+    ["Reem Kufi", "400 700", "normal", "dhikr/assets/fonts/ReemKufi.ttf", "ذكر"]
+  ]
+}

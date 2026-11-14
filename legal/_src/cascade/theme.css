@@ -1,0 +1,36 @@
+/* Cascade: lib/ui/riso.dart, a risograph print at night. Flat inks on navy paper, a halftone screen for
+   shading, and a second ink printed a few pixels off where other games put a glow. The summary is one
+   Riso.block (a hard offset block of ink behind it); section numbers are orbs printed flat, one ink each. */
+:root{--bg:#141A2E;--deep:#0E1324;--panel:#1E2742;--edge:#27324F;--ink:#F4EEDC;--muted:#B9BED3;--link:#5FD9CD;
+  --pink:#FF5C9E;--yellow:#FFD23F;--teal:#2EC4B6;--blue:#5B8CFF;--off:#070A14;--rule:rgba(244,238,220,.17);--focus:#FFD23F;
+  --body:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--title:var(--body);--size:1.06rem;--lead:1.62}
+.print{padding-top:.8rem}
+.app{margin:0;display:flex;align-items:center;gap:.7rem;font-weight:600;line-height:1.25}
+.app img{border-radius:10px;flex:none}
+h1{margin-top:1.4rem;font-weight:800;font-size:clamp(2.5rem,10vw,3.7rem);line-height:1.02;color:var(--yellow);text-shadow:3px 3px 0 var(--pink)}
+.dates{margin:1.1rem 0 0;color:var(--muted)}
+.screen{height:30px;margin-top:1.5rem;
+  background:radial-gradient(circle,var(--pink) 0 3.1px,transparent 3.4px) 0 0/10px 10px,radial-gradient(circle,var(--pink) 0 3.1px,transparent 3.4px) 5px 5px/10px 10px;
+  -webkit-mask:linear-gradient(90deg,#000 0,rgba(0,0,0,.55) 45%,transparent 92%);mask:linear-gradient(90deg,#000 0,rgba(0,0,0,.55) 45%,transparent 92%)}
+h2{font-weight:800;font-size:1.42rem;letter-spacing:-.01em}
+h3{font-weight:600}
+strong{font-weight:600;color:#fff}
+.summary{margin-top:2rem;background:var(--panel);border:1.5px solid var(--edge);border-radius:14px;box-shadow:5px 5px 0 var(--off);padding:1.25rem 1.2rem 1.3rem}
+.summary h2{color:var(--yellow)}
+.summary tbody th{color:var(--ink);font-weight:600}
+thead th{color:var(--muted);font-weight:600;font-size:.9rem}
+article h2{display:flex;align-items:center;gap:.65rem}
+.n{flex:none;display:inline-grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--c,var(--pink));
+  color:#141A2E;font-weight:800;font-size:.95rem;box-shadow:2.5px 2.5px 0 var(--off)}
+article section:nth-of-type(4n+2) .n{--c:var(--yellow)}
+article section:nth-of-type(4n+3) .n{--c:var(--teal)}
+article section:nth-of-type(4n) .n{--c:var(--blue)}
+.contents a{text-decoration:none}
+.contents a:hover{text-decoration:underline}
+.contents li::marker{color:var(--muted);font-weight:600}
+ul{list-style:none;padding-left:0}
+article li,.summary li{position:relative;padding-left:1.25rem}
+article li::before,.summary li::before{content:"";position:absolute;left:.05rem;top:.62em;width:.5rem;height:.5rem;border-radius:50%;background:var(--teal)}
+.note{border-left:3px solid var(--pink);padding-left:.85rem}
+.foot{color:var(--ink)}
+@media (max-width:42rem){.summary{padding-inline:1rem}}

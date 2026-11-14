@@ -1,0 +1,16 @@
+{
+  "name": "Relic Revival",
+  "store_title": "Relic Revival: Cleaning ASMR",
+  "package": "com.carthage.relicrevival",
+  "effective": "14 July 2026",
+  "theme_color": "#EFE6D3",
+  "scheme": "light",
+  "pages": ["privacy", "terms"],
+  "colophon": "Set in Cinzel and Libre Caslon Text, the faces of the game's museum, on its workbench cream. The header is written as the card beside an exhibit.",
+  "fonts": [
+    ["Cinzel", "400 900", "normal", "relicrevival/assets/fonts/Cinzel.ttf"],
+    ["Libre Caslon Text", "400", "normal", "relicrevival/assets/fonts/LibreCaslonText-Regular.ttf"],
+    ["Libre Caslon Text", "400", "italic", "relicrevival/assets/fonts/LibreCaslonText-Italic.ttf"],
+    ["Libre Caslon Text", "700", "normal", "relicrevival/assets/fonts/LibreCaslonText-Bold.ttf"]
+  ]
+}

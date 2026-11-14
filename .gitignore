@@ -2,3 +2,5 @@
 _*
 # kept (and, starting with _, not published by GitHub Pages): brand sources
 !_brand/
+# kept (and not published, for the same reason): the words and the builder of the legal pages
+!legal/_src/

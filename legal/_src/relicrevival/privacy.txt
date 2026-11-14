@@ -1,0 +1,84 @@
+title: Privacy policy
+description: Relic Revival keeps your museum on your phone. Ads after an appraisal, the one purchase and a picture you share are what leave it, and you can stop each.
+summary: What leaves your phone
+---
+| What | Where it goes | When | How to stop it |
+| Advertising ID, IP address, what you do with an ad | Google AdMob | While ads show | Refuse in Privacy options, buy Remove Ads, or use Android's ad settings |
+| The Remove Ads purchase | Google Play | Each time you buy or restore it | Nothing is sent until you buy |
+| A picture of a relic | The app you pick in Android's share sheet | Each time you tap Share | Keep the relic to yourself |
+| A backup of your museum | Your own Google account | While Android's backup is on | Turn the backup off in Android's settings |
+| A problem report | Our support mailbox | Only if you press send | Close the draft unsent |
+
+Your relics, your restorers and your coins stay on the phone. The game has no account and needs no connection to be played.
+
+## Who publishes Relic Revival
+
+Relic Revival: Cleaning ASMR is a game for Android, published by Carthage Studio (Mehdi Snoussi), in Tunisia, as its Google Play page shows. Write to [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com) about anything on this page. "We" stands for the publisher.
+
+## What stays on your phone
+
+The game keeps its records on the phone, where only it can read them:
+
+- your coins and the relics you have revealed;
+- your museum sets, the restorers you hired and their levels;
+- the time you last played, so your restorers' work while you were away can be counted;
+- your daily reward streak, and your place in the Cursed Collection or another event;
+- your settings: sound, haptics, language, the daily reminder.
+
+Nothing in this list is sent to us. With backup switched on for your Google account, Android can copy it there and put it back on a new phone.
+
+## Ads
+
+Relic Revival shows no banner, and no ad when it opens or closes. A full-screen ad may come after you finish appraising a relic, never in the middle of a wipe. A video plays only when you choose one, for instance to double an appraisal or what your restorers earned while you were away.
+
+The ads are served by Google AdMob. Google's ad software, which is part of the game, collects for Google and shares with it: your phone's advertising ID and app set ID, its IP address (enough for a rough location), the ads you saw and tapped, when the game was opened, and crash and performance data about the ad software. None of it reaches us. See [how Google uses it](https://policies.google.com/technologies/partner-sites).
+
+- In the European Economic Area, the UK and Switzerland, and in US states that require it, the game asks for your consent before it requests any ad. "Privacy options" in Settings lets you change or withdraw it.
+- Android's settings (Google, then Ads) let you reset or delete the advertising ID.
+- Remove Ads ends the full-screen ads. The optional videos stay available, for when you want what they give.
+
+## The purchase
+
+One thing is for sale: Remove Ads. Google Play collects the payment and confirms it to the game, without telling us who you are or how you paid. The game notes on the phone that forced ads are off, and asks Google Play again each time it starts. Coins are earned, not sold, and the game sells no random items.
+
+## Reminders
+
+You can ask for a daily reminder. While the Cursed Relics event runs, the game adds one note on the day it opens and one on its last day. Each notification is scheduled by your phone. There is no push server and no token that would let us address your phone. Turn them off in the game's Settings or in Android's.
+
+## Sharing a relic, reporting a problem
+
+When you tap **Share**, the game draws the picture on your phone and passes it to the app you pick. We do not see it.
+
+**Report a problem** opens a message in your own mail app, filled in with the game's version, your Android version, the model of your phone and the most recent errors. You decide whether to send it and what to leave in.
+
+## What we can see
+
+Google Play shows us counts for the game: installs and uninstalls, ratings, and crash rates from phones that share diagnostics with Google. They cannot be linked to a person. We have no other view of how you play.
+
+## Children
+
+Relic Revival is intended for players aged 13 and over and is not directed at younger children. We do not knowingly collect personal data from a child under 13. A parent who finds that a child has emailed us can ask us to delete the message.
+
+## Keeping and deleting
+
+Your museum is kept on your phone until you uninstall the game or clear its data in Android's settings. A backup, if you use one, is kept by Google under your account. We hold no copy. Any email you send stays in our support mailbox until the matter is resolved or you ask us to delete it.
+
+## Your rights
+
+You can ask us for the data we hold about you, or for its deletion, and we answer within 30 days. As the game stores everything on your phone, there is ordinarily nothing for us to send or delete.
+
+Under the GDPR, people in the EU and the UK may see, correct, delete and move their data, object to its use and withdraw consent at any time (for ads, through Privacy options). California and other places grant similar rights. The GDPR grounds we rely on are your consent for ads and reminders, a contract for the purchase, and our legitimate interest in repairing the game when you report a fault.
+
+Google is responsible for the data its ad software collects. Besides the choices in [[Ads]], you can use [Google's My Ad Center](https://myadcenter.google.com/). We do not sell personal data. A complaint can be made to the data protection authority of your country.
+
+## Security
+
+The game talks to Google's ad and payment services over encrypted connections, and Google Play verifies the purchase. Your progress is stored where only the game can reach it, under the protection of your phone's lock.
+
+## Changes to this policy
+
+If the game starts handling data differently, we update this page and its date. Changes that matter are also announced in the game or in its notes on Google Play.
+
+## Contact
+
+Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

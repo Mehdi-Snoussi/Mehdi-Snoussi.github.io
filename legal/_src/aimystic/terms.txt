@@ -1,0 +1,84 @@
+title: Terms of service
+description: The terms for AI Mystic: readings are written by an AI for reflection and entertainment, three are free each day, and Mystic Pro is a subscription that renews until you cancel it.
+summary: In short
+---
+- Readings are written by an AI model. They are for reflection and entertainment, not advice and not prediction.
+- Three readings a day are free, and a short video adds up to two more.
+- Mystic Pro is a subscription. It renews by itself until you cancel it in Google Play.
+- AI Mystic is for people aged 17 and over.
+- Google Play decides refunds. Tunisian law applies, with the consumer law of your own country.
+
+## Agreeing to these terms
+
+AI Mystic: Tarot Card Reading is published by Carthage Studio (Mehdi Snoussi), in Tunisia. These terms are the agreement between us, and installing or using the app means you accept them. If you do not, uninstall it. Google Play's terms also apply to the download and to the subscription.
+
+## What you may do with AI Mystic
+
+You may install the app on Android devices you own or control and use it for yourself. You may not transfer that permission, publish the app elsewhere, take it apart to reuse it, or distribute an altered copy, except where the law lets you regardless. We can end the permission if these terms are broken.
+
+## The readings
+
+A reading is written when you ask for it, by Google's Gemini, from the cards you drew, your question and your zodiac sign. When Gemini cannot be reached, the app composes the reading on your phone from the cards' own meanings.
+
+Take a reading for what it is: something to think with. It does not foretell anything. It is not medical, legal, financial or psychological advice, and it should not be the reason for a decision about your health, your money or another person. An AI can write things that are wrong or unsuitable. If a reading troubles you, "Report this reading" sends it to us.
+
+You may share a reading or a card with people you know. Do not sell them or present them as your own professional service. The app's design, artwork and code belong to the publisher.
+
+## No account
+
+There is no sign-up. Your journal and settings are kept on your phone and are lost if you uninstall the app or clear its data. We have no copy; Android's backup may bring them back on a new phone. A subscription returns through "Restore purchases".
+
+## Ads
+
+The free app is paid for by ads from Google AdMob, and using it means seeing them. A subscription removes them.
+
+## What is free, Mystic Pro and refunds
+
+| | Free | Mystic Pro |
+| Card of the day | Yes | Yes |
+| Readings | Three a day, plus up to two for a video | Unlimited |
+| Love and Career spreads | No | Yes |
+| Ads | Yes | None |
+
+Mystic Pro is sold by Google Play, by the month or by the year. The price and the period are on the purchase screen before you confirm.
+
+- It renews automatically at the end of each period, at the price then shown in Google Play, until you cancel.
+- Cancel in Google Play, under Payments and subscriptions, at least 24 hours before the period ends. Uninstalling the app does not cancel it.
+- After you cancel, Pro stays active to the end of the period you paid for.
+- A free trial, when one is offered, becomes a paid subscription at the stated price unless you cancel before it ends.
+
+Refunds are handled under [Google Play's refund policy](https://support.google.com/googleplay/answer/2479637). We can support a request, and Google decides. If you live in the EU or the UK, the rights the law gives you for digital services, the right to withdraw among them, are not affected.
+
+## Fair use
+
+- Do not rely on a reading for a real-world decision, or give it to someone else as advice.
+- Keep within the law, and respect other people's rights in what you ask and what you share.
+- Do not tamper with the app or its subscription, and do not use scripts to draw readings in bulk.
+
+## Who can use AI Mystic
+
+You must be 17 or older. The app touches on mature themes.
+
+## No warranty
+
+AI Mystic is provided "as is" and "as available". We do not promise that it will always be reachable or free of faults, or that a reading is accurate, complete or fit for any purpose. Gemini is Google's service and can change, slow down or stop.
+
+## Limit of our liability
+
+As far as the law allows, we are not liable for indirect or consequential loss, for the loss of your journal, or for anything you do or decide because of a reading. Our total liability for any claim is limited to what you paid us in the twelve months before it.
+
+Where the law does not permit such a limit, it does not apply. Nothing here reduces your rights under the consumer law of your country.
+
+## Changes and ending
+
+We may update these terms, for example if the free allowance or Pro changes. The date at the top of this page marks the current version, and an important change is announced in the app or in its notes on Google Play. Using the app after a change means you accept it.
+
+You can stop at any time: cancel any subscription in Google Play, then uninstall. We may end your permission to use the app if you break these terms.
+
+## Law that applies
+
+These terms follow Tunisian law, the law of the publisher's country. Consumers keep the mandatory protections of their own country's law, and may go to their local courts where it allows.
+
+## Contact
+
+Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

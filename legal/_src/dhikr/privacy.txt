@@ -1,0 +1,135 @@
+title: Privacy policy
+description: What Dhikr keeps on your phone, the few things it sends out (to find mosques, play a recitation or show an ad) and how to stop each one.
+summary: What leaves your phone
+---
+| What | Where it goes | When | How to stop it |
+| Your position | OpenStreetMap's mosque search and map | Each time you open Nearby mosques, or ask Home for the nearest one | Don't open them. Prayer times and the Qibla are worked out on the phone |
+| Your position, to name your city | Your phone's own geocoder, Google's on most phones | Each time Dhikr reads your position | Turn location off for Dhikr; it keeps the last place it knew |
+| The surah and ayah you play | EveryAyah.com | Each time you press play on a recitation | Read without the audio |
+| The surah whose tafsir you open | QuranEnc.com | The first time you open it | Leave the tafsir closed |
+| A story chapter, and the voice search model | GitHub; the model can also come from Hugging Face | The first time you play a chapter; once for the model | Leave stories and voice search unused |
+| Advertising ID, IP address, what you do with an ad | Google AdMob | While ads show | Remove Ads, any Support Dhikr gift, or Android's ad settings |
+| Prayer times and finished rounds | Your own Wear OS watch | Once Dhikr is on your watch | Remove it from the watch |
+| A backup of your counts and settings | Your own Google account | While Android's backup is on | Turn the backup off in Android's settings |
+
+Everything else stays on the phone: your counts, the prayers you mark, what you read, your voice. Dhikr has no account, and we run no server that receives anything about you.
+
+## Who publishes Dhikr
+
+Dhikr: Tasbih Counter & Azkar is an app for Android phones and Wear OS watches. Its publisher is Carthage Studio (Mehdi Snoussi), in Tunisia, the name on its Google Play page. Questions about anything here go to [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com).
+
+In this policy "Dhikr" means the phone app and the watch app together, and "we" means the publisher.
+
+## What stays on your phone
+
+Dhikr keeps these in its own storage on the phone, where other apps cannot read them:
+
+- your tasbih counts, finished rounds, history, streak and badges;
+- the prayers you mark, your excused days and make-up prayers;
+- today's azkar counts, your place and bookmark in the Quran, your favourite duas and your quiz answers;
+- your settings: calculation method, reminders, language, theme;
+- the last position Dhikr read and the city it belongs to, so the times can show at once, and the last list of mosques it found;
+- what it downloaded for you: tafsir you opened, story chapters you played, the voice search model.
+
+**Your voice.** "Recite to find an ayah" listens through the microphone only while its sheet is open. The sound is turned into words on the phone, by a model that runs there, and is dropped as soon as the ayah is found. It is never saved and never sent. You can type the words instead.
+
+**Reminders and Quiet at prayer.** Prayer, azkar and dua reminders are set on the phone itself; no server sends them. Quiet at prayer is a Do Not Disturb rule that Android keeps and shows in its own settings.
+
+**Widgets** are drawn on the phone from the same data.
+
+## Your position
+
+Dhikr asks for your position to work out prayer times and the direction of the Kaaba. Both are calculated on the phone. You can allow a precise or an approximate position, or none: without it Dhikr uses the last place it knew.
+
+To put a city name on the screen, Dhikr hands the coordinates to the geocoder built into your phone. On most Android phones that is a Google service.
+
+Mosques are the one feature that sends your position out. When you open Nearby mosques, or ask Home for the nearest one, Dhikr sends your coordinates and the radius you chose to a public OpenStreetMap search server (Overpass). If the first server is slow it asks up to three more: overpass-api.de, overpass.kumi.systems, maps.mail.ru and overpass.private.coffee. The map is drawn with tiles from tile.openstreetmap.org, which learns the area you are looking at. Directions open your phone's own maps app with the mosque's position.
+
+Dhikr never reads your position while it is closed.
+
+## What Dhikr fetches from the internet
+
+| Service | What it is told |
+| EveryAyah.com | Which ayah to play, in which reciter's voice |
+| QuranEnc.com | Which surah's tafsir to send, in which language |
+| GitHub | Which story chapter to send; a request for the voice search model |
+| Hugging Face | A request for the voice search model, if GitHub does not answer |
+| OpenStreetMap | Coordinates and radius for mosques; the map tiles you look at |
+
+Dhikr sends no name, account or device ID with these requests. Like any site you visit, each service sees your IP address. Tafsir, story chapters and the model are kept on the phone after the first download, so they are asked for once.
+
+Three of these services publish a privacy policy of their own: [GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement), [Hugging Face](https://huggingface.co/privacy) and the [OpenStreetMap Foundation](https://osmfoundation.org/wiki/Privacy_Policy).
+
+## Ads
+
+Dhikr is free and shows ads from Google AdMob: a small banner at the foot of some screens (the counter, prayer times, the lists of surahs and duas) and, now and then, a full-screen ad, never more than one in three minutes. No ad appears on Home, while you read the Quran, the azkar or a dua, in the quiz, or around a share. The only video you can choose to watch is "Watch Ad to Hide Ads" in Settings, which hides ads for an hour.
+
+Google's ad software collects on its own account, and we never receive it: the phone's advertising ID and app set ID, its IP address (from which Google can estimate a rough location), which ads you see and tap, when the app starts, and how the ad software performs. Google uses this for advertising, measurement and fraud prevention. See [how Google uses data from apps that show its ads](https://policies.google.com/technologies/partner-sites).
+
+- In the European Economic Area, the UK and Switzerland, Dhikr asks for your choice before it shows personalised ads. Change it later in Settings, under "Ad privacy options".
+- Anywhere, you can reset or delete your advertising ID in Android's settings, under Google, then Ads.
+- Remove Ads, or any Support Dhikr gift, ends ads for good.
+
+Dhikr asks AdMob only for ads rated G, suitable for all audiences, and we block the sensitive ad categories for it, dating among them. Gambling and alcohol ads stay blocked. We cannot see each ad before it shows. If one seems out of place, tell us.
+
+## Purchases
+
+Remove Ads and the three Support Dhikr gifts are sold by Google Play. Google takes the payment and tells Dhikr whether it went through. We never see your card or your name. Dhikr keeps two yes-or-no notes on the phone: ads removed, a gift given. It checks Remove Ads with Google Play again at each start, so the purchase follows you to a new phone and ends if it is refunded.
+
+## Your watch
+
+If you install Dhikr on a Wear OS watch, your phone sends it about a month of prayer times and your language, and the watch sends back the rounds you finish. This travels between your own two devices, over the link Google Play services provides. We receive none of it.
+
+## Backups and copies
+
+**Android's backup.** If backup is on for your Google account, Android stores Dhikr's data there with your other apps' data: counts, marks, bookmarks, settings. The downloaded tafsir, stories and voice model are left out. Google keeps and deletes these backups under its own terms.
+
+**A copy file.** "Save a copy" in Settings writes your data to a file wherever you choose, and "Restore from a copy" reads one back. The file is ordinary text with no password: anyone who has it can read it.
+
+## Sharing
+
+Sharing a dua, a dhikr, an ayah or a quiz question hands the text or picture to the app you pick in Android's share sheet. Nothing goes to us. The link added to a share carries a short tag saying which part of Dhikr it came from, such as "dua". It does not say who shared it. Google Play shows us how many installs came from each tag.
+
+## Problem reports
+
+"Report a problem" opens your own mail app with a message addressed to us. It holds Dhikr's version, your Android version, your phone's model and the last errors Dhikr noted. You can read it and edit it, and it leaves only if you press send.
+
+## What we can see
+
+Google Play gives every publisher totals: installs, uninstalls, ratings, and crash rates from phones whose owners share diagnostics with Google. They name no one. Beyond those, and the emails you choose to send, we see nothing of how you use Dhikr.
+
+## Children
+
+Dhikr is made for a general audience and has no account, chat or public profile. It is not aimed at children under 13, and we do not knowingly collect personal data from them. A parent who thinks a child has sent us something can write to us and we will delete it.
+
+## Keeping and deleting
+
+Your data lives on your phone for as long as you keep the app. Uninstalling Dhikr, or clearing its data in Android's settings, erases all of it, and removing the watch app erases what the watch kept. A copy file stays where you saved it until you delete it. A backup stays in your Google account until you turn backup off or delete it there.
+
+We hold nothing about you on our side, except emails you sent us. Those stay in our support mailbox until the matter is settled or you ask us to delete them.
+
+## Your rights
+
+You can ask us what we hold about you and ask us to delete it. We answer within 30 days. For Dhikr the answer is nearly always "nothing", because your data is on your phone, where you can read, change and delete it yourself.
+
+The laws of the EU and the UK (the GDPR), of California and of other places give you named rights: to see your data, correct it, delete it, object to its use, take it with you and withdraw a consent. Where the GDPR asks for a legal ground, ours are:
+
+- your consent, for each permission you grant and for personalised ads;
+- a contract with you, for a purchase;
+- our legitimate interest in keeping the app working, for a problem report you send.
+
+For ad data, Google decides how it is used. Your choices are in [[Ads]] and in [Google's My Ad Center](https://myadcenter.google.com/).
+
+We do not sell personal data. If you think we have handled yours badly, you can complain to the data protection authority where you live.
+
+## Security
+
+Everything Dhikr fetches travels over HTTPS. Purchases are checked by Google Play. Your data sits in the app's private storage, protected by your phone's own lock. No system is perfectly safe: a phone without a screen lock, or a copy file left in a shared folder, can be read by whoever holds it.
+
+## Changes to this policy
+
+When Dhikr changes what it does with data, we change this page and the date at its top. For a change that matters, we also say so in the app or in its notes on Google Play.
+
+## Contact
+
+Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

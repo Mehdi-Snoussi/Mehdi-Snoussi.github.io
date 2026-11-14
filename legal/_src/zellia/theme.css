@@ -1,0 +1,29 @@
+/* Zellia: lib/core/palette.dart. Plaster ground, warm ink, the chrome's cobalt-teal, and the glazes of the
+   tiles (cobalt, saffron, terracotta, turquoise on tin white). One band of cut tile runs under the top of
+   the page; section numbers are single terracotta tiles. Nothing else is decorated. */
+:root{--bg:#F2EAD3;--ink:#2A2118;--muted:#6A5D4B;--link:#115674;--teal:#115674;--terra:#B04A2C;--rule:rgba(42,33,24,.2);--focus:#B04A2C;
+  --body:"Poppins","Segoe UI",system-ui,sans-serif;--title:"Cinzel","Times New Roman",serif;--sub:"Marcellus",Georgia,serif;
+  --size:1rem;--lead:1.72}
+.band{height:44px;margin:.2rem 0 1.6rem;border-block:3px solid var(--teal);
+  background:#F1EBDD url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cpath d='M22 3l5.6 5.4h7.8v7.8L41 22l-5.6 5.8v7.8h-7.8L22 41l-5.6-5.4H8.6v-7.8L3 22l5.6-5.8V8.4h7.8z' fill='%231E4B8F'/%3E%3Ccircle cx='22' cy='22' r='4.2' fill='%23F4C430'/%3E%3Cpath d='M0 0l4.5 4.5L0 9zM44 0l-4.5 4.5L44 9zM0 44l4.5-4.5L0 35zM44 44l-4.5-4.5L44 35z' fill='%23C75B3D'/%3E%3Cpath d='M0 17.5l3 4.5-3 4.5zM44 17.5l-3 4.5 3 4.5z' fill='%232F94A6'/%3E%3C/svg%3E") 0 0/44px 44px repeat-x}
+.app{margin:0;display:flex;align-items:center;gap:.7rem;font-weight:600;line-height:1.3}
+.app img{border-radius:10px;flex:none}
+h1{margin-top:1.3rem;font-weight:700;color:var(--teal);letter-spacing:.01em;font-size:clamp(1.9rem,7.4vw,2.7rem)}
+.dates{margin:.75rem 0 0;color:var(--muted)}
+h2{font-family:var(--sub);font-weight:400;font-size:1.55rem;color:var(--teal)}
+h3{font-family:var(--body);font-weight:600;font-size:1.02rem}
+strong,tbody th,thead th{font-weight:600}
+article h2{display:flex;align-items:center;gap:.7rem}
+.n{flex:none;display:inline-grid;place-items:center;width:1.95rem;height:1.95rem;background:var(--terra);color:#F1EBDD;border-radius:3px;
+  box-shadow:inset 0 0 0 2px var(--terra),inset 0 0 0 3px rgba(241,235,221,.55);font:600 .9rem/1 var(--body)}
+.summary{margin-top:2rem;padding-top:1.2rem;border-top:3px solid var(--teal)}
+thead th{color:var(--muted);font-size:.86rem}
+.contents ol{padding-left:1.6rem}
+.contents a{text-decoration:none}
+.contents a:hover{text-decoration:underline}
+.contents li::marker{color:var(--terra);font-weight:600}
+ul{list-style:none;padding-left:0}
+article li,.summary li{position:relative;padding-left:1.3rem}
+article li::before,.summary li::before{content:"";position:absolute;left:.1rem;top:.62em;width:.5rem;height:.5rem;background:var(--teal);transform:rotate(45deg)}
+.note{border-left:3px solid #F4C430;padding-left:.85rem}
+.foot{font-size:.9rem}

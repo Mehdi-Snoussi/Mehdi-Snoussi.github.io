@@ -1,0 +1,117 @@
+title: Privacy policy
+description: Blue Hour has no ads and no account. A position rounded to about 1 km goes to MET Norway for the weather; your drives, your car book and your settings stay on the device.
+summary: What leaves your device
+---
+| What | Where it goes | When | How to stop it |
+| Your position, rounded to about 1 km | MET Norway, for the weather | When Blue Hour starts or comes back to the screen, and at most about every 15 minutes while it is open | Turn location off for Blue Hour. The request then names the main city of your time zone, not where you are |
+| The Blue Hour Full purchase | Google Play | Each time you buy or restore it | Nothing is sent until you buy |
+| A picture of your scene, or a drive postcard | The app you pick in Android's share sheet | Each time you tap Share | Don't share |
+| A backup of your settings and car book | Your own Google account | While Android's backup is on | Turn the backup off in Android's settings |
+| A problem report | Our support mailbox | Only if you send it | Leave the draft unsent |
+
+Blue Hour shows no ads. It has no account, no advertising ID, no analytics and no crash reporting, and we run no server of our own.
+
+## Who publishes Blue Hour
+
+Blue Hour: Car Screen Launcher is a home screen for car head units and for phones in a dashboard mount. It is published by Carthage Studio (Mehdi Snoussi), in Tunisia, the name on its Google Play page. For anything about this page, write to [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com). "We" means the publisher, and "device" means the head unit or phone Blue Hour runs on.
+
+## What stays on your device
+
+- **Settings**: your car's body, paint, parts and plate, the scene, the weather and unit choices, the dock, the language.
+- **The car book**: each drive (when, how far, how fast, and a short sketch of the way), and the odometer, fill-ups, services and costs you type in.
+- **The list of your apps**: their names and icons, read from Android to fill the dock and the drawer, and used on the device only.
+- **Counters**: the days you have used Blue Hour, for the week of Full and the rating request; how often the screen came back after going dark, for Wake guard; on head units that announce the ignition, how many times the key was turned and when last.
+- **The last forecast**, so the weather still shows without a signal.
+- **An error log**: the app's last few error messages.
+
+None of this is sent to us. If Android's backup is on for a Google account on the device, Android can store a copy of the settings and the car book in that account.
+
+## Your position
+
+Blue Hour asks for your position while it is in use. It uses it on the device for three things: to light the scene with the real sun where you are, to switch drive mode on when the car moves and off when it stops, and to record your drives in the car book. It reads the GPS's own clock too, to correct a head unit that has forgotten the time.
+
+If you say no, the scene is lit for the main city of your time zone, drive mode changes only when you tap it, and no drives are recorded.
+
+**Drives behind other apps.** "Record trips behind other apps" is off until you turn it on in Settings. With it on, Blue Hour keeps reading your position during a drive while another app, your maps for instance, is in front, so the whole drive reaches the car book. Android shows a notification, "Car book: this drive", for as long as that lasts. It can only begin while Blue Hour is on screen, and it stops by itself once you have parked. If you leave the app while parked, it keeps watching for a drive for up to 15 minutes, then stops.
+
+Blue Hour sends your exact position nowhere. The one copy of your drives that can leave the device is the car book inside your own Android backup, if you use one.
+
+## The weather request
+
+The weather comes from MET Norway, the Norwegian Meteorological Institute. Each request carries a latitude and longitude rounded to two decimals, about 1 km, and the app's name and version. It carries nothing that identifies you or your device, though MET Norway sees the IP address the request comes from, as any site does. We do not receive or store these requests.
+
+The forecast that comes back is kept on the device. The time stamped on MET Norway's answer is also used to correct the device's clock when it is wrong.
+
+MET Norway publishes [its terms of service](https://api.met.no/doc/TermsOfService), and its weather data is licensed under [CC BY 4.0](https://api.met.no/doc/License).
+
+## Music and directions
+
+To show what is playing and your next turn, Blue Hour needs Android's notification access, which you grant yourself in the system settings. With it, the app reads two things: the media sessions of your music apps (title, artist, artwork) and the ongoing navigation notification of your maps app (the arrow and the text of the next turn). It sends play, pause and skip to your player when you tap them.
+
+It holds this in memory while it is on screen. It does not store it, does not send it, and does not read any other notification. Blue Hour never takes audio focus, so it cannot interrupt your music or your radio. You can take the access back in Android's settings; the rest of the app works without it.
+
+## The car book and its postcards
+
+Drives are recorded from GPS: start and end, distance, time, speeds, and a sketch of the way made of points along it. Fill-ups, services and costs are what you type. All of it stays in the car book on the device, and the trip computer and the drive postcards are drawn from it there.
+
+In the free version the book shows one car and the last seven days of drives. Older drives are kept, not deleted, and Blue Hour Full shows them all.
+
+## Sharing
+
+"Share this scene" draws a picture of your scene on the device and hands it to Android's share sheet. A drive postcard is shared the same way. We receive neither.
+
+A postcard shows the date, the distance, the time and the sketch of the way, with no map and no place names. From version 1.1.5 the shared sketch leaves out the first and the last 800 m of the drive, where home and work usually are. A drive too short for that is shared with no sketch. The car book on your device keeps the whole way.
+
+The text that goes with a shared picture ends with a link to Blue Hour on Google Play. The link carries a tag saying it came from a share. It says nothing about you.
+
+## The purchase and the week of Full
+
+Blue Hour Full is bought once, through Google Play. Google handles the payment and tells the app whether you own Full. We never see how you paid. The app keeps a yes-or-no note on the device and checks it with Google Play.
+
+Your first seven days of use include everything in Full. Those days are counted on the device, and nothing is sent to count them.
+
+## Problem reports and the error log
+
+The error log never leaves the device by itself. "Report a problem" in Settings prepares an email to us in your own mail app. It contains Blue Hour's version, the device's maker and model, its Android version, memory and processor count, whether Blue Hour is the home screen, has notification access and is free of battery limits, your effects and language settings, your country as the time zone gives it, and the last eight errors. You read it before it goes, and it goes only if you send it. On a device with no mail app, the same text is copied so you can paste it where you like.
+
+## Other apps and links
+
+When you open an app from the dock or the drawer, that app's own privacy policy applies from there. Wake guard may offer a link to a firmware tool's website for some head units; it opens in your browser, on a site that is not ours. Google Play shows its own rating card and update prompt inside the app from time to time.
+
+## What we can see
+
+Google Play gives us totals for Blue Hour: installs, uninstalls, ratings, sales, and crash rates from devices that share diagnostics with Google. They identify no one. We cannot see your drives, your car or your position.
+
+## Children
+
+Blue Hour is made for drivers, so for adults. It is not directed at children under 13, and we do not knowingly collect personal data from them.
+
+## Keeping and deleting
+
+Settings and the car book stay on the device until you uninstall Blue Hour or clear its data in Android's settings; both erase everything. A backup lives in your Google account until you turn backup off or delete it there. A picture you shared belongs to wherever you sent it.
+
+We hold nothing about you, apart from emails you sent us. They stay in the support mailbox until the matter is closed or you ask us to delete them.
+
+## Your rights
+
+Ask us what we hold about you, or ask us to delete it, and we answer within 30 days. With no account and no server, there is nothing for us to look up beyond your emails.
+
+The GDPR in the EU and the UK, and laws in California and elsewhere, give you rights to see, correct, delete and move your data, to object to its use and to withdraw a consent. You withdraw a permission in Android's settings, at any time. For the GDPR, the grounds are:
+
+- your consent, for location (its rounded use for the weather included) and for notification access;
+- a contract with you, for the purchase;
+- our legitimate interest in fixing faults, for a report you send.
+
+We do not sell personal data. You can complain to the data protection authority where you live.
+
+## Security
+
+The weather request and the purchase travel over HTTPS, and Google Play verifies the purchase. Everything else stays in the app's private storage on the device. A head unit is often left unlocked in a parked car: anyone who can use the unit can open the car book.
+
+## Changes to this policy
+
+When a new version of Blue Hour handles data differently, we change this page and the date at its top. A change that matters is also named in the app's notes on Google Play.
+
+## Contact
+
+Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

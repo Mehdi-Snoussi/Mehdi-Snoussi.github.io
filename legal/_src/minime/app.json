@@ -1,0 +1,16 @@
+{
+  "name": "Mini Me",
+  "store_title": "Mini Me: Avatar Pet & Widget",
+  "package": "com.carthage.minime",
+  "effective": "19 October 2026",
+  "theme_color": "#FFF0F6",
+  "scheme": "light",
+  "pages": ["privacy", "terms", "delete-account"],
+  "md_copy": "minime/store/PRIVACY_POLICY.md",
+  "colophon": "Set in Grandstander and DM Sans in Mimi's world, Lilita One and DM Sans in Kai's: the app's own faces, borders and colours. The colour switch at the top is the first choice the app asks you to make: Mimi or Kai.",
+  "fonts": [
+    ["Grandstander", "700 800", "normal", "minime/assets/fonts/grandstander/Grandstander-Variable.ttf", null, {"wght": [700, 800]}],
+    ["DM Sans", "400 800", "normal", "minime/assets/fonts/dmsans/DMSans-Variable.ttf", null, {"opsz": 14, "wght": [400, 800]}],
+    ["Lilita One", "400", "normal", "minime/assets/fonts/lilitaone/LilitaOne-Regular.ttf"]
+  ]
+}

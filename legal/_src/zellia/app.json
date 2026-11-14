@@ -1,0 +1,17 @@
+{
+  "name": "Zellia",
+  "store_title": "Zellia: Triple Tile Match",
+  "package": "com.carthage.zellia",
+  "effective": "11 July 2026",
+  "theme_color": "#F2EAD3",
+  "scheme": "light",
+  "pages": ["privacy", "terms"],
+  "md_copy": "zellia/store/PRIVACY_POLICY.md",
+  "colophon": "Set in Cinzel, Marcellus and Poppins, the game's own faces, on its plaster ground. The band at the top is a row of its tiles: cobalt stars, saffron and terracotta between them.",
+  "fonts": [
+    ["Cinzel", "400 900", "normal", "zellia/assets/fonts/Cinzel.ttf"],
+    ["Marcellus", "400", "normal", "zellia/assets/fonts/Marcellus.ttf"],
+    ["Poppins", "400", "normal", "zellia/assets/fonts/Poppins-Regular.ttf"],
+    ["Poppins", "600", "normal", "zellia/assets/fonts/Poppins-SemiBold.ttf"]
+  ]
+}

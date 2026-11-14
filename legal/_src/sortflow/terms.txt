@@ -1,0 +1,80 @@
+title: Terms of service
+description: The terms for playing SortFlow: what is free, what Remove Ads and the Premium Bundle give you, what coins are worth, and which law applies.
+summary: In short
+---
+- SortFlow is free to play, with ads. Remove Ads and the Premium Bundle are bought once. Nothing renews.
+- Coins and power-ups are part of the game. They cannot be turned into money.
+- There is no account. Your progress is on your phone; export it if you want a copy of your own.
+- Refunds are decided by Google Play.
+- Tunisian law applies, and the consumer law of your own country still protects you.
+
+## Agreeing to these terms
+
+These terms are between you and Carthage Studio (Mehdi Snoussi), in Tunisia, which publishes SortFlow: Water Sort Puzzle. By installing or playing the game you accept them. If you would rather not, uninstall it. Google Play's own terms cover the download and anything you buy through it.
+
+## What you may do with SortFlow
+
+You may install the game on Android devices you own or control and play it for your own enjoyment. The permission is yours alone and cannot be sold or handed on. We can withdraw it if you break these terms.
+
+Please do not republish the game, pull it apart to rebuild it, or pass on a changed copy, unless the law gives you that right whatever a licence says.
+
+## The game and its levels
+
+The game, its artwork, its sounds and its level generator belong to the publisher. Every board is generated on your phone and run through a solver before you see it.
+
+Events such as Witch's Brew run between fixed dates. What you win in an event stays yours after it ends.
+
+## No account
+
+SortFlow has no sign-up. Your levels, coins and settings are stored on your phone. If you uninstall the game or clear its data, they are gone, and we have no copy to give back. Android's own backup may return them on a new phone, and "Export progress" in Settings lets you keep a file yourself. Purchases come back through "Restore Purchases".
+
+## Ads
+
+The free game is paid for by ads from Google AdMob, and playing it means seeing a banner under the board and a full-screen ad after some levels. Videos are optional and are only shown when you ask for what they give.
+
+## Purchases, coins and refunds
+
+Google Play sells two things in SortFlow and shows the price before you confirm:
+
+| What | What you get | How often |
+| Remove Ads | No banner and no full-screen ads, for good | Once |
+| Premium Bundle | The same, plus 500 coins | Once |
+
+Neither is a subscription. The coins of a bundle are granted when you buy it and are not granted again when you restore it on another phone.
+
+Coins and power-ups, whether earned or bought, exist only inside the game. They have no value in money, cannot be sold, exchanged or refunded on their own, and are lost if the game's data is cleared.
+
+Refunds follow [Google Play's refund policy](https://support.google.com/googleplay/answer/2479637). We can support a request you send to Google, and Google decides. Where you live in the EU or the UK, the rights the law gives you over digital purchases are untouched by these terms.
+
+## Fair play
+
+- Play within the law where you are.
+- Do not tamper with the game, its saved progress or its purchases.
+
+## Who can play
+
+SortFlow is made for a general audience. A child should play with a parent's agreement.
+
+## No warranty
+
+SortFlow is provided "as is" and "as available". We fix what we find, but we cannot promise that it will always run, or run without faults, on every phone.
+
+## Limit of our liability
+
+To the extent the law allows, we are not liable for indirect or consequential loss, or for lost progress, arising from the game. Our total liability for any claim is limited to what you paid us in the twelve months before it.
+
+These limits stop where the law says they must. They do not remove any right your country's consumer law gives you.
+
+## Changes and ending
+
+We may update these terms when the game changes. The date at the top of this page changes with them, and a change that matters is mentioned in the game or in its notes on Google Play. Playing on after a change means you accept it.
+
+You can end this agreement whenever you like by uninstalling SortFlow. We can end your permission to play if you break these terms.
+
+## Law that applies
+
+Tunisian law governs these terms, as the publisher lives in Tunisia. If you are a consumer, the mandatory protections of your own country's law still apply, and you may go to your local courts where that law provides for it.
+
+## Contact
+
+Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

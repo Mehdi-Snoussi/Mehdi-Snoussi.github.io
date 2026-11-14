@@ -1,0 +1,72 @@
+title: Terms of service
+description: The terms for playing Cascade: it is free with ads, one payment removes them, coins are earned and never sold, and Tunisian law applies.
+summary: In short
+---
+- Cascade is free, with ads. "Remove ads" is one payment and never renews.
+- Coins are earned by playing. They are not sold and cannot become money.
+- You play without an account, and your save is on your phone.
+- Google Play decides refunds.
+- Tunisian law applies; your own country's consumer law still protects you.
+
+## Agreeing to these terms
+
+Cascade: Drop & Merge Puzzle is published by Carthage Studio (Mehdi Snoussi), in Tunisia. When you install or play it, you agree to these terms with us. If you disagree with them, the way out is to uninstall the game. Downloads and payments also fall under Google Play's terms.
+
+## What you may do with Cascade
+
+You may install Cascade on Android devices you own or control, and play it for yourself. You may not sell or transfer that permission, put the game on other stores, take it apart to copy it, or hand on an altered version, except as far as the law allows this in spite of a licence. If you break these terms, we can end the permission.
+
+## The game and its events
+
+The game, its artwork, its sounds and its orb skins are the publisher's. Each run is made on your phone for your own play.
+
+Events, for instance Halloween Night, start and stop on set dates. A skin you win during one is yours to keep when it is over.
+
+## No account
+
+You never sign up. Your score, coins, skins and settings are saved on your phone, and they go if you uninstall the game or clear its data. We hold no copy and cannot restore them, though Android's backup may. "Restore Purchases" in Settings brings back Remove ads.
+
+## Ads
+
+Ads from Google AdMob pay for the free game. If you play it, you will see them. Videos are never forced on you.
+
+## The purchase, coins and refunds
+
+Cascade sells one thing through Google Play, at a price shown before you confirm: "Remove ads", which ends every ad in the game, the optional videos included. You pay once. It is not a subscription.
+
+Coins come only from playing. They have no value outside the game and cannot be bought, sold or cashed in.
+
+For a refund, Google Play applies [its refund policy](https://support.google.com/googleplay/answer/2479637). We will back a fair request, but the decision is Google's. If you are in the EU or the UK, these terms leave your statutory rights over digital purchases as they are.
+
+## Fair play
+
+- Keep to the law of the country you are in.
+- Leave the game's code, its save and its purchase untampered.
+
+## Who can play
+
+Cascade suits a general audience. Children should have a parent's agreement before they play.
+
+## No warranty
+
+Cascade comes "as is" and "as available". We repair faults we learn of, but give no guarantee that the game will be free of them or will work on every device.
+
+## Limit of our liability
+
+As far as the law permits, we accept no liability for indirect or consequential loss or for a lost save, and our whole liability for any claim stops at the amount you paid us in the twelve months before it.
+
+Where the law forbids such a limit, it does not apply, and nothing here cuts into the rights consumer law gives you in your country.
+
+## Changes and ending
+
+These terms may change as the game does. We change the date at the top of the page, and say so in the game or in its Google Play notes when a change matters. If you go on playing, you accept the new terms.
+
+You are free to stop at any time: uninstall the game. We may end your permission if these terms are broken.
+
+## Law that applies
+
+The law of Tunisia, the publisher's country, governs these terms. Consumers keep the mandatory protection of their own country's law and can use their local courts where that law gives them the right.
+
+## Contact
+
+Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

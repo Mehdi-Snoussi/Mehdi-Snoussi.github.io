@@ -1,0 +1,17 @@
+{
+  "name": "Blue Hour",
+  "store_title": "Blue Hour: Car Screen Launcher",
+  "package": "com.carthage.bluehour",
+  "effective": "4 October 2026",
+  "theme_color": "#0D1118",
+  "scheme": "dark",
+  "pages": ["privacy", "terms"],
+  "md_copy": "bluehour/store/PRIVACY_POLICY.md",
+  "colophon": "Set in Saira, Barlow and Barlow Condensed, the faces on the car's screen. The sky at the top uses the app's own sky colours, picked by the hour on your clock.",
+  "fonts": [
+    ["Saira", "400 700", "normal", "bluehour/assets/fonts/Saira-Variable.ttf", null, {"wdth": 100, "wght": [400, 700]}],
+    ["Barlow", "400", "normal", "bluehour/assets/fonts/Barlow-Regular.ttf"],
+    ["Barlow", "600", "normal", "bluehour/assets/fonts/Barlow-SemiBold.ttf"],
+    ["Barlow Condensed", "600", "normal", "bluehour/assets/fonts/BarlowCondensed-SemiBold.ttf"]
+  ]
+}

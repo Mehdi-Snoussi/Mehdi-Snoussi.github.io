@@ -1,0 +1,16 @@
+{
+  "name": "SortFlow",
+  "store_title": "SortFlow: Water Sort Puzzle",
+  "package": "com.sortflow.sortflow",
+  "effective": "4 June 2026",
+  "theme_color": "#F2EADB",
+  "scheme": "light",
+  "pages": ["privacy", "terms"],
+  "colophon": "Set in Alegreya and Alegreya Sans, as the game is. The rack at the top holds four of its twelve pigments: orpiment, carmine, cerulean and viridian.",
+  "fonts": [
+    ["Alegreya", "700", "normal", "sortflow/assets/fonts/Alegreya-Bold.ttf"],
+    ["Alegreya", "800", "normal", "sortflow/assets/fonts/Alegreya-ExtraBold.ttf"],
+    ["Alegreya Sans", "400", "normal", "sortflow/assets/fonts/AlegreyaSans-Regular.ttf"],
+    ["Alegreya Sans", "700", "normal", "sortflow/assets/fonts/AlegreyaSans-Bold.ttf"]
+  ]
+}

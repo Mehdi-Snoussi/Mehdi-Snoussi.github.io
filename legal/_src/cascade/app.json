@@ -1,0 +1,16 @@
+{
+  "name": "Cascade",
+  "store_title": "Cascade: Drop & Merge Puzzle",
+  "package": "com.carthage.cascade",
+  "effective": "18 June 2026",
+  "theme_color": "#141A2E",
+  "scheme": "dark",
+  "pages": ["privacy", "terms"],
+  "md_copy": "cascade/store/PRIVACY_POLICY.md",
+  "colophon": "Set in Bricolage Grotesque, the game's own face, in its four inks on its night paper. The title is printed twice, a little out of register, as the game prints its name.",
+  "fonts": [
+    ["Bricolage Grotesque", "400", "normal", "cascade/assets/fonts/BricolageGrotesque-Regular.ttf"],
+    ["Bricolage Grotesque", "600", "normal", "cascade/assets/fonts/BricolageGrotesque-SemiBold.ttf"],
+    ["Bricolage Grotesque", "800", "normal", "cascade/assets/fonts/BricolageGrotesque-ExtraBold.ttf"]
+  ]
+}

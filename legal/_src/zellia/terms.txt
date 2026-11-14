@@ -1,0 +1,74 @@
+title: Terms of service
+description: The terms for playing Zellia: free with ads between boards, one purchase to remove them, coins and tesserae earned only by play, and Tunisian law.
+summary: In short
+---
+- Zellia is free. Ads show between boards; Remove Ads is paid once and never renews.
+- Coins and tesserae are earned on the boards. They are not sold and have no value in money.
+- No account is needed. Your progress is kept on your phone.
+- Refunds are for Google Play to decide.
+- Tunisian law applies, alongside the consumer law of your own country.
+
+## Agreeing to these terms
+
+These terms are an agreement between you and Carthage Studio (Mehdi Snoussi), in Tunisia, the publisher of Zellia: Triple Tile Match. You accept them by installing or playing the game. If you do not accept them, remove the game from your phone. Google Play's terms apply as well, to the download and to the purchase.
+
+## What you may do with Zellia
+
+You may put Zellia on Android devices that are yours, or that you control, and play it for your own pleasure. This permission cannot be sold or passed to someone else, and it ends if these terms are broken.
+
+Copying the game to another store, taking it apart, or sharing a modified build is not allowed, save where the law grants that right regardless.
+
+## The game, its tiles and its events
+
+The game, its mosaic artwork, its palace scenes and its craft stories are the publisher's work. Boards are dealt on your phone, for you to play.
+
+Events such as Lantern Night run on fixed dates. Whatever you win in one remains yours afterwards.
+
+## No account
+
+Zellia never asks you to register. Your level, coins, tesserae and palace are saved on your phone, and uninstalling the game or clearing its data removes them. We have no copy to return, though Android's backup may restore them on a new phone. Remove Ads comes back with "Restore purchases".
+
+## Ads
+
+Ads from Google AdMob keep Zellia free. Playing the free game means seeing a full-screen ad between some boards. A video plays only if you choose it.
+
+## The purchase, coins and refunds
+
+Google Play sells one thing in Zellia: Remove Ads. Its price is shown before you confirm, you pay it once, and it does not renew. Once you own it, no ad is shown, and the revive, the doubled coins and the extra shuffle no longer need a video.
+
+Coins and tesserae come from playing. They cannot be bought, sold or exchanged for money, and they exist only in the game.
+
+Refunds are handled under [Google Play's refund policy](https://support.google.com/googleplay/answer/2479637). We can support your request, but Google makes the decision. In the EU and the UK, your statutory rights for digital purchases are not reduced by these terms.
+
+## Fair play
+
+- Respect the law where you play.
+- Do not interfere with the game's code, your saved progress or the purchase.
+
+## Who can play
+
+Zellia is for a general audience. A child needs a parent's agreement to play.
+
+## No warranty
+
+The game is provided "as is" and "as available". We correct problems as we learn of them, without promising a game that never fails or that runs on every phone.
+
+## Limit of our liability
+
+To the extent the law allows, we are not liable for indirect or consequential loss, nor for lost progress. For any claim, our total liability is capped at what you paid us in the twelve months before it.
+
+This cap does not apply where the law does not permit it, and your rights under your country's consumer law are unaffected.
+
+## Changes and ending
+
+We may revise these terms as Zellia changes. The date at the top of the page shows the latest version, and a change that matters is noted in the game or on Google Play. Playing after a change means accepting it.
+
+Uninstalling Zellia ends the agreement on your side whenever you wish. We may end your permission to play if you break these terms.
+
+## Law that applies
+
+These terms are governed by the law of Tunisia, where the publisher is based. A consumer keeps the mandatory protections of the law of their own country, including the right to a local court where that law gives it.
+
+## Contact
+
+Carthage Studio (Mehdi Snoussi), Tunisia. [apps.contact.supports@gmail.com](mailto:apps.contact.supports@gmail.com)

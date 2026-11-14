@@ -2,505 +2,195 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cascade — Privacy Policy</title>
-<meta name="description" content="Privacy Policy for Cascade, the drop-and-merge orb game: no sign-up, your game progress stays on your device, and ads come from Google AdMob until you remove them.">
-<meta name="theme-color" content="#0C0820">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy for Cascade</title>
+<meta name="description" content="Cascade saves your score, coins and skins on your phone. Ads, the one purchase and a card you choose to share are the only things that leave it.">
+<meta name="theme-color" content="#141A2E">
 <meta name="color-scheme" content="dark">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="../../assets/apps/cascade.webp">
 <style>
-/* ==========================================================================
-   Cascade — legal pages, shared design system.
-   Signature: the 11-orb merge ladder (lib/game/tiers.dart) used as the
-   document spine and as the contents index. Orb shading is a CSS port of
-   Orb.render() in lib/game/orb.dart — lit top-left body gradient, lower-edge
-   rim light in a lightened tier colour, specular glint, bloom halo, and the
-   faceted inner ring the goal-class tiers get.
-   PRIVACY takes the periwinkle seed accent (#7E91F2 family);
-   TERMS takes Nova gold. Everything else is identical.
-   ========================================================================== */
-:root{
-  /* the bin — exact app values (lib/main.dart) */
-  --bin-a:#1C1140; --bin-b:#0C0820; --deep:#150D36;
-  --panel:#181041;  /* reading surface */
-  --lift:#211653;   /* inset blocks */
-  --rail:#241858;   /* table head, pill track */
-  --line:rgba(126,145,242,.20);
-  --line-2:rgba(126,145,242,.36);
-  --lav:#A493DA;    /* bin wall lavender (lib/game/bin_decoration.dart) */
-  /* ink — ratios measured against --panel */
-  --ink:#ECE9F8;    /* 14.8:1 */
-  --ink-2:#C8C1EB;  /* 10.3:1 */
-  --dim:#A79DD2;    /*  7.1:1 */
-  /* role accent — PRIVACY = periwinkle, the app seed colour */
-  --accent:#9DAEFF;      /*  8.4:1 on panel */
-  --accent-deep:#7E91F2;
-  --accent-rule:rgba(157,174,255,.42);
-  --focus:#FFD24A;
-  --gut:78px;
-}
-/* the merge ladder: base / light / dark / text-safe tint */
-.t0 {--c:#29A8FF;--l:#CCEAFF;--d:#004F85;--ct:#85CDFF}
-.t1 {--c:#35E0C2;--l:#C2F6ED;--d:#0F6354;--ct:#85ECDA}
-.t2 {--c:#1E88E5;--l:#B0D5F6;--d:#0A3256;--ct:#70B4EF}
-.t3 {--c:#5BD75B;--l:#DEF7DE;--d:#1C731C;--ct:#A5E9A5}
-.t4 {--c:#E8E337;--l:#F9F7C9;--d:#6F6C0D;--ct:#F1EF89}
-.t5 {--c:#FFA726;--l:#FFE9C9;--d:#824D00;--ct:#FFCC82}
-.t6 {--c:#FF5252;--l:#FFF5F5;--d:#AE0000;--ct:#FFAEAE}
-.t7 {--c:#FF7BAC;--l:#FFE2EC;--d:#D70050;--ct:#FFD7E6}
-.t8 {--c:#C33FD6;--l:#EDC5F3;--d:#54145E;--ct:#DB8BE6}
-.t9 {--c:#7C5CFF;--l:#DCD3FF;--d:#2400B8;--ct:#C6B8FF}
-.t10{--c:#FFD24A;--l:#FFF3CF;--d:#A67D00;--ct:#FFE9A6}
-.t8,.t9,.t10{--ring:rgba(255,255,255,.20)}  /* goal-class facet ring */
-
+@font-face{font-family:"Bricolage Grotesque";src:url(../fonts/BricolageGrotesque-Regular.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Bricolage Grotesque";src:url(../fonts/BricolageGrotesque-SemiBold.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Bricolage Grotesque";src:url(../fonts/BricolageGrotesque-ExtraBold.woff2) format("woff2");font-weight:800;font-style:normal;font-display:swap}
+/* What every legal page shares: how it reads. How it looks is each app's theme.css. */
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{
-  margin:0;
-  background:var(--bin-b);
-  background-image:linear-gradient(179deg,var(--bin-a) 0%,var(--bin-b) 62%);
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-  color:var(--ink);
-  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  font-size:17px;line-height:1.72;
-  overflow-x:hidden;
+html{-webkit-text-size-adjust:100%;scroll-padding-top:1.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--size,1.0625rem)/var(--lead,1.62) var(--body);overflow-wrap:break-word}
+img{max-width:100%;display:block}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--focus,var(--link));outline-offset:3px}
+.skip{position:absolute;left:-999rem}
+.skip:focus{left:1rem;top:1rem;z-index:9;background:var(--bg);color:var(--ink);padding:.5rem .8rem}
+.top,.head,main,.foot{max-width:var(--measure,43rem);margin-inline:auto;padding-inline:1.125rem}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem 1.25rem;flex-wrap:wrap;padding-block:1rem .9rem;font-size:.95rem}
+.top .pages{display:flex;gap:1.15rem;flex-wrap:wrap}
+.top [aria-current]{color:var(--ink);font-weight:700;text-decoration:none}
+h1,h2,h3{font-family:var(--title);line-height:1.18;margin:0;text-wrap:balance}
+h1{font-size:clamp(2rem,7vw,2.8rem)}
+h2{font-size:1.42rem}
+h3{font-size:1.1rem;margin-top:1.6rem}
+p,ul,table{margin:.85rem 0 0}
+ul{padding-left:1.15rem}
+li+li{margin-top:.42rem}
+strong{font-weight:700}
+article section{margin-top:2.7rem}
+.summary{margin-top:2.2rem}
+.contents{margin-top:2.4rem}
+.contents ol{margin:.7rem 0 0;padding-left:1.5rem;columns:2 15rem;column-gap:2.5rem}
+.contents li{break-inside:avoid}
+.contents li+li{margin-top:.28rem}
+.note{color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:.96rem;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:.62rem .9rem .62rem 0;border-top:1px solid var(--rule);font-weight:400}
+th:last-child,td:last-child{padding-right:0}
+thead th{border-top:0;font-weight:700;padding-top:0}
+tbody th{font-weight:700}
+@media (max-width:42rem){
+  table,tbody,tr,th,td{display:block}
+  thead{position:absolute;left:-999rem}
+  tr{border-top:1px solid var(--rule);padding:.75rem 0 .8rem}
+  .summary h2+table tbody tr:first-child{border-top:0}
+  th,td{border:0;padding:0}
+  tbody th{font-size:1.02rem}
+  td{margin-top:.3rem}
+  td::before{content:attr(data-th) ": ";font-weight:700}
 }
-.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
-
-/* ---------- the orb (CSS port of Orb.render) ---------- */
-.orb{
-  position:relative;display:inline-block;flex:none;border-radius:50%;
-  width:var(--sz,16px);height:var(--sz,16px);
-  background:
-    /* secondary specular - Offset(r*.20, r*.12), radius r*.07, white 32% */
-    radial-gradient(4% 4% at 60% 56%,rgba(255,255,255,.34) 0 60%,rgba(255,255,255,0) 100%),
-    /* faceted inner ring the goal-class tiers get - r*.55, stroke r*.04 */
-    radial-gradient(closest-side,transparent 0 53%,var(--ring,transparent) 53% 57%,transparent 57%),
-    /* lit body - RadialGradient(center:(-0.4,-0.5)), ramp tightened from the
-       game's 1.15 radius so the tier colour still reads at 11px */
-    radial-gradient(62% 62% at 30% 25%,var(--l) 0%,var(--c) 46%,var(--d) 100%);
-}
-.orb::before{               /* rim light along the lower edge, tier-tinted */
-  content:"";position:absolute;inset:4%;border-radius:50%;opacity:.55;
-  background:conic-gradient(from 122deg,var(--l) 0deg,var(--l) 140deg,transparent 140deg);
-  -webkit-mask:radial-gradient(closest-side,transparent 0 88%,#000 91%);
-          mask:radial-gradient(closest-side,transparent 0 88%,#000 91%);
-}
-.orb::after{                /* primary specular - Offset(-r*.30,-r*.36), radius r*.22 */
-  content:"";position:absolute;left:24%;top:21%;width:22%;height:22%;border-radius:50%;
-  background:radial-gradient(closest-side,rgba(255,255,255,.82) 0 46%,rgba(255,255,255,0) 100%);
-}
-.orb.cleared{               /* two Novas merge and clear: the empty ring */
-  background:none;box-shadow:inset 0 0 0 max(2px,calc(var(--sz)*.09)) var(--c);
-}
-.orb.cleared::before,.orb.cleared::after{display:none}
-
-/* ---------- top bar ---------- */
-.topbar{
-  position:sticky;top:0;z-index:9;
-  background:rgba(12,8,32,.94);border-bottom:1px solid var(--line);
-  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
-}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;
-  gap:14px;flex-wrap:wrap;min-height:58px;padding-top:9px;padding-bottom:9px}
-.back{font-size:14.5px;font-weight:500;color:var(--dim);text-decoration:none;
-  border-bottom:1px solid transparent}
-.back:hover{color:var(--ink);border-bottom-color:var(--line-2)}
-/* privacy <-> terms, built like the segmented control in the game */
-.swap{display:flex;align-items:center;gap:2px;padding:3px;border-radius:999px;
-  background:var(--rail);border:1px solid var(--line)}
-.swap a,.swap span{
-  font-family:Poppins,system-ui,sans-serif;font-weight:700;font-size:12.5px;
-  letter-spacing:.06em;text-transform:uppercase;color:var(--dim);
-  padding:6px 15px;border-radius:999px;text-decoration:none;border-bottom:0;
-  display:inline-flex;align-items:center;gap:7px;
-}
-.swap a:hover{color:#fff;background:rgba(126,145,242,.20)}
-.swap [aria-current]{color:#0C0820;background:var(--accent)}
-.swap .dot{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.65}
-.swap [aria-current] .dot{opacity:1}
-
-/* ---------- header: the drop ---------- */
-header{padding:34px 0 30px}
-.bin{
-  position:relative;overflow:hidden;
-  border:1px solid var(--line-2);border-radius:24px;
-  padding:clamp(26px,4.4vw,44px);
-  background:
-    radial-gradient(1.2px 1.2px at 18% 22%,rgba(255,255,255,.55),transparent),
-    radial-gradient(1px 1px at 74% 13%,rgba(255,255,255,.42),transparent),
-    radial-gradient(1.5px 1.5px at 88% 61%,rgba(255,255,255,.30),transparent),
-    radial-gradient(1px 1px at 36% 81%,rgba(255,255,255,.34),transparent),
-    radial-gradient(1px 1px at 57% 43%,rgba(255,255,255,.22),transparent),
-    radial-gradient(1.3px 1.3px at 8% 66%,rgba(255,255,255,.28),transparent),
-    linear-gradient(158deg,#241653 0%,var(--deep) 52%,var(--bin-b) 100%);
-  display:grid;grid-template-columns:1fr auto;gap:clamp(18px,4vw,40px);align-items:center;
-}
-.bin::before,.bin::after{      /* the lavender pips on the bin walls */
-  content:"";position:absolute;top:11px;width:9px;height:9px;border-radius:50%;
-  background:var(--lav);box-shadow:0 0 10px rgba(164,147,218,.75);
-}
-.bin::before{left:11px}
-.bin::after{right:11px}
-.eyebrow{display:flex;align-items:center;gap:11px;margin:0 0 18px;flex-wrap:wrap}
-.eyebrow img{width:38px;height:38px;border-radius:11px;display:block;
-  border:1px solid rgba(255,255,255,.16)}
-.eyebrow b{font-family:Poppins,sans-serif;font-weight:800;font-size:14px;
-  letter-spacing:.17em;text-transform:uppercase;color:var(--ink-2)}
-.eyebrow em{font-style:normal;color:var(--dim);font-size:13.5px;letter-spacing:.04em}
-h1{font-family:Poppins,system-ui,sans-serif;font-weight:900;
-  font-size:clamp(33px,6vw,50px);line-height:1.05;letter-spacing:-.022em;
-  margin:0 0 22px;color:#fff}
-.meta{margin:0;font-size:15px;color:var(--dim);max-width:54ch;
-  padding-top:16px;border-top:1px solid var(--line)}
-.drop{display:flex;flex-direction:column;align-items:center;align-self:stretch;
-  justify-content:flex-start;padding-top:4px}
-.drop .orb{--sz:clamp(84px,15vw,130px);
-  box-shadow:0 0 58px rgba(255,210,74,.34),0 18px 26px -14px rgba(0,0,0,.65)}
-.guide{flex:1;width:2px;min-height:34px;margin-top:14px;
-  background:repeating-linear-gradient(180deg,rgba(255,210,74,.5) 0 7px,transparent 7px 15px);
-  -webkit-mask:linear-gradient(180deg,#000 0 45%,transparent 100%);
-          mask:linear-gradient(180deg,#000 0 45%,transparent 100%)}
-
-/* ---------- shared block label ---------- */
-.lbl{font-family:Poppins,sans-serif;font-weight:800;font-size:12.5px;
-  letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 4px}
-
-/* ---------- at a glance ---------- */
-.glance{margin:0 0 26px;padding:22px 26px 24px;border-radius:14px;
-  background:var(--lift);border:1px solid var(--line);
-  border-left:3px solid var(--accent-deep)}
-.glance p.sub{margin:0 0 15px;font-size:14.5px;color:var(--dim);max-width:60ch}
-.glance ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
-.glance li{display:flex;align-items:flex-start;gap:13px;font-size:16px;
-  line-height:1.6;color:var(--ink-2);max-width:62ch}
-.glance li .orb{--sz:13px;margin-top:7px}
-
-/* ---------- contents: the ladder, as an index ---------- */
-.index{margin:0 0 30px;padding:20px 24px 22px;border-radius:14px;
-  border:1px solid var(--line);background:rgba(33,22,83,.55)}
-.index ol{list-style:none;margin:0;padding:0;display:grid;gap:2px 26px;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  grid-template-rows:repeat(5,auto);grid-auto-flow:column}
-.index a{display:flex;align-items:baseline;gap:11px;padding:5px 0;font-size:15.5px;
-  line-height:1.45;color:var(--ink-2);text-decoration:none;border-bottom:0}
-.index a:hover{color:#fff}
-.index a:hover .num{color:var(--ct)}
-.index .orb{--sz:11px;align-self:center}
-.index .num{font-family:Poppins,sans-serif;font-weight:700;font-size:12.5px;
-  color:var(--dim);min-width:1.7ch;text-align:right;flex:none}
-
-/* ---------- document panel + the ladder spine ---------- */
-main{position:relative;background:var(--panel);border:1px solid var(--line);
-  border-radius:22px;margin-bottom:36px;
-  padding:clamp(26px,4vw,42px) clamp(20px,3.4vw,40px) 16px}
-.sections{position:relative}
-.sections::before{        /* the drop guide the orbs hang on */
-  content:"";position:absolute;left:26px;top:16px;bottom:26px;width:2px;opacity:.40;
-  background:linear-gradient(180deg,#29A8FF,#35E0C2,#1E88E5,#5BD75B,#E8E337,
-    #FFA726,#FF5252,#FF7BAC,#C33FD6,#7C5CFF);
-  -webkit-mask:repeating-linear-gradient(180deg,#000 0 8px,transparent 8px 17px);
-          mask:repeating-linear-gradient(180deg,#000 0 8px,transparent 8px 17px);
-}
-section{position:relative;padding:0 0 34px var(--gut);scroll-margin-top:84px}
-section:last-of-type{padding-bottom:18px}
-section:target h2{text-shadow:0 0 24px var(--c)}  /* the section you jumped to lights up */
-.pip{position:absolute;left:0;top:0;width:54px;height:70px;
-  display:flex;align-items:center;justify-content:center;pointer-events:none}
-.pip::before{             /* bloom halo */
-  content:"";position:absolute;width:calc(var(--sz)*2);height:calc(var(--sz)*2);
-  border-radius:50%;opacity:.30;
-  background:radial-gradient(closest-side,var(--c),transparent);
-}
-.pip .orb{box-shadow:0 calc(var(--sz)*.07) calc(var(--sz)*.2) rgba(0,0,0,.4)}
-.tier{font-family:Poppins,sans-serif;font-weight:700;font-size:11.5px;
-  letter-spacing:.20em;text-transform:uppercase;color:var(--ct);
-  margin:0 0 6px;line-height:1.2}
-h2{font-family:Poppins,system-ui,sans-serif;font-weight:800;
-  font-size:clamp(20px,2.4vw,23.5px);line-height:1.32;letter-spacing:-.012em;
-  color:#fff;margin:0 0 13px}
-h2 .n{color:var(--ct);font-weight:900}
-p{margin:0 0 15px;max-width:66ch;color:var(--ink)}
-p:last-child{margin-bottom:0}
-strong{font-weight:600;color:#fff}
-ul.body{margin:0;padding:0;list-style:none;max-width:66ch}
-ul.body li{position:relative;padding-left:22px;margin-bottom:12px}
-ul.body li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:8px;
-  border-radius:50%;background:var(--c)}
-ul.body li:last-child{margin-bottom:0}
-
-/* ---------- links ---------- */
-a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-rule);
-  overflow-wrap:break-word;
-  transition:color .15s,border-color .15s,background-color .15s}
-a:hover{color:#fff;border-bottom-color:#fff}
-a:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:4px}
-
-/* ---------- table ---------- */
-.tablewrap{overflow-x:auto;margin:0 0 18px;border:1px solid var(--line);
-  border-radius:14px;-webkit-overflow-scrolling:touch;
-  /* shadow-scroll: edge shadows show only while there is more table to reach */
-  background:
-    linear-gradient(90deg,var(--lift) 40%,rgba(33,22,83,0)) left/44px 100% no-repeat,
-    linear-gradient(270deg,var(--lift) 40%,rgba(33,22,83,0)) right/44px 100% no-repeat,
-    radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.55),rgba(0,0,0,0)) left/16px 100% no-repeat,
-    radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.55),rgba(0,0,0,0)) right/16px 100% no-repeat,
-    var(--lift);
-  background-attachment:local,local,scroll,scroll}
-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15.5px}
-th,td{text-align:left;padding:13px 16px;vertical-align:top;
-  border-bottom:1px solid rgba(126,145,242,.14)}
-th{font-family:Poppins,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.13em;
-  text-transform:uppercase;color:var(--accent);background:var(--rail);
-  border-bottom:1px solid var(--line-2);white-space:nowrap;line-height:1.5}
-tr:last-child td{border-bottom:0}
-td{color:var(--ink-2);line-height:1.62}
-td:first-child{color:#fff;font-weight:500;width:22%}
-
-/* ---------- callout ---------- */
-.notice{margin:18px 0 0;padding:16px 20px;border-radius:12px;max-width:66ch;
-  background:var(--lift);border:1px solid var(--line);border-left:3px solid #FFD24A;
-  color:var(--ink-2);font-size:16px}
-.notice strong{font-family:Poppins,sans-serif;font-weight:700;letter-spacing:.03em;
-  color:#FFE9A6}
-
-/* ---------- footer ---------- */
-footer{padding:0 0 60px;color:var(--dim);font-size:15px}
-.flinks{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center;
-  padding-top:20px;border-top:1px solid var(--line)}
-.flinks a{color:var(--ink-2);border-bottom-color:transparent;font-weight:500}
-.flinks a:hover{color:#fff;border-bottom-color:var(--line-2)}
-.flinks .sep{flex:1 1 0}
-.flinks .play{color:#FFD24A;border-bottom-color:rgba(255,210,74,.40)}
-.flinks .play:hover{color:#fff;border-bottom-color:#fff}
-
-@media (max-width:860px){
-  .index ol{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}
-}
-@media (max-width:760px){
-  :root{--gut:0px}
-  body{font-size:16.5px}
-  .bin{grid-template-columns:1fr}
-  .drop{flex-direction:row;justify-content:flex-start;align-items:center;
-    gap:16px;padding-top:0;align-self:flex-start}
-  .drop .orb{--sz:76px}
-  .guide{flex:none;width:104px;height:2px;min-height:0;margin:0;
-    background:repeating-linear-gradient(90deg,rgba(255,210,74,.5) 0 7px,transparent 7px 15px);
-    -webkit-mask:linear-gradient(90deg,#000 0 35%,transparent 100%);
-            mask:linear-gradient(90deg,#000 0 35%,transparent 100%)}
-  .sections::before{display:none}
-  /* the ladder collapses to a slim tier-coloured rail down the left edge */
-  section{border-left:3px solid var(--c);border-radius:2px;padding:2px 0 30px 22px}
-  section:last-of-type{padding-bottom:14px}
-  .pip{left:-9.5px;top:13px;width:16px;height:16px}
-  .pip::before{display:none}
-  .pip .orb{--sz:16px}
-  main{padding-left:16px;padding-right:16px;border-radius:16px}
-  .glance,.index{padding:20px 18px}
-  table{min-width:540px}
-}
-@media (max-width:400px){
-  .wrap{padding:0 14px}
-  .eyebrow img{width:34px;height:34px}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important;
-    scroll-behavior:auto!important}
-}
+.foot{margin-top:3.6rem;padding-block:1.4rem 3.2rem;border-top:1px solid var(--rule);font-size:.95rem}
+.foot p{margin:0 0 .55rem}
+.foot .links{display:flex;flex-wrap:wrap;gap:.3rem 1.25rem}
+.foot .colophon{color:var(--muted);margin-top:1rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media print{
-  html,body{background:#fff!important;color:#000!important;font-size:11pt;line-height:1.5}
-  body{background-image:none!important}
-  .topbar,.drop,.guide,.pip,.sections::before,.bin::before,.bin::after,
-  .orb,.tier{display:none!important}
-  .wrap{max-width:none;padding:0}
-  .bin,main{background:#fff!important;border:0!important;border-radius:0!important;
-    padding:0!important;margin:0 0 14pt!important;color:#000!important;display:block}
-  .glance ul{list-style:disc!important;padding-left:15pt!important}
-  .glance li{display:list-item!important}
-  .glance,.index,.notice,.tablewrap{background:#fff!important;background-image:none!important;
-    border:1px solid #999!important;
-    border-radius:0!important;padding:8pt!important;margin:0 0 12pt!important;color:#000!important}
-  h1,h2,strong,td:first-child,.eyebrow b,.lbl,.notice strong,h2 .n,
-  .index .num{color:#000!important}
-  h2{page-break-after:avoid;break-after:avoid}
-  p,.meta,td,li,.glance li,.glance p,.notice,footer,.eyebrow em,.index a{color:#000!important}
-  th{background:#eee!important;color:#000!important;border-bottom:1px solid #000!important}
-  section{padding:0 0 10pt 0!important;border:0!important;
-    page-break-inside:avoid;break-inside:avoid}
-  .index ol{grid-template-columns:repeat(2,1fr);grid-auto-flow:row;grid-template-rows:none}
-  .tablewrap{overflow:visible}
-  table{min-width:0}
-  a{color:#000!important;border:0!important;text-decoration:underline}
-  a[href^="http"]::after,a[href^="mailto"]::after{content:" (" attr(href) ")";
-    font-size:9pt;color:#333}
-  .flinks{border-top:1px solid #999}
-  ul.body li::before{background:#000!important}
+  :root{--bg:#fff;--ink:#000;--muted:#333;--link:#000;--rule:#999}
+  body{background:#fff!important;color:#000;font-size:10.5pt}
+  .top,.skip,.contents,.head .deco,.switch{display:none!important}
+  .head,main,.foot{max-width:none;padding:0}
+  *{background-image:none!important;box-shadow:none!important;text-shadow:none!important}
+  .head *,.summary,.summary *{background:#fff!important;color:#000!important}
+  h2,h3{break-after:avoid}
+  tr,li{break-inside:avoid}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8.5pt}
 }
+
+/* Cascade: lib/ui/riso.dart, a risograph print at night. Flat inks on navy paper, a halftone screen for
+   shading, and a second ink printed a few pixels off where other games put a glow. The summary is one
+   Riso.block (a hard offset block of ink behind it); section numbers are orbs printed flat, one ink each. */
+:root{--bg:#141A2E;--deep:#0E1324;--panel:#1E2742;--edge:#27324F;--ink:#F4EEDC;--muted:#B9BED3;--link:#5FD9CD;
+  --pink:#FF5C9E;--yellow:#FFD23F;--teal:#2EC4B6;--blue:#5B8CFF;--off:#070A14;--rule:rgba(244,238,220,.17);--focus:#FFD23F;
+  --body:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--title:var(--body);--size:1.06rem;--lead:1.62}
+.print{padding-top:.8rem}
+.app{margin:0;display:flex;align-items:center;gap:.7rem;font-weight:600;line-height:1.25}
+.app img{border-radius:10px;flex:none}
+h1{margin-top:1.4rem;font-weight:800;font-size:clamp(2.5rem,10vw,3.7rem);line-height:1.02;color:var(--yellow);text-shadow:3px 3px 0 var(--pink)}
+.dates{margin:1.1rem 0 0;color:var(--muted)}
+.screen{height:30px;margin-top:1.5rem;
+  background:radial-gradient(circle,var(--pink) 0 3.1px,transparent 3.4px) 0 0/10px 10px,radial-gradient(circle,var(--pink) 0 3.1px,transparent 3.4px) 5px 5px/10px 10px;
+  -webkit-mask:linear-gradient(90deg,#000 0,rgba(0,0,0,.55) 45%,transparent 92%);mask:linear-gradient(90deg,#000 0,rgba(0,0,0,.55) 45%,transparent 92%)}
+h2{font-weight:800;font-size:1.42rem;letter-spacing:-.01em}
+h3{font-weight:600}
+strong{font-weight:600;color:#fff}
+.summary{margin-top:2rem;background:var(--panel);border:1.5px solid var(--edge);border-radius:14px;box-shadow:5px 5px 0 var(--off);padding:1.25rem 1.2rem 1.3rem}
+.summary h2{color:var(--yellow)}
+.summary tbody th{color:var(--ink);font-weight:600}
+thead th{color:var(--muted);font-weight:600;font-size:.9rem}
+article h2{display:flex;align-items:center;gap:.65rem}
+.n{flex:none;display:inline-grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--c,var(--pink));
+  color:#141A2E;font-weight:800;font-size:.95rem;box-shadow:2.5px 2.5px 0 var(--off)}
+article section:nth-of-type(4n+2) .n{--c:var(--yellow)}
+article section:nth-of-type(4n+3) .n{--c:var(--teal)}
+article section:nth-of-type(4n) .n{--c:var(--blue)}
+.contents a{text-decoration:none}
+.contents a:hover{text-decoration:underline}
+.contents li::marker{color:var(--muted);font-weight:600}
+ul{list-style:none;padding-left:0}
+article li,.summary li{position:relative;padding-left:1.25rem}
+article li::before,.summary li::before{content:"";position:absolute;left:.05rem;top:.62em;width:.5rem;height:.5rem;border-radius:50%;background:var(--teal)}
+.note{border-left:3px solid var(--pink);padding-left:.85rem}
+.foot{color:var(--ink)}
+@media (max-width:42rem){.summary{padding-inline:1rem}}
+
 </style>
 </head>
-<body>
-
-<nav class="topbar" aria-label="Policy navigation">
-  <div class="wrap">
-    <a class="back" href="../index.html">&larr; All policies</a>
-    <div class="swap">
-      <span aria-current="page"><i class="dot"></i>Privacy</span>
-      <a href="terms.html"><i class="dot"></i>Terms</a>
-    </div>
-  </div>
+<body class="privacy">
+<a class="skip" href="#main">Skip to the text</a>
+<nav class="top" aria-label="Legal pages">
+<a href="../index.html">All eight apps</a>
+<span class="pages"><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></span>
 </nav>
-
-<div class="wrap">
-
-  <header>
-    <div class="bin">
-      <div class="bin-txt">
-        <p class="eyebrow">
-          <img src="../../assets/apps/cascade.webp" alt="Cascade app icon" width="38" height="38">
-          <b>Cascade</b><em>drop &middot; merge &middot; cascade</em>
-        </p>
-        <h1>Privacy Policy</h1>
-        <p class="meta">Cascade — Effective 18 June 2026. Last updated 15 October 2026.</p>
-      </div>
-      <div class="drop t10" aria-hidden="true">
-        <span class="orb"></span>
-        <span class="guide"></span>
-      </div>
-    </div>
-  </header>
-
-  <main>
-
-    <div class="glance">
-      <p class="lbl">At a glance</p>
-      <p class="sub">A summary of the sections below.</p>
-      <ul>
-        <li class="t0"><span class="orb" aria-hidden="true"></span><span>The App has no sign-up or login.</span></li>
-        <li class="t3"><span class="orb" aria-hidden="true"></span><span>Your game progress and settings live on your device only.</span></li>
-        <li class="t5"><span class="orb" aria-hidden="true"></span><span>We do not collect your name, email address, phone number, contacts, SMS messages, calendar, location, microphone audio, or photos.</span></li>
-        <li class="t8"><span class="orb" aria-hidden="true"></span><span>Ads are served by Google AdMob, and can be removed via in-app purchase.</span></li>
-        <li class="t10"><span class="orb" aria-hidden="true"></span><span>We do not sell personal information.</span></li>
-      </ul>
-    </div>
-
-    <nav class="index" aria-label="Contents">
-      <p class="lbl">Contents</p>
-      <ol>
-        <li class="t0"><a href="#s1"><span class="orb" aria-hidden="true"></span><span class="num">1</span> Who we are</a></li>
-        <li class="t1"><a href="#s2"><span class="orb" aria-hidden="true"></span><span class="num">2</span> Data we collect</a></li>
-        <li class="t2"><a href="#s3"><span class="orb" aria-hidden="true"></span><span class="num">3</span> Third-party services</a></li>
-        <li class="t3"><a href="#s4"><span class="orb" aria-hidden="true"></span><span class="num">4</span> Ads</a></li>
-        <li class="t4"><a href="#s5"><span class="orb" aria-hidden="true"></span><span class="num">5</span> Children</a></li>
-        <li class="t5"><a href="#s6"><span class="orb" aria-hidden="true"></span><span class="num">6</span> Data retention &amp; deletion</a></li>
-        <li class="t6"><a href="#s7"><span class="orb" aria-hidden="true"></span><span class="num">7</span> Your rights (GDPR / CCPA)</a></li>
-        <li class="t7"><a href="#s8"><span class="orb" aria-hidden="true"></span><span class="num">8</span> Security</a></li>
-        <li class="t8"><a href="#s9"><span class="orb" aria-hidden="true"></span><span class="num">9</span> Changes</a></li>
-        <li class="t9"><a href="#s10"><span class="orb" aria-hidden="true"></span><span class="num">10</span> Contact</a></li>
-      </ol>
-    </nav>
-
-    <div class="sections">
-
-      <section id="s1" class="t0" style="--sz:14px">
-        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
-        <p class="tier" aria-hidden="true">Spark</p>
-        <h2><span class="n">1.</span> Who we are</h2>
-        <p>Cascade (the &ldquo;App&rdquo;) is a drop-and-merge puzzle game, published by an independent developer (the &ldquo;Developer&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). Contact: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
-        <p>This policy explains, in plain language, what data the App handles and why.</p>
-      </section>
-
-      <section id="s2" class="t1" style="--sz:17px">
-        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
-        <p class="tier" aria-hidden="true">Dew</p>
-        <h2><span class="n">2.</span> Data we collect</h2>
-        <div class="tablewrap">
-        <table>
-        <tr><th>Category</th><th>What it is</th><th>Why</th><th>Where it lives</th></tr>
-        <tr><td>Game progress</td><td>Your best score, coins, owned and equipped skins (including event skins such as the Pumpkin), achievements, daily-reward streak, event progress, reminder choice and settings.</td><td>To save your progress between sessions.</td><td>On your device only.</td></tr>
-        <tr><td>Purchase records</td><td>The one-time &ldquo;Remove Ads&rdquo; purchase.</td><td>To unlock what you paid for.</td><td>Validated by Google Play. We store only a yes/no flag on your device.</td></tr>
-        <tr><td>Advertising identifier</td><td>Your device&rsquo;s advertising ID, unless you removed ads or opted out in your device settings.</td><td>So our ad partner (Google AdMob) can show ads.</td><td>Sent to Google AdMob. We do not store it.</td></tr>
-        <tr><td>Shared cards</td><td>A score card you choose to share.</td><td>To share your result.</td><td>Handed to the app you pick in Android&rsquo;s share sheet. Not sent to us.</td></tr>
-        <tr><td>Problem reports</td><td>If you choose &ldquo;Report a problem&rdquo;, an email your own mail app writes, with the app and Android versions, the device model and recent error messages.</td><td>To fix what went wrong.</td><td>Sent only if you press send, to our support address.</td></tr>
-        </table>
-        </div>
-        <p>We do <strong>not</strong> collect: your name, email address, phone number, contacts, SMS messages, calendar, location, microphone audio, or photos. The App has no sign-up or login and works offline apart from ads, purchases, and Google Play&rsquo;s review and update prompts.</p>
-      </section>
-
-      <section id="s3" class="t2" style="--sz:20px">
-        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
-        <p class="tier" aria-hidden="true">Tide</p>
-        <h2><span class="n">3.</span> Third-party services</h2>
-        <ul class="body">
-        <li><strong>Google Play Billing</strong> &mdash; processes the &ldquo;Remove Ads&rdquo; purchase. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-        <li><strong>Google AdMob</strong> and Google&rsquo;s consent tool &mdash; show ads (only if you have not removed them) and ask for consent where required. <a href="https://policies.google.com/technologies/ads">AdMob &amp; ads privacy</a></li>
-        <li><strong>Google Play</strong> &mdash; in-app reviews and in-app updates. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-        </ul>
-      </section>
-
-      <section id="s4" class="t3" style="--sz:23px">
-        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
-        <p class="tier" aria-hidden="true">Leaf</p>
-        <h2><span class="n">4.</span> Ads</h2>
-        <p>The App may show banner, interstitial, or rewarded ads via Google AdMob. Rewarded ads are always optional and shown only when you choose to watch one (for example, to double a run&rsquo;s coins or a daily reward). Ads are personalised only where you allow it. In the European Economic Area, the UK, and Switzerland we show a consent prompt (via Google's User Messaging Platform) before serving personalised ads. You can disable ad personalisation in your device settings (Android: Settings &rarr; Google &rarr; Ads) or remove ads with the one-time purchase. Removing ads also removes the optional rewarded videos.</p>
-      </section>
-
-      <section id="s5" class="t4" style="--sz:26px">
-        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
-        <p class="tier" aria-hidden="true">Bloom</p>
-        <h2><span class="n">5.</span> Children</h2>
-        <p>The App is intended for a general audience. It is not specifically directed at children under 13, and we do not knowingly collect personal data from them.</p>
-      </section>
-
-      <section id="s6" class="t5" style="--sz:29px">
-        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
-        <p class="tier" aria-hidden="true">Amber</p>
-        <h2><span class="n">6.</span> Data retention &amp; deletion</h2>
-        <p>Your game progress and settings live on your device and are removed when you uninstall the App or clear its data. We do not hold a server-side copy. For any request, email <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>; we action verified requests within 30 days.</p>
-      </section>
-
-      <section id="s7" class="t6" style="--sz:32px">
-        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
-        <p class="tier" aria-hidden="true">Flare</p>
-        <h2><span class="n">7.</span> Your rights (GDPR / CCPA)</h2>
-        <p>If you are in the EU/UK (GDPR) or California (CCPA/CPRA), you have the right to access, delete, and object to processing of your data, and to withdraw consent. We do not sell personal information.</p>
-      </section>
-
-      <section id="s8" class="t7" style="--sz:35px">
-        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
-        <p class="tier" aria-hidden="true">Coral</p>
-        <h2><span class="n">8.</span> Security</h2>
-        <p>Network requests use HTTPS. Purchases are validated by Google Play directly — we never see your payment method.</p>
-      </section>
-
-      <section id="s9" class="t8" style="--sz:39px">
-        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
-        <p class="tier" aria-hidden="true">Rose</p>
-        <h2><span class="n">9.</span> Changes</h2>
-        <p>If we materially change this policy we will update the date above and, where appropriate, notify you in the App.</p>
-      </section>
-
-      <section id="s10" class="t9" style="--sz:43px">
-        <span class="pip" aria-hidden="true"><span class="orb"></span></span>
-        <p class="tier" aria-hidden="true">Orchid</p>
-        <h2><span class="n">10.</span> Contact</h2>
-        <p>Questions or requests: <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
-      </section>
-
-    </div>
-  </main>
-
-  <footer>
-    <div class="flinks">
-      <a href="../index.html">All policies</a>
-      <a href="terms.html">Cascade Terms of Service</a>
-      <span class="sep"></span>
-      <a class="play" href="https://play.google.com/store/apps/details?id=com.carthage.cascade">Cascade on Google Play &nearr;</a>
-    </div>
-  </footer>
-
+<header class="head">
+<div class="print">
+<p class="app"><img src="../../assets/apps/cascade.webp" alt="" width="40" height="40"><span>Cascade: Drop &amp; Merge Puzzle</span></p>
+<h1>Privacy policy</h1>
+<p class="dates">In force since 18 June 2026. Last changed 14 November 2026. Published by Carthage Studio.</p>
+<div class="screen deco" aria-hidden="true"></div>
 </div>
+</header>
+<main id="main">
+<section class="summary" aria-labelledby="sum">
+<h2 id="sum">What leaves your phone</h2>
+<table><thead><tr><th scope="col">What</th><th scope="col">Where it goes</th><th scope="col">When</th><th scope="col">How to stop it</th></tr></thead><tbody><tr><th scope="row">Advertising ID, IP address, what you do with an ad</th><td data-th="Where it goes">Google AdMob</td><td data-th="When">While ads show</td><td data-th="How to stop it">Buy Remove ads, or use Android’s ad settings</td></tr><tr><th scope="row">The Remove ads purchase</th><td data-th="Where it goes">Google Play</td><td data-th="When">Each time you buy or restore it</td><td data-th="How to stop it">Nothing is sent until you buy</td></tr><tr><th scope="row">A score card</th><td data-th="Where it goes">The app you pick in Android’s share sheet</td><td data-th="When">Each time you tap Share</td><td data-th="How to stop it">Skip the share</td></tr><tr><th scope="row">A backup of your save</th><td data-th="Where it goes">Your own Google account</td><td data-th="When">While Android’s backup is on</td><td data-th="How to stop it">Turn the backup off in Android’s settings</td></tr><tr><th scope="row">A problem report</th><td data-th="Where it goes">Our support mailbox</td><td data-th="When">Only if you press send</td><td data-th="How to stop it">Discard the draft</td></tr></tbody></table>
+<p>Nothing else goes anywhere. There is no account to make, and the game runs offline.</p>
+</section>
+<nav class="contents" aria-labelledby="con">
+<h2 id="con">On this page</h2>
+<ol><li><a href="#s1">Who publishes Cascade</a></li><li><a href="#s2">What stays on your phone</a></li><li><a href="#s3">Ads</a></li><li><a href="#s4">The purchase</a></li><li><a href="#s5">The daily reminder</a></li><li><a href="#s6">Sharing a score, reporting a problem</a></li><li><a href="#s7">What we can see</a></li><li><a href="#s8">Children</a></li><li><a href="#s9">Keeping and deleting</a></li><li><a href="#s10">Your rights</a></li><li><a href="#s11">Security</a></li><li><a href="#s12">Changes to this policy</a></li><li><a href="#s13">Contact</a></li></ol>
+</nav>
+<article>
+<section id="s1"><h2><span class="n">1</span> Who publishes Cascade</h2>
+<p>Cascade: Drop &amp; Merge Puzzle is an Android game from Carthage Studio (Mehdi Snoussi), in Tunisia. That is the name you see on its Google Play page. The address for anything about your data is <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>. Where this page says “we”, it means the publisher.</p>
+</section>
+<section id="s2"><h2><span class="n">2</span> What stays on your phone</h2>
+<p>Cascade saves a small file of its own on the phone. In it:</p>
+<ul><li>your best score and your coins;</li><li>the orb skins you own and the one you play with, event skins such as the Pumpkin included;</li><li>your achievements, your daily reward streak and how far you got in an event;</li><li>your choices in Settings: sound, haptics, language, the daily reminder.</li></ul>
+<p>We cannot read that file. Android can copy it into the backup of your Google account if you have backup on, and restore it when you move to a new phone.</p>
+</section>
+<section id="s3"><h2><span class="n">3</span> Ads</h2>
+<p>The free game shows ads supplied by Google AdMob: a banner, a full-screen ad between some games, and videos you start yourself, for example to double the coins of a run or of a daily reward.</p>
+<p>Google’s ad software runs inside the game and collects for Google, not for us: the advertising ID and app set ID of your phone, its IP address (which gives Google a rough idea of where it is), which ads you were shown and tapped, when the game was opened, and how the ad software performed. Google’s own page says <a href="https://policies.google.com/technologies/partner-sites">how it uses that</a>.</p>
+<p>Your choices:</p>
+<ul><li>If you are in the European Economic Area, the UK or Switzerland, Cascade asks for your consent before personalised ads. You can reopen that choice from “Privacy options” in Settings.</li><li>On any phone, Android’s settings (Google, then Ads) let you reset or delete the advertising ID.</li><li>“Remove ads” is one payment. After it there are no ads at all, the optional videos included.</li></ul>
+</section>
+<section id="s4"><h2><span class="n">4</span> The purchase</h2>
+<p>“Remove ads” is the only thing sold in Cascade. Google Play handles the payment and tells the game whether it succeeded. We learn that a sale happened, and nothing about the buyer. A yes-or-no flag on your phone remembers it, and the game confirms it with Google Play when it starts. Coins cannot be bought.</p>
+</section>
+<section id="s5"><h2><span class="n">5</span> The daily reminder</h2>
+<p>If you switch on “Daily reminder”, the game sets one notification on days when that day’s board is still open, and during an event such as Halloween Night it adds one note when the event starts and one on its last day. Your phone holds the schedule. No server sends these, and no token identifies your phone to us. Switch the reminder off in Settings, or block the game’s notifications in Android.</p>
+</section>
+<section id="s6"><h2><span class="n">6</span> Sharing a score, reporting a problem</h2>
+<p><strong>Share</strong> draws a card of your score on the phone and passes it to whichever app you choose. Where it goes after that is up to that app.</p>
+<p><strong>Report a problem</strong> writes an email in your own mail app. It lists the game’s version, your Android version, the phone’s model and the latest error messages. You see all of it before anything is sent, and you can delete what you do not want to send.</p>
+</section>
+<section id="s7"><h2><span class="n">7</span> What we can see</h2>
+<p>As a publisher we get Google Play’s totals for Cascade: how many installs and uninstalls, the ratings, and crash rates from phones that share diagnostics with Google. They are counts. We cannot tell who played or what score they reached.</p>
+</section>
+<section id="s8"><h2><span class="n">8</span> Children</h2>
+<p>Cascade is for a general audience. It is not designed for children under 13, and it has nothing a child could use to post or message. We do not knowingly collect a child’s personal data; if a child’s email reaches us, a parent can ask us to delete it.</p>
+</section>
+<section id="s9"><h2><span class="n">9</span> Keeping and deleting</h2>
+<p>The save file lives as long as the game is installed. Uninstall Cascade, or clear its data in Android’s settings, and it is erased. A backup in your Google account follows Google’s rules and your own backup setting. We keep nothing on our side apart from emails sent to us, and those remain in the support mailbox until the question is answered or you ask for them to be removed.</p>
+</section>
+<section id="s10"><h2><span class="n">10</span> Your rights</h2>
+<p>Write to us and we will tell you, within 30 days, what we hold about you and delete it if you ask. In practice we hold nothing, since the game keeps its data on your phone.</p>
+<p>People in the EU and the UK have rights under the GDPR (to see, correct, delete or move their data, to object, to withdraw consent), and California and other places have laws with similar rights. Under the GDPR we rely on your consent for personalised ads and the reminder, on a contract for the purchase, and on our legitimate interest in repairing the game for any report you send.</p>
+<p>The data ads produce is Google’s to manage: see <a href="#s3">section 3</a> above and <a href="https://myadcenter.google.com/">Google’s My Ad Center</a>. We sell no personal data. You have the right to complain to your country’s data protection authority.</p>
+</section>
+<section id="s11"><h2><span class="n">11</span> Security</h2>
+<p>Connections to Google’s ad and payment services are encrypted. Google Play verifies the purchase. The save file sits in storage only Cascade can open, protected by the lock on your phone.</p>
+</section>
+<section id="s12"><h2><span class="n">12</span> Changes to this policy</h2>
+<p>This page changes when Cascade changes how it handles data, and the date at the top moves with it. If the change is one you would want to know about, the game or its Google Play notes will say so.</p>
+</section>
+<section id="s13"><h2><span class="n">13</span> Contact</h2>
+<p>Carthage Studio (Mehdi Snoussi), Tunisia. <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a></p>
+</section>
+</article>
+</main>
+<footer class="foot">
+<p>Cascade is published by Carthage Studio (Mehdi Snoussi), Tunisia. Write to <a href="mailto:apps.contact.supports@gmail.com">apps.contact.supports@gmail.com</a>.</p>
+<p class="links"><a href="terms.html">Terms of service</a><a href="../index.html">All eight apps</a><a href="https://play.google.com/store/apps/details?id=com.carthage.cascade">Cascade on Google Play</a></p>
+<p class="colophon">Set in Bricolage Grotesque, the game's own face, in its four inks on its night paper. The title is printed twice, a little out of register, as the game prints its name.</p>
+</footer>
+
 </body>
 </html>

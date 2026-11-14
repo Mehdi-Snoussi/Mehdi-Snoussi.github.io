@@ -1,0 +1,6 @@
+<div class="sky deco" aria-hidden="true"><i class="sun"></i><i class="lamps"></i><i class="road"></i></div>
+<p class="app"><img src="{{icon}}" alt="" width="40" height="40"><span>{{store_title}}</span></p>
+<h1>{{title}}</h1>
+<p class="dates">In force since {{effective}}. Last changed {{updated}}. Published by Carthage Studio.</p>
+<p class="lit deco" id="lit" aria-hidden="true" hidden></p>
+<script>(function(){var h=new Date().getHours(),s=h<5||h>=21?"night":h<7||h>=19?"dusk":h<9||h>=17?"golden":"day",n={night:"night",dusk:"blue hour",golden:"golden hour",day:"daylight"}[s],e=document.getElementById("lit");document.documentElement.setAttribute("data-sky",s);if(e){e.textContent="The sky above is lit for the hour on your clock: "+n+".";e.hidden=false}})();</script>

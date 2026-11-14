@@ -1,0 +1,18 @@
+{
+  "name": "AI Mystic",
+  "store_title": "AI Mystic: Tarot Card Reading",
+  "package": "com.carthage.aimystic",
+  "effective": "4 June 2026",
+  "theme_color": "#0B0B1E",
+  "scheme": "dark",
+  "pages": ["privacy", "terms"],
+  "md_copy": "aimystic/store/PRIVACY_POLICY.md",
+  "colophon": "Set in EB Garamond and Inter, as the app is, and laid out as one card of its deck: parchment face, double gold line, on the night-blue table.",
+  "fonts": [
+    ["EB Garamond", "400", "normal", "aimystic/assets/google_fonts/EBGaramond-Regular.ttf"],
+    ["EB Garamond", "500", "normal", "aimystic/assets/google_fonts/EBGaramond-Medium.ttf"],
+    ["EB Garamond", "400", "italic", "aimystic/assets/google_fonts/EBGaramond-Italic.ttf"],
+    ["Inter", "400", "normal", "aimystic/assets/fonts/Inter-Regular.ttf"],
+    ["Inter", "600", "normal", "aimystic/assets/fonts/Inter-SemiBold.ttf"]
+  ]
+}
